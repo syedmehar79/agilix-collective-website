@@ -1,0 +1,7 @@
+node_modules/
+.vercel/
+.cursor/.deploy-pending
+.cursor/deploy-log.txt
+*.bw-bak
+.DS_Store
+Thumbs.db

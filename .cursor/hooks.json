@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "node .cursor/hooks/mark-deploy.js"
+      }
+    ],
+    "stop": [
+      {
+        "command": "node .cursor/hooks/deploy-on-stop.js",
+        "timeout": 300
+      }
+    ]
+  }
+}
