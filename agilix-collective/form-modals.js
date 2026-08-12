@@ -1,4 +1,7 @@
 (function () {
+    if (window.__agilixFormModalsInit) return;
+    window.__agilixFormModalsInit = true;
+
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var openClass = 'is-open';
     var bodyOpenClass = 'form-modal-open';

@@ -156,3 +156,129 @@ function topFunction() {
         }
     });
 })();
+
+// Active top-nav indicator (current page / in-page section)
+(function initActiveNav() {
+    var nav = document.getElementById('primary-nav');
+    if (!nav) return;
+
+    var links = Array.prototype.slice.call(
+        nav.querySelectorAll('.nav-left a, .nav-right a')
+    );
+    if (!links.length) return;
+
+    var SECTION_IDS = ['about', 'products', 'services'];
+
+    function pathName() {
+        return (location.pathname || '/').replace(/\\/g, '/').toLowerCase();
+    }
+
+    function isCareersPage() {
+        var path = pathName();
+        return /\/careers\.html$/.test(path) || /\/careers\/?$/.test(path);
+    }
+
+    function isHomePage() {
+        var path = pathName();
+        return (
+            path === '/' ||
+            /\/index\.html$/.test(path) ||
+            /\/index\/?$/.test(path) ||
+            path === ''
+        );
+    }
+
+    function linkSectionId(link) {
+        var href = link.getAttribute('href') || '';
+        try {
+            var url = new URL(href, location.href);
+            var hash = (url.hash || '').replace(/^#/, '');
+            if (SECTION_IDS.indexOf(hash) !== -1) return hash;
+        } catch (e) {}
+        return '';
+    }
+
+    function isCareersLink(link) {
+        var href = (link.getAttribute('href') || '').toLowerCase();
+        if (href.indexOf('careers.html') !== -1) return true;
+        return linkSectionId(link) === 'careers';
+    }
+
+    function clearActive() {
+        links.forEach(function (link) {
+            link.classList.remove('is-active');
+            link.removeAttribute('aria-current');
+        });
+    }
+
+    function setActiveLink(activeLink) {
+        clearActive();
+        if (!activeLink) return;
+        activeLink.classList.add('is-active');
+        activeLink.setAttribute('aria-current', 'page');
+    }
+
+    function setActiveBySection(sectionId) {
+        var match = null;
+        links.forEach(function (link) {
+            if (linkSectionId(link) === sectionId) match = link;
+        });
+        if (sectionId === 'careers' && !match) {
+            links.forEach(function (link) {
+                if (isCareersLink(link)) match = link;
+            });
+        }
+        setActiveLink(match);
+    }
+
+    if (isCareersPage()) {
+        var careersLink = null;
+        links.forEach(function (link) {
+            if (isCareersLink(link)) careersLink = link;
+        });
+        setActiveLink(careersLink);
+        return;
+    }
+
+    if (!isHomePage()) {
+        clearActive();
+        return;
+    }
+
+    var sections = SECTION_IDS.map(function (id) {
+        return document.getElementById(id);
+    }).filter(Boolean);
+
+    function updateFromScroll() {
+        if (!sections.length) {
+            if (location.hash) {
+                setActiveBySection(location.hash.replace(/^#/, ''));
+            }
+            return;
+        }
+
+        var marker = window.scrollY + Math.min(160, window.innerHeight * 0.28);
+        var current = sections[0].id;
+
+        sections.forEach(function (section) {
+            if (section.offsetTop <= marker) current = section.id;
+        });
+
+        setActiveBySection(current);
+    }
+
+    var scrollTimer = null;
+    function onScroll() {
+        window.clearTimeout(scrollTimer);
+        scrollTimer = window.setTimeout(updateFromScroll, 40);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('hashchange', function () {
+        var id = location.hash.replace(/^#/, '');
+        if (SECTION_IDS.indexOf(id) !== -1) setActiveBySection(id);
+        else updateFromScroll();
+    });
+
+    updateFromScroll();
+})();

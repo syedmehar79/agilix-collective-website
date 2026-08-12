@@ -1,6 +1,12 @@
 {
   "version": 1,
   "hooks": {
+    "sessionStart": [
+      {
+        "command": "node .cursor/hooks/start-dev-server.js",
+        "timeout": 30
+      }
+    ],
     "afterFileEdit": [
       {
         "command": "node .cursor/hooks/mark-deploy.js"

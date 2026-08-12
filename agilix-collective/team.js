@@ -11,13 +11,48 @@
        TEAM DATA — edit name / role / photo as needed
     ===================================================== */
     var TEAM = [
-        { name: 'Ammar Zafar', role: 'Chief Executive Officer', photo: './agilix-collective/assets/team/ammar-zafar.png' },
-        { name: 'S. Mehar Ali Shah', role: 'Chief Technical and Operations Officer', photo: './agilix-collective/assets/team/mehar-ali-shah.png' },
-        { name: 'Waleed Mahmood', role: 'Senior Software Engineer (Full-Stack)', photo: './agilix-collective/assets/team/waleed-mahmood.png' },
-        { name: 'Muhammad Tahir', role: 'Senior Software Engineer (Frontend)', photo: './agilix-collective/assets/team/muhammad-tahir.png' },
-        { name: 'Usman Ayub', role: 'Software Engineer (Frontend)', photo: './agilix-collective/assets/team/usman-ayub.png' },
-        { name: 'Bilal Ahmed', role: 'Senior Product Designer', photo: './agilix-collective/assets/team/bilal-ahmad.png' }
+        {
+            name: 'Ammar Zafar',
+            role: 'Chief Executive Officer',
+            photo: './agilix-collective/assets/team/ammar-zafar.png',
+            linkedin: 'https://www.linkedin.com/in/ammar-zafar-360/'
+        },
+        {
+            name: 'S. Mehar Ali Shah',
+            role: 'Chief Technical and Operations Officer',
+            photo: './agilix-collective/assets/team/mehar-ali-shah.png',
+            linkedin: 'https://www.linkedin.com/in/s-mehar-ali-shah-507965222/'
+        },
+        {
+            name: 'Waleed Mahmood',
+            role: 'Senior Software Engineer (Full-Stack)',
+            photo: './agilix-collective/assets/team/waleed-mahmood.png',
+            linkedin: 'https://www.linkedin.com/in/waleed-mahmood/'
+        },
+        {
+            name: 'Muhammad Tahir',
+            role: 'Senior Software Engineer (Frontend)',
+            photo: './agilix-collective/assets/team/muhammad-tahir.png',
+            linkedin: 'https://www.linkedin.com/in/muhammad-tahir-414476155/'
+        },
+        {
+            name: 'Usman Ayub',
+            role: 'Software Engineer (Frontend)',
+            photo: './agilix-collective/assets/team/usman-ayub.png',
+            linkedin: 'https://www.linkedin.com/in/engineer-usman-ayub/'
+        },
+        {
+            name: 'Bilal Ahmed',
+            role: 'Senior Product Designer',
+            photo: './agilix-collective/assets/team/bilal-ahmad.png',
+            linkedin: 'https://www.linkedin.com/in/callbilalahmad/'
+        }
     ];
+
+    var LINKEDIN_ICON =
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+        '<path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S.02 4.88.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.5h4.56V23H.22V8.5zM8.34 8.5h4.37v1.98h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7V23h-4.56v-6.7c0-1.6-.03-3.65-2.22-3.65-2.22 0-2.56 1.73-2.56 3.53V23H8.34V8.5z"/>' +
+        '</svg>';
 
     var GAP = 20;
     /* 2 advances per 10s → 5s between slides (hold + roll) */
@@ -75,10 +110,23 @@
         card.setAttribute('aria-roledescription', 'slide');
         card.setAttribute('aria-label', member.name + ', ' + member.role);
 
+        var linkedin = member.linkedin
+            ? '<a class="team-card-linkedin" href="' +
+              member.linkedin +
+              '" target="_blank" rel="noopener noreferrer" aria-label="' +
+              member.name +
+              ' on LinkedIn">' +
+              LINKEDIN_ICON +
+              '</a>'
+            : '';
+
         card.innerHTML =
             '<div class="team-card-info">' +
             '<p class="team-card-role">' + member.role + '</p>' +
+            '<div class="team-card-name-row">' +
             '<p class="team-card-name">' + member.name + '</p>' +
+            linkedin +
+            '</div>' +
             '</div>' +
             '<div class="team-card-media">' +
             '<img class="team-card-photo" src="' + member.photo + '" alt="' + member.name + '" draggable="false" loading="lazy" decoding="async">' +
@@ -275,6 +323,8 @@
 
     viewport.addEventListener('pointerdown', function (e) {
         if (e.pointerType === 'mouse' && e.button !== 0) return;
+        /* Let LinkedIn links work without starting a card drag */
+        if (e.target.closest && e.target.closest('.team-card-linkedin')) return;
         dragging = true;
         dragMoved = false;
         activePointerId = e.pointerId;

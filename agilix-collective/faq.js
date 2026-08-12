@@ -188,6 +188,9 @@
     });
 
     function wireFooterForm(footerForm) {
+        if (!footerForm || footerForm.dataset.wired === 'true') return;
+        footerForm.dataset.wired = 'true';
+
         var formStatus = footerForm.querySelector('.footer-form-status');
         if (!formStatus) {
             formStatus = document.createElement('p');
@@ -216,7 +219,7 @@
             }
 
             formStatus.className = 'footer-form-status';
-            formStatus.textContent = 'Sending…';
+            formStatus.textContent = 'Sendingâ€¦';
             if (submitButton) {
                 submitButton.disabled = true;
             }
@@ -227,6 +230,11 @@
                 if (key === '_honey') return;
                 payload[key] = value;
             });
+            var marketingConsent = footerForm.querySelector('[name="marketing_email_consent"]');
+            var smsConsent = footerForm.querySelector('[name="sms_consent"]');
+            payload.marketing_email_consent =
+                marketingConsent && marketingConsent.checked ? 'Yes' : 'No';
+            payload.sms_consent = smsConsent && smsConsent.checked ? 'Yes' : 'No';
 
             fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, {
                 method: 'POST',
@@ -247,7 +255,7 @@
                     }
                     formStatus.className = 'footer-form-status is-success';
                     formStatus.textContent =
-                        'Thank you. Your message has been sent — we will be in touch soon.';
+                        'Thank you. Your message has been sent â€” we will be in touch soon.';
                     footerForm.reset();
                     refreshEnhancedSelects(footerForm, '.footer-field select');
                 })
@@ -264,12 +272,13 @@
         });
     }
 
-    document.querySelectorAll('.footer-form').forEach(wireFooterForm);
-
     var RESUME_MAX_BYTES = 5 * 1024 * 1024;
     var resumeHint = 'PDF or DOC, max 5MB';
 
     function wireCareerForm(careerForm) {
+        if (!careerForm || careerForm.dataset.wired === 'true') return;
+        careerForm.dataset.wired = 'true';
+
         var careerStatus = careerForm.querySelector('.career-form-status');
         var careerSubmit = careerForm.querySelector('.career-form-button');
         var resumeInput = careerForm.querySelector('.career-upload-input');
@@ -391,5 +400,11 @@
         });
     }
 
-    document.querySelectorAll('.career-form').forEach(wireCareerForm);
+    function wireAllForms() {
+        document.querySelectorAll('.footer-form').forEach(wireFooterForm);
+        document.querySelectorAll('.career-form').forEach(wireCareerForm);
+    }
+
+    wireAllForms();
+    window.AgilixWireForms = wireAllForms;
 })();

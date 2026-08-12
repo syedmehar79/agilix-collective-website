@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "browser-sync start --server --files \"**/*.html, **/*.css, **/*.js, assets/**\" --port 3000 --open",
+    "dev:serve": "browser-sync start --server --files \"**/*.html, **/*.css, **/*.js, assets/**\" --port 3000 --no-open",
     "deploy": "npx --yes vercel --prod --yes"
   },
   "devDependencies": {
