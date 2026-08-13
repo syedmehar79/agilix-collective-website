@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    if (!document.body.classList.contains('blogs-page')) return;
+    if (!document.body.classList.contains('page--blogs')) return;
 
     var posts = window.AGILIX_BLOGS || [];
     if (!posts.length) return;
@@ -51,18 +51,18 @@
     }
 
     function likeIcon() {
-        return '<svg class="blog-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.1 20.3 11 19.3C6.4 15.2 3.5 12.6 3.5 9.5A4.4 4.4 0 0 1 8 5c1.5 0 2.9.7 3.8 1.8A4.8 4.8 0 0 1 15.6 5a4.4 4.4 0 0 1 4.5 4.5c0 3.1-2.9 5.7-7.5 9.8l-2.5 1Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg>';
+        return '<svg class="blogs__action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.1 20.3 11 19.3C6.4 15.2 3.5 12.6 3.5 9.5A4.4 4.4 0 0 1 8 5c1.5 0 2.9.7 3.8 1.8A4.8 4.8 0 0 1 15.6 5a4.4 4.4 0 0 1 4.5 4.5c0 3.1-2.9 5.7-7.5 9.8l-2.5 1Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg>';
     }
 
     function shareIcon() {
-        return '<svg class="blog-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="5" r="2.4" stroke="currentColor" stroke-width="1.75"/><circle cx="6" cy="12" r="2.4" stroke="currentColor" stroke-width="1.75"/><circle cx="18" cy="19" r="2.4" stroke="currentColor" stroke-width="1.75"/><path d="M8.2 11.1 15.8 6.4M8.3 12.9 15.7 17.6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>';
+        return '<svg class="blogs__action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="18" cy="5" r="2.4" stroke="currentColor" stroke-width="1.75"/><circle cx="6" cy="12" r="2.4" stroke="currentColor" stroke-width="1.75"/><circle cx="18" cy="19" r="2.4" stroke="currentColor" stroke-width="1.75"/><path d="M8.2 11.1 15.8 6.4M8.3 12.9 15.7 17.6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>';
     }
 
     function actionButtons(post) {
         var liked = isLiked(post.id);
         return (
-            '<div class="blog-reader-actions blog-item-actions">' +
-            '<button type="button" class="blog-action blog-action--like' +
+            '<div class="blogs__reader-actions blogs__item-actions">' +
+            '<button type="button" class="blogs__action blogs__action--like' +
             (liked ? ' is-liked' : '') +
             '" data-blog-like data-like-id="' +
             post.id +
@@ -72,16 +72,16 @@
             (liked ? 'Unlike this post' : 'Like this post') +
             '">' +
             likeIcon() +
-            '<span class="blog-action-label">like</span>' +
-            '<span class="blog-action-count" data-blog-like-count>' +
+            '<span class="blogs__action-label">like</span>' +
+            '<span class="blogs__action-count" data-blog-like-count>' +
             likeTotal(post) +
             '</span>' +
             '</button>' +
-            '<button type="button" class="blog-action blog-action--share" data-blog-share data-share-id="' +
+            '<button type="button" class="blogs__action blogs__action--share" data-blog-share data-share-id="' +
             post.id +
             '" aria-label="Share this post">' +
             shareIcon() +
-            '<span class="blog-action-label" data-blog-share-label>share</span>' +
+            '<span class="blogs__action-label" data-blog-share-label>share</span>' +
             '</button>' +
             '</div>'
         );
@@ -176,34 +176,34 @@
 
     function cardMarkup(post) {
         return (
-            '<article class="blog-item" data-blog-id="' +
+            '<article class="blogs__item" data-blog-id="' +
             post.id +
             '">' +
-            '<a class="blog-item-link" href="#' +
+            '<a class="blogs__item-link" href="#' +
             post.id +
             '" data-blog-open="' +
             post.id +
             '">' +
-            '<div class="blog-item-media">' +
+            '<div class="blogs__item-media">' +
             '<img src="' +
             post.image +
             '" alt="' +
             escapeAttr(post.imageAlt) +
             '" width="1400" height="900" loading="lazy" decoding="async">' +
             '</div>' +
-            '<div class="blog-item-body">' +
-            '<time class="blog-item-date" datetime="' +
+            '<div class="blogs__item-body">' +
+            '<time class="blogs__item-date" datetime="' +
             post.date +
             '">' +
             escapeHtml(post.dateLabel) +
             '</time>' +
-            '<h3 class="blog-item-title">' +
+            '<h3 class="blogs__item-title">' +
             escapeHtml(post.title) +
             '</h3>' +
-            '<p class="blog-item-excerpt">' +
+            '<p class="blogs__item-excerpt">' +
             escapeHtml(post.excerpt) +
             '</p>' +
-            '<span class="blog-item-cta">read more</span>' +
+            '<span class="blogs__item-cta">read more</span>' +
             '</div>' +
             '</a>' +
             actionButtons(post) +
@@ -213,25 +213,25 @@
 
     function sideCardMarkup(post) {
         return (
-            '<a class="blog-side-card" href="#' +
+            '<a class="blogs__side-card" href="#' +
             post.id +
             '" data-blog-id="' +
             post.id +
             '" data-blog-open="' +
             post.id +
             '">' +
-            '<span class="blog-side-card-media">' +
+            '<span class="blogs__side-card-media">' +
             '<img src="' +
             post.image +
             '" alt="" width="160" height="120" loading="lazy" decoding="async">' +
             '</span>' +
-            '<span class="blog-side-card-copy">' +
-            '<time class="blog-side-card-date" datetime="' +
+            '<span class="blogs__side-card-copy">' +
+            '<time class="blogs__side-card-date" datetime="' +
             post.date +
             '">' +
             escapeHtml(post.dateLabel) +
             '</time>' +
-            '<span class="blog-side-card-title">' +
+            '<span class="blogs__side-card-title">' +
             escapeHtml(post.title) +
             '</span>' +
             '</span>' +
@@ -274,7 +274,7 @@
                 if (active) item.setAttribute('aria-current', 'true');
                 else item.removeAttribute('aria-current');
             }
-            var link = item.querySelector('.blog-item-link');
+            var link = item.querySelector('.blogs__item-link');
             if (link) {
                 if (active) link.setAttribute('aria-current', 'true');
                 else link.removeAttribute('aria-current');

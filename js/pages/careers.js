@@ -10,7 +10,7 @@
     var emptyEl = root.querySelector('[data-jobs-empty]');
     var countEl = root.querySelector('[data-jobs-count]');
     var positionInput = document.getElementById('career-position');
-    var form = root.querySelector('.careers__form, .career-form');
+    var form = root.querySelector('.careers__form');
     var shellEl = root.querySelector('[data-jobs-shell]');
     var emptyScreenEl = root.querySelector('[data-jobs-empty-screen]');
     var emptyToggle = root.querySelector('[data-jobs-empty-toggle]');
@@ -445,25 +445,25 @@
 
     function listItemHtml(opening, active) {
         return (
-            '<button type="button" class="jobs-list-item' +
+            '<button type="button" class="jobs-board__list-item' +
             (active ? ' is-active' : '') +
             '" data-job-id="' +
             escapeHtml(opening.id) +
             '" aria-pressed="' +
             (active ? 'true' : 'false') +
             '">' +
-            '<span class="jobs-list-item-role">' +
+            '<span class="jobs-board__list-item-role">' +
             escapeHtml(opening.role) +
             '</span>' +
-            '<span class="jobs-list-item-meta">' +
+            '<span class="jobs-board__list-item-meta">' +
             escapeHtml(opening.city) +
             ' · ' +
             escapeHtml(opening.type) +
             '</span>' +
-            '<span class="jobs-list-item-summary">' +
+            '<span class="jobs-board__list-item-summary">' +
             escapeHtml(opening.summary) +
             '</span>' +
-            '<span class="jobs-list-item-posted">' +
+            '<span class="jobs-board__list-item-posted">' +
             escapeHtml(opening.posted) +
             '</span>' +
             '</button>'
@@ -483,13 +483,13 @@
             .join('');
 
         return (
-            '<div class="jobs-detail-inner">' +
-            '<button type="button" class="jobs-detail-back" data-jobs-back>← Back to openings</button>' +
-            '<p class="jobs-detail-eyebrow">Agilix Collective</p>' +
-            '<h2 class="jobs-detail-role">' +
+            '<div class="jobs-board__detail-inner">' +
+            '<button type="button" class="jobs-board__detail-back" data-jobs-back>← Back to openings</button>' +
+            '<p class="jobs-board__detail-eyebrow">Agilix Collective</p>' +
+            '<h2 class="jobs-board__detail-role">' +
             escapeHtml(opening.role) +
             '</h2>' +
-            '<p class="jobs-detail-meta">' +
+            '<p class="jobs-board__detail-meta">' +
             '<span>' +
             escapeHtml(opening.city) +
             '</span>' +
@@ -500,27 +500,27 @@
             escapeHtml(opening.experience) +
             '</span>' +
             '</p>' +
-            '<div class="jobs-detail-section">' +
+            '<div class="jobs-board__detail-section">' +
             '<h3>About the role</h3>' +
             '<p>' +
             escapeHtml(opening.about) +
             '</p>' +
             '</div>' +
-            '<div class="jobs-detail-section">' +
+            '<div class="jobs-board__detail-section">' +
             '<h3>Responsibilities</h3>' +
             '<ul>' +
             responsibilities +
             '</ul>' +
             '</div>' +
-            '<div class="jobs-detail-section">' +
+            '<div class="jobs-board__detail-section">' +
             '<h3>Requirements</h3>' +
             '<ul>' +
             requirements +
             '</ul>' +
             '</div>' +
-            '<div class="jobs-detail-section jobs-detail-apply-block" id="jobs-apply">' +
+            '<div class="jobs-board__detail-section jobs-board__detail-apply-block" id="jobs-apply">' +
             '<h3>Apply for this role</h3>' +
-            '<p class="jobs-detail-apply-lead">Share your profile and we will reach out when there is a fit.</p>' +
+            '<p class="jobs-board__detail-apply-lead">Share your profile and we will reach out when there is a fit.</p>' +
             '</div>' +
             '</div>'
         );
@@ -528,7 +528,7 @@
 
     function emptyDetailHtml() {
         return (
-            '<div class="jobs-detail-empty">' +
+            '<div class="jobs-board__detail-empty">' +
             '<p>Select an opening to view details.</p>' +
             '</div>'
         );
@@ -774,7 +774,7 @@
 
     function applyToForm(opening) {
         syncSelect(positionSelect, opening.role);
-        var form = document.querySelector('.careers__form, .career-form');
+        var form = document.querySelector('.careers__form');
         if (form) {
             form.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
             window.setTimeout(function () {

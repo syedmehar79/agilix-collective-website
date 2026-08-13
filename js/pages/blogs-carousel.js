@@ -8,7 +8,7 @@
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function stepSize() {
-        var item = track.querySelector('.blog-item');
+        var item = track.querySelector('.blogs__item');
         if (!item) return viewport.clientWidth;
         var styles = window.getComputedStyle(track);
         var gap = parseFloat(styles.columnGap || styles.gap) || 20;

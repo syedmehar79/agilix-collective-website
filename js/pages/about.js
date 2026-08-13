@@ -1,12 +1,12 @@
 (function () {
     'use strict';
 
-    var visual = document.querySelector('#about .about-visual-inner');
-    var copy = document.querySelector('#about .hero-copy');
+    var visual = document.querySelector('#about .about__visual-inner');
+    var copy = document.querySelector('#about .about__copy');
     if (!visual && !copy) return;
 
-    var bar = visual && visual.querySelector('.hero-rectangle');
-    var cards = visual && visual.querySelector('.hero-illustration');
+    var bar = visual && visual.querySelector('.about__rectangle');
+    var cards = visual && visual.querySelector('.about__illustration');
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function revealCopy() {

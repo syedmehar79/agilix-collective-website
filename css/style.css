@@ -36,7 +36,7 @@ body {
 }
 
 /* ===== css/layout.css ===== */
-:is(.gradient-background, .hero, .services) {
+:is(.page__shell, .hero, .services) {
     margin: 10px;
     padding: 10px 0;
     background: linear-gradient(180deg, #F0F0F0 0%, #FFFFFF 100%);
@@ -104,10 +104,10 @@ body {
 }
 
 /* Hero nav is white on red — keep active readable with white underline */
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a.is-active,
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a.is-active,
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a[aria-current="page"],
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a[aria-current="page"] {
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a.is-active,
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a.is-active,
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a[aria-current="page"],
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a[aria-current="page"] {
     color: #ffffff;
     text-decoration-color: #ffffff;
 }
@@ -116,14 +116,14 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     height: 40px;
 }
 
-:is(.banner, .hero__body, .about__body) {
+:is(.about__body, .hero__body) {
     display: flex;
     align-items: center;
     max-width: 1300px;
     margin: 40px auto 20px auto;
 }
 
-:is(.banner-text, .hero__copy, .about__copy, .services__copy) {
+:is(.about__copy, .hero__copy, .services__copy) {
     flex: 1;
 }
 
@@ -135,7 +135,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
 }
 
 #about {
-    /* About banner pulls up with margin-top: -48px */
+    /* About about__body pulls up with margin-top: -48px */
     scroll-margin-top: calc(var(--discover-scroll-pad) + 48px);
 }
 
@@ -955,15 +955,15 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         border-bottom: 1px solid #f0f0f0;
     }
 
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a,
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a {
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a,
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a {
         color: #000000;
     }
 
     .site-nav__cluster--left a:hover,
     .site-nav__cluster--right a:hover,
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a:hover,
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a:hover {
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a:hover,
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a:hover {
         color: #B20000;
     }
 
@@ -971,10 +971,10 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     .site-nav__cluster--right a.is-active,
     .site-nav__cluster--left a[aria-current="page"],
     .site-nav__cluster--right a[aria-current="page"],
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a.is-active,
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a.is-active,
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a[aria-current="page"],
-    main > div:is(.gradient-background, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a[aria-current="page"] {
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a.is-active,
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a.is-active,
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--left a[aria-current="page"],
+    main > div:is(.page__shell, .hero, .services) .site-nav__panel-inner .site-nav__cluster--right a[aria-current="page"] {
         color: #b20000;
         text-decoration: underline;
         text-decoration-color: #b20000;
@@ -1012,7 +1012,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         }
     }
 
-    :is(.banner, .hero__body, .about__body) {
+    :is(.about__body, .hero__body) {
         flex-direction: column;
         align-items: stretch;
         gap: 28px;
@@ -1020,13 +1020,13 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         max-width: none;
     }
 
-    main > div:is(.gradient-background, .hero, .services) {
+    main > div:is(.page__shell, .hero, .services) {
         min-height: 105vh;
         min-height: 105dvh;
         padding-bottom: 0;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.banner, .hero__body, .about__body) {
+    main > div:is(.page__shell, .hero, .services) :is(.about__body, .hero__body) {
         margin: 36px auto 28px;
         flex: 0 1 auto;
         align-self: center;
@@ -1037,23 +1037,23 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         max-width: 1300px;
     }
 
-    :is(.banner-text, .hero__copy, .about__copy, .services__copy) {
+    :is(.about__copy, .hero__copy, .services__copy) {
         flex: none;
         order: 1;
     }
 
-    :is(.banner-text, .hero__copy, .about__copy, .services__copy) h1 {
+    :is(.about__copy, .hero__copy, .services__copy) h1 {
         font-size: clamp(32px, 9vw, 44px);
         line-height: 1.08;
         letter-spacing: -1px;
     }
 
-    :is(.banner-text, .hero__copy, .about__copy, .services__copy) p {
+    :is(.about__copy, .hero__copy, .services__copy) p {
         font-size: 15px;
         line-height: 1.5;
     }
 
-    :is(.banner-text, .hero__copy, .about__copy, .services__copy) p br {
+    :is(.about__copy, .hero__copy, .services__copy) p br {
         display: none;
     }
 
@@ -1064,27 +1064,27 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         text-align: center;
     }
 
-    :is(.banner-visual-inner, .hero__visual-inner, .about__visual-inner) {
+    :is(.about__visual-inner, .hero__visual-inner) {
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.banner-visual-inner, .hero__visual-inner, .about__visual-inner) {
+    main > div:is(.page__shell, .hero, .services) :is(.about__visual-inner, .hero__visual-inner) {
         max-width: 380px;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.hero-illustration, .hero__illustration, .about__illustration) {
+    main > div:is(.page__shell, .hero, .services) :is(.about__illustration, .hero__illustration) {
         max-height: 340px;
     }
 
-    :is(.hero-illustration, .hero__illustration, .about__illustration) {
+    :is(.about__illustration, .hero__illustration) {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
     }
 
-    :is(.hero-rectangle, .about__rectangle) {
+    .about__rectangle {
         width: 52%;
         right: 8%;
     }
@@ -1120,25 +1120,25 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         padding: 20px;
         font-size: 40px;
     }
-    :is(.product-card-large, .products__card--large) :is(.product-image, .products__image) img  {
+    .products__card--large .products__image img  {
         object-fit: contain;
         height: unset;
     }
     .what-we-do{
         margin: 30px 0;
     }
-    :is(.about-image, .about__visual) img {
+    .about__visual img {
         max-width: 100%;
         width: 100%;
         left: 0 !important;
     }
 
-    #about :is(.about-banner, .about__body) {
+    #about .about__body {
         flex-direction: column;
         gap: 28px;
     }
 
-    #about :is(.about-image, .about__visual) {
+    #about .about__visual {
         order: 2;
         width: 100%;
         flex: none;
@@ -1147,37 +1147,37 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         text-align: center;
     }
 
-    #about :is(.about-visual-inner, .about__visual-inner) {
+    #about .about__visual-inner {
         width: 100%;
         max-width: 360px;
         margin: 0 auto;
     }
 
-    #about :is(.about-image, .about__visual) :is(.hero-illustration, .hero__illustration, .about__illustration) {
+    #about .about__visual :is(.about__illustration, .hero__illustration) {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
     }
 
-    #about :is(.about-image, .about__visual) :is(.hero-rectangle, .about__rectangle) {
+    #about .about__visual .about__rectangle {
         width: 52%;
         right: 8%;
         transform: translate3d(0, -50%, 0);
     }
 
-    #about :is(.about-agilix, .about__copy, .services__copy) {
+    #about :is(.about__copy, .services__copy) {
         order: 1;
         flex: none;
         width: 100%;
         padding-right: 0;
         padding-left: 0;
     }
-    :is(.gradient-process-background, .about, .process) {
+    :is(.about, .process) {
         padding: 30px 0;
         margin: 0 10px;
     }
 
-    #process:is(.gradient-process-background, .about, .process) {
+    #process:is(.about, .process) {
         margin-top: 0;
         margin-bottom: 0;
         border-radius: 0;
@@ -1190,7 +1190,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         border-radius: 0 0 8px 8px;
     }
 
-    #about:is(.gradient-process-background, .about, .process) {
+    #about:is(.about, .process) {
         margin: 0 10px 0;
         border-radius: 0;
         padding-top: 0;
@@ -1198,7 +1198,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         box-shadow: none;
     }
 
-    #services:is(.gradient-background, .hero, .services) {
+    #services:is(.page__shell, .hero, .services) {
         margin: 0 10px 0;
         border-radius: 0;
         padding-top: 0;
@@ -1206,37 +1206,37 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         background: #ffffff;
     }
 
-    #services:is(.gradient-background, .hero, .services)::before {
+    #services:is(.page__shell, .hero, .services)::before {
         height: 96px;
     }
 
-    #services:is(.gradient-background, .hero, .services) > .services,
-    #services:is(.gradient-background, .hero, .services) > .services__body {
+    #services:is(.page__shell, .hero, .services) > .services,
+    #services:is(.page__shell, .hero, .services) > .services__body {
         padding-top: 48px;
         padding-bottom: 0;
     }
 
-    main > div:is(.gradient-background, .hero, .services) {
+    main > div:is(.page__shell, .hero, .services) {
         margin: 10px 10px 0;
         border-radius: 8px 8px 0 0;
     }
 
-    :is(.team-section-header, .team__header) {
+    .team__header {
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 28px;
     }
 
-    :is(.team-section-heading, .team__heading) {
+    .team__heading {
         font-size: 32px;
     }
 
-    :is(.slider-viewport, .team__viewport) {
+    .team__viewport {
         height: 428px; /* 384 + 44 */
         min-height: 428px;
     }
 
-    :is(.team-card, .team__card) {
+    .team__card {
         border-radius: 14px;
     }
 
@@ -1258,13 +1258,13 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     }
 }
 @media (max-width: 992px) {
-   :is(.faq-layout, .faq__layout) {
+   .faq__layout {
     grid-template-columns: unset;
    }
 }
 
 /* Dedicated About / Products / Services / Blogs pages */
-.inner-page > :is(.gradient-background, .hero, .services) {
+.page > :is(.page__shell, .hero, .services) {
     background: #ffffff;
     margin-bottom: 0;
     border-bottom-left-radius: 0;
@@ -1273,23 +1273,23 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
 
 /* ===== css/components.css ===== */
 /* FAQ section — top gap from Blogs bottom 140px; own bottom 140px */
-:is(.faq-section, .faq) {
+.faq {
     background: #ffffff;
     padding: 0 0 140px;
 }
 
-:is(.faq-layout, .faq__layout) {
+.faq__layout {
     display: grid;
     grid-template-columns: minmax(220px, 340px) 1fr;
     gap: 48px 88px;
     align-items: start;
 }
 
-:is(.faq-label, .faq__label) {
+.faq__label {
     margin-bottom: 0;
 }
 
-:is(.faq-title, .faq__title) {
+.faq__title {
     font-size: 44px;
     font-weight: 700;
     line-height: 1.08;
@@ -1299,11 +1299,11 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     color: #000000;
 }
 
-:is(.faq-accordion, .faq__accordion) {
+.faq__accordion {
     min-width: 0;
 }
 
-:is(.faq-item, .faq__item) {
+.faq__item {
     border-bottom: 1px solid #d3d3d3;
 }
 
@@ -1467,7 +1467,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     text-transform: lowercase;
 }
 /* --- Team reel carousel --- */
-:is(.our-team, .team) {
+.team {
     position: relative;
     z-index: 1;
     /* Top gap from Products bottom 140px — do not stack */
@@ -1479,13 +1479,13 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     box-sizing: border-box;
 }
 
-:is(.our-team, .team) .container {
+.team .container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-:is(.team-section-header, .team__header) {
+.team__header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -1493,7 +1493,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     margin-bottom: 40px;
 }
 
-:is(.team-section-label, .team__label) {
+.team__label {
     display: block;
     margin: 0 0 8px;
     font-size: 12px;
@@ -1503,7 +1503,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     color: #b20000;
 }
 
-:is(.team-section-heading, .team__heading) {
+.team__heading {
     margin: 0;
     font-size: clamp(32px, 4vw, 44px);
     font-weight: 700;
@@ -1513,14 +1513,14 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     color: #111111;
 }
 
-:is(.nav-btns, .team__controls, .blogs__controls) {
+:is(.team__controls, .blogs__controls) {
     display: flex;
     gap: 18px;
     align-items: center;
     flex-shrink: 0;
 }
 
-:is(.our-team, .team) :is(.nav-btn, .team__nav-btn) {
+.team .team__nav-btn {
     width: 40px;
     height: 40px;
     padding: 0;
@@ -1536,38 +1536,38 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     flex-shrink: 0;
 }
 
-:is(.our-team, .team) :is(.nav-btn, .team__nav-btn):hover,
-:is(.our-team, .team) :is(.nav-btn, .team__nav-btn):focus-visible {
+.team .team__nav-btn:hover,
+.team .team__nav-btn:focus-visible {
     color: #111111;
 }
 
-:is(.our-team, .team) :is(.nav-btn, .team__nav-btn):focus-visible {
+.team .team__nav-btn:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.our-team, .team) :is(.nav-btn--next, .team__nav-btn--next) {
+.team .team__nav-btn--next {
     color: #b20000;
 }
 
-:is(.our-team, .team) :is(.nav-btn--next, .team__nav-btn--next):hover,
-:is(.our-team, .team) :is(.nav-btn--next, .team__nav-btn--next):focus-visible {
+.team .team__nav-btn--next:hover,
+.team .team__nav-btn--next:focus-visible {
     color: #8f0000;
 }
 
 
 /* Used after click-to-activate remounts onto the middle copy ? must be invisible */
-:is(.slider-track, .team__track).is-remounting :is(.team-card, .team__card),
-:is(.slider-track, .team__track).is-remounting :is(.team-card-photo, .team__card-photo),
-:is(.slider-track, .team__track).is-remounting :is(.team-card-info, .team__card-info) {
+.team__track.is-remounting .team__card,
+.team__track.is-remounting .team__card-photo,
+.team__track.is-remounting .team__card-info {
     transition: none !important;
 }
 
-:is(.slider-track, .team__track).is-remounting :is(.team-card, .team__card)::after {
+.team__track.is-remounting .team__card::after {
     transition: none !important;
 }
 
-:is(.team-card, .team__card) {
+.team__card {
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
@@ -1588,7 +1588,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         background 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:is(.team-card, .team__card)::after {
+.team__card::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -1600,11 +1600,11 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:is(.team-card, .team__card):not(.is-active) :is(.team-card-photo, .team__card-photo) {
+.team__card:not(.is-active) .team__card-photo {
     filter: grayscale(1);
 }
 
-:is(.team-card, .team__card).is-active {
+.team__card.is-active {
     width: 500px;
     height: 640px;
     /* Figma: red (left/top) ? black (right/bottom) */
@@ -1612,20 +1612,20 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     z-index: 2;
 }
 
-:is(.team-card, .team__card).is-active :is(.team-card-photo, .team__card-photo) {
+.team__card.is-active .team__card-photo {
     filter: none;
 }
 
-:is(.team-card, .team__card).is-active::after {
+.team__card.is-active::after {
     opacity: 0;
 }
 
-:is(.team-card, .team__card):not(.is-active) :is(.team-card-info, .team__card-info) {
+.team__card:not(.is-active) .team__card-info {
     visibility: hidden;
     opacity: 0;
 }
 
-:is(.team-card-info, .team__card-info) {
+.team__card-info {
     position: absolute;
     top: 32px;
     left: 32px;
@@ -1640,7 +1640,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     pointer-events: none;
 }
 
-:is(.team-card, .team__card).is-active :is(.team-card-info, .team__card-info) {
+.team__card.is-active .team__card-info {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -1650,7 +1650,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
         visibility 0s linear 0s;
 }
 
-:is(.team-card-role, .team__card-role) {
+.team__card-role {
     margin: 0 0 8px;
     font-family: "JetBrains Mono", monospace;
     font-weight: 700;
@@ -1663,14 +1663,14 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     max-width: 100%;
 }
 
-:is(.team-card-name-row, .team__card-name-row) {
+.team__card-name-row {
     display: flex;
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
 }
 
-:is(.team-card-name, .team__card-name) {
+.team__card-name {
     margin: 0;
     font-family: "Outfit", sans-serif;
     font-weight: 600;
@@ -1681,7 +1681,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     color: #ffffff;
 }
 
-:is(.team-card-linkedin, .team__card-linkedin) {
+.team__card-linkedin {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1695,27 +1695,27 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     pointer-events: none;
 }
 
-:is(.team-card, .team__card).is-active :is(.team-card-linkedin, .team__card-linkedin) {
+.team__card.is-active .team__card-linkedin {
     pointer-events: auto;
 }
 
-:is(.team-card-linkedin, .team__card-linkedin):hover,
-:is(.team-card-linkedin, .team__card-linkedin):focus-visible {
+.team__card-linkedin:hover,
+.team__card-linkedin:focus-visible {
     background: #ffffff;
     color: #b20000;
     transform: translateY(-1px);
 }
 
-:is(.team-card-linkedin, .team__card-linkedin):focus-visible {
+.team__card-linkedin:focus-visible {
     outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
 
-:is(.team-card-linkedin, .team__card-linkedin) svg {
+.team__card-linkedin svg {
     display: block;
 }
 
-:is(.team-card-media, .team__card-media) {
+.team__card-media {
     position: absolute;
     left: 0;
     right: 0;
@@ -1729,7 +1729,7 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
     background: transparent;
 }
 
-:is(.team-card-photo, .team__card-photo) {
+.team__card-photo {
     display: block;
     width: 100%;
     height: 100%;
@@ -1743,41 +1743,41 @@ main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right 
 }
 
 @media (max-width: 1100px) {
-    :is(.slider-viewport, .team__viewport) {
+    .team__viewport {
         height: 514px; /* 470 + 44 */
         min-height: 514px;
     }
 
-    :is(.team-card-name, .team__card-name) {
+    .team__card-name {
         font-size: clamp(18px, 3.5vw, 30px);
         line-height: 1.13;
     }
 
-    :is(.team-card-role, .team__card-role) {
+    .team__card-role {
         font-size: clamp(11px, 2vw, 16px);
         line-height: 1.44;
     }
 }
 
 @media (max-width: 768px) {
-    :is(.slider-viewport, .team__viewport) {
+    .team__viewport {
         height: 428px; /* 384 + 44 */
         min-height: 428px;
     }
 }
 
 @media (max-width: 480px) {
-    :is(.slider-viewport, .team__viewport) {
+    .team__viewport {
         height: 364px; /* 320 + 44 */
         min-height: 364px;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.slider-track, .team__track),
-    :is(.team-card, .team__card),
-    :is(.team-card-photo, .team__card-photo),
-    :is(.team-card-info, .team__card-info) {
+    .team__track,
+    .team__card,
+    .team__card-photo,
+    .team__card-info {
         transition: none;
     }
 }
@@ -2143,11 +2143,11 @@ html[data-theme="dark"] body {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.gradient-background, .hero, .services) {
+html[data-theme="dark"] :is(.page__shell, .hero, .services) {
     background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
 }
 
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) {
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) {
     background: linear-gradient(
         180deg,
         #8f0000 0%,
@@ -2166,7 +2166,7 @@ html[data-theme="dark"] :is(.section-slogan, .hero__slogan) p {
     color: #ffffff;
 }
 
-html[data-theme="dark"] #about:is(.gradient-process-background, .about, .process) {
+html[data-theme="dark"] #about:is(.about, .process) {
     background: linear-gradient(
         180deg,
         rgba(13, 13, 13, 0) 0%,
@@ -2178,11 +2178,11 @@ html[data-theme="dark"] #about:is(.gradient-process-background, .about, .process
     );
 }
 
-html[data-theme="dark"] #services:is(.gradient-background, .hero, .services) {
+html[data-theme="dark"] #services:is(.page__shell, .hero, .services) {
     background: #121212;
 }
 
-html[data-theme="dark"] #services:is(.gradient-background, .hero, .services)::before {
+html[data-theme="dark"] #services:is(.page__shell, .hero, .services)::before {
     background: linear-gradient(
         180deg,
         #161616 0%,
@@ -2191,7 +2191,7 @@ html[data-theme="dark"] #services:is(.gradient-background, .hero, .services)::be
     );
 }
 
-html[data-theme="dark"] #process:is(.gradient-process-background, .about, .process) {
+html[data-theme="dark"] #process:is(.about, .process) {
     background: linear-gradient(
         180deg,
         #121212 0%,
@@ -2200,7 +2200,7 @@ html[data-theme="dark"] #process:is(.gradient-process-background, .about, .proce
     );
 }
 
-html[data-theme="dark"] #process:is(.gradient-process-background, .about, .process)::after {
+html[data-theme="dark"] #process:is(.about, .process)::after {
     background: linear-gradient(
         180deg,
         rgba(13, 13, 13, 0) 0%,
@@ -2227,35 +2227,35 @@ html[data-theme="dark"] .site-nav__cluster--right a[aria-current="page"] {
     text-decoration-color: #b20000;
 }
 
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a,
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a {
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a,
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a {
     color: #ffffff;
 }
 
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a.is-active,
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a.is-active,
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a[aria-current="page"],
-html[data-theme="dark"] main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a[aria-current="page"] {
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a.is-active,
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a.is-active,
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a[aria-current="page"],
+html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a[aria-current="page"] {
     color: #ffffff;
     text-decoration-color: #ffffff;
 }
 
-html[data-theme="dark"] :is(.banner-text, .hero__copy, .about__copy, .services__copy),
-html[data-theme="dark"] :is(.banner-text, .hero__copy, .about__copy, .services__copy) h1,
-html[data-theme="dark"] :is(.banner-text, .hero__copy, .about__copy, .services__copy) p,
-html[data-theme="dark"] :is(.about-agilix, .about__copy, .services__copy) h2,
-html[data-theme="dark"] :is(.about-agilix, .about__copy, .services__copy) p,
-html[data-theme="dark"] #about :is(.about-agilix, .about__copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)),
-html[data-theme="dark"] #services :is(.services-about-copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)),
-html[data-theme="dark"] :is(.faq-title, .faq__title),
-html[data-theme="dark"] :is(.faq-question, .faq__question),
+html[data-theme="dark"] :is(.about__copy, .hero__copy, .services__copy),
+html[data-theme="dark"] :is(.about__copy, .hero__copy, .services__copy) h1,
+html[data-theme="dark"] :is(.about__copy, .hero__copy, .services__copy) p,
+html[data-theme="dark"] :is(.about__copy, .services__copy) h2,
+html[data-theme="dark"] :is(.about__copy, .services__copy) p,
+html[data-theme="dark"] #about :is(.about__copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)),
+html[data-theme="dark"] #services .services__copy > p:not(:is(.tagline, .hero__tagline)),
+html[data-theme="dark"] .faq__title,
+html[data-theme="dark"] .faq__question,
 html[data-theme="dark"] .author-name,
 html[data-theme="dark"] .what-we-do .service-card p {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.about-agilix, .about__copy, .services__copy) span,
-html[data-theme="dark"] :is(.faq-label, .faq__label),
+html[data-theme="dark"] :is(.about__copy, .services__copy) span,
+html[data-theme="dark"] .faq__label,
 html[data-theme="dark"] :is(.process-content, .process__content) p,
 html[data-theme="dark"] .testimonial-quote,
 html[data-theme="dark"] .author-title,
@@ -2263,31 +2263,31 @@ html[data-theme="dark"] .float-dock__datetime {
     color: #a0a0a0;
 }
 
-html[data-theme="dark"] #about :is(.about-agilix, .about__copy, .services__copy) > span {
+html[data-theme="dark"] #about :is(.about__copy, .services__copy) > span {
     color: #B20000;
 }
 
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item) {
+html[data-theme="dark"] .services__grid .services__item {
     background: #1a1a1a;
     border-color: #333333;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover {
+html[data-theme="dark"] .services__grid .services__item:hover {
     background-color: #b20000;
     border-color: #b20000;
     box-shadow: 0 12px 28px rgba(178, 0, 0, 0.35);
     color: #ffffff;
 }
 
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover svg rect[fill="white"] {
+html[data-theme="dark"] .services__grid .services__item:hover svg rect[fill="white"] {
     fill: #ffffff;
     stroke: #ffffff;
     stroke-width: 1;
 }
 
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover svg [fill="#B20000"] {
+html[data-theme="dark"] .services__grid .services__item:hover svg [fill="#B20000"] {
     fill: none;
     stroke: #b20000;
     stroke-width: 1;
@@ -2295,7 +2295,7 @@ html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail
     stroke-linecap: round;
 }
 
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover svg :not(rect)[stroke="#B20000"] {
+html[data-theme="dark"] .services__grid .services__item:hover svg :not(rect)[stroke="#B20000"] {
     fill: none;
     stroke: #b20000;
 }
@@ -2316,81 +2316,81 @@ html[data-theme="dark"] .what-we-do .service-card:hover p {
     color: #ffffff;
 }
 
-html[data-theme="dark"] :is(.product-card, .products__card):not(:is(.product-card-explore, .products__card--explore)):not(:is(.product-card-title, .products__card--title)) {
+html[data-theme="dark"] .products__card:not(.products__card--explore):not(.products__card--title) {
     background: #1a1a1a;
 }
 
-html[data-theme="dark"] :is(.product-card-title, .products__card--title) {
+html[data-theme="dark"] .products__card--title {
     background: #4E3162;
     border-color: #4E3162;
     color: #ffffff;
 }
 
-html[data-theme="dark"] :is(.product-card-explore, .products__card--explore) {
+html[data-theme="dark"] .products__card--explore {
     background: linear-gradient(135deg, #4a3a6b 0%, #6b4c8a 100%);
 }
 
-html[data-theme="dark"] :is(.product-card-description, .products__card--description) :is(.product-description, .products__description),
-html[data-theme="dark"] :is(.product-card-features, .products__card--features) :is(.product-features, .products__features) li {
+html[data-theme="dark"] .products__card--description .products__description,
+html[data-theme="dark"] .products__card--features .products__features li {
     color: #c4b5d4;
 }
 
-html[data-theme="dark"] :is(.faq-section, .faq) {
+html[data-theme="dark"] .faq {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] :is(.blogs-section, .blogs) {
+html[data-theme="dark"] .blogs {
     background: #141414;
 }
 
-html[data-theme="dark"] :is(.blogs-title, .blogs__title) {
+html[data-theme="dark"] .blogs__title {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.blogs-lead, .blogs__lead),
-html[data-theme="dark"] :is(.blog-item-excerpt, .blogs__item-excerpt) {
+html[data-theme="dark"] .blogs__lead,
+html[data-theme="dark"] .blogs__item-excerpt {
     color: #b0b0b0;
 }
 
-html[data-theme="dark"] :is(.blog-item-link, .blogs__item-link) {
+html[data-theme="dark"] .blogs__item-link {
     background: #2a2a2a;
     border-color: rgba(255, 255, 255, 0.1);
     border-top-color: #b20000;
 }
 
-html[data-theme="dark"] :is(.blog-item-link, .blogs__item-link):hover,
-html[data-theme="dark"] :is(.blog-item-link, .blogs__item-link):focus-visible {
+html[data-theme="dark"] .blogs__item-link:hover,
+html[data-theme="dark"] .blogs__item-link:focus-visible {
     border-color: rgba(178, 0, 0, 0.45);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-html[data-theme="dark"] :is(.blog-item-title, .blogs__item-title) {
+html[data-theme="dark"] .blogs__item-title {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.blogs-nav, .blogs__nav) :is(.blogs-nav-btn, .blogs__nav-btn):disabled {
+html[data-theme="dark"] .blogs__nav .blogs__nav-btn:disabled {
     color: #666666;
 }
 
-html[data-theme="dark"] :is(.faq-item, .faq__item) {
+html[data-theme="dark"] .faq__item {
     border-bottom-color: #333333;
 }
 
-html[data-theme="dark"] :is(.faq-trigger, .faq__trigger),
-html[data-theme="dark"] :is(.faq-panel, .faq__panel) p,
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item) h3,
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-list, .services__list) li,
+html[data-theme="dark"] .faq__trigger,
+html[data-theme="dark"] .faq__panel p,
+html[data-theme="dark"] .services__grid .services__item h3,
+html[data-theme="dark"] .services__grid .services__list li,
 html[data-theme="dark"] .testimonials-title h2 {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.faq-icon, .faq__icon)::before,
-html[data-theme="dark"] :is(.faq-icon, .faq__icon)::after {
+html[data-theme="dark"] .faq__icon::before,
+html[data-theme="dark"] .faq__icon::after {
     background: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover h3,
-html[data-theme="dark"] :is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover :is(.service-list, .services__list) li {
+html[data-theme="dark"] .services__grid .services__item:hover h3,
+html[data-theme="dark"] .services__grid .services__item:hover .services__list li {
     color: #ffffff;
 }
 
@@ -2402,29 +2402,29 @@ html[data-theme="dark"] .testimonials-section {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] :is(.our-team, .team),
+html[data-theme="dark"] .team,
 html[data-theme="dark"] .products {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] :is(.career-page, .careers__page) > :is(.gradient-background, .hero, .services) {
+html[data-theme="dark"] .page--careers > :is(.page__shell, .hero, .services) {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] :is(.career-page, .careers__page) :is(.our-team, .team) {
+html[data-theme="dark"] .page--careers .team {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] :is(.career-page, .careers__page) :is(.our-team, .team)::before {
+html[data-theme="dark"] .page--careers .team::before {
     content: none;
     display: none;
 }
 
-html[data-theme="dark"] :is(.career-section, .careers) {
+html[data-theme="dark"] .careers {
     background: #181818;
 }
 
-html[data-theme="dark"] :is(.career-section, .careers)::before {
+html[data-theme="dark"] .careers::before {
     background: linear-gradient(
         180deg,
         #0d0d0d 0%,
@@ -2434,7 +2434,7 @@ html[data-theme="dark"] :is(.career-section, .careers)::before {
     );
 }
 
-html[data-theme="dark"] :is(.career-section, .careers)::after {
+html[data-theme="dark"] .careers::after {
     background: linear-gradient(
         180deg,
         rgba(24, 24, 24, 0) 0%,
@@ -2443,71 +2443,71 @@ html[data-theme="dark"] :is(.career-section, .careers)::after {
     );
 }
 
-html[data-theme="dark"] :is(.career-heading, .careers__heading) {
+html[data-theme="dark"] .careers__heading {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.career-lead, .careers__lead),
-html[data-theme="dark"] :is(.career-form-status, .careers__form-status) {
+html[data-theme="dark"] .careers__lead,
+html[data-theme="dark"] .careers__form-status {
     color: #b0b0b0;
 }
 
-html[data-theme="dark"] :is(.career-openings-title, .careers__openings-title),
-html[data-theme="dark"] :is(.career-opening-role, .careers__opening-role) {
+html[data-theme="dark"] .careers__openings-title,
+html[data-theme="dark"] .careers__opening-role {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.career-openings-search, .careers__openings-search) input {
+html[data-theme="dark"] .careers__openings-search input {
     background: #ffffff;
     border-color: rgba(0, 0, 0, 0.12);
     color: #111111;
 }
 
-html[data-theme="dark"] :is(.career-openings-search, .careers__openings-search) input::placeholder,
-html[data-theme="dark"] :is(.career-openings-search-icon, .careers__openings-search-icon) {
+html[data-theme="dark"] .careers__openings-search input::placeholder,
+html[data-theme="dark"] .careers__openings-search-icon {
     color: #888888;
 }
 
-html[data-theme="dark"] :is(.career-opening-card, .careers__opening-card) {
+html[data-theme="dark"] .careers__opening-card {
     background: #2a2a2a;
     border-color: rgba(255, 255, 255, 0.12);
 }
 
-html[data-theme="dark"] :is(.career-opening-meta, .careers__opening-meta),
-html[data-theme="dark"] :is(.career-opening-desc, .careers__opening-desc),
-html[data-theme="dark"] :is(.career-openings-empty, .careers__openings-empty),
-html[data-theme="dark"] :is(.career-openings-meta, .careers__openings-meta) {
+html[data-theme="dark"] .careers__opening-meta,
+html[data-theme="dark"] .careers__opening-desc,
+html[data-theme="dark"] .careers__openings-empty,
+html[data-theme="dark"] .careers__openings-meta {
     color: #a8a8a8;
 }
 
-html[data-theme="dark"] :is(.career-label-field, .careers__label-field) {
+html[data-theme="dark"] .careers__label-field {
     color: #d0d0d0;
 }
 
-html[data-theme="dark"] :is(.career-field, .careers__field) input,
-html[data-theme="dark"] :is(.career-field, .careers__field) select {
+html[data-theme="dark"] .careers__field input,
+html[data-theme="dark"] .careers__field select {
     background-color: #ffffff;
     border-color: rgba(0, 0, 0, 0.12);
     color: #111111;
 }
 
-html[data-theme="dark"] :is(.career-salary, .careers__salary) {
+html[data-theme="dark"] .careers__salary {
     background: #ffffff;
     border-color: rgba(0, 0, 0, 0.12);
 }
 
-html[data-theme="dark"] :is(.career-salary-currency, .careers__salary-currency) {
+html[data-theme="dark"] .careers__salary-currency {
     color: #555555;
     background: rgba(0, 0, 0, 0.04);
     border-right-color: rgba(0, 0, 0, 0.1);
 }
 
-html[data-theme="dark"] :is(.career-salary, .careers__salary) input[type="number"] {
+html[data-theme="dark"] .careers__salary input[type="number"] {
     background: transparent;
     color: #111111;
 }
 
-html[data-theme="dark"] :is(.career-form, .careers__form) .site-footer__select-trigger {
+html[data-theme="dark"] .careers__form .site-footer__select-trigger {
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666666' d='M1.4 0L6 4.6 10.6 0 12 1.4 6 7.4 0 1.4z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -2516,53 +2516,53 @@ html[data-theme="dark"] :is(.career-form, .careers__form) .site-footer__select-t
     color: #111111;
 }
 
-html[data-theme="dark"] :is(.career-field, .careers__field) select {
+html[data-theme="dark"] .careers__field select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666666' d='M1.4 0L6 4.6 10.6 0 12 1.4 6 7.4 0 1.4z'/%3E%3C/svg%3E");
 }
 
-html[data-theme="dark"] :is(.career-form, .careers__form) .site-footer__select-trigger.is-placeholder,
-html[data-theme="dark"] :is(.career-field, .careers__field) input::placeholder {
+html[data-theme="dark"] .careers__form .site-footer__select-trigger.is-placeholder,
+html[data-theme="dark"] .careers__field input::placeholder {
     color: #9a9a9a;
 }
 
-html[data-theme="dark"] :is(.career-form, .careers__form) .site-footer__select-menu {
+html[data-theme="dark"] .careers__form .site-footer__select-menu {
     background: #ffffff;
     border-color: rgba(0, 0, 0, 0.1);
 }
 
-html[data-theme="dark"] :is(.career-form, .careers__form) .site-footer__select-option {
+html[data-theme="dark"] .careers__form .site-footer__select-option {
     color: #111111;
 }
 
-html[data-theme="dark"] :is(.career-upload-btn, .careers__upload-btn) {
+html[data-theme="dark"] .careers__upload-btn {
     color: #ffffff;
     border-color: #b20000;
 }
 
-html[data-theme="dark"] :is(.career-upload-btn, .careers__upload-btn):hover {
+html[data-theme="dark"] .careers__upload-btn:hover {
     background: #b20000;
     color: #ffffff;
     border-color: #b20000;
 }
 
-html[data-theme="dark"] :is(.career-upload-name, .careers__upload-name) {
+html[data-theme="dark"] .careers__upload-name {
     color: #999999;
 }
 
-html[data-theme="dark"] :is(.career-upload-name, .careers__upload-name).is-selected {
+html[data-theme="dark"] .careers__upload-name.is-selected {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] :is(.career-form-status, .careers__form-status).is-success {
+html[data-theme="dark"] .careers__form-status.is-success {
     color: #7dcea0;
 }
 
-html[data-theme="dark"] :is(.career-form-status, .careers__form-status).is-error {
+html[data-theme="dark"] .careers__form-status.is-error {
     color: #ff8a8a;
 }
 
-html[data-theme="dark"] :is(.team-section-heading, .team__heading),
-html[data-theme="dark"] :is(.section-header, .section__header) h2,
+html[data-theme="dark"] .team__heading,
+html[data-theme="dark"] .section__header h2,
 html[data-theme="dark"] #process :is(.process-content, .process__content) h3 {
     color: #e8e8e8;
 }
@@ -2801,7 +2801,7 @@ html[data-theme="dark"] .form-modal__title--careers {
     min-width: 0;
 }
 
-.form-modal :is(.career-form, .careers__form) {
+.form-modal .careers__form {
     width: 100%;
 }
 
@@ -2827,7 +2827,7 @@ html[data-theme="dark"] .form-modal__title--careers {
     }
 
     .form-modal .site-footer__form-grid,
-    .form-modal :is(.career-form-grid, .careers__form-grid) {
+    .form-modal .careers__form-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -2840,92 +2840,92 @@ html[data-theme="dark"] .form-modal__title--careers {
 }
 
 
-html[data-theme="dark"] .inner-page > :is(.gradient-background, .hero, .services),
-html[data-theme="dark"] .about-page #about:is(.gradient-process-background, .about, .process),
-html[data-theme="dark"] .services-page #services:is(.gradient-background, .hero, .services),
-html[data-theme="dark"] .products-page .products,
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blogs-section, .blogs) {
+html[data-theme="dark"] .page > :is(.page__shell, .hero, .services),
+html[data-theme="dark"] .page--about #about:is(.about, .process),
+html[data-theme="dark"] .page--services #services:is(.page__shell, .hero, .services),
+html[data-theme="dark"] .page--products .products,
+html[data-theme="dark"] .page--blogs .blogs {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] .services-page .svc-block,
-html[data-theme="dark"] .services-page .svc-cta {
+html[data-theme="dark"] .page--services .services__section,
+html[data-theme="dark"] .page--services .services__cta {
     background: #0d0d0d;
 }
 
-html[data-theme="dark"] .services-page .svc-block--alt {
+html[data-theme="dark"] .page--services .services__section--alt {
     background: #141414;
 }
 
-html[data-theme="dark"] .services-page .svc-block h2,
-html[data-theme="dark"] .services-page .svc-cta-copy h2,
-html[data-theme="dark"] .services-page .svc-card h3,
-html[data-theme="dark"] .services-page .svc-process-step h3,
-html[data-theme="dark"] .services-page .svc-chips li {
+html[data-theme="dark"] .page--services .services__section h2,
+html[data-theme="dark"] .page--services .services__cta-copy h2,
+html[data-theme="dark"] .page--services .services__card h3,
+html[data-theme="dark"] .page--services .services__process-step h3,
+html[data-theme="dark"] .page--services .services__chips li {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] .services-page .svc-lead,
-html[data-theme="dark"] .services-page .svc-card p,
-html[data-theme="dark"] .services-page .svc-process-step p,
-html[data-theme="dark"] .services-page .svc-cta-copy p:not(:is(.section-label, .section__label)) {
+html[data-theme="dark"] .page--services .services__lead,
+html[data-theme="dark"] .page--services .services__card p,
+html[data-theme="dark"] .page--services .services__process-step p,
+html[data-theme="dark"] .page--services .services__cta-copy p:not(.section__label) {
     color: #b0b0b0;
 }
 
-html[data-theme="dark"] .services-page .svc-card,
-html[data-theme="dark"] .services-page .svc-cta-inner {
+html[data-theme="dark"] .page--services .services__card,
+html[data-theme="dark"] .page--services .services__cta-inner {
     background: #1a1a1a;
     border-color: #333333;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-html[data-theme="dark"] .services-page .svc-block--alt .svc-card {
+html[data-theme="dark"] .page--services .services__section--alt .services__card {
     background: #1a1a1a;
 }
 
-html[data-theme="dark"] .services-page .svc-card:hover {
+html[data-theme="dark"] .page--services .services__card:hover {
     border-color: #b20000;
     box-shadow: 0 16px 32px rgba(178, 0, 0, 0.2);
 }
 
-html[data-theme="dark"] .services-page .svc-process-slab {
+html[data-theme="dark"] .page--services .services__process-slab {
     opacity: 0.22;
 }
 
-html[data-theme="dark"] .services-page .svc-process-step {
+html[data-theme="dark"] .page--services .services__process-step {
     background: #1a1a1a;
     border-color: #333333;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-html[data-theme="dark"] .services-page .svc-process-step:hover,
-html[data-theme="dark"] .services-page .svc-process-step:focus-within {
+html[data-theme="dark"] .page--services .services__process-step:hover,
+html[data-theme="dark"] .page--services .services__process-step:focus-within {
     background-color: #b20000;
     border-color: #b20000;
     box-shadow: 0 16px 32px rgba(178, 0, 0, 0.28);
 }
 
-html[data-theme="dark"] .services-page .svc-process-step:hover h3,
-html[data-theme="dark"] .services-page .svc-process-step:hover p,
-html[data-theme="dark"] .services-page .svc-process-step:hover .svc-process-icon,
-html[data-theme="dark"] .services-page .svc-process-step:focus-within h3,
-html[data-theme="dark"] .services-page .svc-process-step:focus-within p,
-html[data-theme="dark"] .services-page .svc-process-step:focus-within .svc-process-icon {
+html[data-theme="dark"] .page--services .services__process-step:hover h3,
+html[data-theme="dark"] .page--services .services__process-step:hover p,
+html[data-theme="dark"] .page--services .services__process-step:hover .services__process-icon,
+html[data-theme="dark"] .page--services .services__process-step:focus-within h3,
+html[data-theme="dark"] .page--services .services__process-step:focus-within p,
+html[data-theme="dark"] .page--services .services__process-step:focus-within .services__process-icon {
     color: #ffffff;
 }
 
-html[data-theme="dark"] .services-page .svc-chips li {
+html[data-theme="dark"] .page--services .services__chips li {
     background: #1a1a1a;
     border-color: #333333;
 }
 
-html[data-theme="dark"] .services-page .svc-chips li:hover {
+html[data-theme="dark"] .page--services .services__chips li:hover {
     border-color: #b20000;
     color: #ff6b6b;
 }
 
-:is(.banner-text, .hero__copy, .about__copy, .services__copy) button,
-:is(.banner-cta, .btn) {
+:is(.about__copy, .hero__copy, .services__copy) button,
+.btn {
     margin-top: 20px;
     padding: 16px 24px;
     background-color: #B20000;
@@ -2941,7 +2941,7 @@ html[data-theme="dark"] .services-page .svc-chips li:hover {
     box-sizing: border-box;
 }
 
-:is(.banner-cta-group, .hero__actions, .about__actions) {
+:is(.about__actions, .hero__actions) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -2949,28 +2949,28 @@ html[data-theme="dark"] .services-page .svc-chips li:hover {
     margin-top: 20px;
 }
 
-:is(.banner-cta-group, .hero__actions, .about__actions) :is(.banner-cta, .btn) {
+:is(.about__actions, .hero__actions) .btn {
     margin-top: 0;
 }
 
-:is(.banner-cta--secondary, .btn--secondary) {
+.btn--secondary {
     background-color: transparent;
     color: #B20000;
     border-color: #B20000;
 }
 
-:is(.banner-cta--secondary, .btn--secondary):hover {
+.btn--secondary:hover {
     background-color: #B20000;
     color: #ffffff;
 }
 
-:is(.banner-cta, .btn):hover {
+.btn:hover {
     background-color: #8f0000;
     border-color: #8f0000;
     color: #ffffff;
 }
 
-:is(.banner-cta, .btn):focus-visible {
+.btn:focus-visible {
     outline: 2px solid #000000;
     outline-offset: 3px;
 }
@@ -2999,29 +2999,29 @@ html[data-theme="dark"] .services-page .svc-chips li:hover {
     }
 }
 
-:is(.banner-cta, .btn):not(:is(.banner-cta--secondary, .btn--secondary)),
-.explore-btn-full,
+.btn:not(.btn--secondary),
+.products__explore-link,
 .site-footer__form .site-footer__form-button {
     animation: ctaAttract 3.2s ease-in-out infinite;
     transform-origin: center center;
 }
 
-:is(.banner-cta--secondary, .btn--secondary) {
+.btn--secondary {
     animation: none;
 }
 
-:is(.banner-cta, .btn):hover,
-:is(.banner-cta, .btn):focus-visible,
-.explore-btn-full:hover,
-.explore-btn-full:focus-visible,
+.btn:hover,
+.btn:focus-visible,
+.products__explore-link:hover,
+.products__explore-link:focus-visible,
 .site-footer__form .site-footer__form-button:hover,
 .site-footer__form .site-footer__form-button:focus-visible {
     animation: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.banner-cta, .btn),
-    .explore-btn-full,
+    .btn,
+    .products__explore-link,
     .site-footer__form .site-footer__form-button {
         animation: none;
     }
@@ -3029,7 +3029,7 @@ html[data-theme="dark"] .services-page .svc-chips li:hover {
 
 /* ===== css/pages/home.css ===== */
 /* Hero only ? theme color fill that blends into About */
-main > div:is(.gradient-background, .hero, .services) {
+main > div:is(.page__shell, .hero, .services) {
     background: linear-gradient(
         180deg,
         #b20000 0%,
@@ -3059,7 +3059,7 @@ main > div:is(.gradient-background, .hero, .services) {
     z-index: 1;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner, .hero__body, .about__body) {
+main > div:is(.page__shell, .hero, .services) :is(.about__body, .hero__body) {
     flex: 0 1 auto;
     align-self: center;
     display: flex;
@@ -3077,78 +3077,78 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner, .hero__body, 
     box-sizing: border-box;
 }
 
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a,
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a {
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a,
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a {
     color: #FFFFFF;
 }
 
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--left a:hover,
-main > div:is(.gradient-background, .hero, .services) .site-nav__cluster--right a:hover {
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--left a:hover,
+main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a:hover {
     color: rgba(255, 255, 255, 0.85);
 }
 
-main > div:is(.gradient-background, .hero, .services) .site-nav__logo img {
+main > div:is(.page__shell, .hero, .services) .site-nav__logo img {
     filter: brightness(0) invert(1);
 }
 
-main > div:is(.gradient-background, .hero, .services) .site-nav__logo a:focus-visible {
+main > div:is(.page__shell, .hero, .services) .site-nav__logo a:focus-visible {
     outline-color: #FFFFFF;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-text, .hero__copy, .about__copy, .services__copy) {
+main > div:is(.page__shell, .hero, .services) :is(.about__copy, .hero__copy, .services__copy) {
     color: #FFFFFF;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-text, .hero__copy, .about__copy, .services__copy) h1 {
+main > div:is(.page__shell, .hero, .services) :is(.about__copy, .hero__copy, .services__copy) h1 {
     color: #FFFFFF;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-text, .hero__copy, .about__copy, .services__copy) p {
+main > div:is(.page__shell, .hero, .services) :is(.about__copy, .hero__copy, .services__copy) p {
     color: rgba(255, 255, 255, 0.88);
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-text, .hero__copy, .about__copy, .services__copy) :is(.tagline, .hero__tagline) {
+main > div:is(.page__shell, .hero, .services) :is(.about__copy, .hero__copy, .services__copy) :is(.tagline, .hero__tagline) {
     color: #FFFFFF;
     opacity: 0.95;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn) {
+main > div:is(.page__shell, .hero, .services) .btn {
     background-color: #FFFFFF;
     color: #B20000;
     border-color: #FFFFFF;
     font-weight: 600;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):hover {
+main > div:is(.page__shell, .hero, .services) .btn:hover {
     background-color: #f5f5f5;
     border-color: #f5f5f5;
     color: #8f0000;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-cta--secondary, .btn--secondary) {
+main > div:is(.page__shell, .hero, .services) .btn--secondary {
     background-color: transparent;
     color: #FFFFFF;
     border-color: #FFFFFF;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-cta--secondary, .btn--secondary):hover {
+main > div:is(.page__shell, .hero, .services) .btn--secondary:hover {
     background-color: #FFFFFF;
     color: #B20000;
     border-color: #FFFFFF;
 }
 
-main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):focus-visible {
+main > div:is(.page__shell, .hero, .services) .btn:focus-visible {
     outline: 2px solid #FFFFFF;
     outline-offset: 3px;
 }
 
 @media (min-width: 769px) {
-    main > div:is(.gradient-background, .hero, .services) :is(.banner-text, .hero__copy, .about__copy, .services__copy) {
+    main > div:is(.page__shell, .hero, .services) :is(.about__copy, .hero__copy, .services__copy) {
         flex: 0 0 38%;
         padding-left: 0;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.banner-visual, .hero__visual) {
+    main > div:is(.page__shell, .hero, .services) :is(.banner-visual, .hero__visual) {
         flex: 1 1 60%;
         text-align: right;
         padding-right: 0;
@@ -3157,7 +3157,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):foc
         justify-content: flex-end;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.banner-visual-inner, .hero__visual-inner, .about__visual-inner) {
+    main > div:is(.page__shell, .hero, .services) :is(.about__visual-inner, .hero__visual-inner) {
         width: 100%;
         max-width: min(100%, 42rem);
         margin-left: auto;
@@ -3166,7 +3166,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):foc
         left: 0;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.hero-illustration, .hero__illustration, .about__illustration) {
+    main > div:is(.page__shell, .hero, .services) :is(.about__illustration, .hero__illustration) {
         width: 100%;
         max-width: 100%;
         max-height: clamp(340px, 52vh, 620px);
@@ -3174,12 +3174,12 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):foc
         object-fit: contain;
     }
 
-    main > div:is(.gradient-background, .hero, .services) :is(.hero-rectangle, .about__rectangle) {
+    main > div:is(.page__shell, .hero, .services) .about__rectangle {
         width: 58%;
     }
 }
 
-:is(.gradient-process-background, .about, .process) {
+:is(.about, .process) {
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
     margin: 10px;
     padding: 50px 0;
@@ -3189,7 +3189,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):foc
 }
 
 /* Process keeps its gradient; soft fade into Products at the bottom */
-#process:is(.gradient-process-background, .about, .process) {
+#process:is(.about, .process) {
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
@@ -3199,7 +3199,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):foc
     padding: 140px 0;
 }
 
-#process:is(.gradient-process-background, .about, .process)::after {
+#process:is(.about, .process)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -3224,7 +3224,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.banner-cta, .btn):foc
 }
 
 /* Slogan on the hero ? About gradient merge (mid fade) */
-main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero__slogan) {
+main > div:is(.page__shell, .hero, .services) :is(.section-slogan, .hero__slogan) {
     position: absolute;
     left: 0;
     right: 0;
@@ -3253,7 +3253,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 /* About continues the hero blend ? no hard edge (own background unchanged) */
-#about:is(.gradient-process-background, .about, .process) {
+#about:is(.about, .process) {
     position: relative;
     z-index: 2; /* above hero so ABOUT tag isn't covered by the fade layer */
     margin: 0 10px 0;
@@ -3276,12 +3276,12 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     padding-bottom: clamp(48px, 8vh, 88px);
 }
 
-#about:is(.gradient-process-background, .about, .process) > :is(.banner, .hero__body, .about__body) {
+#about:is(.about, .process) > :is(.about__body, .hero__body) {
     margin-top: -48px;
 }
 
 /* Services keeps solid white; soft top overlay bridges from About's #f0f0f0 */
-#services:is(.gradient-background, .hero, .services) {
+#services:is(.page__shell, .hero, .services) {
     margin: 0 10px 0;
     border-radius: 0;
     box-shadow: none;
@@ -3294,7 +3294,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     overflow: hidden;
 }
 
-#services:is(.gradient-background, .hero, .services)::before {
+#services:is(.page__shell, .hero, .services)::before {
     content: "";
     position: absolute;
     left: 0;
@@ -3311,8 +3311,8 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     );
 }
 
-#services:is(.gradient-background, .hero, .services) > .services,
-#services:is(.gradient-background, .hero, .services) > .services__body {
+#services:is(.page__shell, .hero, .services) > .services,
+#services:is(.page__shell, .hero, .services) > .services__body {
     position: relative;
     z-index: 1;
     padding-top: clamp(56px, 10vh, 96px);
@@ -3361,116 +3361,116 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     }
 }
 
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.tagline, .hero__tagline),
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > h1,
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > h2,
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > span,
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > p:not(:is(.tagline, .hero__tagline)),
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.banner-cta-group, .hero__actions, .about__actions),
-:is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.services-about-copy, .services__copy) {
+:is(.about__copy, .hero__copy, .services__intro) > :is(.tagline, .hero__tagline),
+:is(.about__copy, .hero__copy, .services__intro) > h1,
+:is(.about__copy, .hero__copy, .services__intro) > h2,
+:is(.about__copy, .hero__copy, .services__intro) > span,
+:is(.about__copy, .hero__copy, .services__intro) > p:not(:is(.tagline, .hero__tagline)),
+:is(.about__copy, .hero__copy, .services__intro) > :is(.about__actions, .hero__actions),
+:is(.about__copy, .hero__copy, .services__intro) > .services__copy {
     opacity: 0;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Hero plays on load */
-:is(.gradient-background, .hero, .services) > :is(.banner, .hero__body, .about__body) > :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.tagline, .hero__tagline) {
+:is(.page__shell, .hero, .services) > :is(.about__body, .hero__body) > :is(.about__copy, .hero__copy, .services__intro) > :is(.tagline, .hero__tagline) {
     animation-name: heroTaglineIn;
     animation-duration: 0.8s;
     animation-delay: 0.1s;
 }
 
-:is(.gradient-background, .hero, .services) > :is(.banner, .hero__body, .about__body) > :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > h1 {
+:is(.page__shell, .hero, .services) > :is(.about__body, .hero__body) > :is(.about__copy, .hero__copy, .services__intro) > h1 {
     animation-name: heroTitleIn;
     animation-duration: 1s;
     animation-delay: 0.22s;
 }
 
-:is(.gradient-background, .hero, .services) > :is(.banner, .hero__body, .about__body) > :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > p:not(:is(.tagline, .hero__tagline)) {
+:is(.page__shell, .hero, .services) > :is(.about__body, .hero__body) > :is(.about__copy, .hero__copy, .services__intro) > p:not(:is(.tagline, .hero__tagline)) {
     animation-name: heroCopyIn;
     animation-duration: 0.9s;
     animation-delay: 0.4s;
 }
 
-:is(.gradient-background, .hero, .services) > :is(.banner, .hero__body, .about__body) > :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.banner-cta-group, .hero__actions, .about__actions) {
+:is(.page__shell, .hero, .services) > :is(.about__body, .hero__body) > :is(.about__copy, .hero__copy, .services__intro) > :is(.about__actions, .hero__actions) {
     animation-name: heroCopyIn;
     animation-duration: 0.85s;
     animation-delay: 0.55s;
 }
 
 /* About plays when scrolled into view (.is-in) */
-#about :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > span {
+#about :is(.about__copy, .hero__copy, .services__intro).is-in > span {
     animation-name: heroTaglineIn;
     animation-duration: 0.8s;
     animation-delay: 0.1s;
 }
 
-#about :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > h2 {
+#about :is(.about__copy, .hero__copy, .services__intro).is-in > h2 {
     animation-name: heroTitleIn;
     animation-duration: 1s;
     animation-delay: 0.22s;
 }
 
-#about :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > p {
+#about :is(.about__copy, .hero__copy, .services__intro).is-in > p {
     animation-name: heroCopyIn;
     animation-duration: 0.9s;
     animation-delay: 0.4s;
 }
 
-#about :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > :is(.banner-cta-group, .hero__actions, .about__actions) {
+#about :is(.about__copy, .hero__copy, .services__intro).is-in > :is(.about__actions, .hero__actions) {
     animation-name: heroCopyIn;
     animation-duration: 0.85s;
     animation-delay: 0.55s;
 }
 
 /* Services intro plays when scrolled into view (.is-in) */
-#services :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > :is(.section-label, .section__label) {
+#services :is(.about__copy, .hero__copy, .services__intro).is-in > .section__label {
     animation-name: heroTaglineIn;
     animation-duration: 0.8s;
     animation-delay: 0.1s;
 }
 
-#services :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > h2 {
+#services :is(.about__copy, .hero__copy, .services__intro).is-in > h2 {
     animation-name: heroTitleIn;
     animation-duration: 1s;
     animation-delay: 0.22s;
 }
 
-#services :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > :is(.services-about-copy, .services__copy) {
+#services :is(.about__copy, .hero__copy, .services__intro).is-in > .services__copy {
     animation-name: heroCopyIn;
     animation-duration: 0.9s;
     animation-delay: 0.4s;
 }
 
-#services :is(.hero-copy, .hero__copy, .about__copy, .services__intro).is-in > :is(.banner-cta-group, .hero__actions, .about__actions) {
+#services :is(.about__copy, .hero__copy, .services__intro).is-in > :is(.about__actions, .hero__actions) {
     animation-name: heroCopyIn;
     animation-duration: 0.85s;
     animation-delay: 0.55s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.tagline, .hero__tagline),
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > h1,
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > h2,
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > span,
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > p:not(:is(.tagline, .hero__tagline)),
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.banner-cta-group, .hero__actions, .about__actions),
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.services-about-copy, .services__copy) {
+    :is(.about__copy, .hero__copy, .services__intro) > :is(.tagline, .hero__tagline),
+    :is(.about__copy, .hero__copy, .services__intro) > h1,
+    :is(.about__copy, .hero__copy, .services__intro) > h2,
+    :is(.about__copy, .hero__copy, .services__intro) > span,
+    :is(.about__copy, .hero__copy, .services__intro) > p:not(:is(.tagline, .hero__tagline)),
+    :is(.about__copy, .hero__copy, .services__intro) > :is(.about__actions, .hero__actions),
+    :is(.about__copy, .hero__copy, .services__intro) > .services__copy {
         opacity: 1;
         filter: none;
         transform: none;
         animation: none;
     }
 
-    :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.tagline, .hero__tagline),
-    #about :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > span,
-    #services :is(.hero-copy, .hero__copy, .about__copy, .services__intro) > :is(.section-label, .section__label) {
+    :is(.about__copy, .hero__copy, .services__intro) > :is(.tagline, .hero__tagline),
+    #about :is(.about__copy, .hero__copy, .services__intro) > span,
+    #services :is(.about__copy, .hero__copy, .services__intro) > .section__label {
         opacity: 0.95;
     }
 }
 
 @media (min-width: 769px) {
-    :is(.banner-text, .hero__copy, .about__copy, .services__copy) {
+    :is(.about__copy, .hero__copy, .services__copy) {
         flex: 0 0 42%;
     }
 
@@ -3479,18 +3479,18 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     }
 }
 
-:is(.banner-text, .hero__copy, .about__copy, .services__copy) h1 {
+:is(.about__copy, .hero__copy, .services__copy) h1 {
     margin: 0;
     font-size: 50px;
     line-height: 50px;
     letter-spacing: -1.68px;
 }
 
-:is(.banner-text, .hero__copy, .about__copy, .services__copy) p {
+:is(.about__copy, .hero__copy, .services__copy) p {
     color: #808080;
 }
 
-:is(.banner-text, .hero__copy, .about__copy, .services__copy) :is(.tagline, .hero__tagline) {
+:is(.about__copy, .hero__copy, .services__copy) :is(.tagline, .hero__tagline) {
     color: #B20000;
     font-size: 14px;
     font-weight: 600;
@@ -3510,7 +3510,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     border-radius: 4px;
 }
 
-:is(.about-agilix, .about__copy, .services__copy) h2 {
+:is(.about__copy, .services__copy) h2 {
     margin: 0;
     font-size: 40px;
     font-weight: 700;
@@ -3518,47 +3518,47 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     letter-spacing: normal;
 }
 
-:is(.about-agilix, .about__copy, .services__copy) span {
+:is(.about__copy, .services__copy) span {
     color: #B20000;
     margin: 0;
     font-weight: 500;
     font-size: 14px;
 }
 
-:is(.about-agilix, .about__copy, .services__copy) p {
+:is(.about__copy, .services__copy) p {
     color: #000000;
 }
 
-#about :is(.about-agilix, .about__copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)) {
+#about :is(.about__copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)) {
     text-align: justify;
 }
 
 /* About layout ? live-site hero visual on the right */
-#about :is(.about-banner, .about__body) {
+#about .about__body {
     align-items: center;
     position: relative;
 }
 
-#about :is(.about-agilix, .about__copy, .services__copy) {
+#about :is(.about__copy, .services__copy) {
     flex: 1;
     position: relative;
     z-index: 3; /* keep ABOUT tag above hero fade overlap */
 }
 
-#about :is(.about-agilix, .about__copy, .services__copy) > span {
+#about :is(.about__copy, .services__copy) > span {
     display: inline-block;
     position: relative;
     z-index: 3;
     color: #B20000;
 }
 
-#about :is(.about-image, .about__visual) {
+#about .about__visual {
     flex: 1;
     min-width: 0;
     text-align: right;
 }
 
-#about :is(.about-visual-inner, .about__visual-inner) {
+#about .about__visual-inner {
     position: relative;
     display: block;
     width: 100%;
@@ -3566,7 +3566,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     margin-left: auto;
 }
 
-#about :is(.about-image, .about__visual) :is(.hero-illustration, .hero__illustration, .about__illustration) {
+#about .about__visual :is(.about__illustration, .hero__illustration) {
     position: relative;
     z-index: 2;
     display: block;
@@ -3582,7 +3582,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     will-change: opacity, transform;
 }
 
-#about :is(.about-image, .about__visual) :is(.hero-rectangle, .about__rectangle) {
+#about .about__visual .about__rectangle {
     position: absolute;
     right: 0;
     top: 50%;
@@ -3599,23 +3599,23 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     will-change: clip-path;
 }
 
-#about :is(.about-visual-inner, .about__visual-inner).is-bar-in :is(.hero-rectangle, .about__rectangle) {
+#about .about__visual-inner.is-bar-in .about__rectangle {
     clip-path: inset(0 0 0 0);
 }
 
-#about :is(.about-visual-inner, .about__visual-inner).is-cards-in :is(.hero-illustration, .hero__illustration, .about__illustration) {
+#about .about__visual-inner.is-cards-in :is(.about__illustration, .hero__illustration) {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #about :is(.about-image, .about__visual) :is(.hero-rectangle, .about__rectangle) {
+    #about .about__visual .about__rectangle {
         clip-path: none;
         transition: none;
         will-change: auto;
     }
 
-    #about :is(.about-image, .about__visual) :is(.hero-illustration, .hero__illustration, .about__illustration) {
+    #about .about__visual :is(.about__illustration, .hero__illustration) {
         opacity: 1;
         transform: none;
         transition: none;
@@ -3624,24 +3624,24 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 @media (min-width: 769px) {
-    #about :is(.about-agilix, .about__copy, .services__copy) {
+    #about :is(.about__copy, .services__copy) {
         flex: 0 0 42%;
         padding-left: clamp(1rem, 4vw, 2rem);
         padding-right: 0;
     }
 
-    #about :is(.about-image, .about__visual) {
+    #about .about__visual {
         flex: 1 1 58%;
         padding-right: clamp(1rem, 4vw, 2rem);
         padding-left: 0;
     }
 
-    #about :is(.about-visual-inner, .about__visual-inner) {
+    #about .about__visual-inner {
         width: 100%;
         max-width: 100%;
     }
 
-    #about :is(.about-image, .about__visual) :is(.hero-rectangle, .about__rectangle) {
+    #about .about__visual .about__rectangle {
         width: 54%;
     }
 }
@@ -3653,7 +3653,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     text-align: right;
 }
 
-:is(.banner-visual-inner, .hero__visual-inner, .about__visual-inner) {
+:is(.about__visual-inner, .hero__visual-inner) {
     position: relative;
     display: block;
     width: 100%;
@@ -3661,7 +3661,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     margin-left: auto;
 }
 
-:is(.hero-illustration, .hero__illustration, .about__illustration) {
+:is(.about__illustration, .hero__illustration) {
     position: relative;
     z-index: 2;
     display: block;
@@ -3676,7 +3676,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     pointer-events: none;
 }
 
-:is(.hero-rectangle, .about__rectangle) {
+.about__rectangle {
     position: absolute;
     right: 0;
     top: 50%;
@@ -3716,13 +3716,13 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.hero-rectangle, .about__rectangle) {
+    .about__rectangle {
         animation: none;
         opacity: 1;
         transform: translate3d(0, -50%, 0);
     }
 
-    :is(.hero-illustration, .hero__illustration, .about__illustration) {
+    :is(.about__illustration, .hero__illustration) {
         animation: none;
         opacity: 1;
         transform: none;
@@ -3736,7 +3736,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     padding: 0 20px;
 }
 
-:is(.section-label, .section__label) {
+.section__label {
     color: #B20000;
     font-size: 12px;
     font-weight: 700;
@@ -3751,35 +3751,35 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     /* background-color: #F9F9F9; */
 }
 
-:is(.section-header, .section__header) h2 {
+.section__header h2 {
     font-size: 40px;
     font-weight: 700;
     margin: 0 0 40px 0;
 }
 
-:is(.section-header, .section__header) h2:has(+ :is(.services-about-copy, .services__copy)) {
+.section__header h2:has(+ .services__copy) {
     margin-bottom: 16px;
 }
 
 /* Match About text column width + typography */
-#services :is(.services-about-copy, .services__copy) {
+#services .services__copy {
     flex: none;
     width: 100%;
     margin: 0 0 40px;
 }
 
-#services :is(.services-about-copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)) {
+#services .services__copy > p:not(:is(.tagline, .hero__tagline)) {
     text-align: justify;
 }
 
 @media (min-width: 769px) {
-    #services :is(.services-about-copy, .services__copy) {
+    #services .services__copy {
         width: 42%;
         max-width: none;
     }
 }
 
-:is(.services-grid, .services__grid) {
+.services__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -3813,15 +3813,15 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #ffffff;
 }
 
-.what-we-do .service-card:hover :is(.service-icon, .services__icon) svg [fill="#B20000"] {
+.what-we-do .service-card:hover .services__icon svg [fill="#B20000"] {
     fill: #ffffff;
 }
 
-.what-we-do .service-card:hover :is(.service-icon, .services__icon) svg [stroke="#B20000"] {
+.what-we-do .service-card:hover .services__icon svg [stroke="#B20000"] {
     stroke: #ffffff;
 }
 
-.what-we-do :is(.service-icon, .services__icon) {
+.what-we-do .services__icon {
     align-self: flex-end;
 }
 
@@ -3842,7 +3842,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 /* Our services section cards ? directional smooth reveals */
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item) {
+.services__grid .services__item {
     padding: 24px;
     border-radius: 20px;
     border: 2px solid #d3d3d3;
@@ -3862,23 +3862,23 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     will-change: transform, opacity, filter;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="left"] {
+.services__grid .services__item[data-reveal-from="left"] {
     transform: translate3d(-56px, 0, 0);
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="right"] {
+.services__grid .services__item[data-reveal-from="right"] {
     transform: translate3d(56px, 0, 0);
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="top"] {
+.services__grid .services__item[data-reveal-from="top"] {
     transform: translate3d(0, -48px, 0);
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="bottom"] {
+.services__grid .services__item[data-reveal-from="bottom"] {
     transform: translate3d(0, 48px, 0);
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item).is-revealed {
+.services__grid .services__item.is-revealed {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     filter: blur(0);
@@ -3886,11 +3886,11 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.services-grid, .services__grid) :is(.service-detail, .services__item),
-    :is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="left"],
-    :is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="right"],
-    :is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="top"],
-    :is(.services-grid, .services__grid) :is(.service-detail, .services__item)[data-reveal-from="bottom"] {
+    .services__grid .services__item,
+    .services__grid .services__item[data-reveal-from="left"],
+    .services__grid .services__item[data-reveal-from="right"],
+    .services__grid .services__item[data-reveal-from="top"],
+    .services__grid .services__item[data-reveal-from="bottom"] {
         opacity: 1;
         transform: none;
         filter: none;
@@ -3902,48 +3902,48 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     }
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item) svg {
+.services__grid .services__item svg {
     width: 50px;
     height: 50px;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item) svg [fill="#B20000"] {
+.services__grid .services__item svg [fill="#B20000"] {
     fill: #808080;
     transition: fill 0.3s ease;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item) svg [stroke="#B20000"] {
+.services__grid .services__item svg [stroke="#B20000"] {
     stroke: #808080;
     transition: stroke 0.3s ease;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item) h3 {
+.services__grid .services__item h3 {
     color: #000000;
     transition: color 0.3s ease;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item) :is(.service-list, .services__list) li {
+.services__grid .services__item .services__list li {
     transition: color 0.3s ease;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover {
+.services__grid .services__item:hover {
     background-color: #B20000;
     border-color: #B20000;
     box-shadow: 0 12px 28px rgba(178, 0, 0, 0.2);
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover h3,
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover :is(.service-list, .services__list) li {
+.services__grid .services__item:hover h3,
+.services__grid .services__item:hover .services__list li {
     color: #ffffff;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover svg rect[fill="white"] {
+.services__grid .services__item:hover svg rect[fill="white"] {
     fill: #ffffff;
     stroke: #ffffff;
     stroke-width: 1;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover svg [fill="#B20000"] {
+.services__grid .services__item:hover svg [fill="#B20000"] {
     fill: none;
     stroke: #b20000;
     stroke-width: 1;
@@ -3951,7 +3951,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     stroke-linecap: round;
 }
 
-:is(.services-grid, .services__grid) :is(.service-detail, .services__item):hover svg :not(rect)[stroke="#B20000"] {
+.services__grid .services__item:hover svg :not(rect)[stroke="#B20000"] {
     fill: none;
     stroke: #b20000;
 }
@@ -3995,7 +3995,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 :is(.process-items, .process__items) {
-    /* Clip at the banner?s right edge so steps emerge from there */
+    /* Clip at the about__body?s right edge so steps emerge from there */
     overflow: hidden;
     flex: 1;
     min-width: 0;
@@ -4005,12 +4005,12 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 /* Keep overflow:hidden while step 5 animates so it still clips at the
-   banner edge. Unlock only after the sequence completes. */
+   about__body edge. Unlock only after the sequence completes. */
 :is(.process-container, .process__container).is-complete :is(.process-items, .process__items) {
     overflow: visible;
 }
 
-/* Space below steps so banner overhangs past step 5 —
+/* Space below steps so about__body overhangs past step 5 —
    keep this inside content; section padding stays equal top/bottom */
 :is(.process-main, .process__main)::after {
     content: "";
@@ -4163,7 +4163,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     }
 }
 
-/* Approach banner ? in-flow so the original clip-path reveal still works */
+/* Approach about__body ? in-flow so the original clip-path reveal still works */
 :is(.process-steps, .process__steps) {
     flex: 0 0 200px;
     width: 200px;
@@ -4275,7 +4275,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     border-radius: 0 0 8px 8px;
 }
 
-:is(.products-grid, .products__grid) {
+.products__grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: .5fr;
@@ -4283,7 +4283,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     margin-top: 40px;
 }
 
-:is(.product-card, .products__card) {
+.products__card {
     border-radius: 12px;
     padding: 24px;
     border: 2px solid #4E3162;
@@ -4296,7 +4296,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 
 
 /* Title Box - First card (Trace brand tab) */
-:is(.product-card-title, .products__card--title) {
+.products__card--title {
     grid-column: 1;
     grid-row: 1;
     background: #4E3162;
@@ -4304,23 +4304,23 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #ffffff;
 }
 
-:is(.product-card-title, .products__card--title) :is(.product-header, .products__header) {
+.products__card--title .products__header {
     margin: auto;
     color: #ffffff;
 }
 
-:is(.product-card-title, .products__card--title) :is(.product-header, .products__header) svg {
+.products__card--title .products__header svg {
     color: #ffffff;
     display: block;
 }
 
 /* Description Box - Second card */
-:is(.product-card-description, .products__card--description) {
+.products__card--description {
     grid-column: 1;
     grid-row: 2;
 }
 
-:is(.product-card-description, .products__card--description) :is(.product-description, .products__description) {
+.products__card--description .products__description {
     margin: 0;
     color: #4E3162;
     font-size: 16px;
@@ -4328,18 +4328,18 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 /* Features Box - Third card */
-:is(.product-card-features, .products__card--features) {
+.products__card--features {
     grid-column: 1;
     grid-row: 3;
 }
 
-:is(.product-card-features, .products__card--features) :is(.product-features, .products__features) ul {
+.products__card--features .products__features ul {
     list-style: disc;
     padding-left: 20px;
     margin: 0;
 }
 
-:is(.product-card-features, .products__card--features) :is(.product-features, .products__features) li {
+.products__card--features .products__features li {
     color: #4E3162;
     font-size: 15px;
     padding: 6px 0;
@@ -4347,7 +4347,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 /* Large image - Right side spanning 3 rows */
-:is(.product-card-large, .products__card--large) {
+.products__card--large {
     grid-column: 2;
     grid-row: 1 / span 3;
     border: unset !important;
@@ -4355,7 +4355,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 
 }
 
-/* :is(.product-card-large, .products__card--large) :is(.product-image, .products__image) {
+/* .products__card--large .products__image {
     width: 100%;
     height: 100%;
     display: flex;
@@ -4363,13 +4363,13 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     justify-content: center;
 } */
 
-:is(.product-card-large, .products__card--large) :is(.product-image, .products__image) img {
+.products__card--large .products__image img {
     width: 100%;
     height: 540px;
 }
 
 /* Explore Button - Full width at bottom */
-:is(.product-card-explore, .products__card--explore) {
+.products__card--explore {
     grid-column: 1 / -1;
     grid-row: 4;
     background: linear-gradient(135deg, #4a3a6b 0%, #6b4c8a 100%);
@@ -4382,7 +4382,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 
 
 
-.explore-btn-full {
+.products__explore-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4395,11 +4395,11 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     transition: all 0.3s ease;
 }
 
-.explore-btn-full:hover {
+.products__explore-link:hover {
     gap: 24px;
 }
 
-.explore-btn-full svg {
+.products__explore-link svg {
     width: 28px;
     height: 28px;
     stroke: white;
@@ -4411,61 +4411,61 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     padding: 40px 0 0;
 }
 
-:is(.services-grid-2, .services__grid--two) {
+.services__grid--two {
     gap: 40px;
 }
 
-:is(.services-view-more, .services__view-more) {
+.services__view-more {
     display: flex;
     justify-content: flex-end;
     margin-top: 40px;
 }
 
-:is(.services-view-more, .services__view-more) :is(.banner-cta, .btn) {
+.services__view-more .btn {
     margin-top: 0;
 }
 
-:is(.services-grid, .services__grid) :is(.service-list, .services__list) li {
+.services__grid .services__list li {
     padding: 8px 0;
     color: #000000;
 }
 
 @media (max-width: 1024px) {
-    :is(.products-grid, .products__grid) {
+    .products__grid {
         grid-template-columns: 1fr;
     }
 
-    :is(.product-card-title, .products__card--title),
-    :is(.product-card-description, .products__card--description),
-    :is(.product-card-features, .products__card--features) {
+    .products__card--title,
+    .products__card--description,
+    .products__card--features {
         grid-column: 1;
     }
 
-    :is(.product-card-large, .products__card--large) {
+    .products__card--large {
         grid-column: 1;
         grid-row: auto;
     }
 
-    :is(.product-card-explore, .products__card--explore) {
+    .products__card--explore {
         grid-column: 1;
     }
 }
 
 @media (max-width: 768px) {
-    :is(.services-grid, .services__grid) {
+    .services__grid {
         grid-template-columns: 1fr;
     }
 
-    :is(.products-grid, .products__grid) {
+    .products__grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    :is(.product-card-title, .products__card--title),
-    :is(.product-card-description, .products__card--description),
-    :is(.product-card-features, .products__card--features),
-    :is(.product-card-large, .products__card--large),
-    :is(.product-card-explore, .products__card--explore) {
+    .products__card--title,
+    .products__card--description,
+    .products__card--features,
+    .products__card--large,
+    .products__card--explore {
         grid-column: 1;
         grid-row: auto;
     }
@@ -4520,16 +4520,16 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
         font-size: 40px;
     }
 
-    :is(.faq-layout, .faq__layout) {
+    .faq__layout {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    :is(.faq-title, .faq__title) {
+    .faq__title {
         font-size: 32px;
     }
 
-    :is(.faq-question, .faq__question) {
+    .faq__question {
         font-size: 16px;
     }
 
@@ -4578,7 +4578,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 
-.products-page .products {
+.page--products .products {
     margin: 0;
     padding: 24px 0 140px;
     border-radius: 0;
@@ -4586,18 +4586,18 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 
 /* ===== css/pages/blogs.css ===== */
 /* Blogs section — equal 140px top/bottom (same as Products / FAQ) */
-:is(.blogs-section, .blogs) {
+.blogs {
     background: #ffffff;
     padding: 140px 0;
 }
 
-:is(.blogs-inner, .blogs__inner) {
+.blogs__inner {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-:is(.blogs-header, .blogs__header) {
+.blogs__header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -4605,16 +4605,16 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     margin-bottom: 40px;
 }
 
-:is(.blogs-header-text, .blogs__header-text) {
+.blogs__header-text {
     max-width: 36rem;
     min-width: 0;
 }
 
-:is(.blogs-label, .blogs__label) {
+.blogs__label {
     margin-bottom: 12px;
 }
 
-:is(.blogs-title, .blogs__title) {
+.blogs__title {
     margin: 0 0 14px;
     font-size: clamp(32px, 4vw, 44px);
     font-weight: 700;
@@ -4624,14 +4624,14 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #111111;
 }
 
-:is(.blogs-lead, .blogs__lead) {
+.blogs__lead {
     margin: 0;
     font-size: 16px;
     line-height: 1.55;
     color: #000000;
 }
 
-:is(.blogs-nav, .blogs__nav) :is(.blogs-nav-btn, .blogs__nav-btn) {
+.blogs__nav .blogs__nav-btn {
     width: 40px;
     height: 40px;
     padding: 0;
@@ -4647,24 +4647,24 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     flex-shrink: 0;
 }
 
-:is(.blogs-nav, .blogs__nav) :is(.blogs-nav-btn, .blogs__nav-btn):hover:not(:disabled),
-:is(.blogs-nav, .blogs__nav) :is(.blogs-nav-btn, .blogs__nav-btn):focus-visible:not(:disabled) {
+.blogs__nav .blogs__nav-btn:hover:not(:disabled),
+.blogs__nav .blogs__nav-btn:focus-visible:not(:disabled) {
     color: #8f0000;
 }
 
-:is(.blogs-nav, .blogs__nav) :is(.blogs-nav-btn, .blogs__nav-btn):focus-visible {
+.blogs__nav .blogs__nav-btn:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.blogs-nav, .blogs__nav) :is(.blogs-nav-btn, .blogs__nav-btn):disabled {
+.blogs__nav .blogs__nav-btn:disabled {
     color: #c4c4c4;
     opacity: 0.55;
     cursor: default;
     pointer-events: none;
 }
 
-:is(.blogs-viewport, .blogs__viewport) {
+.blogs__viewport {
     container-type: inline-size;
     width: 100%;
     overflow-x: auto;
@@ -4674,24 +4674,24 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     -ms-overflow-style: none;
 }
 
-:is(.blogs-viewport, .blogs__viewport)::-webkit-scrollbar {
+.blogs__viewport::-webkit-scrollbar {
     display: none;
 }
 
-:is(.blogs-track, .blogs__track) {
+.blogs__track {
     display: flex;
     gap: 20px;
     width: max-content;
     min-width: 100%;
 }
 
-:is(.blog-item, .blogs__item) {
+.blogs__item {
     /* Match previous 3-column card width; do not shrink when a 4th card is added */
     flex: 0 0 calc((100cqi - 40px) / 3);
     min-width: 0;
 }
 
-:is(.blog-item-link, .blogs__item-link) {
+.blogs__item-link {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -4706,19 +4706,19 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-:is(.blog-item-link, .blogs__item-link):hover,
-:is(.blog-item-link, .blogs__item-link):focus-visible {
+.blogs__item-link:hover,
+.blogs__item-link:focus-visible {
     transform: translateY(-3px);
     border-color: rgba(178, 0, 0, 0.35);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
-:is(.blog-item-link, .blogs__item-link):focus-visible {
+.blogs__item-link:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.blog-item-media, .blogs__item-media) {
+.blogs__item-media {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 10;
@@ -4726,7 +4726,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     background: #ececec;
 }
 
-:is(.blog-item-media, .blogs__item-media) img {
+.blogs__item-media img {
     display: block;
     width: 100%;
     height: 100%;
@@ -4735,19 +4735,19 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-:is(.blog-item-link, .blogs__item-link):hover :is(.blog-item-media, .blogs__item-media) img,
-:is(.blog-item-link, .blogs__item-link):focus-visible :is(.blog-item-media, .blogs__item-media) img {
+.blogs__item-link:hover .blogs__item-media img,
+.blogs__item-link:focus-visible .blogs__item-media img {
     transform: scale(1.04);
 }
 
-:is(.blog-item-body, .blogs__item-body) {
+.blogs__item-body {
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 22px 22px 20px;
 }
 
-:is(.blog-item-date, .blogs__item-date) {
+.blogs__item-date {
     display: block;
     margin-bottom: 12px;
     font-size: 0.78rem;
@@ -4757,7 +4757,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #b20000;
 }
 
-:is(.blog-item-title, .blogs__item-title) {
+.blogs__item-title {
     margin: 0 0 12px;
     font-size: 1.2rem;
     font-weight: 700;
@@ -4767,7 +4767,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #111111;
 }
 
-:is(.blog-item-excerpt, .blogs__item-excerpt) {
+.blogs__item-excerpt {
     margin: 0 0 20px;
     flex: 1;
     font-size: 0.95rem;
@@ -4775,7 +4775,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #000000;
 }
 
-:is(.blog-item-cta, .blogs__item-cta) {
+.blogs__item-cta {
     font-size: 0.88rem;
     font-weight: 600;
     text-transform: lowercase;
@@ -4784,51 +4784,51 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     text-underline-offset: 3px;
 }
 
-:is(.blogs-view-more, .blogs__view-more) {
+.blogs__view-more {
     display: flex;
     justify-content: flex-end;
     margin-top: 40px;
 }
 
-:is(.blogs-view-more, .blogs__view-more) :is(.banner-cta, .btn) {
+.blogs__view-more .btn {
     margin-top: 0;
 }
 
 @media (max-width: 900px) {
-    :is(.blogs-header, .blogs__header) {
+    .blogs__header {
         flex-wrap: wrap;
         align-items: flex-start;
     }
 
-    :is(.blog-item, .blogs__item) {
+    .blogs__item {
         flex-basis: min(340px, 85cqi);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.blogs-viewport, .blogs__viewport) {
+    .blogs__viewport {
         scroll-behavior: auto;
     }
 
-    :is(.blog-item-link, .blogs__item-link),
-    :is(.blog-item-media, .blogs__item-media) img {
+    .blogs__item-link,
+    .blogs__item-media img {
         transition: none;
     }
 
-    :is(.blog-item-link, .blogs__item-link):hover,
-    :is(.blog-item-link, .blogs__item-link):focus-visible {
+    .blogs__item-link:hover,
+    .blogs__item-link:focus-visible {
         transform: none;
     }
 
-    :is(.blog-item-link, .blogs__item-link):hover :is(.blog-item-media, .blogs__item-media) img,
-    :is(.blog-item-link, .blogs__item-link):focus-visible :is(.blog-item-media, .blogs__item-media) img {
+    .blogs__item-link:hover .blogs__item-media img,
+    .blogs__item-link:focus-visible .blogs__item-media img {
         transform: none;
     }
 }
 
 
 
-:is(.faq-trigger, .faq__trigger) {
+.faq__trigger {
     width: 100%;
     display: flex;
     align-items: center;
@@ -4843,12 +4843,12 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: inherit;
 }
 
-:is(.faq-trigger, .faq__trigger):focus-visible {
+.faq__trigger:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
 }
 
-:is(.faq-question, .faq__question) {
+.faq__question {
     font-size: 18px;
     font-weight: 700;
     color: #000000;
@@ -4856,7 +4856,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     line-height: 1.35;
 }
 
-:is(.faq-icon, .faq__icon) {
+.faq__icon {
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -4866,8 +4866,8 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #b20000;
 }
 
-:is(.faq-icon, .faq__icon)::before,
-:is(.faq-icon, .faq__icon)::after {
+.faq__icon::before,
+.faq__icon::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -4878,31 +4878,31 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
         height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:is(.faq-item, .faq__item):not(.is-open) :is(.faq-icon, .faq__icon)::before {
+.faq__item:not(.is-open) .faq__icon::before {
     /* width: 2px; */
     height: 10px;
     transform: translate(-50%, -50%);
 }
 
-:is(.faq-item, .faq__item):not(.is-open) :is(.faq-icon, .faq__icon)::after {
+.faq__item:not(.is-open) .faq__icon::after {
     width: 10px;
     /* height: 2px; */
     transform: translate(-50%, -50%);
 }
 
-:is(.faq-item, .faq__item).is-open :is(.faq-icon, .faq__icon)::before {
+.faq__item.is-open .faq__icon::before {
     width: 11px;
     /* height: 2px; */
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-:is(.faq-item, .faq__item).is-open :is(.faq-icon, .faq__icon)::after {
+.faq__item.is-open .faq__icon::after {
     width: 11px;
     /* height: 2px; */
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-:is(.faq-panel, .faq__panel) {
+.faq__panel {
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
@@ -4912,16 +4912,16 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
         padding-bottom 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:is(.faq-item, .faq__item).is-open :is(.faq-panel, .faq__panel) {
+.faq__item.is-open .faq__panel {
     grid-template-rows: 1fr;
     padding-bottom: 28px;
 }
 
-:is(.faq-panel, .faq__panel)[hidden] {
+.faq__panel[hidden] {
     display: none;
 }
 
-:is(.faq-panel, .faq__panel) p {
+.faq__panel p {
     margin: 0;
     min-height: 0;
     overflow: hidden;
@@ -4933,29 +4933,29 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.faq-panel, .faq__panel) {
+    .faq__panel {
         transition: none;
     }
 
-    :is(.faq-icon, .faq__icon)::before,
-    :is(.faq-icon, .faq__icon)::after {
+    .faq__icon::before,
+    .faq__icon::after {
         transition: none;
     }
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-section, .blogs) {
+.page--blogs .blogs {
     padding: 24px 0 140px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-nav, .blogs__nav) {
+.page--blogs .blogs__nav {
     display: none;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-viewport, .blogs__viewport) {
+.page--blogs .blogs__viewport {
     overflow: visible;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-track, .blogs__track) {
+.page--blogs .blogs__track {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
@@ -4963,12 +4963,12 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     width: 100%;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) {
+.page--blogs .blogs__item {
     flex: none;
     width: 100%;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader, .blogs__reader) {
+.page--blogs .blogs__reader {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -4978,7 +4978,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     scroll-margin-top: clamp(56px, 10vh, 96px);
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-layout, .blogs__layout) {
+.page--blogs .blogs__layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 320px;
     gap: 40px;
@@ -4986,7 +4986,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     margin-bottom: 64px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-sidebar, .blogs__sidebar) {
+.page--blogs .blogs__sidebar {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -4994,11 +4994,11 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     top: 24px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-side-block, .blogs__side-block) {
+.page--blogs .blogs__side-block {
     min-width: 0;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-side-title, .blogs__side-title) {
+.page--blogs .blogs__side-title {
     margin: 0 0 16px;
     font-size: 1.05rem;
     font-weight: 700;
@@ -5008,13 +5008,13 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #111111;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-side-list, .blogs__side-list) {
+.page--blogs .blogs__side-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card) {
+.page--blogs .blogs__side-card {
     display: grid;
     grid-template-columns: 88px minmax(0, 1fr);
     gap: 12px;
@@ -5029,19 +5029,19 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card):hover,
-:is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card):focus-visible,
-:is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card).is-active {
+.page--blogs .blogs__side-card:hover,
+.page--blogs .blogs__side-card:focus-visible,
+.page--blogs .blogs__side-card.is-active {
     border-color: #b20000;
     box-shadow: 0 0 0 1px #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card):focus-visible {
+.page--blogs .blogs__side-card:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card-media, .blogs__side-card-media) {
+.page--blogs .blogs__side-card-media {
     display: block;
     width: 88px;
     height: 72px;
@@ -5050,21 +5050,21 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     background: #f2f2f2;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card-media, .blogs__side-card-media) img {
+.page--blogs .blogs__side-card-media img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card-copy, .blogs__side-card-copy) {
+.page--blogs .blogs__side-card-copy {
     display: flex;
     flex-direction: column;
     min-width: 0;
     gap: 6px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card-date, .blogs__side-card-date) {
+.page--blogs .blogs__side-card-date {
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -5072,7 +5072,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-side-card-title, .blogs__side-card-title) {
+.page--blogs .blogs__side-card-title {
     font-size: 0.92rem;
     font-weight: 700;
     line-height: 1.3;
@@ -5081,7 +5081,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #111111;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-media, .blogs__reader-media) {
+.page--blogs .blogs__reader-media {
     width: 100%;
     overflow: hidden;
     border-radius: 16px;
@@ -5089,14 +5089,14 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     aspect-ratio: 21 / 9;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-media, .blogs__reader-media) img {
+.page--blogs .blogs__reader-media img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-copy, .blogs__reader-copy) {
+.page--blogs .blogs__reader-copy {
     width: 100%;
     max-width: none;
     margin: 32px 0 0;
@@ -5104,7 +5104,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     text-align: left;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-date, .blogs__reader-date) {
+.page--blogs .blogs__reader-date {
     display: block;
     margin-bottom: 14px;
     font-size: 0.78rem;
@@ -5114,7 +5114,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-title, .blogs__reader-title) {
+.page--blogs .blogs__reader-title {
     margin: 0 0 24px;
     font-size: clamp(32px, 4.4vw, 48px);
     font-weight: 700;
@@ -5124,26 +5124,26 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #111111;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-body, .blogs__reader-body) {
+.page--blogs .blogs__reader-body {
     display: grid;
     gap: 18px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-body, .blogs__reader-body) p {
+.page--blogs .blogs__reader-body p {
     margin: 0;
     font-size: 1.05rem;
     line-height: 1.7;
     color: #000000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-reader-actions, .blogs__reader-actions) {
+.page--blogs .blogs__reader-actions {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 28px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action) {
+.page--blogs .blogs__action {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -5163,42 +5163,42 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action):hover,
-:is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action):focus-visible {
+.page--blogs .blogs__action:hover,
+.page--blogs .blogs__action:focus-visible {
     border-color: #b20000;
     color: #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action):focus-visible {
+.page--blogs .blogs__action:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action-icon, .blogs__action-icon) {
+.page--blogs .blogs__action-icon {
     flex-shrink: 0;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action-count, .blogs__action-count) {
+.page--blogs .blogs__action-count {
     min-width: 1.2em;
     color: inherit;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action--like, .blogs__action--like).is-liked {
+.page--blogs .blogs__action--like.is-liked {
     border-color: #b20000;
     background: rgba(178, 0, 0, 0.08);
     color: #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-action--like, .blogs__action--like).is-liked :is(.blog-action-icon, .blogs__action-icon) path {
+.page--blogs .blogs__action--like.is-liked .blogs__action-icon path {
     fill: #b20000;
     stroke: #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-list-header, .blogs__list-header) {
+.page--blogs .blogs__list-header {
     margin: 0 0 28px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blogs-list-title, .blogs__list-title) {
+.page--blogs .blogs__list-title {
     margin: 0;
     font-size: clamp(24px, 3vw, 32px);
     font-weight: 700;
@@ -5208,7 +5208,7 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     color: #111111;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) {
+.page--blogs .blogs__item {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -5219,19 +5219,19 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item):hover,
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item):focus-within {
+.page--blogs .blogs__item:hover,
+.page--blogs .blogs__item:focus-within {
     transform: translateY(-3px);
     border-color: rgba(178, 0, 0, 0.35);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item).is-active {
+.page--blogs .blogs__item.is-active {
     border-color: #b20000;
     box-shadow: 0 0 0 1px #b20000;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) :is(.blog-item-link, .blogs__item-link) {
+.page--blogs .blogs__item .blogs__item-link {
     flex: 1 1 auto;
     height: auto;
     min-height: 0;
@@ -5243,18 +5243,18 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     background: transparent;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) :is(.blog-item-link, .blogs__item-link):hover,
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) :is(.blog-item-link, .blogs__item-link):focus-visible {
+.page--blogs .blogs__item .blogs__item-link:hover,
+.page--blogs .blogs__item .blogs__item-link:focus-visible {
     transform: none;
     border-color: transparent;
     box-shadow: none;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) :is(.blog-item-body, .blogs__item-body) {
+.page--blogs .blogs__item .blogs__item-body {
     padding-bottom: 12px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item-actions, .blogs__item-actions) {
+.page--blogs .blogs__item-actions {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -5263,20 +5263,20 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
     padding: 0 22px 20px;
 }
 
-:is(.blogs-page, .blogs__page) :is(.blog-item-actions, .blogs__item-actions) :is(.blog-action, .blogs__action) {
+.page--blogs .blogs__item-actions .blogs__action {
     min-height: 36px;
     padding: 0 12px;
     font-size: 0.8rem;
 }
 
 @media (max-width: 1024px) {
-    :is(.blogs-page, .blogs__page) :is(.blogs-layout, .blogs__layout) {
+    .page--blogs .blogs__layout {
         grid-template-columns: 1fr;
         gap: 36px;
         margin-bottom: 48px;
     }
 
-    :is(.blogs-page, .blogs__page) :is(.blogs-sidebar, .blogs__sidebar) {
+    .page--blogs .blogs__sidebar {
         position: static;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -5285,82 +5285,82 @@ main > div:is(.gradient-background, .hero, .services) :is(.section-slogan, .hero
 }
 
 @media (max-width: 900px) {
-    :is(.blogs-page, .blogs__page) :is(.blogs-track, .blogs__track) {
+    .page--blogs .blogs__track {
         grid-template-columns: 1fr;
     }
 
-    :is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) {
+    .page--blogs .blogs__item {
         flex-basis: auto;
     }
 
-    :is(.blogs-page, .blogs__page) :is(.blog-reader-media, .blogs__reader-media) {
+    .page--blogs .blogs__reader-media {
         aspect-ratio: 16 / 10;
     }
 
-    :is(.blogs-page, .blogs__page) :is(.blogs-sidebar, .blogs__sidebar) {
+    .page--blogs .blogs__sidebar {
         grid-template-columns: 1fr;
     }
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-reader-title, .blogs__reader-title),
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blogs-list-title, .blogs__list-title),
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blogs-side-title, .blogs__side-title),
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card-title, .blogs__side-card-title) {
+html[data-theme="dark"] .page--blogs .blogs__reader-title,
+html[data-theme="dark"] .page--blogs .blogs__list-title,
+html[data-theme="dark"] .page--blogs .blogs__side-title,
+html[data-theme="dark"] .page--blogs .blogs__side-card-title {
     color: #ffffff;
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-reader-body, .blogs__reader-body) p {
+html[data-theme="dark"] .page--blogs .blogs__reader-body p {
     color: rgba(255, 255, 255, 0.88);
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-reader-media, .blogs__reader-media),
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card-media, .blogs__side-card-media) {
+html[data-theme="dark"] .page--blogs .blogs__reader-media,
+html[data-theme="dark"] .page--blogs .blogs__side-card-media {
     background: #1a1a1a;
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action) {
+html[data-theme="dark"] .page--blogs .blogs__action {
     background: #141414;
     border-color: rgba(255, 255, 255, 0.16);
     color: #ffffff;
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action):hover,
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-action, .blogs__action):focus-visible,
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-action--like, .blogs__action--like).is-liked {
+html[data-theme="dark"] .page--blogs .blogs__action:hover,
+html[data-theme="dark"] .page--blogs .blogs__action:focus-visible,
+html[data-theme="dark"] .page--blogs .blogs__action--like.is-liked {
     border-color: #b20000;
     color: #ff6b6b;
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-action--like, .blogs__action--like).is-liked {
+html[data-theme="dark"] .page--blogs .blogs__action--like.is-liked {
     background: rgba(178, 0, 0, 0.2);
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item) {
+html[data-theme="dark"] .page--blogs .blogs__item {
     background: #2a2a2a;
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item):hover,
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item):focus-within {
+html[data-theme="dark"] .page--blogs .blogs__item:hover,
+html[data-theme="dark"] .page--blogs .blogs__item:focus-within {
     border-color: rgba(178, 0, 0, 0.45);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-item, .blogs__item).is-active {
+html[data-theme="dark"] .page--blogs .blogs__item.is-active {
     border-color: #b20000;
     box-shadow: 0 0 0 1px #b20000;
 }
 
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card).is-active,
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card):hover,
-html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blogs__side-card):focus-visible {
+html[data-theme="dark"] .page--blogs .blogs__side-card.is-active,
+html[data-theme="dark"] .page--blogs .blogs__side-card:hover,
+html[data-theme="dark"] .page--blogs .blogs__side-card:focus-visible {
     border-color: #b20000;
     box-shadow: 0 0 0 1px #b20000;
 }
 
 /* ===== css/pages/careers.css ===== */
 /* --- Careers --- */
-:is(.career-section, .careers) {
+.careers {
     position: relative;
     z-index: 0;
     /* Overlap Team so the top fade sits flush against the team background */
@@ -5372,8 +5372,8 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
 }
 
 /* Soft blend into Team (above) and Blogs (below) */
-:is(.career-section, .careers)::before,
-:is(.career-section, .careers)::after {
+.careers::before,
+.careers::after {
     content: "";
     position: absolute;
     left: 0;
@@ -5382,7 +5382,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     z-index: 0;
 }
 
-:is(.career-section, .careers)::before {
+.careers::before {
     top: 0;
     height: clamp(140px, 24vh, 240px);
     background: linear-gradient(
@@ -5394,7 +5394,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     );
 }
 
-:is(.career-section, .careers)::after {
+.careers::after {
     bottom: 0;
     height: clamp(96px, 16vh, 160px);
     background: linear-gradient(
@@ -5405,7 +5405,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     );
 }
 
-:is(.career-layout, .careers__layout) {
+.careers__layout {
     position: relative;
     z-index: 1;
     max-width: 1300px;
@@ -5417,17 +5417,17 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     align-items: start;
 }
 
-:is(.career-intro, .careers__intro),
-:is(.career-form, .careers__form) {
+.careers__intro,
+.careers__form {
     margin-top: 0;
     padding-top: 0;
 }
 
-:is(.career-label, .careers__label) {
+.careers__label {
     margin: 0 0 12px;
 }
 
-:is(.career-heading, .careers__heading) {
+.careers__heading {
     margin: 0 0 16px;
     font-size: clamp(32px, 4vw, 44px);
     font-weight: 700;
@@ -5437,7 +5437,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #111111;
 }
 
-:is(.career-lead, .careers__lead) {
+.careers__lead {
     margin: 0;
     max-width: 28ch;
     font-size: 16px;
@@ -5457,12 +5457,12 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     border: 0;
 }
 
-:is(.career-openings, .careers__openings) {
+.careers__openings {
     margin-top: 36px;
     max-width: 420px;
 }
 
-:is(.career-openings-header, .careers__openings-header) {
+.careers__openings-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -5470,7 +5470,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     margin-bottom: 14px;
 }
 
-:is(.career-openings-title, .careers__openings-title) {
+.careers__openings-title {
     margin: 0;
     font-size: 1.05rem;
     font-weight: 700;
@@ -5479,14 +5479,14 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #111111;
 }
 
-:is(.career-openings-nav, .careers__openings-nav) {
+.careers__openings-nav {
     display: flex;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
 }
 
-:is(.career-openings-btn, .careers__openings-btn) {
+.careers__openings-btn {
     width: 36px;
     height: 36px;
     padding: 0;
@@ -5500,33 +5500,33 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     transition: color 0.2s ease;
 }
 
-:is(.career-openings-btn, .careers__openings-btn):hover,
-:is(.career-openings-btn, .careers__openings-btn):focus-visible {
+.careers__openings-btn:hover,
+.careers__openings-btn:focus-visible {
     color: #b20000;
 }
 
-:is(.career-openings-btn, .careers__openings-btn):focus-visible {
+.careers__openings-btn:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
 }
 
-:is(.career-openings-btn--next, .careers__openings-btn--next) {
+.careers__openings-btn--next {
     color: #b20000;
 }
 
-:is(.career-openings-btn, .careers__openings-btn):disabled {
+.careers__openings-btn:disabled {
     opacity: 0.35;
     cursor: default;
     pointer-events: none;
 }
 
-:is(.career-openings-search, .careers__openings-search) {
+.careers__openings-search {
     position: relative;
     display: block;
     margin-bottom: 14px;
 }
 
-:is(.career-openings-search-icon, .careers__openings-search-icon) {
+.careers__openings-search-icon {
     position: absolute;
     left: 14px;
     top: 50%;
@@ -5535,7 +5535,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     pointer-events: none;
 }
 
-:is(.career-openings-search, .careers__openings-search) input {
+.careers__openings-search input {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 14px 12px 42px;
@@ -5548,28 +5548,28 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     outline: none;
 }
 
-:is(.career-openings-search, .careers__openings-search) input:focus-visible {
+.careers__openings-search input:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
     border-color: rgba(178, 0, 0, 0.45);
 }
 
-:is(.career-openings-search, .careers__openings-search) input::placeholder {
+.careers__openings-search input::placeholder {
     color: #9a9a9a;
 }
 
-:is(.career-openings-viewport, .careers__openings-viewport) {
+.careers__openings-viewport {
     overflow: hidden;
     border-radius: 14px;
 }
 
-:is(.career-openings-track, .careers__openings-track) {
+.careers__openings-track {
     display: flex;
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform;
 }
 
-:is(.career-opening-card, .careers__opening-card) {
+.careers__opening-card {
     flex: 0 0 100%;
     min-width: 100%;
     box-sizing: border-box;
@@ -5582,7 +5582,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     gap: 10px;
 }
 
-:is(.career-opening-role, .careers__opening-role) {
+.careers__opening-role {
     margin: 0;
     font-size: 1.15rem;
     font-weight: 700;
@@ -5591,7 +5591,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     text-transform: lowercase;
 }
 
-:is(.career-opening-meta, .careers__opening-meta) {
+.careers__opening-meta {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -5601,25 +5601,25 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #666666;
 }
 
-:is(.career-opening-meta, .careers__opening-meta) span {
+.careers__opening-meta span {
     display: inline-flex;
     align-items: center;
 }
 
-:is(.career-opening-meta, .careers__opening-meta) span + span::before {
+.careers__opening-meta span + span::before {
     content: "?";
     margin-right: 12px;
     color: #b20000;
 }
 
-:is(.career-opening-desc, .careers__opening-desc) {
+.careers__opening-desc {
     margin: 0;
     font-size: 0.92rem;
     line-height: 1.5;
     color: #000000;
 }
 
-:is(.career-opening-apply, .careers__opening-apply) {
+.careers__opening-apply {
     align-self: flex-start;
     margin-top: 4px;
     padding: 0;
@@ -5635,17 +5635,17 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     text-underline-offset: 3px;
 }
 
-:is(.career-opening-apply, .careers__opening-apply):hover,
-:is(.career-opening-apply, .careers__opening-apply):focus-visible {
+.careers__opening-apply:hover,
+.careers__opening-apply:focus-visible {
     color: #8f0000;
 }
 
-:is(.career-opening-apply, .careers__opening-apply):focus-visible {
+.careers__opening-apply:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.career-openings-meta, .careers__openings-meta) {
+.careers__openings-meta {
     margin: 10px 0 0;
     font-size: 0.8rem;
     font-weight: 500;
@@ -5653,13 +5653,13 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     letter-spacing: 0.02em;
 }
 
-:is(.career-openings-empty, .careers__openings-empty) {
+.careers__openings-empty {
     margin: 12px 0 0;
     font-size: 0.92rem;
     color: #666666;
 }
 
-:is(.career-explore, .careers__explore) {
+.careers__explore {
     position: relative;
     z-index: 1;
     max-width: 1300px;
@@ -5668,7 +5668,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     box-sizing: border-box;
 }
 
-:is(.career-explore-btn, .careers__explore-btn) {
+.careers__explore-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -5685,47 +5685,47 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     transition: gap 0.3s ease, transform 0.15s ease, filter 0.2s ease;
 }
 
-:is(.career-explore-btn, .careers__explore-btn):hover,
-:is(.career-explore-btn, .careers__explore-btn):focus-visible {
+.careers__explore-btn:hover,
+.careers__explore-btn:focus-visible {
     gap: 24px;
     filter: brightness(1.05);
 }
 
-:is(.career-explore-btn, .careers__explore-btn):focus-visible {
+.careers__explore-btn:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.career-explore-btn, .careers__explore-btn) svg {
+.careers__explore-btn svg {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
 }
 
 /* Standalone careers page — no Team overlap */
-:is(.career-page, .careers__page) :is(.career-section, .careers) {
+.page--careers .careers {
     margin-top: 0;
     padding: 48px 0 80px;
 }
 
-:is(.career-page, .careers__page) :is(.career-section, .careers)::before {
+.page--careers .careers::before {
     height: clamp(64px, 10vh, 96px);
 }
 
-:is(.career-page, .careers__page) > :is(.gradient-background, .hero, .services) {
+.page--careers > :is(.page__shell, .hero, .services) {
     background: #ffffff;
     margin-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-:is(.career-page, .careers__page) .jobs-board {
+.page--careers .jobs-board {
     padding-bottom: 48px;
     background: transparent;
 }
 
 /* Same background as Careers above — no fade needed */
-:is(.career-page, .careers__page) :is(.our-team, .team) {
+.page--careers .team {
     position: relative;
     z-index: 1;
     margin-top: 0;
@@ -5734,7 +5734,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     overflow: hidden;
 }
 
-:is(.career-page, .careers__page) :is(.our-team, .team)::before {
+.page--careers .team::before {
     content: none;
     display: none;
 }
@@ -5747,11 +5747,11 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     box-sizing: border-box;
 }
 
-.jobs-board-header {
+.jobs-board__header {
     margin-bottom: 28px;
 }
 
-.jobs-board-heading-row {
+.jobs-board__heading-row {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
@@ -5762,11 +5762,11 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     max-width: 100%;
 }
 
-.jobs-board-heading-row :is(.career-heading, .careers__heading) {
+.jobs-board__heading-row .careers__heading {
     margin: 0;
 }
 
-.jobs-empty-toggle {
+.jobs-board__empty-toggle {
     position: relative;
     z-index: 6;
     flex: 0 0 auto;
@@ -5798,24 +5798,24 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.jobs-empty-toggle:hover,
-.jobs-empty-toggle:focus-visible {
+.jobs-board__empty-toggle:hover,
+.jobs-board__empty-toggle:focus-visible {
     background: #b20000;
     color: #ffffff;
     outline: none;
 }
 
-.jobs-empty-toggle:focus-visible {
+.jobs-board__empty-toggle:focus-visible {
     box-shadow: 0 0 0 3px rgba(178, 0, 0, 0.2);
 }
 
-.jobs-empty-toggle.is-active {
+.jobs-board__empty-toggle.is-active {
     background: #b20000;
     border-color: #b20000;
     color: #ffffff;
 }
 
-.jobs-board-empty-screen {
+.jobs-board__empty-screen {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5826,17 +5826,17 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
-.jobs-board-empty-screen[hidden] {
+.jobs-board__empty-screen[hidden] {
     display: none !important;
 }
 
-.jobs-board-empty-screen-inner {
+.jobs-board__empty-screen-inner {
     max-width: 36ch;
     padding: 40px 28px;
     text-align: center;
 }
 
-.jobs-board-empty-screen-title {
+.jobs-board__empty-screen-title {
     margin: 0 0 10px;
     font-size: 1.35rem;
     font-weight: 700;
@@ -5844,24 +5844,24 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #111111;
 }
 
-.jobs-board-empty-screen-copy {
+.jobs-board__empty-screen-copy {
     margin: 0;
     font-size: 0.98rem;
     line-height: 1.55;
     color: #555555;
 }
 
-.jobs-board-shell[hidden] {
+.jobs-board__shell[hidden] {
     display: none !important;
 }
 
-.jobs-board-lead {
+.jobs-board__lead {
     max-width: 42ch;
     margin-top: 8px;
     color: #555555;
 }
 
-.jobs-board-shell {
+.jobs-board__shell {
     display: grid;
     grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
     gap: 0;
@@ -5873,7 +5873,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
-.jobs-board-list-pane {
+.jobs-board__list-pane {
     display: flex;
     flex-direction: column;
     /* Height follows the detail column; content here does not grow the row */
@@ -5884,14 +5884,14 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     background: #fafafa;
 }
 
-.jobs-board-list-top {
+.jobs-board__list-top {
     flex-shrink: 0;
     padding: 18px 16px 12px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     background: #ffffff;
 }
 
-.jobs-board-list-heading {
+.jobs-board__list-heading {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -5899,7 +5899,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     margin-bottom: 12px;
 }
 
-.jobs-board-list-title {
+.jobs-board__list-title {
     margin: 0;
     font-size: 1.05rem;
     font-weight: 700;
@@ -5908,7 +5908,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #111111;
 }
 
-.jobs-board-count {
+.jobs-board__count {
     margin: 0;
     font-size: 0.82rem;
     font-weight: 500;
@@ -5916,11 +5916,11 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     white-space: nowrap;
 }
 
-.jobs-board-search {
+.jobs-board__search {
     margin: 0;
 }
 
-.jobs-board-list {
+.jobs-board__list {
     flex: 1 1 auto;
     overflow-y: auto;
     overscroll-behavior: contain;
@@ -5931,7 +5931,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     scrollbar-gutter: auto;
 }
 
-.jobs-list-item {
+.jobs-board__list-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -5949,35 +5949,35 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
-.jobs-list-item:hover {
+.jobs-board__list-item:hover {
     border-color: rgba(178, 0, 0, 0.25);
 }
 
-.jobs-list-item.is-active {
+.jobs-board__list-item.is-active {
     border-color: #b20000;
     background: #fff8f8;
     box-shadow: inset 3px 0 0 #b20000;
 }
 
-.jobs-list-item:focus-visible {
+.jobs-board__list-item:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
 }
 
-.jobs-list-item-role {
+.jobs-board__list-item-role {
     font-size: 1.02rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #111111;
 }
 
-.jobs-list-item-meta {
+.jobs-board__list-item-meta {
     font-size: 0.82rem;
     font-weight: 500;
     color: #666666;
 }
 
-.jobs-list-item-summary {
+.jobs-board__list-item-summary {
     font-size: 0.88rem;
     line-height: 1.45;
     color: #555555;
@@ -5987,23 +5987,23 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     overflow: hidden;
 }
 
-.jobs-list-item-posted {
+.jobs-board__list-item-posted {
     font-size: 0.75rem;
     font-weight: 500;
     color: #888888;
 }
 
-.jobs-board-detail-pane {
+.jobs-board__detail-pane {
     min-width: 0;
     overflow: visible;
     background: #ffffff;
 }
 
-.jobs-detail-inner {
+.jobs-board__detail-inner {
     padding: 28px 28px 40px;
 }
 
-.jobs-detail-back {
+.jobs-board__detail-back {
     display: none;
     margin: 0 0 16px;
     padding: 0;
@@ -6016,19 +6016,19 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     cursor: pointer;
 }
 
-.jobs-detail-back:hover,
-.jobs-detail-back:focus-visible {
+.jobs-board__detail-back:hover,
+.jobs-board__detail-back:focus-visible {
     color: #8f0000;
 }
 
-.jobs-detail-eyebrow {
+.jobs-board__detail-eyebrow {
     margin: 0 0 8px;
     font-size: 0.85rem;
     font-weight: 600;
     color: #666666;
 }
 
-.jobs-detail-role {
+.jobs-board__detail-role {
     margin: 0 0 12px;
     font-size: clamp(1.6rem, 3vw, 2.1rem);
     font-weight: 700;
@@ -6037,7 +6037,7 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #111111;
 }
 
-.jobs-detail-meta {
+.jobs-board__detail-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 14px;
@@ -6047,17 +6047,17 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #555555;
 }
 
-.jobs-detail-meta span + span::before {
+.jobs-board__detail-meta span + span::before {
     content: "·";
     margin-right: 14px;
     color: #b20000;
 }
 
-.jobs-detail-section {
+.jobs-board__detail-section {
     margin-bottom: 28px;
 }
 
-.jobs-detail-section h3 {
+.jobs-board__detail-section h3 {
     margin: 0 0 10px;
     font-size: 1.05rem;
     font-weight: 700;
@@ -6065,36 +6065,36 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     color: #111111;
 }
 
-.jobs-detail-section p,
-.jobs-detail-apply-lead {
+.jobs-board__detail-section p,
+.jobs-board__detail-apply-lead {
     margin: 0;
     font-size: 0.98rem;
     line-height: 1.6;
     color: #333333;
 }
 
-.jobs-detail-section ul {
+.jobs-board__detail-section ul {
     margin: 0;
     padding-left: 1.15em;
 }
 
-.jobs-detail-section li {
+.jobs-board__detail-section li {
     margin: 0 0 8px;
     font-size: 0.98rem;
     line-height: 1.55;
     color: #333333;
 }
 
-.jobs-detail-apply-block {
+.jobs-board__detail-apply-block {
     padding-top: 8px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.jobs-detail-apply-lead {
+.jobs-board__detail-apply-lead {
     margin-bottom: 18px !important;
 }
 
-.jobs-detail-empty {
+.jobs-board__detail-empty {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6104,32 +6104,32 @@ html[data-theme="dark"] :is(.blogs-page, .blogs__page) :is(.blog-side-card, .blo
     text-align: center;
 }
 
-.jobs-board :is(.career-position-filled, .careers__position-filled) {
+.jobs-board .careers__position-filled {
     cursor: default;
     color: #111111;
     background: #f3f3f3;
 }
 
-html[data-theme="dark"] .jobs-board :is(.career-position-filled, .careers__position-filled) {
+html[data-theme="dark"] .jobs-board .careers__position-filled {
     color: #e8e8e8;
     background: #101010;
 }
 
-.jobs-board :is(.career-form, .careers__form) {
+.jobs-board .careers__form {
     margin-top: 8px;
 }
 
-.jobs-board :is(.career-form, .careers__form)[hidden] {
+.jobs-board .careers__form[hidden] {
     display: none !important;
 }
 
 @media (max-width: 900px) {
-    .jobs-board-shell {
+    .jobs-board__shell {
         grid-template-columns: 1fr;
         overflow: hidden;
     }
 
-    .jobs-board-list-pane {
+    .jobs-board__list-pane {
         height: auto;
         min-height: 0;
         max-height: min(62vh, 560px);
@@ -6137,124 +6137,124 @@ html[data-theme="dark"] .jobs-board :is(.career-position-filled, .careers__posit
         overflow: hidden;
     }
 
-    .jobs-board-detail-pane {
+    .jobs-board__detail-pane {
         display: none;
         overflow: visible;
         border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
-    .jobs-board.is-detail-mobile .jobs-board-list-pane {
+    .jobs-board.is-detail-mobile .jobs-board__list-pane {
         display: none;
     }
 
-    .jobs-board.is-detail-mobile .jobs-board-detail-pane {
+    .jobs-board.is-detail-mobile .jobs-board__detail-pane {
         display: block;
     }
 
-    .jobs-detail-back {
+    .jobs-board__detail-back {
         display: inline-flex;
     }
 
-    .jobs-detail-inner {
+    .jobs-board__detail-inner {
         padding: 20px 18px 36px;
     }
 }
 
-html[data-theme="dark"] .jobs-board-lead,
-html[data-theme="dark"] .jobs-board-empty-screen-copy,
-html[data-theme="dark"] .jobs-list-item-summary,
-html[data-theme="dark"] .jobs-detail-section p,
-html[data-theme="dark"] .jobs-detail-section li,
-html[data-theme="dark"] .jobs-detail-apply-lead {
+html[data-theme="dark"] .jobs-board__lead,
+html[data-theme="dark"] .jobs-board__empty-screen-copy,
+html[data-theme="dark"] .jobs-board__list-item-summary,
+html[data-theme="dark"] .jobs-board__detail-section p,
+html[data-theme="dark"] .jobs-board__detail-section li,
+html[data-theme="dark"] .jobs-board__detail-apply-lead {
     color: #b0b0b0;
 }
 
-html[data-theme="dark"] .jobs-empty-toggle {
+html[data-theme="dark"] .jobs-board__empty-toggle {
     background: #1a1a1a;
     border-color: #b20000;
     color: #ff6b6b;
 }
 
-html[data-theme="dark"] .jobs-empty-toggle:hover,
-html[data-theme="dark"] .jobs-empty-toggle:focus-visible,
-html[data-theme="dark"] .jobs-empty-toggle.is-active {
+html[data-theme="dark"] .jobs-board__empty-toggle:hover,
+html[data-theme="dark"] .jobs-board__empty-toggle:focus-visible,
+html[data-theme="dark"] .jobs-board__empty-toggle.is-active {
     background: #b20000;
     border-color: #b20000;
     color: #ffffff;
 }
 
-html[data-theme="dark"] .jobs-board-empty-screen {
+html[data-theme="dark"] .jobs-board__empty-screen {
     background: #141414;
     border-color: rgba(255, 255, 255, 0.1);
     box-shadow: none;
 }
 
-html[data-theme="dark"] .jobs-board-empty-screen-title {
+html[data-theme="dark"] .jobs-board__empty-screen-title {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] .jobs-board-shell {
+html[data-theme="dark"] .jobs-board__shell {
     background: #141414;
     border-color: rgba(255, 255, 255, 0.1);
     box-shadow: none;
 }
 
-html[data-theme="dark"] .jobs-board-list-pane {
+html[data-theme="dark"] .jobs-board__list-pane {
     background: #101010;
     border-right-color: rgba(255, 255, 255, 0.08);
 }
 
-html[data-theme="dark"] .jobs-board-list-top,
-html[data-theme="dark"] .jobs-board-detail-pane,
-html[data-theme="dark"] .jobs-list-item {
+html[data-theme="dark"] .jobs-board__list-top,
+html[data-theme="dark"] .jobs-board__detail-pane,
+html[data-theme="dark"] .jobs-board__list-item {
     background: #1a1a1a;
 }
 
-html[data-theme="dark"] .jobs-board-list-title,
-html[data-theme="dark"] .jobs-list-item-role,
-html[data-theme="dark"] .jobs-detail-role,
-html[data-theme="dark"] .jobs-detail-section h3 {
+html[data-theme="dark"] .jobs-board__list-title,
+html[data-theme="dark"] .jobs-board__list-item-role,
+html[data-theme="dark"] .jobs-board__detail-role,
+html[data-theme="dark"] .jobs-board__detail-section h3 {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] .jobs-list-item.is-active {
+html[data-theme="dark"] .jobs-board__list-item.is-active {
     background: rgba(178, 0, 0, 0.12);
     border-color: #b20000;
 }
 
-html[data-theme="dark"] .jobs-detail-apply-block {
+html[data-theme="dark"] .jobs-board__detail-apply-block {
     border-top-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :is(.career-openings-track, .careers__openings-track) {
+    .careers__openings-track {
         transition: none;
     }
 }
 
-:is(.career-form, .careers__form) {
+.careers__form {
     width: 100%;
     min-width: 0;
     position: relative;
 }
 
-:is(.career-form-grid, .careers__form-grid) {
+.careers__form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px 18px;
 }
 
-:is(.career-field, .careers__field) {
+.careers__field {
     display: flex;
     flex-direction: column;
     min-width: 0;
 }
 
-:is(.career-field--full, .careers__field--full) {
+.careers__field--full {
     grid-column: 1 / -1;
 }
 
-:is(.career-label-field, .careers__label-field) {
+.careers__label-field {
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
@@ -6263,8 +6263,8 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     color: #333333;
 }
 
-:is(.career-field, .careers__field) input,
-:is(.career-field, .careers__field) select {
+.careers__field input,
+.careers__field select {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -6280,7 +6280,7 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-:is(.career-field, .careers__field) select {
+.careers__field select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666666' d='M1.4 0L6 4.6 10.6 0 12 1.4 6 7.4 0 1.4z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 14px center;
@@ -6289,18 +6289,18 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     cursor: pointer;
 }
 
-:is(.career-field, .careers__field) input:focus-visible,
-:is(.career-field, .careers__field) select:focus-visible {
+.careers__field input:focus-visible,
+.careers__field select:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 2px;
     border-color: rgba(178, 0, 0, 0.45);
 }
 
-:is(.career-field, .careers__field) input::placeholder {
+.careers__field input::placeholder {
     color: #9a9a9a;
 }
 
-:is(.career-salary, .careers__salary) {
+.careers__salary {
     display: flex;
     align-items: stretch;
     width: 100%;
@@ -6312,13 +6312,13 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-:is(.career-salary, .careers__salary):focus-within {
+.careers__salary:focus-within {
     outline: 2px solid #b20000;
     outline-offset: 2px;
     border-color: rgba(178, 0, 0, 0.45);
 }
 
-:is(.career-salary-currency, .careers__salary-currency) {
+.careers__salary-currency {
     flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
@@ -6335,7 +6335,7 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     pointer-events: none;
 }
 
-:is(.career-salary, .careers__salary) input[type="number"] {
+.careers__salary input[type="number"] {
     flex: 1 1 auto;
     min-width: 0;
     border: none;
@@ -6345,18 +6345,18 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     -moz-appearance: textfield;
 }
 
-:is(.career-salary, .careers__salary) input[type="number"]::-webkit-outer-spin-button,
-:is(.career-salary, .careers__salary) input[type="number"]::-webkit-inner-spin-button {
+.careers__salary input[type="number"]::-webkit-outer-spin-button,
+.careers__salary input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-:is(.career-salary, .careers__salary) input[type="number"]:focus-visible {
+.careers__salary input[type="number"]:focus-visible {
     outline: none;
     border-color: transparent;
 }
 
-:is(.career-form, .careers__form) .site-footer__select-trigger {
+.careers__form .site-footer__select-trigger {
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.92);
@@ -6367,29 +6367,29 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     padding-right: 36px;
 }
 
-:is(.career-form, .careers__form) .site-footer__select-trigger.is-placeholder {
+.careers__form .site-footer__select-trigger.is-placeholder {
     color: #9a9a9a;
 }
 
-:is(.career-form, .careers__form) .site-footer__select-menu {
+.careers__form .site-footer__select-menu {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
-:is(.career-upload, .careers__upload) {
+.careers__upload {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 12px 16px;
 }
 
-:is(.career-upload, .careers__upload) :is(.career-form-button, .careers__form-button) {
+.careers__upload .careers__form-button {
     margin-top: 0;
     margin-left: auto;
 }
 
-:is(.career-upload-input, .careers__upload-input) {
+.careers__upload-input {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -6401,7 +6401,7 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     border: 0;
 }
 
-:is(.career-upload-btn, .careers__upload-btn) {
+.careers__upload-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -6418,29 +6418,29 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-:is(.career-upload-btn, .careers__upload-btn):hover {
+.careers__upload-btn:hover {
     background: #b20000;
     color: #ffffff;
 }
 
-:is(.career-upload-input, .careers__upload-input):focus-visible + :is(.career-upload-btn, .careers__upload-btn) {
+.careers__upload-input:focus-visible + .careers__upload-btn {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.career-upload-name, .careers__upload-name) {
+.careers__upload-name {
     font-size: 14px;
     color: #666666;
     min-width: 0;
     word-break: break-word;
 }
 
-:is(.career-upload-name, .careers__upload-name).is-selected {
+.careers__upload-name.is-selected {
     color: #111111;
     font-weight: 500;
 }
 
-:is(.career-form-button, .careers__form-button) {
+.careers__form-button {
     margin-top: 0;
     padding: 12px 24px;
     border: 2px solid #b20000;
@@ -6455,24 +6455,24 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 
-:is(.career-form-button, .careers__form-button):hover {
+.careers__form-button:hover {
     background: #8f0000;
     border-color: #8f0000;
     transform: translateY(-1px);
 }
 
-:is(.career-form-button, .careers__form-button):focus-visible {
+.careers__form-button:focus-visible {
     outline: 2px solid #b20000;
     outline-offset: 3px;
 }
 
-:is(.career-form-button, .careers__form-button):disabled {
+.careers__form-button:disabled {
     opacity: 0.7;
     cursor: wait;
     transform: none;
 }
 
-:is(.career-form-status, .careers__form-status) {
+.careers__form-status {
     margin: 14px 0 0;
     font-size: 14px;
     line-height: 1.45;
@@ -6480,44 +6480,44 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     min-height: 1.2em;
 }
 
-:is(.career-form-status, .careers__form-status).is-success {
+.careers__form-status.is-success {
     color: #1b6b3a;
 }
 
-:is(.career-form-status, .careers__form-status).is-error {
+.careers__form-status.is-error {
     color: #b20000;
 }
 
 @media (max-width: 900px) {
-    :is(.career-layout, .careers__layout) {
+    .careers__layout {
         grid-template-columns: 1fr;
         gap: 28px;
     }
 
-    :is(.career-lead, .careers__lead) {
+    .careers__lead {
         max-width: none;
     }
 
-    :is(.career-openings, .careers__openings) {
+    .careers__openings {
         max-width: none;
     }
 
-    :is(.career-explore, .careers__explore) {
+    .careers__explore {
         margin-top: 28px;
     }
 }
 
 @media (max-width: 640px) {
-    :is(.career-section, .careers) {
+    .careers {
         padding: 56px 0 0;
     }
 
-    :is(.career-form-grid, .careers__form-grid) {
+    .careers__form-grid {
         grid-template-columns: 1fr;
     }
 }
 
-:is(.slider-viewport, .team__viewport) {
+.team__viewport {
     width: 100%;
     overflow: hidden;
     touch-action: pan-y;
@@ -6529,11 +6529,11 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     box-sizing: border-box;
 }
 
-:is(.slider-viewport, .team__viewport):active {
+.team__viewport:active {
     cursor: grabbing;
 }
 
-:is(.slider-track, .team__track) {
+.team__track {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -6543,41 +6543,41 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-:is(.slider-track, .team__track).is-jumping {
+.team__track.is-jumping {
     transition: none !important;
 }
 
 /* ===== css/pages/about.css ===== */
-.about-page #about:is(.gradient-process-background, .about, .process) {
+.page--about #about:is(.about, .process) {
     margin: 0;
     background: #ffffff;
     padding-top: 24px;
     padding-bottom: clamp(64px, 10vh, 120px);
 }
 
-.about-page #about:is(.gradient-process-background, .about, .process) > :is(.banner, .hero__body, .about__body) {
+.page--about #about:is(.about, .process) > :is(.about__body, .hero__body) {
     margin-top: 0;
 }
 
 /* ===== css/pages/services.css ===== */
-.services-page #services:is(.gradient-background, .hero, .services) {
+.page--services #services:is(.page__shell, .hero, .services) {
     margin: 0;
     background: #ffffff;
     overflow: visible;
 }
 
-.services-page #services:is(.gradient-background, .hero, .services)::before {
+.page--services #services:is(.page__shell, .hero, .services)::before {
     content: none;
     display: none;
 }
 
-.services-page #services:is(.gradient-background, .hero, .services) > .services,
-.services-page #services:is(.gradient-background, .hero, .services) > .services__body {
+.page--services #services:is(.page__shell, .hero, .services) > .services,
+.page--services #services:is(.page__shell, .hero, .services) > .services__body {
     padding-top: 24px;
     padding-bottom: 48px;
 }
 
-.services-page .services-intro-row {
+.page--services .services__intro-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6585,12 +6585,12 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     margin-bottom: 48px;
 }
 
-.services-page .services-intro-row :is(.services-intro, .services__intro) {
+.page--services .services__intro-row .services__intro {
     flex: 1 1 46%;
     min-width: 0;
 }
 
-.services-page .services-intro-visual {
+.page--services .services__intro-visual {
     flex: 1 1 48%;
     min-width: 0;
     display: flex;
@@ -6600,7 +6600,7 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     padding-top: 2.5rem;
 }
 
-.services-page .services-intro-visual-inner {
+.page--services .services__intro-visual-inner {
     position: relative;
     display: block;
     width: 100%;
@@ -6608,7 +6608,7 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     transform: translateX(-5.5rem);
 }
 
-.services-page .services-intro-visual-inner :is(.hero-rectangle, .about__rectangle) {
+.page--services .services__intro-visual-inner .about__rectangle {
     width: 68%;
     height: 92%;
     left: -10%;
@@ -6617,7 +6617,7 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     object-fit: fill;
 }
 
-.services-page .services-intro-illustration {
+.page--services .services__intro-illustration {
     position: relative;
     z-index: 2;
     display: block;
@@ -6625,33 +6625,33 @@ html[data-theme="dark"] .jobs-detail-apply-block {
     height: auto;
 }
 
-.services-page #services :is(.services-about-copy, .services__copy) {
+.page--services #services .services__copy {
     width: 100%;
     max-width: none;
     margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
-    .services-page .services-intro-row {
+    .page--services .services__intro-row {
         flex-direction: column;
         align-items: stretch;
         gap: 28px;
         margin-bottom: 36px;
     }
 
-    .services-page .services-intro-visual {
+    .page--services .services__intro-visual {
         justify-content: center;
         order: -1;
         padding-top: 0.75rem;
     }
 
-    .services-page .services-intro-visual-inner {
+    .page--services .services__intro-visual-inner {
         max-width: 17rem;
         margin: 0 auto;
         transform: none;
     }
 
-    .services-page .services-intro-visual-inner :is(.hero-rectangle, .about__rectangle) {
+    .page--services .services__intro-visual-inner .about__rectangle {
         width: 68%;
         height: 92%;
         left: -10%;
@@ -6660,29 +6660,29 @@ html[data-theme="dark"] .jobs-detail-apply-block {
         object-fit: fill;
     }
 
-    .services-page .services-intro-illustration {
+    .page--services .services__intro-illustration {
         max-width: none;
         margin: 0;
         transform: none;
     }
 }
 
-html[data-theme="dark"] .services-page .services-intro-illustration {
+html[data-theme="dark"] .page--services .services__intro-illustration {
     filter: brightness(0.96) saturate(1.05);
 }
 
 /* Services page — extra sections */
-.services-page .svc-block {
+.page--services .services__section {
     padding: clamp(64px, 8vw, 96px) 0;
     background: #ffffff;
 }
 
-.services-page .svc-block--alt {
+.page--services .services__section--alt {
     background: #f5f5f5;
 }
 
-.services-page .svc-block h2,
-.services-page .svc-cta-copy h2 {
+.page--services .services__section h2,
+.page--services .services__cta-copy h2 {
     font-size: clamp(32px, 4vw, 40px);
     font-weight: 700;
     line-height: 1.12;
@@ -6692,7 +6692,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     margin: 12px 0 16px;
 }
 
-.services-page .svc-lead {
+.page--services .services__lead {
     max-width: 40rem;
     margin: 0 0 40px;
     font-size: 16px;
@@ -6700,20 +6700,20 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #333333;
 }
 
-.services-page .svc-card-grid {
+.page--services .services__card-grid {
     display: grid;
     gap: 24px;
 }
 
-.services-page .svc-card-grid-3 {
+.page--services .services__card-grid--three {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.services-page .svc-card-grid-4 {
+.page--services .services__card-grid--four {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.services-page .svc-card {
+.page--services .services__card {
     padding: 28px 24px;
     border-radius: 20px;
     border: 2px solid #d3d3d3;
@@ -6722,17 +6722,17 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.services-page .svc-block--alt .svc-card {
+.page--services .services__section--alt .services__card {
     background: #ffffff;
 }
 
-.services-page .svc-card:hover {
+.page--services .services__card:hover {
     border-color: #b20000;
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(178, 0, 0, 0.12);
 }
 
-.services-page .svc-card-index {
+.page--services .services__card-index {
     display: block;
     color: #b20000;
     font-size: 12px;
@@ -6740,7 +6740,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     letter-spacing: 1px;
 }
 
-.services-page .svc-card h3 {
+.page--services .services__card h3 {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.2;
@@ -6749,28 +6749,28 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #111111;
 }
 
-.services-page .svc-card--compact h3 {
+.page--services .services__card--compact h3 {
     margin-top: 0;
 }
 
-.services-page .svc-card p {
+.page--services .services__card p {
     margin: 0;
     font-size: 15px;
     line-height: 1.55;
     color: #333333;
 }
 
-.services-page .svc-process-section {
+.page--services .services__process-section {
     overflow: hidden;
 }
 
-.services-page .svc-process-stage {
+.page--services .services__process-stage {
     position: relative;
     margin-top: 8px;
     padding: clamp(28px, 4vw, 48px) 0 8px;
 }
 
-.services-page .svc-process-slab {
+.page--services .services__process-slab {
     position: absolute;
     left: 6%;
     right: 14%;
@@ -6783,7 +6783,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     pointer-events: none;
 }
 
-.services-page .svc-process-curve {
+.page--services .services__process-curve {
     position: absolute;
     left: 2%;
     right: 2%;
@@ -6794,18 +6794,18 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     z-index: 0;
 }
 
-.services-page .svc-process-curve-line {
+.page--services .services__process-curve-line {
     stroke: #b20000;
     stroke-width: 2.4;
     stroke-linecap: round;
     fill: none;
 }
 
-.services-page .svc-process-curve circle {
+.page--services .services__process-curve circle {
     fill: #b20000;
 }
 
-.services-page .svc-process {
+.page--services .services__process {
     list-style: none;
     margin: 36px 0 0;
     padding: 0 0 48px;
@@ -6816,7 +6816,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     z-index: 1;
 }
 
-.services-page .svc-process-step {
+.page--services .services__process-step {
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -6833,55 +6833,55 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
         box-shadow 0.35s ease;
 }
 
-.services-page .svc-process-step:nth-child(1) {
+.page--services .services__process-step:nth-child(1) {
     transform: translateY(36px);
 }
 
-.services-page .svc-process-step:nth-child(2) {
+.page--services .services__process-step:nth-child(2) {
     transform: translateY(12px);
 }
 
-.services-page .svc-process-step:nth-child(3) {
+.page--services .services__process-step:nth-child(3) {
     transform: translateY(-8px);
 }
 
-.services-page .svc-process-step:nth-child(4) {
+.page--services .services__process-step:nth-child(4) {
     transform: translateY(12px);
 }
 
-.services-page .svc-process-step:nth-child(5) {
+.page--services .services__process-step:nth-child(5) {
     transform: translateY(36px);
 }
 
-.services-page .svc-process-step:hover,
-.services-page .svc-process-step:focus-within {
+.page--services .services__process-step:hover,
+.page--services .services__process-step:focus-within {
     background-color: #b20000;
     border-color: #b20000;
     box-shadow: 0 16px 32px rgba(178, 0, 0, 0.22);
     color: #ffffff;
 }
 
-.services-page .svc-process-step:nth-child(1):hover {
+.page--services .services__process-step:nth-child(1):hover {
     transform: translateY(32px);
 }
 
-.services-page .svc-process-step:nth-child(2):hover {
+.page--services .services__process-step:nth-child(2):hover {
     transform: translateY(8px);
 }
 
-.services-page .svc-process-step:nth-child(3):hover {
+.page--services .services__process-step:nth-child(3):hover {
     transform: translateY(-12px);
 }
 
-.services-page .svc-process-step:nth-child(4):hover {
+.page--services .services__process-step:nth-child(4):hover {
     transform: translateY(8px);
 }
 
-.services-page .svc-process-step:nth-child(5):hover {
+.page--services .services__process-step:nth-child(5):hover {
     transform: translateY(32px);
 }
 
-.services-page .svc-process-ghost {
+.page--services .services__process-ghost {
     position: absolute;
     right: -6px;
     top: -18px;
@@ -6896,7 +6896,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transition: color 0.35s ease, opacity 0.35s ease;
 }
 
-.services-page .svc-process-icon {
+.page--services .services__process-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6909,12 +6909,12 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transition: color 0.35s ease;
 }
 
-.services-page .svc-process-icon svg {
+.page--services .services__process-icon svg {
     width: 28px;
     height: 28px;
 }
 
-.services-page .svc-process-step h3 {
+.page--services .services__process-step h3 {
     font-size: 20px;
     font-weight: 700;
     text-transform: lowercase;
@@ -6925,7 +6925,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transition: color 0.35s ease;
 }
 
-.services-page .svc-process-step p {
+.page--services .services__process-step p {
     margin: 0;
     font-size: 15px;
     line-height: 1.5;
@@ -6935,22 +6935,22 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transition: color 0.35s ease;
 }
 
-.services-page .svc-process-step:hover .svc-process-icon,
-.services-page .svc-process-step:hover h3,
-.services-page .svc-process-step:hover p,
-.services-page .svc-process-step:focus-within .svc-process-icon,
-.services-page .svc-process-step:focus-within h3,
-.services-page .svc-process-step:focus-within p {
+.page--services .services__process-step:hover .services__process-icon,
+.page--services .services__process-step:hover h3,
+.page--services .services__process-step:hover p,
+.page--services .services__process-step:focus-within .services__process-icon,
+.page--services .services__process-step:focus-within h3,
+.page--services .services__process-step:focus-within p {
     color: #ffffff;
 }
 
-.services-page .svc-process-step:hover .svc-process-ghost,
-.services-page .svc-process-step:focus-within .svc-process-ghost {
+.page--services .services__process-step:hover .services__process-ghost,
+.page--services .services__process-step:focus-within .services__process-ghost {
     color: #ffffff;
     opacity: 0.18;
 }
 
-.services-page .svc-process-loop {
+.page--services .services__process-loop {
     position: relative;
     z-index: 1;
     margin: 56px 0 0;
@@ -6962,7 +6962,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #b20000;
 }
 
-.services-page .svc-process-loop::before {
+.page--services .services__process-loop::before {
     content: "";
     display: inline-block;
     width: 42px;
@@ -6975,7 +6975,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     border-bottom-left-radius: 12px;
 }
 
-.services-page .svc-chips {
+.page--services .services__chips {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -6984,7 +6984,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     padding: 0;
 }
 
-.services-page .svc-chips li {
+.page--services .services__chips li {
     padding: 12px 20px;
     border-radius: 999px;
     border: 2px solid #d3d3d3;
@@ -6995,21 +6995,21 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.services-page .svc-chips li:hover {
+.page--services .services__chips li:hover {
     border-color: #b20000;
     color: #b20000;
 }
 
-.services-page .svc-faq {
+.page--services .faq--services {
     padding: clamp(64px, 8vw, 96px) 0;
 }
 
-.services-page .svc-cta {
+.page--services .services__cta {
     padding: 0 0 clamp(64px, 8vw, 96px);
     background: #ffffff;
 }
 
-.services-page .svc-cta-inner {
+.page--services .services__cta-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7020,7 +7020,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     background: #f0f0f0;
 }
 
-.services-page .svc-cta-copy p:not(:is(.section-label, .section__label)) {
+.page--services .services__cta-copy p:not(.section__label) {
     margin: 0;
     max-width: 36rem;
     font-size: 16px;
@@ -7028,124 +7028,124 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #333333;
 }
 
-.services-page .svc-cta :is(.banner-cta, .btn) {
+.page--services .services__cta .btn {
     flex-shrink: 0;
     margin-top: 0;
 }
 
 @media (max-width: 1100px) {
-    .services-page .svc-card-grid-4 {
+    .page--services .services__card-grid--four {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .services-page .svc-process {
+    .page--services .services__process {
         grid-template-columns: 1fr;
         gap: 16px;
         margin-top: 8px;
         padding-bottom: 0;
     }
 
-    .services-page .svc-process-curve,
-    .services-page .svc-process-slab {
+    .page--services .services__process-curve,
+    .page--services .services__process-slab {
         display: none;
     }
 
-    .services-page .svc-process-step,
-    .services-page .svc-process-step:nth-child(1),
-    .services-page .svc-process-step:nth-child(2),
-    .services-page .svc-process-step:nth-child(3),
-    .services-page .svc-process-step:nth-child(4),
-    .services-page .svc-process-step:nth-child(5),
-    .services-page .svc-process-step:hover,
-    .services-page .svc-process-step:nth-child(1):hover,
-    .services-page .svc-process-step:nth-child(2):hover,
-    .services-page .svc-process-step:nth-child(3):hover,
-    .services-page .svc-process-step:nth-child(4):hover,
-    .services-page .svc-process-step:nth-child(5):hover {
+    .page--services .services__process-step,
+    .page--services .services__process-step:nth-child(1),
+    .page--services .services__process-step:nth-child(2),
+    .page--services .services__process-step:nth-child(3),
+    .page--services .services__process-step:nth-child(4),
+    .page--services .services__process-step:nth-child(5),
+    .page--services .services__process-step:hover,
+    .page--services .services__process-step:nth-child(1):hover,
+    .page--services .services__process-step:nth-child(2):hover,
+    .page--services .services__process-step:nth-child(3):hover,
+    .page--services .services__process-step:nth-child(4):hover,
+    .page--services .services__process-step:nth-child(5):hover {
         transform: none;
     }
 
-    .services-page .svc-process-loop {
+    .page--services .services__process-loop {
         margin-top: 24px;
         text-align: left;
     }
 }
 
 @media (max-width: 768px) {
-    .services-page .svc-card-grid-3,
-    .services-page .svc-card-grid-4 {
+    .page--services .services__card-grid--three,
+    .page--services .services__card-grid--four {
         grid-template-columns: 1fr;
     }
 
-    .services-page .svc-cta-inner {
+    .page--services .services__cta-inner {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .services-page .svc-card,
-    .services-page .svc-chips li,
-    .services-page .svc-process-step {
+    .page--services .services__card,
+    .page--services .services__chips li,
+    .page--services .services__process-step {
         transition: none;
     }
 
-    .services-page .svc-card:hover,
-    .services-page .svc-process-step,
-    .services-page .svc-process-step:nth-child(1),
-    .services-page .svc-process-step:nth-child(2),
-    .services-page .svc-process-step:nth-child(3),
-    .services-page .svc-process-step:nth-child(4),
-    .services-page .svc-process-step:nth-child(5),
-    .services-page .svc-process-step:hover,
-    .services-page .svc-process-step:nth-child(1):hover,
-    .services-page .svc-process-step:nth-child(2):hover,
-    .services-page .svc-process-step:nth-child(3):hover,
-    .services-page .svc-process-step:nth-child(4):hover,
-    .services-page .svc-process-step:nth-child(5):hover {
+    .page--services .services__card:hover,
+    .page--services .services__process-step,
+    .page--services .services__process-step:nth-child(1),
+    .page--services .services__process-step:nth-child(2),
+    .page--services .services__process-step:nth-child(3),
+    .page--services .services__process-step:nth-child(4),
+    .page--services .services__process-step:nth-child(5),
+    .page--services .services__process-step:hover,
+    .page--services .services__process-step:nth-child(1):hover,
+    .page--services .services__process-step:nth-child(2):hover,
+    .page--services .services__process-step:nth-child(3):hover,
+    .page--services .services__process-step:nth-child(4):hover,
+    .page--services .services__process-step:nth-child(5):hover {
         transform: none;
     }
 }
 
 /* ===== css/pages/legal.css ===== */
-.privacy-section , .terms-section {
+.legal--privacy , .legal--terms {
     margin-block: 60px;
 }
-.privacy-section  h4 {
+.legal--privacy  h4 {
     color: #808080;
     font-size: 16px;
 }
-.terms-section h4 {
+.legal--terms h4 {
     color: #808080;
     font-size: 16px;
 
 }
-.privacy-content .privacy-item {
+.legal__content .legal__item {
     margin-bottom: 70px;
 }
 
-.terms-content .terms-item {
+.legal__content .legal__item {
     margin-bottom: 70px;
 }
 
-.legal-footer-nav {
+.site-footer__nav-row--legal {
     padding-top: 48px;
 }
 
-html[data-theme="dark"] .privacy-section h1,
-html[data-theme="dark"] .privacy-section h2,
-html[data-theme="dark"] .privacy-section h3,
-html[data-theme="dark"] .terms-section h1,
-html[data-theme="dark"] .terms-section h2,
-html[data-theme="dark"] .terms-section h3,
-html[data-theme="dark"] .privacy-section p,
-html[data-theme="dark"] .privacy-section li,
-html[data-theme="dark"] .terms-section p,
-html[data-theme="dark"] .terms-section li {
+html[data-theme="dark"] .legal--privacy h1,
+html[data-theme="dark"] .legal--privacy h2,
+html[data-theme="dark"] .legal--privacy h3,
+html[data-theme="dark"] .legal--terms h1,
+html[data-theme="dark"] .legal--terms h2,
+html[data-theme="dark"] .legal--terms h3,
+html[data-theme="dark"] .legal--privacy p,
+html[data-theme="dark"] .legal--privacy li,
+html[data-theme="dark"] .legal--terms p,
+html[data-theme="dark"] .legal--terms li {
     color: #e8e8e8;
 }
 
-html[data-theme="dark"] .privacy-section h4,
-html[data-theme="dark"] .terms-section h4 {
+html[data-theme="dark"] .legal--privacy h4,
+html[data-theme="dark"] .legal--terms h4 {
     color: #a0a0a0;
 }

@@ -21,11 +21,11 @@
         })();
     </script>
 </head>
-<body class="career-page">
+<body class="page page--careers">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
-    <div class="gradient-background">
+    <div class="page__shell">
         <nav class="site-nav" id="site-nav" aria-label="Primary">
             <div class="site-nav__logo">
                 <a href="index.html" aria-label="Agilix Collective home">
@@ -51,13 +51,13 @@
 
         <main id="main-content">
             <section class="jobs-board" data-jobs-board aria-labelledby="careers-heading">
-                <div class="jobs-board-header">
-                    <p class="section-label career-label">CAREERS</p>
-                    <div class="jobs-board-heading-row">
-                        <h1 id="careers-heading" class="career-heading">join our team</h1>
+                <div class="jobs-board__header">
+                    <p class="section__label careers__label">CAREERS</p>
+                    <div class="jobs-board__heading-row">
+                        <h1 id="careers-heading" class="careers__heading">join our team</h1>
                         <button
                             type="button"
-                            class="jobs-empty-toggle"
+                            class="jobs-board__empty-toggle"
                             data-jobs-empty-toggle
                             aria-pressed="false"
                             title="Show empty openings screen"
@@ -66,55 +66,55 @@
                             empty
                         </button>
                     </div>
-                    <p class="career-lead jobs-board-lead" data-jobs-lead>Browse openings on the left. Select a role to see details and apply on the right.</p>
+                    <p class="careers__lead jobs-board__lead" data-jobs-lead>Browse openings on the left. Select a role to see details and apply on the right.</p>
                 </div>
 
-                <div class="jobs-board-empty-screen" data-jobs-empty-screen hidden>
-                    <div class="jobs-board-empty-screen-inner">
-                        <p class="jobs-board-empty-screen-title">No openings available</p>
-                        <p class="jobs-board-empty-screen-copy">There are no roles open right now. Check back soon — we’re always growing the team agilix.</p>
+                <div class="jobs-board__empty-screen" data-jobs-empty-screen hidden>
+                    <div class="jobs-board__empty-screen-inner">
+                        <p class="jobs-board__empty-screen-title">No openings available</p>
+                        <p class="jobs-board__empty-screen-copy">There are no roles open right now. Check back soon — we’re always growing the team agilix.</p>
                     </div>
                 </div>
 
-                <div class="jobs-board-shell" data-jobs-shell>
-                    <aside class="jobs-board-list-pane" aria-label="Available openings">
-                        <div class="jobs-board-list-top">
-                            <div class="jobs-board-list-heading">
-                                <h2 class="jobs-board-list-title">available openings</h2>
-                                <p class="jobs-board-count" data-jobs-count></p>
+                <div class="jobs-board__shell" data-jobs-shell>
+                    <aside class="jobs-board__list-pane" aria-label="Available openings">
+                        <div class="jobs-board__list-top">
+                            <div class="jobs-board__list-heading">
+                                <h2 class="jobs-board__list-title">available openings</h2>
+                                <p class="jobs-board__count" data-jobs-count></p>
                             </div>
-                            <label class="career-openings-search jobs-board-search">
+                            <label class="careers__openings-search jobs-board__search">
                                 <span class="visually-hidden">Search openings</span>
-                                <svg class="career-openings-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <svg class="careers__openings-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.75"/>
                                     <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
                                 </svg>
                                 <input type="search" data-jobs-search placeholder="Search by role, city, or type" autocomplete="off">
                             </label>
                         </div>
-                        <div class="jobs-board-list" data-jobs-list role="listbox" aria-label="Open roles"></div>
-                        <p class="career-openings-empty" data-jobs-empty hidden>No openings match your search.</p>
+                        <div class="jobs-board__list" data-jobs-list role="listbox" aria-label="Open roles"></div>
+                        <p class="careers__openings-empty" data-jobs-empty hidden>No openings match your search.</p>
                     </aside>
 
-                    <div class="jobs-board-detail-pane" data-jobs-detail aria-live="polite"></div>
+                    <div class="jobs-board__detail-pane" data-jobs-detail aria-live="polite"></div>
                 </div>
 
-                <form class="career-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate hidden>
+                <form class="careers__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate hidden>
                     <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
-                    <div class="career-form-grid">
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-name">full name*</label>
+                    <div class="careers__form-grid">
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-name">full name*</label>
                             <input id="career-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-email">email*</label>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-email">email*</label>
                             <input id="career-email" name="email" type="email" autocomplete="email" placeholder="john@email.com" required>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-city">city*</label>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-city">city*</label>
                             <select id="career-city" name="city" required>
                                 <option value="" disabled selected>Select city</option>
                                 <option value="Lahore">Lahore</option>
@@ -129,12 +129,12 @@
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-position">position*</label>
-                            <input id="career-position" class="career-position-filled" name="position" type="text" required readonly tabindex="-1" autocomplete="off" aria-readonly="true">
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-position">position*</label>
+                            <input id="career-position" class="careers__position-filled" name="position" type="text" required readonly tabindex="-1" autocomplete="off" aria-readonly="true">
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-experience">total experience*</label>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-experience">total experience*</label>
                             <select id="career-experience" name="total_experience" required>
                                 <option value="" disabled selected>Select experience</option>
                                 <option value="Fresher / Less than 1 year">Fresher / Less than 1 year</option>
@@ -145,8 +145,8 @@
                                 <option value="10+ years">10+ years</option>
                             </select>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-degree">last degree*</label>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-degree">last degree*</label>
                             <select id="career-degree" name="last_degree" required>
                                 <option value="" disabled selected>Select degree</option>
                                 <option value="Intermediate / High School">Intermediate / High School</option>
@@ -162,59 +162,59 @@
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-organization">current organization</label>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-organization">current organization</label>
                             <input id="career-organization" name="current_organization" type="text" autocomplete="organization" placeholder="Company name">
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-current-salary">current salary</label>
-                            <div class="career-salary">
-                                <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-current-salary">current salary</label>
+                            <div class="careers__salary">
+                                <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                                 <input type="hidden" name="current_salary_currency" value="PKR">
                                 <input id="career-current-salary" name="current_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="150000">
                             </div>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-expected-salary">expected salary*</label>
-                            <div class="career-salary">
-                                <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-expected-salary">expected salary*</label>
+                            <div class="careers__salary">
+                                <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                                 <input type="hidden" name="expected_salary_currency" value="PKR">
                                 <input id="career-expected-salary" name="expected_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="200000" required>
                             </div>
                         </div>
-                        <div class="career-field">
-                            <label class="career-label-field" for="career-linkedin">linkedin url</label>
+                        <div class="careers__field">
+                            <label class="careers__label-field" for="career-linkedin">linkedin url</label>
                             <input id="career-linkedin" name="linkedin_url" type="url" autocomplete="url" placeholder="https://linkedin.com/in/username">
                         </div>
-                        <div class="career-field career-field--full">
-                            <label class="career-label-field" for="career-resume">resume*</label>
-                            <div class="career-upload">
-                                <input id="career-resume" class="career-upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-                                <label class="career-upload-btn" for="career-resume">upload resume</label>
-                                <span class="career-upload-name" id="career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
-                                <button class="career-form-button" type="submit">Apply</button>
+                        <div class="careers__field careers__field--full">
+                            <label class="careers__label-field" for="career-resume">resume*</label>
+                            <div class="careers__upload">
+                                <input id="career-resume" class="careers__upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                                <label class="careers__upload-btn" for="career-resume">upload resume</label>
+                                <span class="careers__upload-name" id="career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
+                                <button class="careers__form-button" type="submit">Apply</button>
                             </div>
                         </div>
                     </div>
-                    <p class="career-form-status" role="status" aria-live="polite"></p>
+                    <p class="careers__form-status" role="status" aria-live="polite"></p>
                 </form>
             </section>
 
-            <section class="our-team" id="team" aria-labelledby="team-heading">
+            <section class="team" id="team" aria-labelledby="team-heading">
                 <div class="container">
-                    <div class="team-section-header">
-                        <div class="team-section-title">
-                            <p class="team-section-label">TEAM</p>
-                            <h2 id="team-heading" class="team-section-heading">agilix team</h2>
+                    <div class="team__header">
+                        <div class="team__title">
+                            <p class="team__label">TEAM</p>
+                            <h2 id="team-heading" class="team__heading">agilix team</h2>
                         </div>
-                        <div class="nav-btns" role="group" aria-label="Team carousel controls">
-                            <button type="button" class="nav-btn" id="prevBtn" aria-label="Previous team member">
+                        <div class="team__controls" role="group" aria-label="Team carousel controls">
+                            <button type="button" class="team__nav-btn" id="prevBtn" aria-label="Previous team member">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button type="button" class="nav-btn nav-btn--next" id="nextBtn" aria-label="Next team member">
+                            <button type="button" class="team__nav-btn team__nav-btn--next" id="nextBtn" aria-label="Next team member">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -223,8 +223,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider-viewport" id="viewport" aria-roledescription="carousel" aria-label="Agilix team members">
-                    <div class="slider-track" id="track"></div>
+                <div class="team__viewport" id="viewport" aria-roledescription="carousel" aria-label="Agilix team members">
+                    <div class="team__track" id="track"></div>
                 </div>
             </section>
         </main>
@@ -232,7 +232,7 @@
 
     <footer class="site-footer">
         <div class="container site-footer__inner">
-            <div class="site-footer__nav-row legal-footer-nav">
+            <div class="site-footer__nav-row site-footer__nav-row--legal">
                 <div class="site-footer__columns">
                     <div class="site-footer__col">
                         <p class="site-footer__col-title">discover</p>

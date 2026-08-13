@@ -1,11 +1,11 @@
 (function () {
-    var items = document.querySelectorAll('.faq__item, .faq-item');
+    var items = document.querySelectorAll('.faq__item');
     var ANIM_MS = 450;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function closeItem(item, immediate) {
-        var btn = item.querySelector('.faq__trigger, .faq-trigger');
-        var panel = item.querySelector('.faq__panel, .faq-panel');
+        var btn = item.querySelector('.faq__trigger');
+        var panel = item.querySelector('.faq__panel');
         if (!btn || !panel || !item.classList.contains('is-open')) {
             return Promise.resolve();
         }
@@ -43,8 +43,8 @@
     }
 
     function openItem(item) {
-        var btn = item.querySelector('.faq__trigger, .faq-trigger');
-        var panel = item.querySelector('.faq__panel, .faq-panel');
+        var btn = item.querySelector('.faq__trigger');
+        var panel = item.querySelector('.faq__panel');
         if (!btn || !panel) return;
 
         panel.hidden = false;
@@ -65,8 +65,8 @@
     }
 
     items.forEach(function (item) {
-        var btn = item.querySelector('.faq__trigger, .faq-trigger');
-        var panel = item.querySelector('.faq__panel, .faq-panel');
+        var btn = item.querySelector('.faq__trigger');
+        var panel = item.querySelector('.faq__panel');
         if (!btn || !panel) return;
 
         var isOpen = item.classList.contains('is-open');
@@ -279,12 +279,12 @@
         if (!careerForm || careerForm.dataset.wired === 'true') return;
         careerForm.dataset.wired = 'true';
 
-        var careerStatus = careerForm.querySelector('.careers__form-status, .careers__form, .career-form-status');
-        var careerSubmit = careerForm.querySelector('.careers__form-button, .careers__form, .career-form-button');
-        var resumeInput = careerForm.querySelector('.careers__upload-input, .career-upload-input');
-        var resumeName = careerForm.querySelector('.careers__upload-name, .career-upload-name');
+        var careerStatus = careerForm.querySelector('.careers__form-status, .careers__form-status');
+        var careerSubmit = careerForm.querySelector('.careers__form-button, .careers__form-button');
+        var resumeInput = careerForm.querySelector('.careers__upload-input');
+        var resumeName = careerForm.querySelector('.careers__upload-name');
 
-        careerForm.querySelectorAll('.careers__field select, .career-field select').forEach(enhanceFooterSelect);
+        careerForm.querySelectorAll('.careers__field select, .careers__field select').forEach(enhanceFooterSelect);
 
         function resetResumeLabel() {
             if (!resumeName) return;
@@ -321,7 +321,7 @@
 
         careerForm.addEventListener('reset', function () {
             setTimeout(function () {
-                refreshEnhancedSelects(careerForm, '.careers__field select, .career-field select');
+                refreshEnhancedSelects(careerForm, '.careers__field select, .careers__field select');
                 resetResumeLabel();
             }, 0);
         });
@@ -382,7 +382,7 @@
                             'Thank you. Your application has been sent — we will be in touch soon.';
                     }
                     careerForm.reset();
-                    refreshEnhancedSelects(careerForm, '.careers__field select, .career-field select');
+                    refreshEnhancedSelects(careerForm, '.careers__field select, .careers__field select');
                     resetResumeLabel();
                 })
                 .catch(function () {
@@ -402,7 +402,7 @@
 
     function wireAllForms() {
         document.querySelectorAll('.site-footer__form').forEach(wireFooterForm);
-        document.querySelectorAll('.careers__form, .career-form').forEach(wireCareerForm);
+        document.querySelectorAll('.careers__form').forEach(wireCareerForm);
     }
 
     wireAllForms();

@@ -21,11 +21,11 @@
         })();
     </script>
 </head>
-<body class="inner-page services-page">
+<body class="page page--services">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
-    <div class="gradient-background">
+    <div class="page__shell">
         <nav class="site-nav" id="site-nav" aria-label="Primary">
             <div class="site-nav__logo">
                 <a href="index.html" aria-label="Agilix Collective home">
@@ -51,35 +51,35 @@
 
         <main id="main-content">
     <!-- Services Section -->
-    <section class="gradient-background" id="services">
-        <section class="services section-header">
+    <section class="services" id="services">
+        <div class="services__body section__header">
       <div class="container">
-                <div class="services-intro-row">
-                <div class="hero-copy services-intro">
-                    <p class="section-label">SERVICES</p>
+                <div class="services__intro-row">
+                <div class="services__intro">
+                    <p class="section__label">SERVICES</p>
                     <h2>what we do</h2>
-                    <div class="banner-text about-agilix services-about-copy">
+                    <div class="services__copy">
                         <p>Agilix Collective delivers real time solutions using the most effective technologies, and results
                             driven approach. Combination of agility, innovation, and technical expertise to build scalable
                             products tailored to business requirements. With a strong focus on collaboration and efficiency, we
                             ensure faster delivery, better quality, and a valuable impact.
                         </p>
         </div>
-                    <div class="banner-cta-group">
-                        <a href="#contact" class="banner-cta" data-open-modal="contact">get in touch</a>
+                    <div class="services__actions">
+                        <a href="#contact" class="btn btn--primary" data-open-modal="contact">get in touch</a>
                     </div>
       </div>
-                    <div class="services-intro-visual">
-                        <div class="services-intro-visual-inner">
-                            <img class="hero-rectangle" src="assets/images/hero-rectangle.png" alt="" width="1776" height="1886" decoding="async" aria-hidden="true">
-                            <img class="services-intro-illustration" src="assets/images/services-what-we-do.svg" alt="Teams connecting to deliver software products together" width="819" height="750" decoding="async">
+                    <div class="services__intro-visual">
+                        <div class="services__intro-visual-inner">
+                            <img class="services__intro-rectangle" src="assets/images/hero-rectangle.png" alt="" width="1776" height="1886" decoding="async" aria-hidden="true">
+                            <img class="services__intro-illustration" src="assets/images/services-what-we-do.svg" alt="Teams connecting to deliver software products together" width="819" height="750" decoding="async">
                         </div>
                     </div>
                 </div>
-                <div class="services-grid services-grid-2">
+                <div class="services__grid services__grid--two">
                     <!-- Custom Software -->
-                    <div class="service-detail" data-reveal-from="left" data-reveal-delay="0">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="left" data-reveal-delay="0">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -96,7 +96,7 @@
 
         </div>
                         <h3>custom software</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Web-based platforms</li>
                             <li>Secure backend systems</li>
                             <li>Custom dashboards and reporting</li>
@@ -105,8 +105,8 @@
       </div>
 
                     <!-- SaaS Development -->
-                    <div class="service-detail" data-reveal-from="top" data-reveal-delay="100">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="top" data-reveal-delay="100">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -126,7 +126,7 @@
 
             </div>
                         <h3>SaaS development</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Multi-tenant SaaS architecture</li>
                             <li>Subscription and billing systems</li>
                             <li>Admin panels and analytics</li>
@@ -135,8 +135,8 @@
                     </div>
 
                     <!-- Workflow Automation -->
-                    <div class="service-detail" data-reveal-from="right" data-reveal-delay="200">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="right" data-reveal-delay="200">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -160,7 +160,7 @@
 
             </div>
                         <h3>workflow automation</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Process mapping</li>
                             <li>Automation rule configuration</li>
                             <li>Cross-platform workflow triggers</li>
@@ -169,8 +169,8 @@
                     </div>
 
                     <!-- System Integrations -->
-                    <div class="service-detail" data-reveal-from="left" data-reveal-delay="120">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="left" data-reveal-delay="120">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -205,7 +205,7 @@
 
             </div>
                         <h3>system integrations</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Jira & ClickUp implementation and setup</li>
                             <li>Third-party integrations (Slack, Teams, Zapier, APIs)</li>
                             <li>Data migration and system alignment</li>
@@ -214,8 +214,8 @@
                     </div>
 
                     <!-- Tool Optimization -->
-                    <div class="service-detail" data-reveal-from="bottom" data-reveal-delay="220">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="bottom" data-reveal-delay="220">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -226,7 +226,7 @@
 
             </div>
                         <h3>tool optimization</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                          <li> Workflow audit and restructuring</li>
                            <li> Advanced automation (rules, triggers, conditions)</li>
                             <li>Custom dashboards and reporting</li>
@@ -235,8 +235,8 @@
             </div>
 
                     <!-- 24/7 Support -->
-                    <div class="service-detail" data-reveal-from="right" data-reveal-delay="320">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="right" data-reveal-delay="320">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -250,7 +250,7 @@
 
             </div>
                         <h3>24/7 support</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>24/7 monitoring</li>
                             <li>Fast issue resolution</li>
                             <li>Multi-channel support</li>
@@ -259,27 +259,27 @@
                     </div>
                 </div>
       </div>
-        </section>
+        </div>
     </section>
 
-    <section class="svc-block" id="engagement" aria-labelledby="engagement-heading">
+    <section class="services__section" id="engagement" aria-labelledby="engagement-heading">
         <div class="container">
-            <p class="section-label">ENGAGE</p>
+            <p class="section__label">ENGAGE</p>
             <h2 id="engagement-heading">how we work with you</h2>
-            <p class="svc-lead">Pick the shape of the partnership. The delivery standard stays the same: clear outcomes, visible progress, and software that holds up in production.</p>
-            <div class="svc-card-grid svc-card-grid-3">
-                <article class="svc-card">
-                    <span class="svc-card-index">01</span>
+            <p class="services__lead">Pick the shape of the partnership. The delivery standard stays the same: clear outcomes, visible progress, and software that holds up in production.</p>
+            <div class="services__card-grid services__card-grid--three">
+                <article class="services__card">
+                    <span class="services__card-index">01</span>
                     <h3>project delivery</h3>
                     <p>A scoped product from discovery to launch. Fixed milestones, a named team, and a handover your people can actually run.</p>
                 </article>
-                <article class="svc-card">
-                    <span class="svc-card-index">02</span>
+                <article class="services__card">
+                    <span class="services__card-index">02</span>
                     <h3>dedicated teams</h3>
                     <p>Engineers embedded with yours. Same tools, same standups, same backlog — extra capacity without the hiring lag.</p>
                 </article>
-                <article class="svc-card">
-                    <span class="svc-card-index">03</span>
+                <article class="services__card">
+                    <span class="services__card-index">03</span>
                     <h3>ongoing partnership</h3>
                     <p>Support, iteration, and optimization after go-live. We stay on the product so it keeps matching the business.</p>
                 </article>
@@ -287,86 +287,86 @@
         </div>
     </section>
 
-    <section class="svc-block svc-block--alt svc-process-section" id="how-we-work" aria-labelledby="how-we-work-heading">
+    <section class="services__section services__section--alt services__process-section" id="how-we-work" aria-labelledby="how-we-work-heading">
         <div class="container">
-            <p class="section-label">PROCESS</p>
+            <p class="section__label">PROCESS</p>
             <h2 id="how-we-work-heading">how we build</h2>
-            <p class="svc-lead">Five stages, one loop. We don’t freeze the spec — we keep the product in motion.</p>
-            <div class="svc-process-stage">
-                <span class="svc-process-slab" aria-hidden="true"></span>
-                <svg class="svc-process-curve" viewBox="0 0 1200 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="none">
-                    <path class="svc-process-curve-line" d="M40 168 C 170 168, 210 86, 360 78 S 520 36, 600 36 S 780 78, 840 86 S 1030 168, 1160 168" />
+            <p class="services__lead">Five stages, one loop. We don’t freeze the spec — we keep the product in motion.</p>
+            <div class="services__process-stage">
+                <span class="services__process-slab" aria-hidden="true"></span>
+                <svg class="services__process-curve" viewBox="0 0 1200 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+                    <path class="services__process-curve-line" d="M40 168 C 170 168, 210 86, 360 78 S 520 36, 600 36 S 780 78, 840 86 S 1030 168, 1160 168" />
                     <circle cx="40" cy="168" r="6" />
                     <circle cx="360" cy="78" r="6" />
                     <circle cx="600" cy="36" r="8" />
                     <circle cx="840" cy="86" r="6" />
                     <circle cx="1160" cy="168" r="6" />
                 </svg>
-                <ol class="svc-process">
-                    <li class="svc-process-step">
-                        <span class="svc-process-ghost" aria-hidden="true">01</span>
-                        <span class="svc-process-icon" aria-hidden="true">
+                <ol class="services__process">
+                    <li class="services__process-step">
+                        <span class="services__process-ghost" aria-hidden="true">01</span>
+                        <span class="services__process-icon" aria-hidden="true">
                             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="8" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="15" r="2.5" fill="currentColor"/><path d="M21 21l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                         </span>
                         <h3>discover</h3>
                         <p>Name the outcome, the users, and the constraints before a line of code is sized.</p>
                     </li>
-                    <li class="svc-process-step">
-                        <span class="svc-process-ghost" aria-hidden="true">02</span>
-                        <span class="svc-process-icon" aria-hidden="true">
+                    <li class="services__process-step">
+                        <span class="services__process-ghost" aria-hidden="true">02</span>
+                        <span class="services__process-icon" aria-hidden="true">
                             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="7" width="14" height="14" rx="3" stroke="currentColor" stroke-width="2"/><rect x="13" y="11" width="14" height="14" rx="3" stroke="currentColor" stroke-width="2"/></svg>
                         </span>
                         <h3>plan</h3>
                         <p>Architecture, scope, and a delivery rhythm you can track week by week.</p>
                     </li>
-                    <li class="svc-process-step svc-process-step--peak">
-                        <span class="svc-process-ghost" aria-hidden="true">03</span>
-                        <span class="svc-process-icon" aria-hidden="true">
+                    <li class="services__process-step services__process-step--peak">
+                        <span class="services__process-ghost" aria-hidden="true">03</span>
+                        <span class="services__process-icon" aria-hidden="true">
                             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8L6 16l6 8M20 8l6 8-6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </span>
                         <h3>build</h3>
                         <p>Agile sprints with demos, reviews, and course-correction in the open.</p>
                     </li>
-                    <li class="svc-process-step">
-                        <span class="svc-process-ghost" aria-hidden="true">04</span>
-                        <span class="svc-process-icon" aria-hidden="true">
+                    <li class="services__process-step">
+                        <span class="services__process-ghost" aria-hidden="true">04</span>
+                        <span class="services__process-icon" aria-hidden="true">
                             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 22L22 10M14 10h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </span>
                         <h3>launch</h3>
                         <p>Deploy, document, and hand over so the product is usable on day one.</p>
                     </li>
-                    <li class="svc-process-step">
-                        <span class="svc-process-ghost" aria-hidden="true">05</span>
-                        <span class="svc-process-icon" aria-hidden="true">
+                    <li class="services__process-step">
+                        <span class="services__process-ghost" aria-hidden="true">05</span>
+                        <span class="services__process-icon" aria-hidden="true">
                             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16a7 7 0 1 0 2-4.9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 8v6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </span>
                         <h3>improve</h3>
                         <p>Monitor, support, and iterate against real usage — not a frozen spec.</p>
                     </li>
                 </ol>
-                <p class="svc-process-loop">then it loops</p>
+                <p class="services__process-loop">then it loops</p>
             </div>
         </div>
     </section>
 
-    <section class="svc-block" id="outcomes" aria-labelledby="outcomes-heading">
+    <section class="services__section" id="outcomes" aria-labelledby="outcomes-heading">
         <div class="container">
-            <p class="section-label">OUTCOMES</p>
+            <p class="section__label">OUTCOMES</p>
             <h2 id="outcomes-heading">what you should feel</h2>
-            <div class="svc-card-grid svc-card-grid-4">
-                <article class="svc-card svc-card--compact">
+            <div class="services__card-grid services__card-grid--four">
+                <article class="services__card services__card--compact">
                     <h3>faster delivery</h3>
                     <p>Smaller batches, clearer owners, less waiting between “agreed” and “shipped.”</p>
                 </article>
-                <article class="svc-card svc-card--compact">
+                <article class="services__card services__card--compact">
                     <h3>better quality</h3>
                     <p>Reviews, testing, and production habits built in — not bolted on at the end.</p>
                 </article>
-                <article class="svc-card svc-card--compact">
+                <article class="services__card services__card--compact">
                     <h3>real collaboration</h3>
                     <p>You see the work. Decisions stay in the room with the people doing the build.</p>
                 </article>
-                <article class="svc-card svc-card--compact">
+                <article class="services__card services__card--compact">
                     <h3>lasting impact</h3>
                     <p>Software sized to the problem, ready to scale when the business actually needs it.</p>
                 </article>
@@ -374,11 +374,11 @@
         </div>
     </section>
 
-    <section class="svc-block svc-block--alt" id="capabilities" aria-labelledby="capabilities-heading">
+    <section class="services__section services__section--alt" id="capabilities" aria-labelledby="capabilities-heading">
         <div class="container">
-            <p class="section-label">CAPABILITIES</p>
+            <p class="section__label">CAPABILITIES</p>
             <h2 id="capabilities-heading">where we help</h2>
-            <ul class="svc-chips">
+            <ul class="services__chips">
                 <li>custom software</li>
                 <li>SaaS products</li>
                 <li>AI-powered solutions</li>
@@ -391,55 +391,55 @@
         </div>
     </section>
 
-    <section class="faq-section svc-faq" id="faq" aria-labelledby="svc-faq-heading">
-        <div class="container faq-layout">
-            <div class="faq-intro">
-                <p class="section-label faq-label">FAQS</p>
-                <h2 id="svc-faq-heading" class="faq-title">frequently <br> asked <br> questions</h2>
+    <section class="faq faq--services" id="faq" aria-labelledby="svc-faq-heading">
+        <div class="container faq__layout">
+            <div class="faq__intro">
+                <p class="section__label faq__label">FAQS</p>
+                <h2 id="svc-faq-heading" class="faq__title">frequently <br> asked <br> questions</h2>
             </div>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="svc-faq-panel-1" id="svc-faq-trigger-1">
-                        <span class="faq-question">how do engagements typically start?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+            <div class="faq__accordion">
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="svc-faq-panel-1" id="svc-faq-trigger-1">
+                        <span class="faq__question">how do engagements typically start?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="svc-faq-panel-1" role="region" aria-labelledby="svc-faq-trigger-1" hidden>
+                    <div class="faq__panel" id="svc-faq-panel-1" role="region" aria-labelledby="svc-faq-trigger-1" hidden>
                         <p>We begin with the outcome: who changes behavior if this works, and what decision gets faster. From there we size a discovery or a delivery plan — not a generic package.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="svc-faq-panel-2" id="svc-faq-trigger-2">
-                        <span class="faq-question">can you work with our existing tools and team?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="svc-faq-panel-2" id="svc-faq-trigger-2">
+                        <span class="faq__question">can you work with our existing tools and team?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="svc-faq-panel-2" role="region" aria-labelledby="svc-faq-trigger-2" hidden>
+                    <div class="faq__panel" id="svc-faq-panel-2" role="region" aria-labelledby="svc-faq-trigger-2" hidden>
                         <p>Yes. We regularly plug into Jira, ClickUp, Slack, Teams, and existing APIs. Dedicated teams use your rituals; project teams still keep you in the loop every sprint.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="svc-faq-panel-3" id="svc-faq-trigger-3">
-                        <span class="faq-question">how long does a typical project take?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="svc-faq-panel-3" id="svc-faq-trigger-3">
+                        <span class="faq__question">how long does a typical project take?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="svc-faq-panel-3" role="region" aria-labelledby="svc-faq-trigger-3" hidden>
+                    <div class="faq__panel" id="svc-faq-panel-3" role="region" aria-labelledby="svc-faq-trigger-3" hidden>
                         <p>It depends on the outcome, not a catalog. After discovery we share a milestone plan you can track. Most product work ships in sprints, with a first usable release as early as the problem allows.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="svc-faq-panel-4" id="svc-faq-trigger-4">
-                        <span class="faq-question">do you stay on after launch?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="svc-faq-panel-4" id="svc-faq-trigger-4">
+                        <span class="faq__question">do you stay on after launch?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="svc-faq-panel-4" role="region" aria-labelledby="svc-faq-trigger-4" hidden>
+                    <div class="faq__panel" id="svc-faq-panel-4" role="region" aria-labelledby="svc-faq-trigger-4" hidden>
                         <p>Yes. 24/7 support, monitoring, and an ongoing partnership are part of how we work. Launch is a handoff of ownership — not the end of the product.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="svc-faq-panel-5" id="svc-faq-trigger-5">
-                        <span class="faq-question">how can we get started?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="svc-faq-panel-5" id="svc-faq-trigger-5">
+                        <span class="faq__question">how can we get started?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="svc-faq-panel-5" role="region" aria-labelledby="svc-faq-trigger-5" hidden>
+                    <div class="faq__panel" id="svc-faq-panel-5" role="region" aria-labelledby="svc-faq-trigger-5" hidden>
                         <p>Use get in touch, email support@agilixcollective.com, or call +971 58 307 0847. Tell us the problem in plain language. We’ll come back with a clear next step.</p>
                     </div>
                 </div>
@@ -447,14 +447,14 @@
         </div>
     </section>
 
-    <section class="svc-cta" id="start" aria-labelledby="svc-cta-heading">
-        <div class="container svc-cta-inner">
-            <div class="svc-cta-copy">
-                <p class="section-label">START</p>
+    <section class="services__cta" id="start" aria-labelledby="svc-cta-heading">
+        <div class="container services__cta-inner">
+            <div class="services__cta-copy">
+                <p class="section__label">START</p>
                 <h2 id="svc-cta-heading">ready to build?</h2>
                 <p>Tell us the problem. We’ll help you turn it into a product with a plan you can follow.</p>
             </div>
-            <a href="#contact" class="banner-cta" data-open-modal="contact">get in touch</a>
+            <a href="#contact" class="btn btn--primary" data-open-modal="contact">get in touch</a>
         </div>
     </section>
         </main>
@@ -462,7 +462,7 @@
 
     <footer class="site-footer">
         <div class="container site-footer__inner">
-            <div class="site-footer__nav-row legal-footer-nav">
+            <div class="site-footer__nav-row site-footer__nav-row--legal">
                 <div class="site-footer__columns">
                     <div class="site-footer__col">
                         <p class="site-footer__col-title">discover</p>

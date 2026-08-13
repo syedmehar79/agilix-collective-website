@@ -1,10 +1,6 @@
 (function () {
-    var cards = document.querySelectorAll(
-        ".services__grid .services__item, .services-grid .service-detail"
-    );
-    var intro = document.querySelector(
-        "#services .services__intro, #services .services-intro"
-    );
+    var cards = document.querySelectorAll(".services__grid .services__item");
+    var intro = document.querySelector("#services .services__intro");
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function revealIntro() {

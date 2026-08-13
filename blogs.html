@@ -21,11 +21,11 @@
         })();
     </script>
 </head>
-<body class="inner-page blogs-page">
+<body class="page page--blogs">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
-    <div class="gradient-background">
+    <div class="page__shell">
         <nav class="site-nav" id="site-nav" aria-label="Primary">
             <div class="site-nav__logo">
                 <a href="index.html" aria-label="Agilix Collective home">
@@ -50,66 +50,66 @@
         </nav>
 
         <main id="main-content">
-    <section class="blogs-section" id="blogs" aria-labelledby="blogs-heading">
-        <div class="container blogs-inner">
-            <header class="blogs-header">
-                <div class="blogs-header-text">
-                    <p class="section-label blogs-label">BLOGS</p>
-                    <h2 id="blogs-heading" class="blogs-title">insights &amp; ideas</h2>
-                    <p class="blogs-lead">Notes on building software, shipping products, and working with intent.</p>
+    <section class="blogs" id="blogs" aria-labelledby="blogs-heading">
+        <div class="container blogs__inner">
+            <header class="blogs__header">
+                <div class="blogs__header-text">
+                    <p class="section__label blogs__label">BLOGS</p>
+                    <h2 id="blogs-heading" class="blogs__title">insights &amp; ideas</h2>
+                    <p class="blogs__lead">Notes on building software, shipping products, and working with intent.</p>
                 </div>
             </header>
 
-            <div class="blogs-layout">
-                <article class="blog-reader" id="blog-post" data-blog-reader aria-live="polite">
-                    <div class="blog-reader-media">
+            <div class="blogs__layout">
+                <article class="blogs__reader" id="blog-post" data-blog-reader aria-live="polite">
+                    <div class="blogs__reader-media">
                         <img data-blog-image src="assets/blogs/intention-planning.jpg" alt="Team collaborating around a table during product planning" width="1400" height="900" decoding="async">
                     </div>
-                    <div class="blog-reader-copy">
-                        <time class="blog-reader-date" data-blog-date datetime="2026-06-12">Jun 12, 2026</time>
-                        <h1 class="blog-reader-title" data-blog-title>why intention beats feature lists</h1>
-                        <div class="blog-reader-body" data-blog-body>
+                    <div class="blogs__reader-copy">
+                        <time class="blogs__reader-date" data-blog-date datetime="2026-06-12">Jun 12, 2026</time>
+                        <h1 class="blogs__reader-title" data-blog-title>why intention beats feature lists</h1>
+                        <div class="blogs__reader-body" data-blog-body>
                             <p>Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
                         </div>
-                        <div class="blog-reader-actions">
-                            <button type="button" class="blog-action blog-action--like" data-blog-like aria-pressed="false" aria-label="Like this post">
-                                <svg class="blog-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <div class="blogs__reader-actions">
+                            <button type="button" class="blogs__action blogs__action--like" data-blog-like aria-pressed="false" aria-label="Like this post">
+                                <svg class="blogs__action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M12.1 20.3 11 19.3C6.4 15.2 3.5 12.6 3.5 9.5A4.4 4.4 0 0 1 8 5c1.5 0 2.9.7 3.8 1.8A4.8 4.8 0 0 1 15.6 5a4.4 4.4 0 0 1 4.5 4.5c0 3.1-2.9 5.7-7.5 9.8l-2.5 1Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
                                 </svg>
-                                <span class="blog-action-label">like</span>
-                                <span class="blog-action-count" data-blog-like-count>24</span>
+                                <span class="blogs__action-label">like</span>
+                                <span class="blogs__action-count" data-blog-like-count>24</span>
                             </button>
-                            <button type="button" class="blog-action blog-action--share" data-blog-share aria-label="Share this post">
-                                <svg class="blog-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <button type="button" class="blogs__action blogs__action--share" data-blog-share aria-label="Share this post">
+                                <svg class="blogs__action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <circle cx="18" cy="5" r="2.4" stroke="currentColor" stroke-width="1.75"/>
                                     <circle cx="6" cy="12" r="2.4" stroke="currentColor" stroke-width="1.75"/>
                                     <circle cx="18" cy="19" r="2.4" stroke="currentColor" stroke-width="1.75"/>
                                     <path d="M8.2 11.1 15.8 6.4M8.3 12.9 15.7 17.6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
                                 </svg>
-                                <span class="blog-action-label" data-blog-share-label>share</span>
+                                <span class="blogs__action-label" data-blog-share-label>share</span>
                             </button>
                         </div>
                     </div>
                 </article>
 
-                <aside class="blogs-sidebar" aria-label="Post lists">
-                    <section class="blogs-side-block" aria-labelledby="recent-posts-heading">
-                        <h2 id="recent-posts-heading" class="blogs-side-title">recent posts</h2>
-                        <div class="blogs-side-list" data-recent-posts></div>
+                <aside class="blogs__sidebar" aria-label="Post lists">
+                    <section class="blogs__side-block" aria-labelledby="recent-posts-heading">
+                        <h2 id="recent-posts-heading" class="blogs__side-title">recent posts</h2>
+                        <div class="blogs__side-list" data-recent-posts></div>
                     </section>
-                    <section class="blogs-side-block" aria-labelledby="popular-posts-heading">
-                        <h2 id="popular-posts-heading" class="blogs-side-title">popular posts</h2>
-                        <div class="blogs-side-list" data-popular-posts></div>
+                    <section class="blogs__side-block" aria-labelledby="popular-posts-heading">
+                        <h2 id="popular-posts-heading" class="blogs__side-title">popular posts</h2>
+                        <div class="blogs__side-list" data-popular-posts></div>
                     </section>
                 </aside>
             </div>
 
-            <div class="blogs-list-header">
-                <h2 class="blogs-list-title">more posts</h2>
+            <div class="blogs__list-header">
+                <h2 class="blogs__list-title">more posts</h2>
             </div>
 
-            <div class="blogs-viewport" data-blogs-viewport>
-                <div class="blogs-track" data-blogs-track></div>
+            <div class="blogs__viewport" data-blogs-viewport>
+                <div class="blogs__track" data-blogs-track></div>
             </div>
       </div>
     </section>
@@ -118,7 +118,7 @@
 
     <footer class="site-footer">
         <div class="container site-footer__inner">
-            <div class="site-footer__nav-row legal-footer-nav">
+            <div class="site-footer__nav-row site-footer__nav-row--legal">
                 <div class="site-footer__columns">
                     <div class="site-footer__col">
                         <p class="site-footer__col-title">discover</p>

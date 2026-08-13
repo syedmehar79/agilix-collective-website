@@ -96,4 +96,18 @@ The footer root remains `site-footer`. Existing `data-footer-*` attributes and f
 | `blogs-section` / `blogs-*` / `blog-*` | `blogs` / `blogs__*` |
 | `faq-section` / `faq-*` | `faq` / `faq__*` |
 
-`css/style.css` temporarily uses dual `:is(.old, .new)` selectors for legacy inner-page and modal markup. Task 3 should remove the old selector branches after those pages adopt the BEM classes. Careers form JavaScript also accepts both `.career-*` and `.careers__*` selectors until the shared inner-page/modal markup is migrated.
+## Inner pages
+
+| Old | New |
+|---|---|
+| `inner-page`, `*-page`, `career-page` | `page page--{about,products,services,careers,blogs,privacy,terms}` |
+| outer `gradient-background` wrapper | `page__shell` |
+| about inner-page hero classes | `about`, `about__body`, `about__copy`, `about__actions`, `about__visual`, `about__visual-inner`, `about__rectangle`, `about__illustration` |
+| services inner-page intro / cards | `services__body`, `services__intro*`, `services__copy`, `services__actions`, `services__grid`, `services__item`, `services__icon`, `services__list` |
+| `svc-*` detail sections | `services__section*`, `services__card*`, `services__process*`, `services__chips`, `services__cta*` |
+| careers form / openings classes | `careers__*` |
+| careers jobs board descendants | `jobs-board__*` (keep `jobs-board` block and `data-jobs-*` hooks) |
+| blogs list / reader / actions | `blogs`, `blogs__*` |
+| privacy / terms article classes | `legal`, `legal--privacy`, `legal--terms`, `legal__content`, `legal__item` |
+
+Task 3 removed the temporary inner-page dual selector branches. `services.js`, `faq.js`, `careers.js`, and `blogs.js` now target only BEM classes or preserved `data-*` hooks.
