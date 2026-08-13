@@ -58,8 +58,8 @@ if (backToTopButton) {
     var container = document.getElementById('process-section');
     if (!container) return;
 
-    var slides = container.querySelectorAll('.process-slide');
-    var endLine = container.querySelector('.process-end-line');
+    var slides = container.querySelectorAll('.process__slide');
+    var endLine = container.querySelector('.process__end-line');
     var SLIDE_DURATION = 700;
     var GAP = 150;
     var played = false;

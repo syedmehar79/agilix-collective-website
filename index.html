@@ -56,7 +56,7 @@
    </svg></button>
 
     <main id="main-content">
-    <div class="gradient-background">
+    <div class="hero">
         <nav class="site-nav" id="site-nav" aria-label="Primary">
             <div class="site-nav__logo">
                 <a href="index.html" aria-label="Agilix Collective home">
@@ -80,62 +80,62 @@
                 </div>
             </div>
       </nav>
-        <section class="banner">
-            <div class="banner-text hero-copy">
-                <p class="tagline">Intend · Execute · Achieve</p>
+        <section class="hero__body">
+            <div class="hero__copy">
+                <p class="hero__tagline">Intend · Execute · Achieve</p>
                 <h1>agilix solves <br>
                     real problems</h1>
                 <p>Scalable software products, integrations, and consulting <br>
                     services - built to support business
                     success.
                 </p>
-                <div class="banner-cta-group">
-                    <a href="#contact" class="banner-cta" data-open-modal="contact">get in touch</a>
-                    <a href="#careers" class="banner-cta banner-cta--secondary" data-open-modal="careers">join us</a>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary" data-open-modal="contact">get in touch</a>
+                    <a href="#careers" class="btn btn--secondary" data-open-modal="careers">join us</a>
     </div>
             </div>
-            <div class="banner-visual">
-                <div class="banner-visual-inner">
-                    <img class="hero-illustration" src="assets/images/about-agilix.png"
+            <div class="hero__visual">
+                <div class="hero__visual-inner">
+                    <img class="hero__illustration" src="assets/images/about-agilix.png"
                         alt="Agilix Collective team and technology illustration" width="1330" height="1073" decoding="async" fetchpriority="high">
         </div>
       </div>
     </section>
-        <div class="section-slogan">
+        <div class="hero__slogan">
             <p>Intend Execute Achieve</p>
       </div>
     </div>
 
-    <section class="gradient-process-background" id="about">
+    <section class="about" id="about">
         <div class="site-footer__scroll-anchor" aria-hidden="true"></div>
-        <section class="banner about-banner">
-            <div class="banner-text about-agilix hero-copy">
+        <div class="about__body">
+            <div class="about__copy">
                 <span>ABOUT</span>
 
                 <h2>who we are</h2>
                 <p>Agilix Collective is a technology company focused on building software that solves real business problems. We bring together critical thinking, design, engineering, and AI to create digital solutions that are practical, scalable, and built for what’s next. From custom software and SaaS products to AI-powered solutions and dedicated agile teams, we work alongside businesses to turn ideas into products that deliver measurable value. We believe great software isn’t just about technology. It’s about understanding the problem, designing the right solution, and executing it with purpose.</p>
-                <div class="banner-cta-group">
-                    <a href="about.html" class="banner-cta">know more</a>
+                <div class="about__actions">
+                    <a href="about.html" class="btn btn--primary">know more</a>
   </div>
       </div>
-            <div class="about-image">
-                <div class="banner-visual-inner about-visual-inner">
-                    <img class="hero-rectangle" src="assets/images/hero-rectangle.png" alt="" width="1776" height="1886" decoding="async" loading="lazy">
-                    <img class="hero-illustration" src="assets/images/hero-illustration.png"
+            <div class="about__visual">
+                <div class="about__visual-inner">
+                    <img class="about__rectangle" src="assets/images/hero-rectangle.png" alt="" width="1776" height="1886" decoding="async" loading="lazy">
+                    <img class="about__illustration" src="assets/images/hero-illustration.png"
                         alt="Agilix software products across devices" width="1776" height="1018" loading="lazy" decoding="async">
         </div>
       </div>
-        </section>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section class="gradient-background" id="services">
-        <section class="services section-header">
+    <section class="services" id="services">
+        <div class="services__body section__header">
       <div class="container">
-                <div class="hero-copy services-intro">
-                    <p class="section-label">SERVICES</p>
+                <div class="services__intro">
+                    <p class="section__label">SERVICES</p>
                     <h2>what we do</h2>
-                    <div class="banner-text about-agilix services-about-copy">
+                    <div class="services__copy">
                         <p>Agilix Collective delivers real time solutions using the most effective technologies, and results
                             driven approach. Combination of agility, innovation, and technical expertise to build scalable
                             products tailored to business requirements. With a strong focus on collaboration and efficiency, we
@@ -143,10 +143,10 @@
                         </p>
         </div>
       </div>
-                <div class="services-grid services-grid-2">
+                <div class="services__grid services__grid--two">
                     <!-- Custom Software -->
-                    <div class="service-detail" data-reveal-from="left" data-reveal-delay="0">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="left" data-reveal-delay="0">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -163,7 +163,7 @@
 
         </div>
                         <h3>custom software</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Web-based platforms</li>
                             <li>Secure backend systems</li>
                             <li>Custom dashboards and reporting</li>
@@ -172,8 +172,8 @@
       </div>
 
                     <!-- SaaS Development -->
-                    <div class="service-detail" data-reveal-from="top" data-reveal-delay="100">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="top" data-reveal-delay="100">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -193,7 +193,7 @@
 
             </div>
                         <h3>SaaS development</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Multi-tenant SaaS architecture</li>
                             <li>Subscription and billing systems</li>
                             <li>Admin panels and analytics</li>
@@ -202,8 +202,8 @@
                     </div>
 
                     <!-- Workflow Automation -->
-                    <div class="service-detail" data-reveal-from="right" data-reveal-delay="200">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="right" data-reveal-delay="200">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -227,7 +227,7 @@
 
             </div>
                         <h3>workflow automation</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Process mapping</li>
                             <li>Automation rule configuration</li>
                             <li>Cross-platform workflow triggers</li>
@@ -236,8 +236,8 @@
                     </div>
 
                     <!-- System Integrations -->
-                    <div class="service-detail" data-reveal-from="left" data-reveal-delay="120">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="left" data-reveal-delay="120">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -272,7 +272,7 @@
 
             </div>
                         <h3>system integrations</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Jira & ClickUp implementation and setup</li>
                             <li>Third-party integrations (Slack, Teams, Zapier, APIs)</li>
                             <li>Data migration and system alignment</li>
@@ -281,8 +281,8 @@
                     </div>
 
                     <!-- Tool Optimization -->
-                    <div class="service-detail" data-reveal-from="bottom" data-reveal-delay="220">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="bottom" data-reveal-delay="220">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -293,7 +293,7 @@
 
             </div>
                         <h3>tool optimization</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                          <li> Workflow audit and restructuring</li>
                            <li> Advanced automation (rules, triggers, conditions)</li>
                             <li>Custom dashboards and reporting</li>
@@ -302,8 +302,8 @@
             </div>
 
                     <!-- 24/7 Support -->
-                    <div class="service-detail" data-reveal-from="right" data-reveal-delay="320">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="right" data-reveal-delay="320">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -317,7 +317,7 @@
 
             </div>
                         <h3>24/7 support</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>24/7 monitoring</li>
                             <li>Fast issue resolution</li>
                             <li>Multi-channel support</li>
@@ -325,11 +325,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="services-view-more">
-                    <a href="services.html" class="banner-cta">view more</a>
+                <div class="services__view-more">
+                    <a href="services.html" class="btn btn--primary">view more</a>
                 </div>
       </div>
-        </section>
+        </div>
     </section>
 
 
@@ -409,108 +409,108 @@
         </marquee>
     </section> -->
     <!-- Our Process Section -->
-    <section class="gradient-process-background" id="process">
-        <section class="our-process section-header">
+    <section class="process" id="process">
+        <div class="process__body section__header">
       <div class="container">
-                <p class="section-label">Process</p>
+                <p class="section__label">Process</p>
                 <h2>how we build</h2>
-                <div class="process-container" id="process-section">
-                    <div class="process-steps">
-                        <div class="steps-banner">APPROACH</div>
+                <div class="process__container" id="process-section">
+                    <div class="process__steps">
+                        <div class="process__steps-banner">APPROACH</div>
                     </div>
 
-                    <div class="process-main">
-                    <div class="process-items">
-                        <div class="process-slide process-content1" data-step="1">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">01</div>
-                                    <div class="process-content">
+                    <div class="process__main">
+                    <div class="process__items">
+                        <div class="process__slide process__content1" data-step="1">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">01</div>
+                                    <div class="process__content">
                                         <h3>discovery <br>
                                             & intention</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
+                                <div class="process__image">
                                     <img src="assets/images/discovery.png" alt="discovery-image" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content2" data-step="2">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">02</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content2" data-step="2">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">02</div>
+                                    <div class="process__content">
                                         <h3>Strategic <br> Planning</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
+                                <div class="process__image">
                                     <img src="assets/images/startegic.png" alt="strategic planning" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content3" data-step="3">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">03</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content3" data-step="3">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">03</div>
+                                    <div class="process__content">
                                         <h3>agile <br>
                                             execution</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
+                                <div class="process__image">
                                     <img src="assets/images/agile-execution.png" alt="agile-execution" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content4" data-step="4">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">04</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content4" data-step="4">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">04</div>
+                                    <div class="process__content">
                                         <h3>delivery & <br>
                                             deployment</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
+                                <div class="process__image">
                                     <img src="assets/images/delivery.png" alt="delivery" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content5" data-step="5">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">05</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content5" data-step="5">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">05</div>
+                                    <div class="process__content">
                                         <h3>maintenance <br>
                                             & improvement</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
+                                <div class="process__image">
                                     <img src="assets/images/maintenance.png" alt="maintenance" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <div class="process-end-line" aria-hidden="true"></div>
+                        <div class="process__end-line" aria-hidden="true"></div>
                     </div>
         </div>
       </div>
-        </section>
+        </div>
     </section>
 
     <!-- Products Section -->
-    <section class="products section-header" id="products">
+    <section class="products section__header" id="products">
       <div class="container">
-            <p class="section-label">PRODUCTS</p>
+            <p class="section__label">PRODUCTS</p>
             <h2>what we built</h2>
-            <div class="products-grid">
+            <div class="products__grid">
                 <!-- Box 1: Title Only -->
-                <div class="product-card product-card-title">
-                    <div class="product-header">
+                <div class="products__card products__card--title">
+                    <div class="products__header">
                         <svg width="212" height="40" viewBox="0 0 312 60" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -536,15 +536,15 @@
             </div>
 
                 <!-- Box 2: Description Only -->
-                <div class="product-card product-card-description">
-                    <p class="product-description">trace is a unified workspace for development, operations, and support
+                <div class="products__card products__card--description">
+                    <p class="products__description">trace is a unified workspace for development, operations, and support
                         teams to manage projects, handle requests, and collaborate seamlessly through integrated
                         conversations.</p>
                 </div>
 
                 <!-- Box 3: Features List Only -->
-                <div class="product-card product-card-features">
-                    <div class="product-features">
+                <div class="products__card products__card--features">
+                    <div class="products__features">
                         <ul>
                             <li>Boards & Backlogs</li>
                             <li>Queues & Filters</li>
@@ -557,14 +557,14 @@
                 </div>
 
                 <!-- Image: Large card spanning 3 rows (RIGHT) -->
-                <div class="product-card product-card-large">
-                    <div class="product-image">
+                <div class="products__card products__card--large">
+                    <div class="products__image">
                         <img src="assets/images/trace-product-image.png" alt="Trace Product" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <!-- Explore Button: Full width -->
-                <div class="product-card product-card-explore">
+                <div class="products__card products__card--explore">
                     <a href="https://trace.agilixcollective.com" class="explore-btn-full" target="_blank" rel="noopener noreferrer">
                         <span>explore</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -577,21 +577,21 @@
       </div>
     </section>
 
-   <section class="our-team" id="team" aria-labelledby="team-heading">
+   <section class="team" id="team" aria-labelledby="team-heading">
       <div class="container">
-            <div class="team-section-header">
-                <div class="team-section-title">
-                    <p class="team-section-label">TEAM</p>
-                    <h2 id="team-heading" class="team-section-heading">agilix team</h2>
+            <div class="team__header">
+                <div class="team__title">
+                    <p class="team__label">TEAM</p>
+                    <h2 id="team-heading" class="team__heading">agilix team</h2>
               </div>
-                <div class="nav-btns" role="group" aria-label="Team carousel controls">
-                    <button type="button" class="nav-btn" id="prevBtn" aria-label="Previous team member">
+                <div class="team__controls" role="group" aria-label="Team carousel controls">
+                    <button type="button" class="team__nav-btn" id="prevBtn" aria-label="Previous team member">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <button type="button" class="nav-btn nav-btn--next" id="nextBtn" aria-label="Next team member">
+                    <button type="button" class="team__nav-btn team__nav-btn--next" id="nextBtn" aria-label="Next team member">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -600,28 +600,28 @@
             </div>
               </div>
             </div>
-        <div class="slider-viewport" id="viewport" aria-roledescription="carousel" aria-label="Agilix team members">
-            <div class="slider-track" id="track"></div>
+        <div class="team__viewport" id="viewport" aria-roledescription="carousel" aria-label="Agilix team members">
+            <div class="team__track" id="track"></div>
               </div>
     </section>
 
-    <section class="career-section" id="careers" aria-labelledby="careers-heading">
-        <div class="container career-layout">
-            <div class="career-intro">
-                <p class="section-label career-label">CAREERS</p>
-                <h2 id="careers-heading" class="career-heading">join our team</h2>
-                <p class="career-lead">Share your profile and we’ll reach out when there’s a fit.</p>
+    <section class="careers" id="careers" aria-labelledby="careers-heading">
+        <div class="container careers__layout">
+            <div class="careers__intro">
+                <p class="section__label careers__label">CAREERS</p>
+                <h2 id="careers-heading" class="careers__heading">join our team</h2>
+                <p class="careers__lead">Share your profile and we’ll reach out when there’s a fit.</p>
 
-                <div class="career-openings" data-openings>
-                    <div class="career-openings-header">
-                        <h3 class="career-openings-title">available openings</h3>
-                        <div class="career-openings-nav" role="group" aria-label="Opening navigation">
-                            <button type="button" class="career-openings-btn" data-openings-prev aria-label="Previous opening">
+                <div class="careers__openings" data-openings>
+                    <div class="careers__openings-header">
+                        <h3 class="careers__openings-title">available openings</h3>
+                        <div class="careers__openings-nav" role="group" aria-label="Opening navigation">
+                            <button type="button" class="careers__openings-btn" data-openings-prev aria-label="Previous opening">
                                 <svg width="22" height="22" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button type="button" class="career-openings-btn career-openings-btn--next" data-openings-next aria-label="Next opening">
+                            <button type="button" class="careers__openings-btn careers__openings-btn--next" data-openings-next aria-label="Next opening">
                                 <svg width="22" height="22" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
@@ -629,38 +629,38 @@
             </div>
         </div>
 
-                    <label class="career-openings-search">
+                    <label class="careers__openings-search">
                         <span class="visually-hidden">Search openings</span>
-                        <svg class="career-openings-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="careers__openings-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.75"/>
                             <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
                         </svg>
                         <input type="search" data-openings-search placeholder="Search by role, city, or type" autocomplete="off">
                     </label>
 
-                    <div class="career-openings-viewport" aria-live="polite">
-                        <div class="career-openings-track" data-openings-track></div>
+                    <div class="careers__openings-viewport" aria-live="polite">
+                        <div class="careers__openings-track" data-openings-track></div>
                     </div>
-                    <p class="career-openings-meta" data-openings-meta></p>
-                    <p class="career-openings-empty" data-openings-empty hidden>No openings match your search.</p>
+                    <p class="careers__openings-meta" data-openings-meta></p>
+                    <p class="careers__openings-empty" data-openings-empty hidden>No openings match your search.</p>
                 </div>
             </div>
-            <form class="career-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
+            <form class="careers__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
                 <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
-                <div class="career-form-grid">
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-name">full name*</label>
+                <div class="careers__form-grid">
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-name">full name*</label>
                         <input id="career-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-email">email*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-email">email*</label>
                         <input id="career-email" name="email" type="email" autocomplete="email" placeholder="john@email.com" required>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-city">city*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-city">city*</label>
                         <select id="career-city" name="city" required>
                             <option value="" disabled selected>Select city</option>
                             <option value="Lahore">Lahore</option>
@@ -675,8 +675,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-position">position*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-position">position*</label>
                         <select id="career-position" name="position" required>
                             <option value="" disabled selected>Select position</option>
                             <option value="Software Engineer">Software Engineer</option>
@@ -692,8 +692,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-experience">total experience*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-experience">total experience*</label>
                         <select id="career-experience" name="total_experience" required>
                             <option value="" disabled selected>Select experience</option>
                             <option value="Fresher / Less than 1 year">Fresher / Less than 1 year</option>
@@ -704,8 +704,8 @@
                             <option value="10+ years">10+ years</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-degree">last degree*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-degree">last degree*</label>
                         <select id="career-degree" name="last_degree" required>
                             <option value="" disabled selected>Select degree</option>
                             <option value="Intermediate / High School">Intermediate / High School</option>
@@ -721,45 +721,45 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-organization">current organization</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-organization">current organization</label>
                         <input id="career-organization" name="current_organization" type="text" autocomplete="organization" placeholder="Company name">
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-current-salary">current salary</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-current-salary">current salary</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="current_salary_currency" value="PKR">
                             <input id="career-current-salary" name="current_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="150000">
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-expected-salary">expected salary*</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-expected-salary">expected salary*</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="expected_salary_currency" value="PKR">
                             <input id="career-expected-salary" name="expected_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="200000" required>
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-linkedin">linkedin url</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-linkedin">linkedin url</label>
                         <input id="career-linkedin" name="linkedin_url" type="url" autocomplete="url" placeholder="https://linkedin.com/in/username">
                     </div>
-                    <div class="career-field career-field--full">
-                        <label class="career-label-field" for="career-resume">resume*</label>
-                        <div class="career-upload">
-                            <input id="career-resume" class="career-upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-                            <label class="career-upload-btn" for="career-resume">upload resume</label>
-                            <span class="career-upload-name" id="career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
-                            <button class="career-form-button" type="submit">submit</button>
+                    <div class="careers__field careers__field--full">
+                        <label class="careers__label-field" for="career-resume">resume*</label>
+                        <div class="careers__upload">
+                            <input id="career-resume" class="careers__upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                            <label class="careers__upload-btn" for="career-resume">upload resume</label>
+                            <span class="careers__upload-name" id="career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
+                            <button class="careers__form-button" type="submit">submit</button>
                         </div>
                     </div>
                 </div>
-                <p class="career-form-status" role="status" aria-live="polite"></p>
+                <p class="careers__form-status" role="status" aria-live="polite"></p>
             </form>
       </div>
-            <div class="career-explore">
-                <a href="careers.html" class="explore-btn-full career-explore-btn" aria-label="explore careers">
+            <div class="careers__explore">
+                <a href="careers.html" class="explore-btn-full careers__explore-btn" aria-label="explore careers">
                     <span>explore careers</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -989,22 +989,22 @@
         ]
     }
     </script>
-    <section class="blogs-section" id="blogs" aria-labelledby="blogs-heading">
-        <div class="container blogs-inner">
-            <header class="blogs-header">
-                <div class="blogs-header-text">
-                    <p class="section-label blogs-label">BLOGS</p>
-                    <h2 id="blogs-heading" class="blogs-title">insights &amp; ideas</h2>
-                    <p class="blogs-lead">Notes on building software, shipping products, and working with intent.</p>
+    <section class="blogs" id="blogs" aria-labelledby="blogs-heading">
+        <div class="container blogs__inner">
+            <header class="blogs__header">
+                <div class="blogs__header-text">
+                    <p class="section__label blogs__label">BLOGS</p>
+                    <h2 id="blogs-heading" class="blogs__title">insights &amp; ideas</h2>
+                    <p class="blogs__lead">Notes on building software, shipping products, and working with intent.</p>
                 </div>
-                <div class="nav-btns blogs-nav" role="group" aria-label="Blog carousel controls">
-                    <button type="button" class="nav-btn blogs-nav-btn" data-blogs-prev aria-label="Previous blogs">
+                <div class="blogs__controls blogs__nav" role="group" aria-label="Blog carousel controls">
+                    <button type="button" class="blogs__nav-btn" data-blogs-prev aria-label="Previous blogs">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <button type="button" class="nav-btn blogs-nav-btn blogs-nav-btn--next" data-blogs-next aria-label="Next blogs">
+                    <button type="button" class="blogs__nav-btn blogs__nav-btn--next" data-blogs-next aria-label="Next blogs">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -1013,96 +1013,96 @@
                 </div>
             </header>
 
-            <div class="blogs-viewport" data-blogs-viewport>
-                <div class="blogs-track" data-blogs-track>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#intention-beats-features">
-                            <div class="blog-item-media">
+            <div class="blogs__viewport" data-blogs-viewport>
+                <div class="blogs__track" data-blogs-track>
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#intention-beats-features">
+                            <div class="blogs__item-media">
                                 <img src="assets/blogs/intention-planning.jpg" alt="Team collaborating around a table during product planning" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-06-12">Jun 12, 2026</time>
-                                <h3 class="blog-item-title">why intention beats feature lists</h3>
-                                <p class="blog-item-excerpt">Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-06-12">Jun 12, 2026</time>
+                                <h3 class="blogs__item-title">why intention beats feature lists</h3>
+                                <p class="blogs__item-excerpt">Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#shipping-saas-without-drama">
-                            <div class="blog-item-media">
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#shipping-saas-without-drama">
+                            <div class="blogs__item-media">
                                 <img src="assets/blogs/saas-shipping.jpg" alt="Developer writing code in a dark editor while shipping software" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-05-03">May 3, 2026</time>
-                                <h3 class="blog-item-title">shipping saas without the drama</h3>
-                                <p class="blog-item-excerpt">Practical rituals for releases, observability, and feedback loops that keep products calm under growth.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-05-03">May 3, 2026</time>
+                                <h3 class="blogs__item-title">shipping saas without the drama</h3>
+                                <p class="blogs__item-excerpt">Practical rituals for releases, observability, and feedback loops that keep products calm under growth.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#ai-that-solves-real-work">
-                            <div class="blog-item-media">
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#ai-that-solves-real-work">
+                            <div class="blogs__item-media">
                                 <img src="assets/blogs/ai-work.jpg" alt="White robot representing practical AI applied to real work" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-03-18">Mar 18, 2026</time>
-                                <h3 class="blog-item-title">ai that solves real work</h3>
-                                <p class="blog-item-excerpt">Where AI adds leverage in product teams—and where it just adds noise. A grounded take from delivery floors.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-03-18">Mar 18, 2026</time>
+                                <h3 class="blogs__item-title">ai that solves real work</h3>
+                                <p class="blogs__item-excerpt">Where AI adds leverage in product teams—and where it just adds noise. A grounded take from delivery floors.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#remote-teams-that-ship">
-                            <div class="blog-item-media">
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#remote-teams-that-ship">
+                            <div class="blogs__item-media">
                                 <img src="assets/blogs/remote-teams.jpg" alt="Remote team collaborating around sticky notes in a workshop" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-02-04">Feb 4, 2026</time>
-                                <h3 class="blog-item-title">building remote teams that actually ship</h3>
-                                <p class="blog-item-excerpt">How we keep distributed squads aligned—clear ownership, async rituals, and the habits that replace hallway talk.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-02-04">Feb 4, 2026</time>
+                                <h3 class="blogs__item-title">building remote teams that actually ship</h3>
+                                <p class="blogs__item-excerpt">How we keep distributed squads aligned—clear ownership, async rituals, and the habits that replace hallway talk.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
                 </div>
             </div>
 
-            <div class="blogs-view-more">
-                <a href="blogs.html" class="banner-cta">view more</a>
+            <div class="blogs__view-more">
+                <a href="blogs.html" class="btn btn--primary">view more</a>
             </div>
       </div>
     </section>
 
-    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
-        <div class="container faq-layout">
-            <div class="faq-intro">
-                <p class="section-label faq-label">FAQS</p>
-                <h2 id="faq-heading" class="faq-title">frequently <br> asked <br> questions</h2>
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+        <div class="container faq__layout">
+            <div class="faq__intro">
+                <p class="section__label faq__label">FAQS</p>
+                <h2 id="faq-heading" class="faq__title">frequently <br> asked <br> questions</h2>
       </div>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-1"
+            <div class="faq__accordion">
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-1"
                         id="faq-trigger-1">
-                        <span class="faq-question">what services does Agilix Collective offer?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">what services does Agilix Collective offer?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" hidden>
+                    <div class="faq__panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" hidden>
                         <p>We provide end-to-end software solutions, including custom development, system design,
                             product
                             strategy, and real-time application development tailored to business needs.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-2"
                         id="faq-trigger-2">
-                        <span class="faq-question">what makes Agilix Collective different from other software
+                        <span class="faq__question">what makes Agilix Collective different from other software
                             firms?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+                    <div class="faq__panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
                         <p>We pair deep technical execution with transparent communication, outcome-focused roadmaps,
                             and
                             agile delivery—so you get scalable products built around your business, not
@@ -1110,36 +1110,36 @@
                             packages.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-3"
                         id="faq-trigger-3">
-                        <span class="faq-question">how do you ensure project quality and timely delivery?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">how do you ensure project quality and timely delivery?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+                    <div class="faq__panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
                         <p>We use structured sprints, clear milestones, code review, and automated checks where they add
                             value—so scope, timelines, and quality stay visible from kickoff through release.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-4"
                         id="faq-trigger-4">
-                        <span class="faq-question">do you provide ongoing support after project delivery?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">do you provide ongoing support after project delivery?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+                    <div class="faq__panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
                         <p>Yes. We offer maintenance, enhancements, and support options after go-live so your product
                             stays
                             reliable and can evolve with your users and business.</p>
         </div>
       </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-5"
                         id="faq-trigger-5">
-                        <span class="faq-question">how can we get started with Agilix Collective?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">how can we get started with Agilix Collective?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
+                    <div class="faq__panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
                         <p>Reach out through our contact channels; we’ll set up a short discovery call, clarify goals
                             and
                             constraints, and share a proposed approach, timeline, and next steps.</p>
@@ -1492,26 +1492,26 @@
                 </svg>
             </button>
             <div class="form-modal__header">
-                <p class="section-label career-label">CAREERS</p>
+                <p class="section__label careers__label">CAREERS</p>
                 <h2 id="careers-modal-title" class="form-modal__title form-modal__title--careers">join our team</h2>
-                <p class="career-lead form-modal__lead">Share your profile and we’ll reach out when there’s a fit.</p>
+                <p class="careers__lead form-modal__lead">Share your profile and we’ll reach out when there’s a fit.</p>
             </div>
-            <form class="career-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
+            <form class="careers__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
                 <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
-                <div class="career-form-grid">
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-name">full name*</label>
+                <div class="careers__form-grid">
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-name">full name*</label>
                         <input id="modal-career-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required data-modal-focus>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-email">email*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-email">email*</label>
                         <input id="modal-career-email" name="email" type="email" autocomplete="email" placeholder="john@email.com" required>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-city">city*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-city">city*</label>
                         <select id="modal-career-city" name="city" required>
                             <option value="" disabled selected>Select city</option>
                             <option value="Lahore">Lahore</option>
@@ -1526,8 +1526,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-position">position*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-position">position*</label>
                         <select id="modal-career-position" name="position" required>
                             <option value="" disabled selected>Select position</option>
                             <option value="Software Engineer">Software Engineer</option>
@@ -1543,8 +1543,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-experience">total experience*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-experience">total experience*</label>
                         <select id="modal-career-experience" name="total_experience" required>
                             <option value="" disabled selected>Select experience</option>
                             <option value="Fresher / Less than 1 year">Fresher / Less than 1 year</option>
@@ -1555,8 +1555,8 @@
                             <option value="10+ years">10+ years</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-degree">last degree*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-degree">last degree*</label>
                         <select id="modal-career-degree" name="last_degree" required>
                             <option value="" disabled selected>Select degree</option>
                             <option value="Intermediate / High School">Intermediate / High School</option>
@@ -1572,41 +1572,41 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-organization">current organization</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-organization">current organization</label>
                         <input id="modal-career-organization" name="current_organization" type="text" autocomplete="organization" placeholder="Company name">
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-current-salary">current salary</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-current-salary">current salary</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="current_salary_currency" value="PKR">
                             <input id="modal-career-current-salary" name="current_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="150000">
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-expected-salary">expected salary*</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-expected-salary">expected salary*</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="expected_salary_currency" value="PKR">
                             <input id="modal-career-expected-salary" name="expected_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="200000" required>
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-linkedin">linkedin url</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-linkedin">linkedin url</label>
                         <input id="modal-career-linkedin" name="linkedin_url" type="url" autocomplete="url" placeholder="https://linkedin.com/in/username">
                     </div>
-                    <div class="career-field career-field--full">
-                        <label class="career-label-field" for="modal-career-resume">resume*</label>
-                        <div class="career-upload">
-                            <input id="modal-career-resume" class="career-upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-                            <label class="career-upload-btn" for="modal-career-resume">upload resume</label>
-                            <span class="career-upload-name" id="modal-career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
-                            <button class="career-form-button" type="submit">submit</button>
+                    <div class="careers__field careers__field--full">
+                        <label class="careers__label-field" for="modal-career-resume">resume*</label>
+                        <div class="careers__upload">
+                            <input id="modal-career-resume" class="careers__upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                            <label class="careers__upload-btn" for="modal-career-resume">upload resume</label>
+                            <span class="careers__upload-name" id="modal-career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
+                            <button class="careers__form-button" type="submit">submit</button>
                         </div>
                     </div>
                 </div>
-                <p class="career-form-status" role="status" aria-live="polite"></p>
+                <p class="careers__form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </div>

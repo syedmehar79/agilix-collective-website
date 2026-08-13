@@ -104,14 +104,14 @@
 
     function buildCard(member, physical) {
         var card = document.createElement('article');
-        card.className = 'team-card';
+        card.className = 'team__card';
         card.dataset.physical = String(physical);
         card.setAttribute('role', 'group');
         card.setAttribute('aria-roledescription', 'slide');
         card.setAttribute('aria-label', member.name + ', ' + member.role);
 
         var linkedin = member.linkedin
-            ? '<a class="team-card-linkedin" href="' +
+            ? '<a class="team__card-linkedin" href="' +
               member.linkedin +
               '" target="_blank" rel="noopener noreferrer" aria-label="' +
               member.name +
@@ -121,15 +121,15 @@
             : '';
 
         card.innerHTML =
-            '<div class="team-card-info">' +
-            '<p class="team-card-role">' + member.role + '</p>' +
-            '<div class="team-card-name-row">' +
-            '<p class="team-card-name">' + member.name + '</p>' +
+            '<div class="team__card-info">' +
+            '<p class="team__card-role">' + member.role + '</p>' +
+            '<div class="team__card-name-row">' +
+            '<p class="team__card-name">' + member.name + '</p>' +
             linkedin +
             '</div>' +
             '</div>' +
-            '<div class="team-card-media">' +
-            '<img class="team-card-photo" src="' + member.photo + '" alt="' + member.name + '" draggable="false" loading="lazy" decoding="async">' +
+            '<div class="team__card-media">' +
+            '<img class="team__card-photo" src="' + member.photo + '" alt="' + member.name + '" draggable="false" loading="lazy" decoding="async">' +
             '</div>';
 
         return card;
@@ -324,11 +324,11 @@
     viewport.addEventListener('pointerdown', function (e) {
         if (e.pointerType === 'mouse' && e.button !== 0) return;
         /* Let LinkedIn links work without starting a card drag */
-        if (e.target.closest && e.target.closest('.team-card-linkedin')) return;
+        if (e.target.closest && e.target.closest('.team__card-linkedin')) return;
         dragging = true;
         dragMoved = false;
         activePointerId = e.pointerId;
-        pressCard = e.target.closest ? e.target.closest('.team-card') : null;
+        pressCard = e.target.closest ? e.target.closest('.team__card') : null;
         pointerX = e.clientX;
         startTransform = readX();
         track.classList.add('is-jumping');

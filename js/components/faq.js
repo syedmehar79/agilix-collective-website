@@ -1,11 +1,11 @@
 (function () {
-    var items = document.querySelectorAll('.faq-item');
+    var items = document.querySelectorAll('.faq__item');
     var ANIM_MS = 450;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function closeItem(item, immediate) {
-        var btn = item.querySelector('.faq-trigger');
-        var panel = item.querySelector('.faq-panel');
+        var btn = item.querySelector('.faq__trigger');
+        var panel = item.querySelector('.faq__panel');
         if (!btn || !panel || !item.classList.contains('is-open')) {
             return Promise.resolve();
         }
@@ -43,8 +43,8 @@
     }
 
     function openItem(item) {
-        var btn = item.querySelector('.faq-trigger');
-        var panel = item.querySelector('.faq-panel');
+        var btn = item.querySelector('.faq__trigger');
+        var panel = item.querySelector('.faq__panel');
         if (!btn || !panel) return;
 
         panel.hidden = false;
@@ -65,8 +65,8 @@
     }
 
     items.forEach(function (item) {
-        var btn = item.querySelector('.faq-trigger');
-        var panel = item.querySelector('.faq-panel');
+        var btn = item.querySelector('.faq__trigger');
+        var panel = item.querySelector('.faq__panel');
         if (!btn || !panel) return;
 
         var isOpen = item.classList.contains('is-open');
@@ -279,12 +279,12 @@
         if (!careerForm || careerForm.dataset.wired === 'true') return;
         careerForm.dataset.wired = 'true';
 
-        var careerStatus = careerForm.querySelector('.career-form-status');
-        var careerSubmit = careerForm.querySelector('.career-form-button');
-        var resumeInput = careerForm.querySelector('.career-upload-input');
-        var resumeName = careerForm.querySelector('.career-upload-name');
+        var careerStatus = careerForm.querySelector('.careers__form-status, .careers__form, .career-form-status');
+        var careerSubmit = careerForm.querySelector('.careers__form-button, .careers__form, .career-form-button');
+        var resumeInput = careerForm.querySelector('.careers__upload-input, .career-upload-input');
+        var resumeName = careerForm.querySelector('.careers__upload-name, .career-upload-name');
 
-        careerForm.querySelectorAll('.career-field select').forEach(enhanceFooterSelect);
+        careerForm.querySelectorAll('.careers__field select, .career-field select').forEach(enhanceFooterSelect);
 
         function resetResumeLabel() {
             if (!resumeName) return;
@@ -303,13 +303,13 @@
                     resumeInput.value = '';
                     resetResumeLabel();
                     if (careerStatus) {
-                        careerStatus.className = 'career-form-status is-error';
+                        careerStatus.className = 'careers__form-status is-error';
                         careerStatus.textContent = 'Resume must be 5MB or smaller.';
                     }
                     return;
                 }
                 if (careerStatus) {
-                    careerStatus.className = 'career-form-status';
+                    careerStatus.className = 'careers__form-status';
                     careerStatus.textContent = '';
                 }
                 if (resumeName) {
@@ -321,7 +321,7 @@
 
         careerForm.addEventListener('reset', function () {
             setTimeout(function () {
-                refreshEnhancedSelects(careerForm, '.career-field select');
+                refreshEnhancedSelects(careerForm, '.careers__field select, .career-field select');
                 resetResumeLabel();
             }, 0);
         });
@@ -337,21 +337,21 @@
             var file = resumeInput && resumeInput.files && resumeInput.files[0];
             if (!file) {
                 if (careerStatus) {
-                    careerStatus.className = 'career-form-status is-error';
+                    careerStatus.className = 'careers__form-status is-error';
                     careerStatus.textContent = 'Please upload your resume.';
                 }
                 return;
             }
             if (file.size > RESUME_MAX_BYTES) {
                 if (careerStatus) {
-                    careerStatus.className = 'career-form-status is-error';
+                    careerStatus.className = 'careers__form-status is-error';
                     careerStatus.textContent = 'Resume must be 5MB or smaller.';
                 }
                 return;
             }
 
             if (careerStatus) {
-                careerStatus.className = 'career-form-status';
+                careerStatus.className = 'careers__form-status';
                 careerStatus.textContent = 'Sending…';
             }
             if (careerSubmit) {
@@ -377,17 +377,17 @@
                         throw new Error((result.data && result.data.message) || 'Send failed');
                     }
                     if (careerStatus) {
-                        careerStatus.className = 'career-form-status is-success';
+                        careerStatus.className = 'careers__form-status is-success';
                         careerStatus.textContent =
                             'Thank you. Your application has been sent — we will be in touch soon.';
                     }
                     careerForm.reset();
-                    refreshEnhancedSelects(careerForm, '.career-field select');
+                    refreshEnhancedSelects(careerForm, '.careers__field select, .career-field select');
                     resetResumeLabel();
                 })
                 .catch(function () {
                     if (careerStatus) {
-                        careerStatus.className = 'career-form-status is-error';
+                        careerStatus.className = 'careers__form-status is-error';
                         careerStatus.textContent =
                             'Something went wrong. Please email ' + CONTACT_EMAIL + ' directly.';
                     }
@@ -402,7 +402,7 @@
 
     function wireAllForms() {
         document.querySelectorAll('.site-footer__form').forEach(wireFooterForm);
-        document.querySelectorAll('.career-form').forEach(wireCareerForm);
+        document.querySelectorAll('.careers__form, .career-form').forEach(wireCareerForm);
     }
 
     wireAllForms();

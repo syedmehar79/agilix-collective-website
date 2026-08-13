@@ -67,3 +67,33 @@ This is the living rename dictionary for the BEM + SEO + UI bugfix implementatio
 | `footer-social-link` | `site-footer__social-link` |
 
 The footer root remains `site-footer`. Existing `data-footer-*` attributes and form-control IDs/labels such as `footer-name` remain unchanged.
+
+## Home sections
+
+| Old | New |
+|---|---|
+| `gradient-background` (home hero) | `hero` |
+| `banner` / `banner-text` (home hero) | `hero__body` / `hero__copy` |
+| `tagline` / `section-slogan` | `hero__tagline` / `hero__slogan` |
+| `banner-visual` / `banner-visual-inner` | `hero__visual` / `hero__visual-inner` |
+| `banner-cta-group` | `hero__actions` or `about__actions` |
+| `banner-cta` | `btn btn--primary` |
+| `banner-cta banner-cta--secondary` | `btn btn--secondary` |
+| `gradient-process-background` / `about-banner` | `about` / `about__body` |
+| `about-agilix` / `about-image` / `about-visual-inner` | `about__copy` / `about__visual` / `about__visual-inner` |
+| `section-header` / `section-label` | `section__header` / `section__label` |
+| `gradient-background` + inner `services` | `services` + `services__body` |
+| `services-grid` / `services-grid-2` | `services__grid` / `services__grid--two` |
+| `service-detail` / `service-icon` / `service-list` | `services__item` / `services__icon` / `services__list` |
+| `gradient-process-background` + `our-process` | `process` + `process__body` |
+| `process-*` | `process__*` (one-to-one suffix mapping) |
+| `products-grid` / `product-card` | `products__grid` / `products__card` |
+| `product-card-{variant}` | `products__card--{variant}` |
+| `product-*` card elements | `products__*` |
+| `our-team` / `team-section-*` | `team` / `team__*` |
+| `slider-viewport` / `slider-track` / `team-card*` | `team__viewport` / `team__track` / `team__card*` |
+| `career-section` / `career-*` | `careers` / `careers__*` |
+| `blogs-section` / `blogs-*` / `blog-*` | `blogs` / `blogs__*` |
+| `faq-section` / `faq-*` | `faq` / `faq__*` |
+
+`css/style.css` temporarily uses dual `:is(.old, .new)` selectors for legacy inner-page and modal markup. Task 3 should remove the old selector branches after those pages adopt the BEM classes. Careers form JavaScript also accepts both `.career-*` and `.careers__*` selectors until the shared inner-page/modal markup is migrated.

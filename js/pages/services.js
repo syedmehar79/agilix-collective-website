@@ -1,5 +1,5 @@
 (function () {
-    var cards = document.querySelectorAll(".services-grid .service-detail");
+    var cards = document.querySelectorAll(".services__grid .services__item");
     var intro = document.querySelector("#services .services-intro");
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

@@ -10,7 +10,7 @@
     var emptyEl = root.querySelector('[data-jobs-empty]');
     var countEl = root.querySelector('[data-jobs-count]');
     var positionInput = document.getElementById('career-position');
-    var form = root.querySelector('.career-form');
+    var form = root.querySelector('.careers__form, .career-form');
     var shellEl = root.querySelector('[data-jobs-shell]');
     var emptyScreenEl = root.querySelector('[data-jobs-empty-screen]');
     var emptyToggle = root.querySelector('[data-jobs-empty-toggle]');
@@ -774,7 +774,7 @@
 
     function applyToForm(opening) {
         syncSelect(positionSelect, opening.role);
-        var form = document.querySelector('.career-form');
+        var form = document.querySelector('.careers__form, .career-form');
         if (form) {
             form.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
             window.setTimeout(function () {
@@ -801,24 +801,24 @@
 
         filtered.forEach(function (opening, i) {
             var card = document.createElement('article');
-            card.className = 'career-opening-card';
+            card.className = 'careers__opening-card';
             card.setAttribute('data-index', String(i));
             card.innerHTML =
-                '<h4 class="career-opening-role"></h4>' +
-                '<p class="career-opening-meta">' +
-                '<span class="career-opening-type"></span>' +
-                '<span class="career-opening-city"></span>' +
-                '<span class="career-opening-exp"></span>' +
+                '<h4 class="careers__opening-role"></h4>' +
+                '<p class="careers__opening-meta">' +
+                '<span class="careers__opening-type"></span>' +
+                '<span class="careers__opening-city"></span>' +
+                '<span class="careers__opening-exp"></span>' +
                 '</p>' +
-                '<p class="career-opening-desc"></p>' +
-                '<button type="button" class="career-opening-apply">apply for this role</button>';
+                '<p class="careers__opening-desc"></p>' +
+                '<button type="button" class="careers__opening-apply">apply for this role</button>';
 
-            card.querySelector('.career-opening-role').textContent = opening.role;
-            card.querySelector('.career-opening-type').textContent = opening.type;
-            card.querySelector('.career-opening-city').textContent = opening.city;
-            card.querySelector('.career-opening-exp').textContent = opening.experience;
-            card.querySelector('.career-opening-desc').textContent = opening.description;
-            card.querySelector('.career-opening-apply').addEventListener('click', function () {
+            card.querySelector('.careers__opening-role').textContent = opening.role;
+            card.querySelector('.careers__opening-type').textContent = opening.type;
+            card.querySelector('.careers__opening-city').textContent = opening.city;
+            card.querySelector('.careers__opening-exp').textContent = opening.experience;
+            card.querySelector('.careers__opening-desc').textContent = opening.description;
+            card.querySelector('.careers__opening-apply').addEventListener('click', function () {
                 applyToForm(opening);
             });
             track.appendChild(card);
