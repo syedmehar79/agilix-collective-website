@@ -1,11 +1,11 @@
 (function () {
-    var items = document.querySelectorAll('.faq__item');
+    var items = document.querySelectorAll('.faq__item, .faq-item');
     var ANIM_MS = 450;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function closeItem(item, immediate) {
-        var btn = item.querySelector('.faq__trigger');
-        var panel = item.querySelector('.faq__panel');
+        var btn = item.querySelector('.faq__trigger, .faq-trigger');
+        var panel = item.querySelector('.faq__panel, .faq-panel');
         if (!btn || !panel || !item.classList.contains('is-open')) {
             return Promise.resolve();
         }
@@ -43,8 +43,8 @@
     }
 
     function openItem(item) {
-        var btn = item.querySelector('.faq__trigger');
-        var panel = item.querySelector('.faq__panel');
+        var btn = item.querySelector('.faq__trigger, .faq-trigger');
+        var panel = item.querySelector('.faq__panel, .faq-panel');
         if (!btn || !panel) return;
 
         panel.hidden = false;
@@ -65,8 +65,8 @@
     }
 
     items.forEach(function (item) {
-        var btn = item.querySelector('.faq__trigger');
-        var panel = item.querySelector('.faq__panel');
+        var btn = item.querySelector('.faq__trigger, .faq-trigger');
+        var panel = item.querySelector('.faq__panel, .faq-panel');
         if (!btn || !panel) return;
 
         var isOpen = item.classList.contains('is-open');
