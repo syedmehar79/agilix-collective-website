@@ -6342,7 +6342,12 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     border: 2px solid #d3d3d3;
     background: #ffffff;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.25s ease,
+        box-shadow 0.35s ease;
 }
 
 .services-page .svc-process-step:nth-child(1) {
@@ -6365,9 +6370,12 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     transform: translateY(36px);
 }
 
-.services-page .svc-process-step:hover {
+.services-page .svc-process-step:hover,
+.services-page .svc-process-step:focus-within {
+    background-color: #b20000;
     border-color: #b20000;
-    box-shadow: 0 16px 32px rgba(178, 0, 0, 0.12);
+    box-shadow: 0 16px 32px rgba(178, 0, 0, 0.22);
+    color: #ffffff;
 }
 
 .services-page .svc-process-step:nth-child(1):hover {
@@ -6402,6 +6410,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     opacity: 0.08;
     z-index: 0;
     pointer-events: none;
+    transition: color 0.35s ease, opacity 0.35s ease;
 }
 
 .services-page .svc-process-icon {
@@ -6414,29 +6423,12 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #b20000;
     position: relative;
     z-index: 1;
+    transition: color 0.35s ease;
 }
 
 .services-page .svc-process-icon svg {
     width: 28px;
     height: 28px;
-}
-
-.services-page .svc-process-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    margin-bottom: 12px;
-    border-radius: 50%;
-    border: 2px solid #b20000;
-    background: #ffffff;
-    color: #b20000;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    position: relative;
-    z-index: 1;
 }
 
 .services-page .svc-process-step h3 {
@@ -6447,6 +6439,7 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #111111;
     position: relative;
     z-index: 1;
+    transition: color 0.35s ease;
 }
 
 .services-page .svc-process-step p {
@@ -6456,33 +6449,22 @@ html[data-theme="dark"] .services-page .services-intro-illustration {
     color: #333333;
     position: relative;
     z-index: 1;
+    transition: color 0.35s ease;
 }
 
-.services-page .svc-process-step--peak {
-    background: #b20000;
-    border-color: #b20000;
+.services-page .svc-process-step:hover .svc-process-icon,
+.services-page .svc-process-step:hover h3,
+.services-page .svc-process-step:hover p,
+.services-page .svc-process-step:focus-within .svc-process-icon,
+.services-page .svc-process-step:focus-within h3,
+.services-page .svc-process-step:focus-within p {
     color: #ffffff;
 }
 
-.services-page .svc-process-step--peak .svc-process-ghost {
+.services-page .svc-process-step:hover .svc-process-ghost,
+.services-page .svc-process-step:focus-within .svc-process-ghost {
     color: #ffffff;
     opacity: 0.18;
-}
-
-.services-page .svc-process-step--peak .svc-process-icon,
-.services-page .svc-process-step--peak h3,
-.services-page .svc-process-step--peak p {
-    color: #ffffff;
-}
-
-.services-page .svc-process-step--peak .svc-process-num {
-    background: #ffffff;
-    border-color: #ffffff;
-    color: #b20000;
-}
-
-.services-page .svc-process-step--peak:hover {
-    box-shadow: 0 18px 36px rgba(178, 0, 0, 0.28);
 }
 
 .services-page .svc-process-loop {
@@ -7121,29 +7103,20 @@ html[data-theme="dark"] .services-page .svc-process-step {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-html[data-theme="dark"] .services-page .svc-process-step:hover {
+html[data-theme="dark"] .services-page .svc-process-step:hover,
+html[data-theme="dark"] .services-page .svc-process-step:focus-within {
+    background-color: #b20000;
     border-color: #b20000;
-    box-shadow: 0 16px 32px rgba(178, 0, 0, 0.2);
+    box-shadow: 0 16px 32px rgba(178, 0, 0, 0.28);
 }
 
-html[data-theme="dark"] .services-page .svc-process-step--peak {
-    background: #b20000;
-    border-color: #b20000;
-}
-
-html[data-theme="dark"] .services-page .svc-process-step--peak h3,
-html[data-theme="dark"] .services-page .svc-process-step--peak p,
-html[data-theme="dark"] .services-page .svc-process-step--peak .svc-process-icon {
+html[data-theme="dark"] .services-page .svc-process-step:hover h3,
+html[data-theme="dark"] .services-page .svc-process-step:hover p,
+html[data-theme="dark"] .services-page .svc-process-step:hover .svc-process-icon,
+html[data-theme="dark"] .services-page .svc-process-step:focus-within h3,
+html[data-theme="dark"] .services-page .svc-process-step:focus-within p,
+html[data-theme="dark"] .services-page .svc-process-step:focus-within .svc-process-icon {
     color: #ffffff;
-}
-
-html[data-theme="dark"] .services-page .svc-process-num {
-    background: #141414;
-}
-
-html[data-theme="dark"] .services-page .svc-process-step--peak .svc-process-num {
-    background: #ffffff;
-    color: #b20000;
 }
 
 html[data-theme="dark"] .services-page .svc-chips li {
