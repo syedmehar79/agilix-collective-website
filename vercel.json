@@ -8,5 +8,36 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" }
       ]
     }
+  ],
+  "redirects": [
+    { "source": "/agilix-collective/assets/team/:path*", "destination": "/assets/team/:path*", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/blogs/:path*", "destination": "/assets/blogs/:path*", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/reviews/:path*", "destination": "/assets/reviews/:path*", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/favicon.svg", "destination": "/assets/icons/favicon.svg", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/agilix-logo.svg", "destination": "/assets/icons/agilix-logo.svg", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/trace-logo.svg", "destination": "/assets/icons/trace-logo.svg", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/trace-favicon.png", "destination": "/assets/icons/trace-favicon.png", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/trace-favicon.ico", "destination": "/assets/icons/trace-favicon.ico", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/trace-nav-icon.svg", "destination": "/assets/icons/trace-nav-icon.svg", "statusCode": 308 },
+    { "source": "/agilix-collective/assets/:path*", "destination": "/assets/images/:path*", "statusCode": 308 },
+    { "source": "/agilix-collective/main.js", "destination": "/js/main.js", "statusCode": 308 },
+    { "source": "/agilix-collective/faq.js", "destination": "/js/components/faq.js", "statusCode": 308 },
+    { "source": "/agilix-collective/form-modals.js", "destination": "/js/components/form-modals.js", "statusCode": 308 },
+    { "source": "/agilix-collective/site-widget.js", "destination": "/js/components/site-widget.js", "statusCode": 308 },
+    { "source": "/agilix-collective/float-dock.js", "destination": "/js/components/float-dock.js", "statusCode": 308 },
+    { "source": "/agilix-collective/footer-reviews.js", "destination": "/js/components/footer-reviews.js", "statusCode": 308 },
+    { "source": "/agilix-collective/about-visual.js", "destination": "/js/pages/about.js", "statusCode": 308 },
+    { "source": "/agilix-collective/blogs-data.js", "destination": "/js/pages/blogs-data.js", "statusCode": 308 },
+    { "source": "/agilix-collective/blogs-page.js", "destination": "/js/pages/blogs.js", "statusCode": 308 },
+    { "source": "/agilix-collective/blogs-carousel.js", "destination": "/js/pages/blogs-carousel.js", "statusCode": 308 },
+    { "source": "/agilix-collective/careers-board.js", "destination": "/js/pages/careers.js", "statusCode": 308 },
+    { "source": "/agilix-collective/careers-openings.js", "destination": "/js/pages/careers.js", "statusCode": 308 },
+    { "source": "/agilix-collective/services-reveal.js", "destination": "/js/pages/services.js", "statusCode": 308 },
+    { "source": "/agilix-collective/team.js", "destination": "/js/pages/team.js", "statusCode": 308 },
+    { "source": "/agilix-collective/jQuery/jquery.min.js", "destination": "/vendor/jquery/jquery.min.js", "statusCode": 308 },
+    { "source": "/agilix-collective/OwlCarousel2-2.3.4/dist/owl.carousel.min.js", "destination": "/vendor/owl-carousel/owl.carousel.min.js", "statusCode": 308 },
+    { "source": "/agilix-collective/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css", "destination": "/vendor/owl-carousel/owl.carousel.min.css", "statusCode": 308 },
+    { "source": "/agilix-collective/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css", "destination": "/vendor/owl-carousel/owl.theme.default.min.css", "statusCode": 308 },
+    { "source": "/agilix-collective/partials/float-widget.html", "destination": "/partials/float-widget.html", "statusCode": 308 }
   ]
 }

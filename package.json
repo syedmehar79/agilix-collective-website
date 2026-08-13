@@ -4,8 +4,10 @@
   "scripts": {
     "dev": "npx browser-sync start --config bs-config.js --open",
     "dev:serve": "npx browser-sync start --config bs-config.js",
-    "deploy": "npx --yes vercel --prod --yes"
+    "deploy": "npx --yes vercel --prod --yes",
+    "verify": "node scripts/verify-structure.js"
   },
+
   "devDependencies": {
     "browser-sync": "^3.0.0"
   }

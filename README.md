@@ -20,8 +20,9 @@ Opens **http://localhost:3000** with auto-reload.
 
 ## Structure
 
-- `index.html` — Full site (same as production)
-- `agilix-collective/style.css` — Styles
-- `agilix-collective/main.js`, `faq.js`, `team.js` — Behavior
-- `agilix-collective/assets/` — Images, logo, favicon
-- `agilix-collective/jQuery/`, `OwlCarousel2-2.3.4/` — Vendored libraries
+- `index.html`, `about.html`, `products.html`, `services.html`, `careers.html`, `blogs.html`, `privacy.html`, `terms.html` — pages (URLs stay at the site root)
+- `css/` — `base.css`, `layout.css`, `components.css`, and `pages/`
+- `js/` — `main.js`, `components/`, `pages/`
+- `assets/` — `icons/`, `images/`, `team/`, `blogs/`, `reviews/`
+- `vendor/` — jQuery and Owl Carousel
+- `partials/float-widget.html` — float dock markup for inner pages
