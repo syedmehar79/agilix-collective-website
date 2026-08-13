@@ -38,12 +38,12 @@
             <div class="nav-mobile-panel" id="nav-mobile-panel">
                 <div class="nav-mobile-panel-inner">
                     <div class="nav-left">
-                        <a href="about.html">About</a>
-                        <a href="products.html">Products</a>
+                        <a href="/about.html">About</a>
+                        <a href="/products.html">Products</a>
                     </div>
                     <div class="nav-right">
-                        <a href="services.html">Services</a>
-                        <a href="careers.html">Careers</a>
+                        <a href="/services.html">Services</a>
+                        <a href="/careers.html">Careers</a>
                     </div>
                 </div>
             </div>
@@ -60,65 +60,56 @@
                 </div>
             </header>
 
-            <div class="blogs-viewport" data-blogs-viewport>
-                <div class="blogs-track" data-blogs-track>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="#contact" data-open-modal="contact">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/intention-planning.jpg" alt="Team collaborating around a table during product planning" width="1400" height="900" loading="lazy" decoding="async">
-                            </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-06-12">Jun 12, 2026</time>
-                                <h3 class="blog-item-title">why intention beats feature lists</h3>
-                                <p class="blog-item-excerpt">Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
-                                <span class="blog-item-cta">read more</span>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="#contact" data-open-modal="contact">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/saas-shipping.jpg" alt="Developer writing code in a dark editor while shipping software" width="1400" height="900" loading="lazy" decoding="async">
-                            </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-05-03">May 3, 2026</time>
-                                <h3 class="blog-item-title">shipping saas without the drama</h3>
-                                <p class="blog-item-excerpt">Practical rituals for releases, observability, and feedback loops that keep products calm under growth.</p>
-                                <span class="blog-item-cta">read more</span>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="#contact" data-open-modal="contact">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/ai-work.jpg" alt="White robot representing practical AI applied to real work" width="1400" height="900" loading="lazy" decoding="async">
-                            </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-03-18">Mar 18, 2026</time>
-                                <h3 class="blog-item-title">ai that solves real work</h3>
-                                <p class="blog-item-excerpt">Where AI adds leverage in product teams—and where it just adds noise. A grounded take from delivery floors.</p>
-                                <span class="blog-item-cta">read more</span>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="#contact" data-open-modal="contact">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/remote-teams.jpg" alt="Remote team collaborating around sticky notes in a workshop" width="1400" height="900" loading="lazy" decoding="async">
-                            </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-02-04">Feb 4, 2026</time>
-                                <h3 class="blog-item-title">building remote teams that actually ship</h3>
-                                <p class="blog-item-excerpt">How we keep distributed squads aligned—clear ownership, async rituals, and the habits that replace hallway talk.</p>
-                                <span class="blog-item-cta">read more</span>
-                            </div>
-                        </a>
-                    </article>
-                </div>
+            <div class="blogs-layout">
+                <article class="blog-reader" id="blog-post" data-blog-reader aria-live="polite">
+                    <div class="blog-reader-media">
+                        <img data-blog-image src="/agilix-collective/assets/blogs/intention-planning.jpg" alt="Team collaborating around a table during product planning" width="1400" height="900" decoding="async">
+                    </div>
+                    <div class="blog-reader-copy">
+                        <time class="blog-reader-date" data-blog-date datetime="2026-06-12">Jun 12, 2026</time>
+                        <h1 class="blog-reader-title" data-blog-title>why intention beats feature lists</h1>
+                        <div class="blog-reader-body" data-blog-body>
+                            <p>Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
+                        </div>
+                        <div class="blog-reader-actions">
+                            <button type="button" class="blog-action blog-action--like" data-blog-like aria-pressed="false" aria-label="Like this post">
+                                <svg class="blog-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M12.1 20.3 11 19.3C6.4 15.2 3.5 12.6 3.5 9.5A4.4 4.4 0 0 1 8 5c1.5 0 2.9.7 3.8 1.8A4.8 4.8 0 0 1 15.6 5a4.4 4.4 0 0 1 4.5 4.5c0 3.1-2.9 5.7-7.5 9.8l-2.5 1Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="blog-action-label">like</span>
+                                <span class="blog-action-count" data-blog-like-count>24</span>
+                            </button>
+                            <button type="button" class="blog-action blog-action--share" data-blog-share aria-label="Share this post">
+                                <svg class="blog-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="18" cy="5" r="2.4" stroke="currentColor" stroke-width="1.75"/>
+                                    <circle cx="6" cy="12" r="2.4" stroke="currentColor" stroke-width="1.75"/>
+                                    <circle cx="18" cy="19" r="2.4" stroke="currentColor" stroke-width="1.75"/>
+                                    <path d="M8.2 11.1 15.8 6.4M8.3 12.9 15.7 17.6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                                </svg>
+                                <span class="blog-action-label" data-blog-share-label>share</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="blogs-sidebar" aria-label="Post lists">
+                    <section class="blogs-side-block" aria-labelledby="recent-posts-heading">
+                        <h2 id="recent-posts-heading" class="blogs-side-title">recent posts</h2>
+                        <div class="blogs-side-list" data-recent-posts></div>
+                    </section>
+                    <section class="blogs-side-block" aria-labelledby="popular-posts-heading">
+                        <h2 id="popular-posts-heading" class="blogs-side-title">popular posts</h2>
+                        <div class="blogs-side-list" data-popular-posts></div>
+                    </section>
+                </aside>
             </div>
 
-            <div class="blogs-view-more">
-                <a href="#contact" class="banner-cta" data-open-modal="contact">get in touch</a>
+            <div class="blogs-list-header">
+                <h2 class="blogs-list-title">more posts</h2>
+            </div>
+
+            <div class="blogs-viewport" data-blogs-viewport>
+                <div class="blogs-track" data-blogs-track></div>
             </div>
       </div>
     </section>
@@ -132,19 +123,19 @@
                     <div class="footer-col">
                         <p class="footer-col-title">discover</p>
                         <ul class="footer-links">
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="services.html">services</a></li>
+                            <li><a href="/about.html">about</a></li>
+                            <li><a href="/services.html">services</a></li>
                             <li><a href="/index.html#team">team</a></li>
-                            <li><a href="careers.html">careers</a></li>
-                            <li><a href="blogs.html">blogs</a></li>
+                            <li><a href="/careers.html">careers</a></li>
+                            <li><a href="/blogs.html">blogs</a></li>
                             <li><a href="/index.html#faq">FAQs</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <p class="footer-col-title">legal</p>
                         <ul class="footer-links">
-                            <li><a href="terms.html">terms and conditions</a></li>
-                            <li><a href="privacy.html">privacy policy</a></li>
+                            <li><a href="/terms.html">terms and conditions</a></li>
+                            <li><a href="/privacy.html">privacy policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -185,7 +176,8 @@
         </div>
     </footer>
     <script src="/agilix-collective/main.js"></script>
-
+    <script src="/agilix-collective/blogs-data.js"></script>
+    <script src="/agilix-collective/blogs-page.js"></script>
     <script src="/agilix-collective/site-widget.js"></script>
 </body>
 </html>

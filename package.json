@@ -2,8 +2,8 @@
   "name": "agilix-collective-website",
   "private": true,
   "scripts": {
-    "dev": "browser-sync start --server --files \"**/*.html, **/*.css, **/*.js, assets/**\" --port 3000 --open",
-    "dev:serve": "browser-sync start --server --files \"**/*.html, **/*.css, **/*.js, assets/**\" --port 3000 --no-open",
+    "dev": "npx browser-sync start --config bs-config.js --open",
+    "dev:serve": "npx browser-sync start --config bs-config.js",
     "deploy": "npx --yes vercel --prod --yes"
   },
   "devDependencies": {
