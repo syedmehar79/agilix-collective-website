@@ -115,19 +115,19 @@
         select.dataset.enhanced = 'true';
 
         var wrap = document.createElement('div');
-        wrap.className = 'footer-select';
+        wrap.className = 'site-footer__select';
         select.parentNode.insertBefore(wrap, select);
         wrap.appendChild(select);
-        select.classList.add('footer-select-native');
+        select.classList.add('site-footer__select-native');
 
         var trigger = document.createElement('button');
         trigger.type = 'button';
-        trigger.className = 'footer-select-trigger';
+        trigger.className = 'site-footer__select-trigger';
         trigger.setAttribute('aria-haspopup', 'listbox');
         trigger.setAttribute('aria-expanded', 'false');
 
         var menu = document.createElement('ul');
-        menu.className = 'footer-select-menu';
+        menu.className = 'site-footer__select-menu';
         menu.setAttribute('role', 'listbox');
 
         Array.prototype.forEach.call(select.options, function (opt) {
@@ -135,7 +135,7 @@
                 return;
             }
             var item = document.createElement('li');
-            item.className = 'footer-select-option';
+            item.className = 'site-footer__select-option';
             item.setAttribute('role', 'option');
             item.setAttribute('data-value', opt.value);
             item.textContent = opt.textContent;
@@ -156,10 +156,10 @@
         trigger.addEventListener('click', function (e) {
             e.preventDefault();
             var open = !wrap.classList.contains('is-open');
-            document.querySelectorAll('.footer-select.is-open').forEach(function (el) {
+            document.querySelectorAll('.site-footer__select.is-open').forEach(function (el) {
                 if (el !== wrap) {
                     el.classList.remove('is-open');
-                    var btn = el.querySelector('.footer-select-trigger');
+                    var btn = el.querySelector('.site-footer__select-trigger');
                     if (btn) btn.setAttribute('aria-expanded', 'false');
                 }
             });
@@ -170,19 +170,19 @@
 
     function refreshEnhancedSelects(form, selectSelector) {
         form.querySelectorAll(selectSelector).forEach(function (select) {
-            var wrap = select.closest('.footer-select');
+            var wrap = select.closest('.site-footer__select');
             if (!wrap) return;
-            var trigger = wrap.querySelector('.footer-select-trigger');
-            var menu = wrap.querySelector('.footer-select-menu');
+            var trigger = wrap.querySelector('.site-footer__select-trigger');
+            var menu = wrap.querySelector('.site-footer__select-menu');
             if (trigger && menu) syncFooterSelect(select, trigger, menu);
         });
     }
 
     document.addEventListener('click', function (e) {
-        if (e.target.closest('.footer-select')) return;
-        document.querySelectorAll('.footer-select.is-open').forEach(function (el) {
+        if (e.target.closest('.site-footer__select')) return;
+        document.querySelectorAll('.site-footer__select.is-open').forEach(function (el) {
             el.classList.remove('is-open');
-            var btn = el.querySelector('.footer-select-trigger');
+            var btn = el.querySelector('.site-footer__select-trigger');
             if (btn) btn.setAttribute('aria-expanded', 'false');
         });
     });
@@ -191,22 +191,22 @@
         if (!footerForm || footerForm.dataset.wired === 'true') return;
         footerForm.dataset.wired = 'true';
 
-        var formStatus = footerForm.querySelector('.footer-form-status');
+        var formStatus = footerForm.querySelector('.site-footer__form-status');
         if (!formStatus) {
             formStatus = document.createElement('p');
-            formStatus.className = 'footer-form-status';
+            formStatus.className = 'site-footer__form-status';
             formStatus.setAttribute('role', 'status');
             formStatus.setAttribute('aria-live', 'polite');
             footerForm.appendChild(formStatus);
         }
 
-        var submitButton = footerForm.querySelector('.footer-form-button');
+        var submitButton = footerForm.querySelector('.site-footer__form-button');
 
-        footerForm.querySelectorAll('.footer-field select').forEach(enhanceFooterSelect);
+        footerForm.querySelectorAll('.site-footer__field select').forEach(enhanceFooterSelect);
 
         footerForm.addEventListener('reset', function () {
             setTimeout(function () {
-                refreshEnhancedSelects(footerForm, '.footer-field select');
+                refreshEnhancedSelects(footerForm, '.site-footer__field select');
             }, 0);
         });
 
@@ -218,7 +218,7 @@
                 return;
             }
 
-            formStatus.className = 'footer-form-status';
+            formStatus.className = 'site-footer__form-status';
             formStatus.textContent = 'Sendingâ€¦';
             if (submitButton) {
                 submitButton.disabled = true;
@@ -253,14 +253,14 @@
                     if (!result.ok) {
                         throw new Error((result.data && result.data.message) || 'Send failed');
                     }
-                    formStatus.className = 'footer-form-status is-success';
+                    formStatus.className = 'site-footer__form-status is-success';
                     formStatus.textContent =
                         'Thank you. Your message has been sent â€” we will be in touch soon.';
                     footerForm.reset();
-                    refreshEnhancedSelects(footerForm, '.footer-field select');
+                    refreshEnhancedSelects(footerForm, '.site-footer__field select');
                 })
                 .catch(function () {
-                    formStatus.className = 'footer-form-status is-error';
+                    formStatus.className = 'site-footer__form-status is-error';
                     formStatus.textContent =
                         'Something went wrong. Please email ' + CONTACT_EMAIL + ' directly.';
                 })
@@ -401,7 +401,7 @@
     }
 
     function wireAllForms() {
-        document.querySelectorAll('.footer-form').forEach(wireFooterForm);
+        document.querySelectorAll('.site-footer__form').forEach(wireFooterForm);
         document.querySelectorAll('.career-form').forEach(wireCareerForm);
     }
 

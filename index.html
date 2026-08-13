@@ -47,7 +47,7 @@
 
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <button type="button" onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+    <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
         xmlns="http://www.w3.org/2000/svg">
      <path d="M12 19V5" stroke="currentColor" stroke-width="2"
            stroke-linecap="round"/>
@@ -57,23 +57,23 @@
 
     <main id="main-content">
     <div class="gradient-background">
-        <nav class="primary-nav" id="primary-nav" aria-label="Primary">
-            <div class="nav-logo">
-                <a href="#main-content" aria-label="Agilix Collective home">
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+            <div class="site-nav__logo">
+                <a href="index.html" aria-label="Agilix Collective home">
                     <img src="assets/icons/agilix-logo.svg" alt="Agilix Collective logo">
                 </a>
             </div>
-            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile-panel"
+            <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-panel"
                 aria-label="Open menu">
-                <span class="nav-toggle-icon" aria-hidden="true"></span>
+                <span class="site-nav__toggle-icon" aria-hidden="true"></span>
             </button>
-            <div class="nav-mobile-panel" id="nav-mobile-panel">
-                <div class="nav-mobile-panel-inner">
-                    <div class="nav-left">
+            <div class="site-nav__panel" id="site-nav-panel">
+                <div class="site-nav__panel-inner">
+                    <div class="site-nav__cluster site-nav__cluster--left">
                         <a href="about.html">About</a>
                         <a href="products.html">Products</a>
                     </div>
-                    <div class="nav-right">
+                    <div class="site-nav__cluster site-nav__cluster--right">
                         <a href="services.html">Services</a>
                         <a href="careers.html">Careers</a>
                     </div>
@@ -107,7 +107,7 @@
     </div>
 
     <section class="gradient-process-background" id="about">
-        <div class="footer-scroll-anchor" aria-hidden="true"></div>
+        <div class="site-footer__scroll-anchor" aria-hidden="true"></div>
         <section class="banner about-banner">
             <div class="banner-text about-agilix hero-copy">
                 <span>ABOUT</span>
@@ -649,7 +649,7 @@
                 <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
+                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
                 <div class="career-form-grid">
                     <div class="career-field">
                         <label class="career-label-field" for="career-name">full name*</label>
@@ -1152,25 +1152,25 @@
   </main>
 
     <footer class="site-footer">
-    <div class="container footer-inner">
-            <div class="footer-cta" id="contact">
-                <div class="footer-cta-text">
-                    <p class="footer-eyebrow">GET IN TOUCH</p>
-                    <h2 class="footer-heading">let's build <br>
+    <div class="container site-footer__inner">
+            <div class="site-footer__cta" id="contact">
+                <div class="site-footer__cta-text">
+                    <p class="site-footer__eyebrow">GET IN TOUCH</p>
+                    <h2 class="site-footer__heading">let's build <br>
                         something <br>
                         together</h2>
-                    <div class="footer-review" data-footer-reviews aria-roledescription="carousel" aria-label="Team reviews">
-                        <div class="footer-review-viewport">
-                            <div class="footer-review-track" data-footer-review-track></div>
+                    <div class="site-footer__review" data-footer-reviews aria-roledescription="carousel" aria-label="Team reviews">
+                        <div class="site-footer__review-viewport">
+                            <div class="site-footer__review-track" data-footer-review-track></div>
                         </div>
-                        <div class="footer-review-nav" role="group" aria-label="Review carousel controls">
-                            <button type="button" class="footer-review-btn" data-footer-review-prev aria-label="Previous review">
+                        <div class="site-footer__review-nav" role="group" aria-label="Review carousel controls">
+                            <button type="button" class="site-footer__review-btn" data-footer-review-prev aria-label="Previous review">
                                 <svg width="18" height="18" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button type="button" class="footer-review-btn footer-review-btn--next" data-footer-review-next aria-label="Next review">
+                            <button type="button" class="site-footer__review-btn site-footer__review-btn--next" data-footer-review-next aria-label="Next review">
                                 <svg width="18" height="18" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -1179,39 +1179,39 @@
                         </div>
                     </div>
                 </div>
-                <form class="footer-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
+                <form class="site-footer__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
                     <input type="hidden" name="_subject" value="New enquiry from Agilix Collective website">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
-                    <div class="footer-form-grid">
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-name">full name*</label>
+                    <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
+                    <div class="site-footer__form-grid">
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-name">full name*</label>
                             <input id="footer-name" name="full_name" type="text" autocomplete="name"
                                 placeholder="John Doe" required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-email">email*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-email">email*</label>
                             <input id="footer-email" name="email" type="email" autocomplete="email"
                                 placeholder="john@company.com" required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-phone">phone number*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-phone">phone number*</label>
                             <input id="footer-phone" name="phone" type="tel" autocomplete="tel"
                                 placeholder="+1 555 000 0000" required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-company">company name*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-company">company name*</label>
                             <input id="footer-company" name="company_name" type="text" autocomplete="organization"
                                 placeholder="Company Inc." required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-company-url">company url</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-company-url">company url</label>
                             <input id="footer-company-url" name="company_url" type="url" autocomplete="url"
                                 placeholder="https://company.com">
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-region">region*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-region">region*</label>
                             <select id="footer-region" name="region" required>
                                 <option value="" disabled selected>Select Region</option>
                                 <option value="Middle East &amp; North Africa">Middle East &amp; North Africa</option>
@@ -1224,8 +1224,8 @@
                                 <option value="Rest of World">Rest of World</option>
                             </select>
                         </div>
-                        <div class="footer-field footer-field--full">
-                            <label class="footer-label" for="footer-services">services you are looking for*</label>
+                        <div class="site-footer__field site-footer__field--full">
+                            <label class="site-footer__label" for="footer-services">services you are looking for*</label>
                             <select id="footer-services" name="services" required>
                                 <option value="" disabled selected>Select a service</option>
                                 <option value="Remote IT Resources">Remote IT Resources</option>
@@ -1238,35 +1238,35 @@
                                 <option value="Other IT Services">Other IT Services</option>
                             </select>
                         </div>
-                        <div class="footer-field footer-field--full">
-                            <label class="footer-label" for="footer-details">project details*</label>
+                        <div class="site-footer__field site-footer__field--full">
+                            <label class="site-footer__label" for="footer-details">project details*</label>
                             <textarea id="footer-details" name="project_details" rows="4"
                                 placeholder="Tell us about your project, goals, and timeline" required></textarea>
                         </div>
-                        <div class="footer-field footer-field--full footer-consent">
-                            <label class="footer-consent-label" for="footer-marketing">
+                        <div class="site-footer__field site-footer__field--full site-footer__consent">
+                            <label class="site-footer__consent-label" for="footer-marketing">
                                 <input id="footer-marketing" name="marketing_email_consent" type="checkbox" value="Yes">
                                 <span>I agree to receive marketing information and updates via email.</span>
                             </label>
                         </div>
-                        <div class="footer-field footer-field--full footer-consent">
-                            <label class="footer-consent-label" for="footer-sms">
+                        <div class="site-footer__field site-footer__field--full site-footer__consent">
+                            <label class="site-footer__consent-label" for="footer-sms">
                                 <input id="footer-sms" name="sms_consent" type="checkbox" value="Yes">
                                 <span>I agree to receive SMS messages from agilix collective. Reply ‘STOP’ to opt out anytime.</span>
                             </label>
                         </div>
                     </div>
-                    <button class="footer-form-button" type="submit">submit</button>
+                    <button class="site-footer__form-button" type="submit">submit</button>
                 </form>
             </div>
 
-            <hr class="footer-rule" aria-hidden="true">
+            <hr class="site-footer__rule" aria-hidden="true">
 
-            <div class="footer-nav-row">
-                <div class="footer-columns">
-                    <div class="footer-col">
-                        <p class="footer-col-title">discover</p>
-                        <ul class="footer-links">
+            <div class="site-footer__nav-row">
+                <div class="site-footer__columns">
+                    <div class="site-footer__col">
+                        <p class="site-footer__col-title">discover</p>
+                        <ul class="site-footer__links">
                             <li><a href="about.html">about</a></li>
                             <li><a href="services.html">services</a></li>
                             <li><a href="#team">team</a></li>
@@ -1275,38 +1275,38 @@
                             <li><a href="#faq">FAQs</a></li>
                         </ul>
                     </div>
-                    <div class="footer-col">
-                        <p class="footer-col-title">legal</p>
-                        <ul class="footer-links">
+                    <div class="site-footer__col">
+                        <p class="site-footer__col-title">legal</p>
+                        <ul class="site-footer__links">
                             <li><a href="terms.html">terms and conditions</a></li>
                             <li><a href="privacy.html">privacy policy</a></li>
                         </ul>
                     </div>
-                    <div class="footer-col">
-                        <p class="footer-col-title">contact</p>
-                        <ul class="footer-links">
-                            <li><a class="footer-link-underline" href="tel:+971583070847">+971 58 307 0847</a></li>
+                    <div class="site-footer__col">
+                        <p class="site-footer__col-title">contact</p>
+                        <ul class="site-footer__links">
+                            <li><a class="site-footer__link-underline" href="tel:+971583070847">+971 58 307 0847</a></li>
                             <li><a href="mailto:support@agilixcollective.com">support@agilixcollective.com</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer-slogan" aria-hidden="true">
+                <div class="site-footer__slogan" aria-hidden="true">
                     <span>intend</span>
                     <span>execute</span>
                     <span>achieve</span>
                 </div>
             </div>
 
-            <div class="footer-brand">
-                <img class="footer-brand-logo" src="assets/icons/agilix-logo.svg" alt="Agilix Collective logo" width="162" height="38" decoding="async">
+            <div class="site-footer__brand">
+                <img class="site-footer__brand-logo" src="assets/icons/agilix-logo.svg" alt="Agilix Collective logo" width="162" height="38" decoding="async">
             </div>
 
-            <hr class="footer-rule" aria-hidden="true">
+            <hr class="site-footer__rule" aria-hidden="true">
 
-            <div class="footer-bottom">
-                <p class="footer-copy">© agilix collective. all rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://wa.me/971583070847" class="footer-social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">© agilix collective. all rights reserved.</p>
+                <div class="site-footer__social">
+                    <a href="https://wa.me/971583070847" class="site-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path
                                 d="M15 0C6.71701 0 0 6.71701 0 15C0 23.283 6.71701 30 15 30C23.283 30 30 23.283 30 15C30 6.71701 23.283 0 15 0ZM15.3179 23.7334C15.3177 23.7334 15.3182 23.7334 15.3179 23.7334H15.3142C13.8117 23.7328 12.3352 23.3561 11.0239 22.641L6.26473 23.8891L7.53844 19.2382C6.7527 17.8772 6.33932 16.3332 6.34002 14.7514C6.34207 9.80303 10.3695 5.77723 15.3179 5.77723C17.7193 5.77811 19.9736 6.71285 21.6685 8.40914C23.3636 10.1056 24.2965 12.3605 24.2956 14.7585C24.2935 19.7072 20.2656 23.7335 15.3179 23.7335L15.3179 23.7334Z"
@@ -1316,7 +1316,7 @@
                                 fill="white" />
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/agilix.collective?igsh=YjJxN2tubGh5YXN5" class="footer-social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/agilix.collective?igsh=YjJxN2tubGh5YXN5" class="site-footer__social-link" aria-label="Instagram">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M17.8672 15C17.8672 16.5857 16.5818 17.8711 14.9961 17.8711C13.4104 17.8711 12.125 16.5857 12.125 15C12.125 13.4143 13.4104 12.1289 14.9961 12.1289C16.5818 12.1289 17.8672 13.4143 17.8672 15Z"
@@ -1330,7 +1330,7 @@
                         </svg>
 
                     </a>
-                    <a href="https://www.facebook.com/share/1Cr7pqDaJC/" class="footer-social-link" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1Cr7pqDaJC/" class="site-footer__social-link" aria-label="Facebook">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15 0C6.72903 0 0 6.72903 0 15C0 23.2704 6.72903 30 15 30C23.2704 30 30 23.2704 30 15C30 6.72903 23.2716 0 15 0ZM18.7304 15.5281H16.29V24.2262H12.6738V15.5281H10.9548V12.4539H12.6738V10.4654C12.6738 9.04133 13.3505 6.81604 16.3232 6.81604L19.0029 6.82631V9.81048H17.0579C16.7413 9.81048 16.2912 9.96878 16.2912 10.6479V12.4545H19.0464L18.7304 15.5281Z"
@@ -1338,7 +1338,7 @@
                         </svg>
 
                     </a>
-                    <a href="https://www.linkedin.com/company/agilix-collective/" class="footer-social-link" aria-label="X">
+                    <a href="https://www.linkedin.com/company/agilix-collective/" class="site-footer__social-link" aria-label="X">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15 0C6.716 0 0 6.716 0 15C0 23.284 6.716 30 15 30C23.284 30 30 23.284 30 15C30 6.716 23.284 0 15 0ZM11.25 20.625H8.437V12.188H11.25V20.625ZM9.844 10.922C8.953 10.922 8.25 10.203 8.25 9.328C8.25 8.453 8.969 7.734 9.844 7.734C10.719 7.734 11.438 8.453 11.438 9.328C11.438 10.203 10.734 10.922 9.844 10.922ZM22.125 20.625H19.313V16.219C19.313 14.906 19.078 13.641 17.484 13.641C15.875 13.641 15.703 14.75 15.703 16.172V20.625H12.891V12.188H15.594V13.344H15.625C16.078 12.563 17.016 11.625 18.703 11.625C21.844 11.625 22.125 13.781 22.125 16.313V20.625Z"
@@ -1404,37 +1404,37 @@
                 </svg>
             </button>
             <div class="form-modal__header">
-                <p class="footer-eyebrow">GET IN TOUCH</p>
+                <p class="site-footer__eyebrow">GET IN TOUCH</p>
                 <h2 id="contact-modal-title" class="form-modal__title form-modal__title--contact">let's build something together</h2>
             </div>
-            <form class="footer-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
+            <form class="site-footer__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
                 <input type="hidden" name="_subject" value="New enquiry from Agilix Collective website">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
-                <div class="footer-form-grid">
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-name">full name*</label>
+                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
+                <div class="site-footer__form-grid">
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-name">full name*</label>
                         <input id="modal-footer-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required data-modal-focus>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-email">email*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-email">email*</label>
                         <input id="modal-footer-email" name="email" type="email" autocomplete="email" placeholder="john@company.com" required>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-phone">phone number*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-phone">phone number*</label>
                         <input id="modal-footer-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 000 0000" required>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-company">company name*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-company">company name*</label>
                         <input id="modal-footer-company" name="company_name" type="text" autocomplete="organization" placeholder="Company Inc." required>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-company-url">company url</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-company-url">company url</label>
                         <input id="modal-footer-company-url" name="company_url" type="url" autocomplete="url" placeholder="https://company.com">
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-region">region*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-region">region*</label>
                         <select id="modal-footer-region" name="region" required>
                             <option value="" disabled selected>Select Region</option>
                             <option value="Middle East &amp; North Africa">Middle East &amp; North Africa</option>
@@ -1447,8 +1447,8 @@
                             <option value="Rest of World">Rest of World</option>
                         </select>
                     </div>
-                    <div class="footer-field footer-field--full">
-                        <label class="footer-label" for="modal-footer-services">services you are looking for*</label>
+                    <div class="site-footer__field site-footer__field--full">
+                        <label class="site-footer__label" for="modal-footer-services">services you are looking for*</label>
                         <select id="modal-footer-services" name="services" required>
                             <option value="" disabled selected>Select a service</option>
                             <option value="Remote IT Resources">Remote IT Resources</option>
@@ -1461,24 +1461,24 @@
                             <option value="Other IT Services">Other IT Services</option>
                         </select>
                     </div>
-                    <div class="footer-field footer-field--full">
-                        <label class="footer-label" for="modal-footer-details">project details*</label>
+                    <div class="site-footer__field site-footer__field--full">
+                        <label class="site-footer__label" for="modal-footer-details">project details*</label>
                         <textarea id="modal-footer-details" name="project_details" rows="4" placeholder="Tell us about your project, goals, and timeline" required></textarea>
                     </div>
-                    <div class="footer-field footer-field--full footer-consent">
-                        <label class="footer-consent-label" for="modal-footer-marketing">
+                    <div class="site-footer__field site-footer__field--full site-footer__consent">
+                        <label class="site-footer__consent-label" for="modal-footer-marketing">
                             <input id="modal-footer-marketing" name="marketing_email_consent" type="checkbox" value="Yes">
                             <span>I agree to receive marketing information and updates via email.</span>
                         </label>
                     </div>
-                    <div class="footer-field footer-field--full footer-consent">
-                        <label class="footer-consent-label" for="modal-footer-sms">
+                    <div class="site-footer__field site-footer__field--full site-footer__consent">
+                        <label class="site-footer__consent-label" for="modal-footer-sms">
                             <input id="modal-footer-sms" name="sms_consent" type="checkbox" value="Yes">
                             <span>I agree to receive SMS messages from agilix collective. Reply ‘STOP’ to opt out anytime.</span>
                         </label>
                     </div>
                 </div>
-                <button class="footer-form-button" type="submit">submit</button>
+                <button class="site-footer__form-button" type="submit">submit</button>
             </form>
         </div>
     </div>
@@ -1500,7 +1500,7 @@
                 <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
+                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
                 <div class="career-form-grid">
                     <div class="career-field">
                         <label class="career-label-field" for="modal-career-name">full name*</label>

@@ -66,25 +66,25 @@
     function render() {
         track.innerHTML = REVIEWS.map(function (review, i) {
             return (
-                '<figure class="footer-review-slide" data-index="' +
+                '<figure class="site-footer__review-slide" data-index="' +
                 i +
                 '" aria-hidden="' +
                 (i === 0 ? 'false' : 'true') +
                 '">' +
-                '<blockquote class="footer-review-quote">' +
+                '<blockquote class="site-footer__review-quote">' +
                 escapeHtml(review.quote) +
                 '</blockquote>' +
-                '<figcaption class="footer-review-author">' +
-                '<img class="footer-review-photo" src="' +
+                '<figcaption class="site-footer__review-author">' +
+                '<img class="site-footer__review-photo" src="' +
                 escapeHtml(review.photo) +
                 '" alt="' +
                 escapeHtml(review.name) +
                 '" width="56" height="56" loading="lazy" decoding="async">' +
-                '<div class="footer-review-meta">' +
-                '<p class="footer-review-name">' +
+                '<div class="site-footer__review-meta">' +
+                '<p class="site-footer__review-name">' +
                 escapeHtml(review.name) +
                 '</p>' +
-                '<p class="footer-review-role">' +
+                '<p class="site-footer__review-role">' +
                 escapeHtml(review.role) +
                 '</p>' +
                 '</div>' +

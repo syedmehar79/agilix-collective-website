@@ -757,10 +757,10 @@
         if (!match) return;
         select.value = value;
         select.dispatchEvent(new Event('change', { bubbles: true }));
-        var wrap = select.closest('.footer-select');
+        var wrap = select.closest('.site-footer__select');
         if (!wrap) return;
-        var trigger = wrap.querySelector('.footer-select-trigger');
-        var menu = wrap.querySelector('.footer-select-menu');
+        var trigger = wrap.querySelector('.site-footer__select-trigger');
+        var menu = wrap.querySelector('.site-footer__select-menu');
         if (!trigger || !menu) return;
         var selected = select.options[select.selectedIndex];
         trigger.textContent = selected ? selected.textContent : '';

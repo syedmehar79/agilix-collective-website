@@ -31,13 +31,14 @@ if (typeof jQuery !== 'undefined') {
     });
 }
 
+var backToTopButton = document.getElementById('back-to-top');
+
 function scrollFunction() {
-    var mybutton = document.getElementById('myBtn');
-    if (!mybutton) return;
+    if (!backToTopButton) return;
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = 'block';
+        backToTopButton.style.display = 'block';
     } else {
-        mybutton.style.display = 'none';
+        backToTopButton.style.display = 'none';
     }
 }
 
@@ -46,6 +47,10 @@ window.addEventListener('scroll', scrollFunction, { passive: true });
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+if (backToTopButton) {
+    backToTopButton.addEventListener('click', topFunction);
 }
 
 // Process section — steps slide in one-by-one (1 → 5)
@@ -116,8 +121,8 @@ function topFunction() {
 
 // Mobile navigation toggle (≤768px only)
 (function initMobileNav() {
-    var nav = document.getElementById('primary-nav');
-    var toggle = nav && nav.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    var toggle = nav && nav.querySelector('.site-nav__toggle');
     if (!nav || !toggle) return;
 
     var mobileQuery = window.matchMedia('(max-width: 768px)');
@@ -134,7 +139,7 @@ function topFunction() {
         setMenuOpen(!nav.classList.contains('is-menu-open'));
     });
 
-    nav.querySelectorAll('.nav-left a, .nav-right a').forEach(function (link) {
+    nav.querySelectorAll('.site-nav__cluster a').forEach(function (link) {
         link.addEventListener('click', function () {
             setMenuOpen(false);
         });
@@ -161,11 +166,11 @@ function topFunction() {
 
 // Active top-nav indicator (current page / in-page section)
 (function initActiveNav() {
-    var nav = document.getElementById('primary-nav');
+    var nav = document.getElementById('site-nav');
     if (!nav) return;
 
     var links = Array.prototype.slice.call(
-        nav.querySelectorAll('.nav-left a, .nav-right a')
+        nav.querySelectorAll('.site-nav__cluster a')
     );
     if (!links.length) return;
 
