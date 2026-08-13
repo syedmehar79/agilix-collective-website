@@ -139,26 +139,26 @@
             </svg>
         </button>
         <div class="form-modal__header">
-            <p class="section-label career-label">CAREERS</p>
+            <p class="section__label careers__label">CAREERS</p>
             <h2 id="careers-modal-title" class="form-modal__title form-modal__title--careers">join our team</h2>
-            <p class="career-lead form-modal__lead">Share your profile and we’ll reach out when there’s a fit.</p>
+            <p class="careers__lead form-modal__lead">Share your profile and we’ll reach out when there’s a fit.</p>
         </div>
-        <form class="career-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
+        <form class="careers__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
             <input type="hidden" name="_subject" value="New career application — Agilix Collective">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
-            <div class="career-form-grid">
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-name">full name*</label>
+            <div class="careers__form-grid">
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-name">full name*</label>
                     <input id="modal-career-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required data-modal-focus>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-email">email*</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-email">email*</label>
                     <input id="modal-career-email" name="email" type="email" autocomplete="email" placeholder="john@email.com" required>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-city">city*</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-city">city*</label>
                     <select id="modal-career-city" name="city" required>
                         <option value="" disabled selected>Select city</option>
                         <option value="Lahore">Lahore</option>
@@ -173,8 +173,8 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-position">position*</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-position">position*</label>
                     <select id="modal-career-position" name="position" required>
                         <option value="" disabled selected>Select position</option>
                         <option value="Software Engineer">Software Engineer</option>
@@ -190,8 +190,8 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-experience">total experience*</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-experience">total experience*</label>
                     <select id="modal-career-experience" name="total_experience" required>
                         <option value="" disabled selected>Select experience</option>
                         <option value="Fresher / Less than 1 year">Fresher / Less than 1 year</option>
@@ -202,8 +202,8 @@
                         <option value="10+ years">10+ years</option>
                     </select>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-degree">last degree*</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-degree">last degree*</label>
                     <select id="modal-career-degree" name="last_degree" required>
                         <option value="" disabled selected>Select degree</option>
                         <option value="Intermediate / High School">Intermediate / High School</option>
@@ -219,41 +219,41 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-organization">current organization</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-organization">current organization</label>
                     <input id="modal-career-organization" name="current_organization" type="text" autocomplete="organization" placeholder="Company name">
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-current-salary">current salary</label>
-                    <div class="career-salary">
-                        <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-current-salary">current salary</label>
+                    <div class="careers__salary">
+                        <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                         <input type="hidden" name="current_salary_currency" value="PKR">
                         <input id="modal-career-current-salary" name="current_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="150000">
                     </div>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-expected-salary">expected salary*</label>
-                    <div class="career-salary">
-                        <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-expected-salary">expected salary*</label>
+                    <div class="careers__salary">
+                        <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                         <input type="hidden" name="expected_salary_currency" value="PKR">
                         <input id="modal-career-expected-salary" name="expected_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="200000" required>
                     </div>
                 </div>
-                <div class="career-field">
-                    <label class="career-label-field" for="modal-career-linkedin">linkedin url</label>
+                <div class="careers__field">
+                    <label class="careers__label-field" for="modal-career-linkedin">linkedin url</label>
                     <input id="modal-career-linkedin" name="linkedin_url" type="url" autocomplete="url" placeholder="https://linkedin.com/in/username">
                 </div>
-                <div class="career-field career-field--full">
-                    <label class="career-label-field" for="modal-career-resume">resume*</label>
-                    <div class="career-upload">
-                        <input id="modal-career-resume" class="career-upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-                        <label class="career-upload-btn" for="modal-career-resume">upload resume</label>
-                        <span class="career-upload-name" id="modal-career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
-                        <button class="career-form-button" type="submit">submit</button>
+                <div class="careers__field careers__field--full">
+                    <label class="careers__label-field" for="modal-career-resume">resume*</label>
+                    <div class="careers__upload">
+                        <input id="modal-career-resume" class="careers__upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                        <label class="careers__upload-btn" for="modal-career-resume">upload resume</label>
+                        <span class="careers__upload-name" id="modal-career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
+                        <button class="careers__form-button" type="submit">submit</button>
                     </div>
                 </div>
             </div>
-            <p class="career-form-status" role="status" aria-live="polite"></p>
+            <p class="careers__form-status" role="status" aria-live="polite"></p>
         </form>
     </div>
 </div>
