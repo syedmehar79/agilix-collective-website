@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore products built by Agilix Collective, including Trace — a unified workspace for teams.">
     <link rel="canonical" href="https://agilixcollective.com/products">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Products — Agilix Collective">
+    <meta property="og:description" content="Explore products built by Agilix Collective, including Trace — a unified workspace for development, operations, and support teams.">
+    <meta property="og:url" content="https://agilixcollective.com/products">
+    <meta property="og:image" content="https://agilixcollective.com/assets/images/trace-product-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +26,26 @@
             } catch (e) {}
         })();
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Products — Agilix Collective",
+        "url": "https://agilixcollective.com/products",
+        "isPartOf": {
+            "@type": "Organization",
+            "name": "Agilix Collective",
+            "url": "https://agilixcollective.com/"
+        }
+    }
+    </script>
 </head>
 <body class="page page--products">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
     <div class="page__shell">
+        <header>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
             <div class="site-nav__logo">
                 <a href="index.html" aria-label="Agilix Collective home">
@@ -48,13 +68,14 @@
                 </div>
             </div>
         </nav>
+        </header>
 
         <main id="main-content">
     <!-- Products Section -->
     <section class="products section__header" id="products">
       <div class="container">
             <p class="section__label">PRODUCTS</p>
-            <h2>what we built</h2>
+            <h1>what we built</h1>
             <div class="products__grid">
                 <!-- Box 1: Title Only -->
                 <div class="products__card products__card--title">
@@ -107,7 +128,7 @@
                 <!-- Image: Large card spanning 3 rows (RIGHT) -->
                 <div class="products__card products__card--large">
                     <div class="products__image">
-                        <img src="assets/images/trace-product-image.png" alt="Trace Product" loading="lazy" decoding="async">
+                        <img src="assets/images/trace-product-image.png" alt="Trace unified workspace shown across desktop and mobile devices" loading="lazy" decoding="async">
                     </div>
                 </div>
 

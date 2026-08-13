@@ -2243,7 +2243,7 @@ html[data-theme="dark"] main > div:is(.page__shell, .hero, .services) .site-nav_
 html[data-theme="dark"] :is(.about__copy, .hero__copy, .services__copy),
 html[data-theme="dark"] :is(.about__copy, .hero__copy, .services__copy) h1,
 html[data-theme="dark"] :is(.about__copy, .hero__copy, .services__copy) p,
-html[data-theme="dark"] :is(.about__copy, .services__copy) h2,
+html[data-theme="dark"] :is(.about__copy, .services__copy) :is(h1, h2),
 html[data-theme="dark"] :is(.about__copy, .services__copy) p,
 html[data-theme="dark"] #about :is(.about__copy, .services__copy) > p:not(:is(.tagline, .hero__tagline)),
 html[data-theme="dark"] #services .services__copy > p:not(:is(.tagline, .hero__tagline)),
@@ -2562,7 +2562,7 @@ html[data-theme="dark"] .careers__form-status.is-error {
 }
 
 html[data-theme="dark"] .team__heading,
-html[data-theme="dark"] .section__header h2,
+html[data-theme="dark"] .section__header :is(h1, h2),
 html[data-theme="dark"] #process :is(.process-content, .process__content) h3 {
     color: #e8e8e8;
 }
@@ -3405,7 +3405,7 @@ main > div:is(.page__shell, .hero, .services) :is(.section-slogan, .hero__slogan
     animation-delay: 0.1s;
 }
 
-#about :is(.about__copy, .hero__copy, .services__intro).is-in > h2 {
+#about :is(.about__copy, .hero__copy, .services__intro).is-in > :is(h1, h2) {
     animation-name: heroTitleIn;
     animation-duration: 1s;
     animation-delay: 0.22s;
@@ -3430,7 +3430,7 @@ main > div:is(.page__shell, .hero, .services) :is(.section-slogan, .hero__slogan
     animation-delay: 0.1s;
 }
 
-#services :is(.about__copy, .hero__copy, .services__intro).is-in > h2 {
+#services :is(.about__copy, .hero__copy, .services__intro).is-in > :is(h1, h2) {
     animation-name: heroTitleIn;
     animation-duration: 1s;
     animation-delay: 0.22s;
@@ -3510,7 +3510,7 @@ main > div:is(.page__shell, .hero, .services) :is(.section-slogan, .hero__slogan
     border-radius: 4px;
 }
 
-:is(.about__copy, .services__copy) h2 {
+:is(.about__copy, .services__copy) :is(h1, h2) {
     margin: 0;
     font-size: 40px;
     font-weight: 700;
@@ -3753,13 +3753,13 @@ main > div:is(.page__shell, .hero, .services) :is(.section-slogan, .hero__slogan
     /* background-color: #F9F9F9; */
 }
 
-.section__header h2 {
+.section__header :is(h1, h2) {
     font-size: 40px;
     font-weight: 700;
     margin: 0 0 40px 0;
 }
 
-.section__header h2:has(+ .services__copy) {
+.section__header :is(h1, h2):has(+ .services__copy) {
     margin-bottom: 16px;
 }
 

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Insights and ideas from Agilix Collective on building software, shipping products, and working with intent.">
     <link rel="canonical" href="https://agilixcollective.com/blogs">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blogs — Agilix Collective">
+    <meta property="og:description" content="Insights and ideas from Agilix Collective on building software, shipping products, and working with intent.">
+    <meta property="og:url" content="https://agilixcollective.com/blogs">
+    <meta property="og:image" content="https://agilixcollective.com/assets/blogs/intention-planning.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +26,26 @@
             } catch (e) {}
         })();
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Blogs — Agilix Collective",
+        "url": "https://agilixcollective.com/blogs",
+        "isPartOf": {
+            "@type": "Organization",
+            "name": "Agilix Collective",
+            "url": "https://agilixcollective.com/"
+        }
+    }
+    </script>
 </head>
 <body class="page page--blogs">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
     <div class="page__shell">
+        <header>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
             <div class="site-nav__logo">
                 <a href="index.html" aria-label="Agilix Collective home">
@@ -48,6 +68,7 @@
                 </div>
             </div>
         </nav>
+        </header>
 
         <main id="main-content">
     <section class="blogs" id="blogs" aria-labelledby="blogs-heading">
@@ -55,7 +76,7 @@
             <header class="blogs__header">
                 <div class="blogs__header-text">
                     <p class="section__label blogs__label">BLOGS</p>
-                    <h2 id="blogs-heading" class="blogs__title">insights &amp; ideas</h2>
+                    <h1 id="blogs-heading" class="blogs__title">insights &amp; ideas</h1>
                     <p class="blogs__lead">Notes on building software, shipping products, and working with intent.</p>
                 </div>
             </header>
@@ -67,7 +88,7 @@
                     </div>
                     <div class="blogs__reader-copy">
                         <time class="blogs__reader-date" data-blog-date datetime="2026-06-12">Jun 12, 2026</time>
-                        <h1 class="blogs__reader-title" data-blog-title>why intention beats feature lists</h1>
+                        <h2 class="blogs__reader-title" data-blog-title>why intention beats feature lists</h2>
                         <div class="blogs__reader-body" data-blog-body>
                             <p>Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
                         </div>
