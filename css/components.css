@@ -1650,3 +1650,106 @@ html[data-theme="dark"] .services-page .svc-chips li:hover {
     color: #ff6b6b;
 }
 
+.banner-text button,
+.banner-cta {
+    margin-top: 20px;
+    padding: 16px 24px;
+    background-color: #B20000;
+    color: #FFFFFF;
+    border: 2px solid #B20000;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    text-transform: lowercase;
+    box-sizing: border-box;
+}
+
+.banner-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.banner-cta-group .banner-cta {
+    margin-top: 0;
+}
+
+.banner-cta--secondary {
+    background-color: transparent;
+    color: #B20000;
+    border-color: #B20000;
+}
+
+.banner-cta--secondary:hover {
+    background-color: #B20000;
+    color: #ffffff;
+}
+
+.banner-cta:hover {
+    background-color: #8f0000;
+    border-color: #8f0000;
+    color: #ffffff;
+}
+
+.banner-cta:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+}
+
+/* Soft periodic nudge to draw attention to CTAs */
+@keyframes ctaAttract {
+    0%,
+    78%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    81% {
+        transform: translate3d(-3px, 0, 0) rotate(-0.8deg);
+    }
+    84% {
+        transform: translate3d(3px, 0, 0) rotate(0.8deg);
+    }
+    87% {
+        transform: translate3d(-2px, 0, 0) rotate(-0.5deg);
+    }
+    90% {
+        transform: translate3d(2px, 0, 0) rotate(0.5deg);
+    }
+    93% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+.banner-cta:not(.banner-cta--secondary),
+.explore-btn-full,
+.footer-form .footer-form-button {
+    animation: ctaAttract 3.2s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+.banner-cta--secondary {
+    animation: none;
+}
+
+.banner-cta:hover,
+.banner-cta:focus-visible,
+.explore-btn-full:hover,
+.explore-btn-full:focus-visible,
+.footer-form .footer-form-button:hover,
+.footer-form .footer-form-button:focus-visible {
+    animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner-cta,
+    .explore-btn-full,
+    .footer-form .footer-form-button {
+        animation: none;
+    }
+}
+
