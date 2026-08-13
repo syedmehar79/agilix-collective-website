@@ -1,33 +1,35 @@
 // main-slider
-$(document).ready(function () {
-    var $slider = $('#slider-3');
-    if ($slider.length) {
-        $slider.owlCarousel({
-            loop: true,
-            items: 3,
-            autoplay: true,
-            margin: 20,
-            autoHeight: false,
-            nav: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
+if (typeof jQuery !== 'undefined') {
+    $(document).ready(function () {
+        var $slider = $('#slider-3');
+        if ($slider.length) {
+            $slider.owlCarousel({
+                loop: true,
+                items: 3,
+                autoplay: true,
+                margin: 20,
+                autoHeight: false,
+                nav: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    }
                 }
-            }
-        });
+            });
 
-        $('.nav-btn.prev').on('click', function () {
-            $slider.trigger('prev.owl.carousel');
-        });
+            $('.nav-btn.prev').on('click', function () {
+                $slider.trigger('prev.owl.carousel');
+            });
 
-        $('.nav-btn.next').on('click', function () {
-            $slider.trigger('next.owl.carousel');
-        });
-    }
-});
+            $('.nav-btn.next').on('click', function () {
+                $slider.trigger('next.owl.carousel');
+            });
+        }
+    });
+}
 
 function scrollFunction() {
     var mybutton = document.getElementById('myBtn');
@@ -168,14 +170,21 @@ function topFunction() {
     if (!links.length) return;
 
     var SECTION_IDS = ['about', 'products', 'services'];
+    var PAGE_IDS = ['about', 'products', 'services', 'careers', 'blogs'];
 
     function pathName() {
         return (location.pathname || '/').replace(/\\/g, '/').toLowerCase();
     }
 
-    function isCareersPage() {
+    function currentPageId() {
         var path = pathName();
-        return /\/careers\.html$/.test(path) || /\/careers\/?$/.test(path);
+        for (var i = 0; i < PAGE_IDS.length; i++) {
+            var id = PAGE_IDS[i];
+            var htmlRe = new RegExp('\\/' + id + '\\.html$');
+            var cleanRe = new RegExp('\\/' + id + '\\/?$');
+            if (htmlRe.test(path) || cleanRe.test(path)) return id;
+        }
+        return '';
     }
 
     function isHomePage() {
@@ -198,10 +207,20 @@ function topFunction() {
         return '';
     }
 
-    function isCareersLink(link) {
+    function isPageLink(link, pageId) {
         var href = (link.getAttribute('href') || '').toLowerCase();
-        if (href.indexOf('careers.html') !== -1) return true;
-        return linkSectionId(link) === 'careers';
+        if (href.indexOf(pageId + '.html') !== -1) return true;
+        try {
+            var url = new URL(href, location.href);
+            var path = (url.pathname || '').replace(/\\/g, '/').toLowerCase();
+            if (path === '/' + pageId || path === '/' + pageId + '/') return true;
+            if (path.slice(-('/' + pageId + '.html').length) === '/' + pageId + '.html') return true;
+        } catch (e) {}
+        return linkSectionId(link) === pageId;
+    }
+
+    function isCareersLink(link) {
+        return isPageLink(link, 'careers');
     }
 
     function clearActive() {
@@ -231,12 +250,13 @@ function topFunction() {
         setActiveLink(match);
     }
 
-    if (isCareersPage()) {
-        var careersLink = null;
+    var pageId = currentPageId();
+    if (pageId) {
+        var pageLink = null;
         links.forEach(function (link) {
-            if (isCareersLink(link)) careersLink = link;
+            if (isPageLink(link, pageId)) pageLink = link;
         });
-        setActiveLink(careersLink);
+        setActiveLink(pageLink);
         return;
     }
 
