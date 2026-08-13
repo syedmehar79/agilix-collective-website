@@ -1,0 +1,42 @@
+.privacy-section , .terms-section {
+    margin-block: 60px;
+}
+.privacy-section  h4 {
+    color: #808080;
+    font-size: 16px;
+}
+.terms-section h4 {
+    color: #808080;
+    font-size: 16px;
+
+}
+.privacy-content .privacy-item {
+    margin-bottom: 70px;
+}
+
+.terms-content .terms-item {
+    margin-bottom: 70px;
+}
+
+.legal-footer-nav {
+    padding-top: 48px;
+}
+
+html[data-theme="dark"] .privacy-section h1,
+html[data-theme="dark"] .privacy-section h2,
+html[data-theme="dark"] .privacy-section h3,
+html[data-theme="dark"] .terms-section h1,
+html[data-theme="dark"] .terms-section h2,
+html[data-theme="dark"] .terms-section h3,
+html[data-theme="dark"] .privacy-section p,
+html[data-theme="dark"] .privacy-section li,
+html[data-theme="dark"] .terms-section p,
+html[data-theme="dark"] .terms-section li {
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] .privacy-section h4,
+html[data-theme="dark"] .terms-section h4 {
+    color: #a0a0a0;
+}
+

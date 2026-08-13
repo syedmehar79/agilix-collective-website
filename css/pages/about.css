@@ -1,0 +1,10 @@
+.about-page #about.gradient-process-background {
+    margin: 0;
+    background: #ffffff;
+    padding-top: 24px;
+    padding-bottom: clamp(64px, 10vh, 120px);
+}
+
+.about-page #about.gradient-process-background > .banner {
+    margin-top: 0;
+}

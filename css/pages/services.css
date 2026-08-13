@@ -1,0 +1,546 @@
+.services-page #services.gradient-background {
+    margin: 0;
+    background: #ffffff;
+    overflow: visible;
+}
+
+.services-page #services.gradient-background::before {
+    content: none;
+    display: none;
+}
+
+.services-page #services.gradient-background > .services {
+    padding-top: 24px;
+    padding-bottom: 48px;
+}
+
+.services-page .services-intro-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(24px, 4vw, 56px);
+    margin-bottom: 48px;
+}
+
+.services-page .services-intro-row .services-intro {
+    flex: 1 1 46%;
+    min-width: 0;
+}
+
+.services-page .services-intro-visual {
+    flex: 1 1 48%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: flex-start;
+    padding-top: 2.5rem;
+}
+
+.services-page .services-intro-visual-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: min(100%, 26rem);
+    transform: translateX(-5.5rem);
+}
+
+.services-page .services-intro-visual-inner .hero-rectangle {
+    width: 68%;
+    height: 92%;
+    left: -10%;
+    right: auto;
+    top: 40%;
+    object-fit: fill;
+}
+
+.services-page .services-intro-illustration {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.services-page #services .services-about-copy {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .services-page .services-intro-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+        margin-bottom: 36px;
+    }
+
+    .services-page .services-intro-visual {
+        justify-content: center;
+        order: -1;
+        padding-top: 0.75rem;
+    }
+
+    .services-page .services-intro-visual-inner {
+        max-width: 17rem;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .services-page .services-intro-visual-inner .hero-rectangle {
+        width: 68%;
+        height: 92%;
+        left: -10%;
+        right: auto;
+        top: 40%;
+        object-fit: fill;
+    }
+
+    .services-page .services-intro-illustration {
+        max-width: none;
+        margin: 0;
+        transform: none;
+    }
+}
+
+html[data-theme="dark"] .services-page .services-intro-illustration {
+    filter: brightness(0.96) saturate(1.05);
+}
+
+/* Services page — extra sections */
+.services-page .svc-block {
+    padding: clamp(64px, 8vw, 96px) 0;
+    background: #ffffff;
+}
+
+.services-page .svc-block--alt {
+    background: #f5f5f5;
+}
+
+.services-page .svc-block h2,
+.services-page .svc-cta-copy h2 {
+    font-size: clamp(32px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.8px;
+    text-transform: lowercase;
+    color: #111111;
+    margin: 12px 0 16px;
+}
+
+.services-page .svc-lead {
+    max-width: 40rem;
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #333333;
+}
+
+.services-page .svc-card-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.services-page .svc-card-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.services-page .svc-card-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.services-page .svc-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+    border: 2px solid #d3d3d3;
+    background: #f0f0f0;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.services-page .svc-block--alt .svc-card {
+    background: #ffffff;
+}
+
+.services-page .svc-card:hover {
+    border-color: #b20000;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(178, 0, 0, 0.12);
+}
+
+.services-page .svc-card-index {
+    display: block;
+    color: #b20000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.services-page .svc-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: lowercase;
+    margin: 12px 0 10px;
+    color: #111111;
+}
+
+.services-page .svc-card--compact h3 {
+    margin-top: 0;
+}
+
+.services-page .svc-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #333333;
+}
+
+.services-page .svc-process-section {
+    overflow: hidden;
+}
+
+.services-page .svc-process-stage {
+    position: relative;
+    margin-top: 8px;
+    padding: clamp(28px, 4vw, 48px) 0 8px;
+}
+
+.services-page .svc-process-slab {
+    position: absolute;
+    left: 6%;
+    right: 14%;
+    top: 18%;
+    bottom: 18%;
+    background: #b20000;
+    opacity: 0.1;
+    border-radius: 28px;
+    transform: skewX(-12deg);
+    pointer-events: none;
+}
+
+.services-page .svc-process-curve {
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 18px;
+    height: 120px;
+    width: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.services-page .svc-process-curve-line {
+    stroke: #b20000;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    fill: none;
+}
+
+.services-page .svc-process-curve circle {
+    fill: #b20000;
+}
+
+.services-page .svc-process {
+    list-style: none;
+    margin: 36px 0 0;
+    padding: 0 0 48px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.services-page .svc-process-step {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 24px 20px 22px;
+    border-radius: 20px;
+    border: 2px solid #d3d3d3;
+    background: #ffffff;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.25s ease,
+        box-shadow 0.35s ease;
+}
+
+.services-page .svc-process-step:nth-child(1) {
+    transform: translateY(36px);
+}
+
+.services-page .svc-process-step:nth-child(2) {
+    transform: translateY(12px);
+}
+
+.services-page .svc-process-step:nth-child(3) {
+    transform: translateY(-8px);
+}
+
+.services-page .svc-process-step:nth-child(4) {
+    transform: translateY(12px);
+}
+
+.services-page .svc-process-step:nth-child(5) {
+    transform: translateY(36px);
+}
+
+.services-page .svc-process-step:hover,
+.services-page .svc-process-step:focus-within {
+    background-color: #b20000;
+    border-color: #b20000;
+    box-shadow: 0 16px 32px rgba(178, 0, 0, 0.22);
+    color: #ffffff;
+}
+
+.services-page .svc-process-step:nth-child(1):hover {
+    transform: translateY(32px);
+}
+
+.services-page .svc-process-step:nth-child(2):hover {
+    transform: translateY(8px);
+}
+
+.services-page .svc-process-step:nth-child(3):hover {
+    transform: translateY(-12px);
+}
+
+.services-page .svc-process-step:nth-child(4):hover {
+    transform: translateY(8px);
+}
+
+.services-page .svc-process-step:nth-child(5):hover {
+    transform: translateY(32px);
+}
+
+.services-page .svc-process-ghost {
+    position: absolute;
+    right: -6px;
+    top: -18px;
+    font-size: clamp(64px, 7vw, 84px);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 1;
+    color: #b20000;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+    transition: color 0.35s ease, opacity 0.35s ease;
+}
+
+.services-page .svc-process-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 14px;
+    color: #b20000;
+    position: relative;
+    z-index: 1;
+    transition: color 0.35s ease;
+}
+
+.services-page .svc-process-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.services-page .svc-process-step h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: lowercase;
+    margin: 0 0 8px;
+    color: #111111;
+    position: relative;
+    z-index: 1;
+    transition: color 0.35s ease;
+}
+
+.services-page .svc-process-step p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    position: relative;
+    z-index: 1;
+    transition: color 0.35s ease;
+}
+
+.services-page .svc-process-step:hover .svc-process-icon,
+.services-page .svc-process-step:hover h3,
+.services-page .svc-process-step:hover p,
+.services-page .svc-process-step:focus-within .svc-process-icon,
+.services-page .svc-process-step:focus-within h3,
+.services-page .svc-process-step:focus-within p {
+    color: #ffffff;
+}
+
+.services-page .svc-process-step:hover .svc-process-ghost,
+.services-page .svc-process-step:focus-within .svc-process-ghost {
+    color: #ffffff;
+    opacity: 0.18;
+}
+
+.services-page .svc-process-loop {
+    position: relative;
+    z-index: 1;
+    margin: 56px 0 0;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #b20000;
+}
+
+.services-page .svc-process-loop::before {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: transparent;
+    border-left: 2px solid #b20000;
+    border-bottom: 2px solid #b20000;
+    border-bottom-left-radius: 12px;
+}
+
+.services-page .svc-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    margin: 32px 0 0;
+    padding: 0;
+}
+
+.services-page .svc-chips li {
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 2px solid #d3d3d3;
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111111;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.services-page .svc-chips li:hover {
+    border-color: #b20000;
+    color: #b20000;
+}
+
+.services-page .svc-faq {
+    padding: clamp(64px, 8vw, 96px) 0;
+}
+
+.services-page .svc-cta {
+    padding: 0 0 clamp(64px, 8vw, 96px);
+    background: #ffffff;
+}
+
+.services-page .svc-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: clamp(32px, 4vw, 48px) clamp(28px, 4vw, 56px);
+    border-radius: 20px;
+    border: 2px solid #d3d3d3;
+    background: #f0f0f0;
+}
+
+.services-page .svc-cta-copy p:not(.section-label) {
+    margin: 0;
+    max-width: 36rem;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #333333;
+}
+
+.services-page .svc-cta .banner-cta {
+    flex-shrink: 0;
+    margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+    .services-page .svc-card-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-page .svc-process {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 8px;
+        padding-bottom: 0;
+    }
+
+    .services-page .svc-process-curve,
+    .services-page .svc-process-slab {
+        display: none;
+    }
+
+    .services-page .svc-process-step,
+    .services-page .svc-process-step:nth-child(1),
+    .services-page .svc-process-step:nth-child(2),
+    .services-page .svc-process-step:nth-child(3),
+    .services-page .svc-process-step:nth-child(4),
+    .services-page .svc-process-step:nth-child(5),
+    .services-page .svc-process-step:hover,
+    .services-page .svc-process-step:nth-child(1):hover,
+    .services-page .svc-process-step:nth-child(2):hover,
+    .services-page .svc-process-step:nth-child(3):hover,
+    .services-page .svc-process-step:nth-child(4):hover,
+    .services-page .svc-process-step:nth-child(5):hover {
+        transform: none;
+    }
+
+    .services-page .svc-process-loop {
+        margin-top: 24px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-page .svc-card-grid-3,
+    .services-page .svc-card-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .services-page .svc-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-page .svc-card,
+    .services-page .svc-chips li,
+    .services-page .svc-process-step {
+        transition: none;
+    }
+
+    .services-page .svc-card:hover,
+    .services-page .svc-process-step,
+    .services-page .svc-process-step:nth-child(1),
+    .services-page .svc-process-step:nth-child(2),
+    .services-page .svc-process-step:nth-child(3),
+    .services-page .svc-process-step:nth-child(4),
+    .services-page .svc-process-step:nth-child(5),
+    .services-page .svc-process-step:hover,
+    .services-page .svc-process-step:nth-child(1):hover,
+    .services-page .svc-process-step:nth-child(2):hover,
+    .services-page .svc-process-step:nth-child(3):hover,
+    .services-page .svc-process-step:nth-child(4):hover,
+    .services-page .svc-process-step:nth-child(5):hover {
+        transform: none;
+    }
+}
+
