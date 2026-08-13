@@ -29,22 +29,24 @@ for (const file of required) {
 }
 
 const skip = new Set(['node_modules', '.git', '.vercel', 'docs', 'agilix-collective', '.superpowers', '.cursor']);
-const skipFiles = new Set(['index-live-temp.html', 'styles.css', 'script.js']);
 function walk(dir, acc) {
+  if (!fs.existsSync(dir)) return;
   for (const name of fs.readdirSync(dir)) {
-    if (skip.has(name) || skipFiles.has(name)) continue;
+    if (skip.has(name)) continue;
     const full = path.join(dir, name);
     const stat = fs.statSync(full);
     if (stat.isDirectory()) walk(full, acc);
     else if (/\.(html|js|css)$/.test(name)) acc.push(full);
   }
 }
-const files = [];
-walk('.', files);
+
+const files = pages.slice();
+for (const dir of ['css', 'js', 'partials', 'vendor']) {
+  walk(dir, files);
+}
 
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');
-  if (file.replace(/\\/g, '/') === 'vercel.json') continue;
   if (hasOldSitePath(text)) {
     console.error('old path in ' + file);
     failed = true;
