@@ -3029,6 +3029,15 @@ html[data-theme="dark"] .page--services .services__chips li:hover {
 
 /* ===== css/pages/home.css ===== */
 /* Hero only ? theme color fill that blends into About */
+.site-header--home {
+    margin: 10px 10px 0;
+    padding: 10px 0 0;
+    background: #b20000;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    z-index: 2;
+}
+
 main > div:is(.page__shell, .hero, .services) {
     background: linear-gradient(
         180deg,
@@ -3057,6 +3066,40 @@ main > div:is(.page__shell, .hero, .services) {
     border-radius: 8px 8px 0 0;
     position: relative;
     z-index: 1;
+}
+
+.site-header--home + main > .hero {
+    margin-top: 0;
+    border-radius: 0;
+    min-height: calc(108vh - 70px);
+    min-height: calc(108dvh - 70px);
+}
+
+.site-header--home .site-nav__logo img {
+    filter: brightness(0) invert(1);
+}
+
+.site-header--home .site-nav__logo a:focus-visible {
+    outline-color: #FFFFFF;
+}
+
+@media (min-width: 769px) {
+    .site-header--home .site-nav__cluster--left a,
+    .site-header--home .site-nav__cluster--right a {
+        color: #FFFFFF;
+    }
+
+    .site-header--home .site-nav__cluster--left a:hover,
+    .site-header--home .site-nav__cluster--right a:hover {
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header--home + main > .hero {
+        min-height: calc(108vh - 62px);
+        min-height: calc(108dvh - 62px);
+    }
 }
 
 main > div:is(.page__shell, .hero, .services) :is(.about__body, .hero__body) {
