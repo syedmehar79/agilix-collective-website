@@ -1,0 +1,52 @@
+DirectoryIndex index.html
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Old flat files inside /agilix-collective/
+  RewriteRule ^agilix-collective/assets/favicon\.svg$ /agilix-collective/assets/icons/favicon.svg [R=301,L]
+  RewriteRule ^agilix-collective/assets/agilix-logo\.svg$ /agilix-collective/assets/icons/agilix-logo.svg [R=301,L]
+  RewriteRule ^agilix-collective/assets/trace-logo\.svg$ /agilix-collective/assets/icons/trace-favicon.png [R=301,L]
+  RewriteRule ^agilix-collective/assets/trace-favicon\.ico$ /agilix-collective/assets/icons/trace-favicon.png [R=301,L]
+  RewriteRule ^agilix-collective/assets/trace-nav-icon\.svg$ /agilix-collective/assets/icons/trace-favicon.png [R=301,L]
+  RewriteRule ^agilix-collective/main\.js$ /agilix-collective/js/main.js [R=301,L]
+  RewriteRule ^agilix-collective/faq\.js$ /agilix-collective/js/components/faq.js [R=301,L]
+  RewriteRule ^agilix-collective/form-modals\.js$ /agilix-collective/js/components/form-modals.js [R=301,L]
+  RewriteRule ^agilix-collective/site-widget\.js$ /agilix-collective/js/components/site-widget.js [R=301,L]
+  RewriteRule ^agilix-collective/float-dock\.js$ /agilix-collective/js/components/float-dock.js [R=301,L]
+  RewriteRule ^agilix-collective/footer-reviews\.js$ /agilix-collective/js/components/footer-reviews.js [R=301,L]
+  RewriteRule ^agilix-collective/about-visual\.js$ /agilix-collective/js/pages/about.js [R=301,L]
+  RewriteRule ^agilix-collective/blogs-data\.js$ /agilix-collective/js/pages/blogs-data.js [R=301,L]
+  RewriteRule ^agilix-collective/blogs-page\.js$ /agilix-collective/js/pages/blogs.js [R=301,L]
+  RewriteRule ^agilix-collective/blogs-carousel\.js$ /agilix-collective/js/pages/blogs-carousel.js [R=301,L]
+  RewriteRule ^agilix-collective/careers-board\.js$ /agilix-collective/js/pages/careers.js [R=301,L]
+  RewriteRule ^agilix-collective/careers-openings\.js$ /agilix-collective/js/pages/careers.js [R=301,L]
+  RewriteRule ^agilix-collective/services-reveal\.js$ /agilix-collective/js/pages/services.js [R=301,L]
+  RewriteRule ^agilix-collective/team\.js$ /agilix-collective/js/pages/team.js [R=301,L]
+  RewriteRule ^agilix-collective/jQuery/jquery\.min\.js$ /agilix-collective/vendor/jquery/jquery.min.js [R=301,L]
+  RewriteRule ^agilix-collective/OwlCarousel2-2\.3\.4/dist/owl\.carousel\.min\.js$ /agilix-collective/vendor/owl-carousel/owl.carousel.min.js [R=301,L]
+  RewriteRule ^agilix-collective/OwlCarousel2-2\.3\.4/dist/assets/owl\.carousel\.min\.css$ /agilix-collective/vendor/owl-carousel/owl.carousel.min.css [R=301,L]
+  RewriteRule ^agilix-collective/OwlCarousel2-2\.3\.4/dist/assets/owl\.theme\.default\.min\.css$ /agilix-collective/vendor/owl-carousel/owl.theme.default.min.css [R=301,L]
+
+  # Old images that lived directly under /agilix-collective/assets/
+  RewriteCond %{REQUEST_URI} !^/agilix-collective/assets/(icons|images|team|blogs)/
+  RewriteRule ^agilix-collective/assets/([^/]+)$ /agilix-collective/assets/images/$1 [R=301,L]
+
+  # Keep float-widget.html fetchable
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteCond %{REQUEST_URI} !^/agilix-collective/partials/
+  RewriteRule ^ /%1 [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>

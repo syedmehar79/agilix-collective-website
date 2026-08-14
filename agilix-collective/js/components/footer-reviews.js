@@ -9,42 +9,42 @@
         {
             name: 'Ammar Zafar',
             role: 'Chief Executive Officer',
-            photo: 'assets/team/ammar-zafar.png',
+            photo: 'agilix-collective/assets/team/ammar-zafar.png',
             quote:
                 'At Agilix Collective, business quality starts with clear outcomes. We stay disciplined on scope, communication, and delivery so every engagement feels professional from the first conversation to launch.'
         },
         {
             name: 'S. Mehar Ali Shah',
             role: 'Chief Technical and Operations Officer',
-            photo: 'assets/team/mehar-ali-shah.png',
+            photo: 'agilix-collective/assets/team/mehar-ali-shah.png',
             quote:
                 'Professionalism at Agilix means reliable systems and honest timelines. We pair strong engineering judgment with operational rigor so clients can trust both the product and the process behind it.'
         },
         {
             name: 'Waleed Mahmood',
             role: 'Senior Software Engineer (Full-Stack)',
-            photo: 'assets/team/waleed-mahmood.png',
+            photo: 'agilix-collective/assets/team/waleed-mahmood.png',
             quote:
                 'Quality shows up in the details we refuse to rush. Clean architecture, careful reviews, and steady collaboration keep Agilix deliveries sharp, scalable, and ready for real business pressure.'
         },
         {
             name: 'Muhammad Tahir',
             role: 'Senior Software Engineer (Frontend)',
-            photo: 'assets/team/muhammad-tahir.png',
+            photo: 'agilix-collective/assets/team/muhammad-tahir.png',
             quote:
                 'We treat every interface as part of the business experience. At Agilix, polish, accessibility, and performance are not extras — they are how we show professionalism to the people who use what we build.'
         },
         {
             name: 'Usman Ayub',
             role: 'Software Engineer (Frontend)',
-            photo: 'assets/team/usman-ayub.png',
+            photo: 'agilix-collective/assets/team/usman-ayub.png',
             quote:
                 'Agilix stays professional by shipping thoughtfully. Clear priorities, careful craft, and consistent follow-through help us turn complex product goals into software teams can depend on.'
         },
         {
             name: 'Bilal Ahmed',
             role: 'Senior Product Designer',
-            photo: 'assets/team/bilal-ahmad.png',
+            photo: 'agilix-collective/assets/team/bilal-ahmad.png',
             quote:
                 'Business quality is design that respects the user’s time and the company’s goals. At Agilix we keep experiences intentional, usable, and aligned so professionalism is visible in every screen.'
         }

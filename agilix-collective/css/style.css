@@ -181,8 +181,13 @@ main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a[aria-c
 }
 
 .site-footer__inner {
-    padding: 56px 20px 32px;
+    padding: 56px 20px 56px;
     max-width: 1300px;
+}
+
+.site-footer:has(.site-footer__cta) .site-footer__inner {
+    padding-top: 88px;
+    padding-bottom: 56px;
 }
 
 .site-footer__cta {
@@ -4579,7 +4584,12 @@ main > div:is(.page__shell, .hero, .services) :is(.section-slogan, .hero__slogan
     }
 
     .site-footer__inner {
-        padding: 40px 20px 28px;
+        padding: 40px 20px 40px;
+    }
+
+    .site-footer:has(.site-footer__cta) .site-footer__inner {
+        padding-top: 64px;
+        padding-bottom: 40px;
     }
 
     /* .site-footer__cta {
@@ -5797,67 +5807,13 @@ html[data-theme="dark"] .page--blogs .blogs__side-card:focus-visible {
 }
 
 .jobs-board__heading-row {
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 14px;
+    display: block;
     margin: 0 0 16px;
-    position: relative;
-    z-index: 5;
     max-width: 100%;
 }
 
 .jobs-board__heading-row .careers__heading {
     margin: 0;
-}
-
-.jobs-board__empty-toggle {
-    position: relative;
-    z-index: 6;
-    flex: 0 0 auto;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    min-width: 52px;
-    height: 28px;
-    margin: 0;
-    padding: 0 12px;
-    border: 1px solid #b20000;
-    border-radius: 999px;
-    background: #ffffff;
-    color: #b20000;
-    font-family: inherit;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: lowercase;
-    line-height: 1;
-    cursor: pointer;
-    pointer-events: auto !important;
-    touch-action: manipulation;
-    appearance: none;
-    -webkit-appearance: none;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.jobs-board__empty-toggle:hover,
-.jobs-board__empty-toggle:focus-visible {
-    background: #b20000;
-    color: #ffffff;
-    outline: none;
-}
-
-.jobs-board__empty-toggle:focus-visible {
-    box-shadow: 0 0 0 3px rgba(178, 0, 0, 0.2);
-}
-
-.jobs-board__empty-toggle.is-active {
-    background: #b20000;
-    border-color: #b20000;
-    color: #ffffff;
 }
 
 .jobs-board__empty-screen {
@@ -6212,20 +6168,6 @@ html[data-theme="dark"] .jobs-board__detail-section p,
 html[data-theme="dark"] .jobs-board__detail-section li,
 html[data-theme="dark"] .jobs-board__detail-apply-lead {
     color: #b0b0b0;
-}
-
-html[data-theme="dark"] .jobs-board__empty-toggle {
-    background: #1a1a1a;
-    border-color: #b20000;
-    color: #ff6b6b;
-}
-
-html[data-theme="dark"] .jobs-board__empty-toggle:hover,
-html[data-theme="dark"] .jobs-board__empty-toggle:focus-visible,
-html[data-theme="dark"] .jobs-board__empty-toggle.is-active {
-    background: #b20000;
-    border-color: #b20000;
-    color: #ffffff;
 }
 
 html[data-theme="dark"] .jobs-board__empty-screen {
