@@ -3,7 +3,7 @@
 
     if (document.querySelector('.float-dock')) return;
 
-    var PARTIAL = 'partials/float-widget.html';
+    var PARTIAL = 'agilix-collective/partials/float-widget.html';
 
     function loadScript(src) {
         return new Promise(function (resolve, reject) {
@@ -38,16 +38,16 @@
         })
         .then(function (html) {
             mountWidget(html);
-            return loadScript('js/components/faq.js');
+            return loadScript('agilix-collective/js/components/faq.js');
         })
         .then(function () {
             if (typeof window.AgilixWireForms === 'function') {
                 window.AgilixWireForms();
             }
-            return loadScript('js/components/form-modals.js');
+            return loadScript('agilix-collective/js/components/form-modals.js');
         })
         .then(function () {
-            return loadScript('js/components/float-dock.js');
+            return loadScript('agilix-collective/js/components/float-dock.js');
         })
         .catch(function (err) {
             console.error('Failed to load site widget:', err);

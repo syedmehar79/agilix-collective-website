@@ -13,9 +13,7 @@
     var form = root.querySelector('.careers__form');
     var shellEl = root.querySelector('[data-jobs-shell]');
     var emptyScreenEl = root.querySelector('[data-jobs-empty-screen]');
-    var emptyToggle = root.querySelector('[data-jobs-empty-toggle]');
     var leadEl = root.querySelector('[data-jobs-lead]');
-    var showEmptyBoard = false;
 
     var OPENINGS = [
         {
@@ -644,24 +642,19 @@
     }
 
     function setEmptyBoard(empty) {
-        showEmptyBoard = !!empty;
-        root.classList.toggle('is-empty-board', showEmptyBoard);
+        var noPosts = !!empty;
+        root.classList.toggle('is-empty-board', noPosts);
 
-        if (emptyToggle) {
-            emptyToggle.setAttribute('aria-pressed', showEmptyBoard ? 'true' : 'false');
-            emptyToggle.classList.toggle('is-active', showEmptyBoard);
-        }
-
-        if (shellEl) shellEl.hidden = showEmptyBoard;
-        if (emptyScreenEl) emptyScreenEl.hidden = !showEmptyBoard;
+        if (shellEl) shellEl.hidden = noPosts;
+        if (emptyScreenEl) emptyScreenEl.hidden = !noPosts;
 
         if (leadEl) {
-            leadEl.textContent = showEmptyBoard
-                ? 'There are no open roles at the moment. Toggle again to browse openings.'
+            leadEl.textContent = noPosts
+                ? 'There are no open roles at the moment. Check back soon — we’re always growing the team.'
                 : 'Browse openings on the left. Select a role to see details and apply on the right.';
         }
 
-        if (showEmptyBoard) {
+        if (noPosts) {
             root.classList.remove('is-detail-mobile');
             if (form) {
                 form.hidden = true;
@@ -670,16 +663,12 @@
                 }
             }
             fillPosition('');
-            return;
         }
-
-        filterJobs(searchInput ? searchInput.value : '');
     }
 
-    if (emptyToggle) {
-        emptyToggle.addEventListener('click', function () {
-            setEmptyBoard(!showEmptyBoard);
-        });
+    if (!OPENINGS.length) {
+        setEmptyBoard(true);
+        return;
     }
 
     renderList();

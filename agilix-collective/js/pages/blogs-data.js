@@ -8,7 +8,7 @@ window.AGILIX_BLOGS = [
         likes: 24,
         excerpt:
             'Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.',
-        image: 'assets/blogs/intention-planning.jpg',
+        image: 'agilix-collective/assets/blogs/intention-planning.jpg',
         imageAlt: 'Team collaborating around a table during product planning',
         body: [
             'Teams often treat a roadmap like a shopping list: more features, more progress. In practice, the opposite is true. When intent is fuzzy, every request looks urgent, every edge case becomes a ticket, and shipping becomes a negotiation instead of a decision.',
@@ -27,7 +27,7 @@ window.AGILIX_BLOGS = [
         likes: 41,
         excerpt:
             'Practical rituals for releases, observability, and feedback loops that keep products calm under growth.',
-        image: 'assets/blogs/saas-shipping.jpg',
+        image: 'agilix-collective/assets/blogs/saas-shipping.jpg',
         imageAlt: 'Developer writing code in a dark editor while shipping software',
         body: [
             'SaaS drama usually arrives as a surprise: a release that “worked in staging,” a silent failure in production, or a feature that users never find. Calm shipping is not luck. It is a set of boring rituals done every time.',
@@ -46,7 +46,7 @@ window.AGILIX_BLOGS = [
         likes: 67,
         excerpt:
             'Where AI adds leverage in product teams—and where it just adds noise. A grounded take from delivery floors.',
-        image: 'assets/blogs/ai-work.jpg',
+        image: 'agilix-collective/assets/blogs/ai-work.jpg',
         imageAlt: 'White robot representing practical AI applied to real work',
         body: [
             'AI earns its place when it removes a real bottleneck: drafting from messy notes, classifying support volume, summarizing long threads, or spotting patterns people miss under deadline pressure. It fails when it becomes a demo layered on top of an unclear process.',
@@ -65,7 +65,7 @@ window.AGILIX_BLOGS = [
         likes: 33,
         excerpt:
             'How we keep distributed squads aligned—clear ownership, async rituals, and the habits that replace hallway talk.',
-        image: 'assets/blogs/remote-teams.jpg',
+        image: 'agilix-collective/assets/blogs/remote-teams.jpg',
         imageAlt: 'Remote team collaborating around sticky notes in a workshop',
         body: [
             'Remote teams do not fail from distance. They fail from ambiguous ownership and meetings that try to replace writing. Hallway talk used to carry context; remote work needs that context on purpose.',

@@ -5,3 +5,4 @@ node_modules/
 *.bw-bak
 .DS_Store
 Thumbs.db
+*.zip

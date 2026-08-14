@@ -14,37 +14,37 @@
         {
             name: 'Ammar Zafar',
             role: 'Chief Executive Officer',
-            photo: 'assets/team/ammar-zafar.png',
+            photo: 'agilix-collective/assets/team/ammar-zafar.png',
             linkedin: 'https://www.linkedin.com/in/ammar-zafar-360/'
         },
         {
             name: 'S. Mehar Ali Shah',
             role: 'Chief Technical and Operations Officer',
-            photo: 'assets/team/mehar-ali-shah.png',
+            photo: 'agilix-collective/assets/team/mehar-ali-shah.png',
             linkedin: 'https://www.linkedin.com/in/s-mehar-ali-shah-507965222/'
         },
         {
             name: 'Waleed Mahmood',
             role: 'Senior Software Engineer (Full-Stack)',
-            photo: 'assets/team/waleed-mahmood.png',
+            photo: 'agilix-collective/assets/team/waleed-mahmood.png',
             linkedin: 'https://www.linkedin.com/in/waleed-mahmood/'
         },
         {
             name: 'Muhammad Tahir',
             role: 'Senior Software Engineer (Frontend)',
-            photo: 'assets/team/muhammad-tahir.png',
+            photo: 'agilix-collective/assets/team/muhammad-tahir.png',
             linkedin: 'https://www.linkedin.com/in/muhammad-tahir-414476155/'
         },
         {
             name: 'Usman Ayub',
             role: 'Software Engineer (Frontend)',
-            photo: 'assets/team/usman-ayub.png',
+            photo: 'agilix-collective/assets/team/usman-ayub.png',
             linkedin: 'https://www.linkedin.com/in/engineer-usman-ayub/'
         },
         {
             name: 'Bilal Ahmed',
             role: 'Senior Product Designer',
-            photo: 'assets/team/bilal-ahmad.png',
+            photo: 'agilix-collective/assets/team/bilal-ahmad.png',
             linkedin: 'https://www.linkedin.com/in/callbilalahmad/'
         }
     ];
