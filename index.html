@@ -12,15 +12,15 @@
     <meta property="og:description"
         content="Scalable software products, integrations, and consulting. Intend · Execute · Achieve.">
     <meta property="og:url" content="https://agilixcollective.com/">
-    <meta property="og:image" content="https://agilixcollective.com/agilix-collective/assets/hero-illustration.png">
+    <meta property="og:image" content="https://agilixcollective.com/assets/images/hero-illustration.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="/agilix-collective/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.default.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/agilix-collective/assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/agilix-collective/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="/agilix-collective/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
 
     <title>Agilix Collective — Software Products, Integrations &amp; Consulting</title>
     <script>
@@ -47,7 +47,7 @@
 
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <button type="button" onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+    <button type="button" id="back-to-top" class="back-to-top" title="Go to top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
         xmlns="http://www.w3.org/2000/svg">
      <path d="M12 19V5" stroke="currentColor" stroke-width="2"
            stroke-linecap="round"/>
@@ -55,87 +55,90 @@
            stroke-linecap="round" stroke-linejoin="round"/>
    </svg></button>
 
-    <main id="main-content">
-    <div class="gradient-background">
-        <nav class="primary-nav" id="primary-nav" aria-label="Primary">
-            <div class="nav-logo">
-                <a href="#main-content" aria-label="Agilix Collective home">
-                    <img src="/agilix-collective/assets/agilix-logo.svg" alt="Agilix Collective logo">
+    <header class="site-header site-header--home">
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+            <div class="site-nav__logo">
+                <a href="index.html" aria-label="Agilix Collective home">
+                    <img src="assets/icons/agilix-logo.svg" alt="Agilix Collective logo">
                 </a>
             </div>
-            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile-panel"
+            <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-panel"
                 aria-label="Open menu">
-                <span class="nav-toggle-icon" aria-hidden="true"></span>
+                <span class="site-nav__toggle-icon" aria-hidden="true"></span>
             </button>
-            <div class="nav-mobile-panel" id="nav-mobile-panel">
-                <div class="nav-mobile-panel-inner">
-                    <div class="nav-left">
-                        <a href="/about.html">About</a>
-                        <a href="/products.html">Products</a>
+            <div class="site-nav__panel" id="site-nav-panel">
+                <div class="site-nav__panel-inner">
+                    <div class="site-nav__cluster site-nav__cluster--left">
+                        <a href="about.html">About</a>
+                        <a href="products.html">Products</a>
                     </div>
-                    <div class="nav-right">
-                        <a href="/services.html">Services</a>
-                        <a href="/careers.html">Careers</a>
+                    <div class="site-nav__cluster site-nav__cluster--right">
+                        <a href="services.html">Services</a>
+                        <a href="careers.html">Careers</a>
                     </div>
                 </div>
             </div>
-      </nav>
-        <section class="banner">
-            <div class="banner-text hero-copy">
-                <p class="tagline">Intend · Execute · Achieve</p>
+        </nav>
+    </header>
+
+    <main id="main-content">
+    <div class="hero">
+        <section class="hero__body">
+            <div class="hero__copy">
+                <p class="hero__tagline">Intend · Execute · Achieve</p>
                 <h1>agilix solves <br>
                     real problems</h1>
                 <p>Scalable software products, integrations, and consulting <br>
                     services - built to support business
                     success.
                 </p>
-                <div class="banner-cta-group">
-                    <a href="#contact" class="banner-cta" data-open-modal="contact">get in touch</a>
-                    <a href="#careers" class="banner-cta banner-cta--secondary" data-open-modal="careers">join us</a>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary" data-open-modal="contact">get in touch</a>
+                    <a href="#careers" class="btn btn--secondary" data-open-modal="careers">join us</a>
     </div>
             </div>
-            <div class="banner-visual">
-                <div class="banner-visual-inner">
-                    <img class="hero-illustration" src="/agilix-collective/assets/about-agilix.png"
+            <div class="hero__visual">
+                <div class="hero__visual-inner">
+                    <img class="hero__illustration" src="assets/images/about-agilix.png"
                         alt="Agilix Collective team and technology illustration" width="1330" height="1073" decoding="async" fetchpriority="high">
         </div>
       </div>
     </section>
-        <div class="section-slogan">
+        <div class="hero__slogan">
             <p>Intend Execute Achieve</p>
       </div>
     </div>
 
-    <section class="gradient-process-background" id="about">
-        <div class="footer-scroll-anchor" aria-hidden="true"></div>
-        <section class="banner about-banner">
-            <div class="banner-text about-agilix hero-copy">
+    <section class="about" id="about">
+        <div class="site-footer__scroll-anchor" aria-hidden="true"></div>
+        <div class="about__body">
+            <div class="about__copy">
                 <span>ABOUT</span>
 
                 <h2>who we are</h2>
                 <p>Agilix Collective is a technology company focused on building software that solves real business problems. We bring together critical thinking, design, engineering, and AI to create digital solutions that are practical, scalable, and built for what’s next. From custom software and SaaS products to AI-powered solutions and dedicated agile teams, we work alongside businesses to turn ideas into products that deliver measurable value. We believe great software isn’t just about technology. It’s about understanding the problem, designing the right solution, and executing it with purpose.</p>
-                <div class="banner-cta-group">
-                    <a href="/about.html" class="banner-cta">know more</a>
+                <div class="about__actions">
+                    <a href="about.html" class="btn btn--primary">know more</a>
   </div>
       </div>
-            <div class="about-image">
-                <div class="banner-visual-inner about-visual-inner">
-                    <img class="hero-rectangle" src="/agilix-collective/assets/hero-rectangle.png" alt="" width="1776" height="1886" decoding="async" loading="lazy">
-                    <img class="hero-illustration" src="/agilix-collective/assets/hero-illustration.png"
+            <div class="about__visual">
+                <div class="about__visual-inner">
+                    <img class="about__rectangle" src="assets/images/hero-rectangle.png" alt="" width="1776" height="1886" decoding="async" loading="lazy" aria-hidden="true">
+                    <img class="about__illustration" src="assets/images/hero-illustration.png"
                         alt="Agilix software products across devices" width="1776" height="1018" loading="lazy" decoding="async">
         </div>
       </div>
-        </section>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section class="gradient-background" id="services">
-        <section class="services section-header">
+    <section class="services" id="services">
+        <div class="services__body section__header">
       <div class="container">
-                <div class="hero-copy services-intro">
-                    <p class="section-label">SERVICES</p>
+                <div class="services__intro">
+                    <p class="section__label">SERVICES</p>
                     <h2>what we do</h2>
-                    <div class="banner-text about-agilix services-about-copy">
+                    <div class="services__copy">
                         <p>Agilix Collective delivers real time solutions using the most effective technologies, and results
                             driven approach. Combination of agility, innovation, and technical expertise to build scalable
                             products tailored to business requirements. With a strong focus on collaboration and efficiency, we
@@ -143,10 +146,10 @@
                         </p>
         </div>
       </div>
-                <div class="services-grid services-grid-2">
+                <div class="services__grid services__grid--two">
                     <!-- Custom Software -->
-                    <div class="service-detail" data-reveal-from="left" data-reveal-delay="0">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="left" data-reveal-delay="0">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -163,7 +166,7 @@
 
         </div>
                         <h3>custom software</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Web-based platforms</li>
                             <li>Secure backend systems</li>
                             <li>Custom dashboards and reporting</li>
@@ -172,8 +175,8 @@
       </div>
 
                     <!-- SaaS Development -->
-                    <div class="service-detail" data-reveal-from="top" data-reveal-delay="100">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="top" data-reveal-delay="100">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -193,7 +196,7 @@
 
             </div>
                         <h3>SaaS development</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Multi-tenant SaaS architecture</li>
                             <li>Subscription and billing systems</li>
                             <li>Admin panels and analytics</li>
@@ -202,8 +205,8 @@
                     </div>
 
                     <!-- Workflow Automation -->
-                    <div class="service-detail" data-reveal-from="right" data-reveal-delay="200">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="right" data-reveal-delay="200">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -227,7 +230,7 @@
 
             </div>
                         <h3>workflow automation</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Process mapping</li>
                             <li>Automation rule configuration</li>
                             <li>Cross-platform workflow triggers</li>
@@ -236,8 +239,8 @@
                     </div>
 
                     <!-- System Integrations -->
-                    <div class="service-detail" data-reveal-from="left" data-reveal-delay="120">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="left" data-reveal-delay="120">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -272,7 +275,7 @@
 
             </div>
                         <h3>system integrations</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>Jira & ClickUp implementation and setup</li>
                             <li>Third-party integrations (Slack, Teams, Zapier, APIs)</li>
                             <li>Data migration and system alignment</li>
@@ -281,8 +284,8 @@
                     </div>
 
                     <!-- Tool Optimization -->
-                    <div class="service-detail" data-reveal-from="bottom" data-reveal-delay="220">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="bottom" data-reveal-delay="220">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -293,7 +296,7 @@
 
             </div>
                         <h3>tool optimization</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                          <li> Workflow audit and restructuring</li>
                            <li> Advanced automation (rules, triggers, conditions)</li>
                             <li>Custom dashboards and reporting</li>
@@ -302,8 +305,8 @@
             </div>
 
                     <!-- 24/7 Support -->
-                    <div class="service-detail" data-reveal-from="right" data-reveal-delay="320">
-                        <div class="service-icon">
+                    <div class="services__item" data-reveal-from="right" data-reveal-delay="320">
+                        <div class="services__icon">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="69" height="69" rx="19.5" fill="white" stroke="#B20000" />
@@ -317,7 +320,7 @@
 
             </div>
                         <h3>24/7 support</h3>
-                        <ul class="service-list">
+                        <ul class="services__list">
                             <li>24/7 monitoring</li>
                             <li>Fast issue resolution</li>
                             <li>Multi-channel support</li>
@@ -325,11 +328,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="services-view-more">
-                    <a href="/services.html" class="banner-cta">view more</a>
+                <div class="services__view-more">
+                    <a href="services.html" class="btn btn--primary">view more</a>
                 </div>
       </div>
-        </section>
+        </div>
     </section>
 
 
@@ -409,108 +412,108 @@
         </marquee>
     </section> -->
     <!-- Our Process Section -->
-    <section class="gradient-process-background" id="process">
-        <section class="our-process section-header">
+    <section class="process" id="process">
+        <div class="process__body section__header">
       <div class="container">
-                <p class="section-label">Process</p>
+                <p class="section__label">Process</p>
                 <h2>how we build</h2>
-                <div class="process-container" id="process-section">
-                    <div class="process-steps">
-                        <div class="steps-banner">APPROACH</div>
+                <div class="process__container" id="process-section">
+                    <div class="process__steps">
+                        <div class="process__steps-banner">APPROACH</div>
                     </div>
 
-                    <div class="process-main">
-                    <div class="process-items">
-                        <div class="process-slide process-content1" data-step="1">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">01</div>
-                                    <div class="process-content">
+                    <div class="process__main">
+                    <div class="process__items">
+                        <div class="process__slide process__content1" data-step="1">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">01</div>
+                                    <div class="process__content">
                                         <h3>discovery <br>
                                             & intention</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
-                                    <img src="/agilix-collective/assets/discovery.png" alt="discovery-image" width="120" height="120" loading="lazy" decoding="async">
+                                <div class="process__image">
+                                    <img src="assets/images/discovery.png" alt="Magnifying glass illustrating discovery and intention" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content2" data-step="2">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">02</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content2" data-step="2">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">02</div>
+                                    <div class="process__content">
                                         <h3>Strategic <br> Planning</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
-                                    <img src="/agilix-collective/assets/startegic.png" alt="strategic planning" width="120" height="120" loading="lazy" decoding="async">
+                                <div class="process__image">
+                                    <img src="assets/images/startegic.png" alt="Planning board illustrating strategic product planning" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content3" data-step="3">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">03</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content3" data-step="3">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">03</div>
+                                    <div class="process__content">
                                         <h3>agile <br>
                                             execution</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
-                                    <img src="/agilix-collective/assets/agile-execution.png" alt="agile-execution" width="120" height="120" loading="lazy" decoding="async">
+                                <div class="process__image">
+                                    <img src="assets/images/agile-execution.png" alt="Iterative workflow illustrating agile execution" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content4" data-step="4">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">04</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content4" data-step="4">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">04</div>
+                                    <div class="process__content">
                                         <h3>delivery & <br>
                                             deployment</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
-                                    <img src="/agilix-collective/assets/delivery.png" alt="delivery" width="120" height="120" loading="lazy" decoding="async">
+                                <div class="process__image">
+                                    <img src="assets/images/delivery.png" alt="Rocket illustrating product delivery and deployment" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
-                            <hr class="process-divider">
+                            <hr class="process__divider">
                         </div>
-                        <div class="process-slide process-content5" data-step="5">
-                            <div class="process-item">
-                                <div class="left">
-                                    <div class="process-number">05</div>
-                                    <div class="process-content">
+                        <div class="process__slide process__content5" data-step="5">
+                            <div class="process__item">
+                                <div class="process__lead">
+                                    <div class="process__number">05</div>
+                                    <div class="process__content">
                                         <h3>maintenance <br>
                                             & improvement</h3>
                                     </div>
                                 </div>
-                                <div class="process-image">
-                                    <img src="/agilix-collective/assets/maintenance.png" alt="maintenance" width="120" height="120" loading="lazy" decoding="async">
+                                <div class="process__image">
+                                    <img src="assets/images/maintenance.png" alt="Tools illustrating ongoing maintenance and improvement" width="120" height="120" loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <div class="process-end-line" aria-hidden="true"></div>
+                        <div class="process__end-line" aria-hidden="true"></div>
                     </div>
         </div>
       </div>
-        </section>
+        </div>
     </section>
 
     <!-- Products Section -->
-    <section class="products section-header" id="products">
+    <section class="products section__header" id="products">
       <div class="container">
-            <p class="section-label">PRODUCTS</p>
+            <p class="section__label">PRODUCTS</p>
             <h2>what we built</h2>
-            <div class="products-grid">
+            <div class="products__grid">
                 <!-- Box 1: Title Only -->
-                <div class="product-card product-card-title">
-                    <div class="product-header">
+                <div class="products__card products__card--title">
+                    <div class="products__header">
                         <svg width="212" height="40" viewBox="0 0 312 60" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -536,15 +539,15 @@
             </div>
 
                 <!-- Box 2: Description Only -->
-                <div class="product-card product-card-description">
-                    <p class="product-description">trace is a unified workspace for development, operations, and support
+                <div class="products__card products__card--description">
+                    <p class="products__description">trace is a unified workspace for development, operations, and support
                         teams to manage projects, handle requests, and collaborate seamlessly through integrated
                         conversations.</p>
                 </div>
 
                 <!-- Box 3: Features List Only -->
-                <div class="product-card product-card-features">
-                    <div class="product-features">
+                <div class="products__card products__card--features">
+                    <div class="products__features">
                         <ul>
                             <li>Boards & Backlogs</li>
                             <li>Queues & Filters</li>
@@ -557,14 +560,14 @@
                 </div>
 
                 <!-- Image: Large card spanning 3 rows (RIGHT) -->
-                <div class="product-card product-card-large">
-                    <div class="product-image">
-                        <img src="/agilix-collective/assets/trace-product-image.png" alt="Trace Product" loading="lazy" decoding="async">
+                <div class="products__card products__card--large">
+                    <div class="products__image">
+                        <img src="assets/images/trace-product-image.png" alt="Trace Product" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <!-- Explore Button: Full width -->
-                <div class="product-card product-card-explore">
+                <div class="products__card products__card--explore">
                     <a href="https://trace.agilixcollective.com" class="explore-btn-full" target="_blank" rel="noopener noreferrer">
                         <span>explore</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -577,21 +580,21 @@
       </div>
     </section>
 
-   <section class="our-team" id="team" aria-labelledby="team-heading">
+   <section class="team" id="team" aria-labelledby="team-heading">
       <div class="container">
-            <div class="team-section-header">
-                <div class="team-section-title">
-                    <p class="team-section-label">TEAM</p>
-                    <h2 id="team-heading" class="team-section-heading">agilix team</h2>
+            <div class="team__header">
+                <div class="team__title">
+                    <p class="team__label">TEAM</p>
+                    <h2 id="team-heading" class="team__heading">agilix team</h2>
               </div>
-                <div class="nav-btns" role="group" aria-label="Team carousel controls">
-                    <button type="button" class="nav-btn" id="prevBtn" aria-label="Previous team member">
+                <div class="team__controls" role="group" aria-label="Team carousel controls">
+                    <button type="button" class="team__nav-btn" id="prevBtn" aria-label="Previous team member">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <button type="button" class="nav-btn nav-btn--next" id="nextBtn" aria-label="Next team member">
+                    <button type="button" class="team__nav-btn team__nav-btn--next" id="nextBtn" aria-label="Next team member">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -600,28 +603,28 @@
             </div>
               </div>
             </div>
-        <div class="slider-viewport" id="viewport" aria-roledescription="carousel" aria-label="Agilix team members">
-            <div class="slider-track" id="track"></div>
+        <div class="team__viewport" id="viewport" aria-roledescription="carousel" aria-label="Agilix team members">
+            <div class="team__track" id="track"></div>
               </div>
     </section>
 
-    <section class="career-section" id="careers" aria-labelledby="careers-heading">
-        <div class="container career-layout">
-            <div class="career-intro">
-                <p class="section-label career-label">CAREERS</p>
-                <h2 id="careers-heading" class="career-heading">join our team</h2>
-                <p class="career-lead">Share your profile and we’ll reach out when there’s a fit.</p>
+    <section class="careers" id="careers" aria-labelledby="careers-heading">
+        <div class="container careers__layout">
+            <div class="careers__intro">
+                <p class="section__label careers__label">CAREERS</p>
+                <h2 id="careers-heading" class="careers__heading">join our team</h2>
+                <p class="careers__lead">Share your profile and we’ll reach out when there’s a fit.</p>
 
-                <div class="career-openings" data-openings>
-                    <div class="career-openings-header">
-                        <h3 class="career-openings-title">available openings</h3>
-                        <div class="career-openings-nav" role="group" aria-label="Opening navigation">
-                            <button type="button" class="career-openings-btn" data-openings-prev aria-label="Previous opening">
+                <div class="careers__openings" data-openings>
+                    <div class="careers__openings-header">
+                        <h3 class="careers__openings-title">available openings</h3>
+                        <div class="careers__openings-nav" role="group" aria-label="Opening navigation">
+                            <button type="button" class="careers__openings-btn" data-openings-prev aria-label="Previous opening">
                                 <svg width="22" height="22" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button type="button" class="career-openings-btn career-openings-btn--next" data-openings-next aria-label="Next opening">
+                            <button type="button" class="careers__openings-btn careers__openings-btn--next" data-openings-next aria-label="Next opening">
                                 <svg width="22" height="22" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
@@ -629,38 +632,38 @@
             </div>
         </div>
 
-                    <label class="career-openings-search">
+                    <label class="careers__openings-search">
                         <span class="visually-hidden">Search openings</span>
-                        <svg class="career-openings-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="careers__openings-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.75"/>
                             <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
                         </svg>
                         <input type="search" data-openings-search placeholder="Search by role, city, or type" autocomplete="off">
                     </label>
 
-                    <div class="career-openings-viewport" aria-live="polite">
-                        <div class="career-openings-track" data-openings-track></div>
+                    <div class="careers__openings-viewport" aria-live="polite">
+                        <div class="careers__openings-track" data-openings-track></div>
                     </div>
-                    <p class="career-openings-meta" data-openings-meta></p>
-                    <p class="career-openings-empty" data-openings-empty hidden>No openings match your search.</p>
+                    <p class="careers__openings-meta" data-openings-meta></p>
+                    <p class="careers__openings-empty" data-openings-empty hidden>No openings match your search.</p>
                 </div>
             </div>
-            <form class="career-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
+            <form class="careers__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
                 <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
-                <div class="career-form-grid">
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-name">full name*</label>
+                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
+                <div class="careers__form-grid">
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-name">full name*</label>
                         <input id="career-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-email">email*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-email">email*</label>
                         <input id="career-email" name="email" type="email" autocomplete="email" placeholder="john@email.com" required>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-city">city*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-city">city*</label>
                         <select id="career-city" name="city" required>
                             <option value="" disabled selected>Select city</option>
                             <option value="Lahore">Lahore</option>
@@ -675,8 +678,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-position">position*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-position">position*</label>
                         <select id="career-position" name="position" required>
                             <option value="" disabled selected>Select position</option>
                             <option value="Software Engineer">Software Engineer</option>
@@ -692,8 +695,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-experience">total experience*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-experience">total experience*</label>
                         <select id="career-experience" name="total_experience" required>
                             <option value="" disabled selected>Select experience</option>
                             <option value="Fresher / Less than 1 year">Fresher / Less than 1 year</option>
@@ -704,8 +707,8 @@
                             <option value="10+ years">10+ years</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-degree">last degree*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-degree">last degree*</label>
                         <select id="career-degree" name="last_degree" required>
                             <option value="" disabled selected>Select degree</option>
                             <option value="Intermediate / High School">Intermediate / High School</option>
@@ -721,45 +724,45 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-organization">current organization</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-organization">current organization</label>
                         <input id="career-organization" name="current_organization" type="text" autocomplete="organization" placeholder="Company name">
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-current-salary">current salary</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-current-salary">current salary</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="current_salary_currency" value="PKR">
                             <input id="career-current-salary" name="current_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="150000">
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-expected-salary">expected salary*</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-expected-salary">expected salary*</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="expected_salary_currency" value="PKR">
                             <input id="career-expected-salary" name="expected_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="200000" required>
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="career-linkedin">linkedin url</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="career-linkedin">linkedin url</label>
                         <input id="career-linkedin" name="linkedin_url" type="url" autocomplete="url" placeholder="https://linkedin.com/in/username">
                     </div>
-                    <div class="career-field career-field--full">
-                        <label class="career-label-field" for="career-resume">resume*</label>
-                        <div class="career-upload">
-                            <input id="career-resume" class="career-upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-                            <label class="career-upload-btn" for="career-resume">upload resume</label>
-                            <span class="career-upload-name" id="career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
-                            <button class="career-form-button" type="submit">submit</button>
+                    <div class="careers__field careers__field--full">
+                        <label class="careers__label-field" for="career-resume">resume*</label>
+                        <div class="careers__upload">
+                            <input id="career-resume" class="careers__upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                            <label class="careers__upload-btn" for="career-resume">upload resume</label>
+                            <span class="careers__upload-name" id="career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
+                            <button class="careers__form-button" type="submit">submit</button>
                         </div>
                     </div>
                 </div>
-                <p class="career-form-status" role="status" aria-live="polite"></p>
+                <p class="careers__form-status" role="status" aria-live="polite"></p>
             </form>
       </div>
-            <div class="career-explore">
-                <a href="/careers.html" class="explore-btn-full career-explore-btn" aria-label="explore careers">
+            <div class="careers__explore">
+                <a href="careers.html" class="explore-btn-full careers__explore-btn" aria-label="explore careers">
                     <span>explore careers</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -989,22 +992,22 @@
         ]
     }
     </script>
-    <section class="blogs-section" id="blogs" aria-labelledby="blogs-heading">
-        <div class="container blogs-inner">
-            <header class="blogs-header">
-                <div class="blogs-header-text">
-                    <p class="section-label blogs-label">BLOGS</p>
-                    <h2 id="blogs-heading" class="blogs-title">insights &amp; ideas</h2>
-                    <p class="blogs-lead">Notes on building software, shipping products, and working with intent.</p>
+    <section class="blogs" id="blogs" aria-labelledby="blogs-heading">
+        <div class="container blogs__inner">
+            <header class="blogs__header">
+                <div class="blogs__header-text">
+                    <p class="section__label blogs__label">BLOGS</p>
+                    <h2 id="blogs-heading" class="blogs__title">insights &amp; ideas</h2>
+                    <p class="blogs__lead">Notes on building software, shipping products, and working with intent.</p>
                 </div>
-                <div class="nav-btns blogs-nav" role="group" aria-label="Blog carousel controls">
-                    <button type="button" class="nav-btn blogs-nav-btn" data-blogs-prev aria-label="Previous blogs">
+                <div class="blogs__controls blogs__nav" role="group" aria-label="Blog carousel controls">
+                    <button type="button" class="blogs__nav-btn" data-blogs-prev aria-label="Previous blogs">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
-                    <button type="button" class="nav-btn blogs-nav-btn blogs-nav-btn--next" data-blogs-next aria-label="Next blogs">
+                    <button type="button" class="blogs__nav-btn blogs__nav-btn--next" data-blogs-next aria-label="Next blogs">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -1013,96 +1016,96 @@
                 </div>
             </header>
 
-            <div class="blogs-viewport" data-blogs-viewport>
-                <div class="blogs-track" data-blogs-track>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#intention-beats-features">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/intention-planning.jpg" alt="Team collaborating around a table during product planning" width="1400" height="900" loading="lazy" decoding="async">
+            <div class="blogs__viewport" data-blogs-viewport>
+                <div class="blogs__track" data-blogs-track>
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#intention-beats-features">
+                            <div class="blogs__item-media">
+                                <img src="assets/blogs/intention-planning.jpg" alt="Team collaborating around a table during product planning" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-06-12">Jun 12, 2026</time>
-                                <h3 class="blog-item-title">why intention beats feature lists</h3>
-                                <p class="blog-item-excerpt">Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
-                                <span class="blog-item-cta">read more</span>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#shipping-saas-without-drama">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/saas-shipping.jpg" alt="Developer writing code in a dark editor while shipping software" width="1400" height="900" loading="lazy" decoding="async">
-                            </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-05-03">May 3, 2026</time>
-                                <h3 class="blog-item-title">shipping saas without the drama</h3>
-                                <p class="blog-item-excerpt">Practical rituals for releases, observability, and feedback loops that keep products calm under growth.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-06-12">Jun 12, 2026</time>
+                                <h3 class="blogs__item-title">why intention beats feature lists</h3>
+                                <p class="blogs__item-excerpt">Most roadmaps fail from unclear intent—not missing features. Here’s how we frame problems before we write a line of code.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#ai-that-solves-real-work">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/ai-work.jpg" alt="White robot representing practical AI applied to real work" width="1400" height="900" loading="lazy" decoding="async">
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#shipping-saas-without-drama">
+                            <div class="blogs__item-media">
+                                <img src="assets/blogs/saas-shipping.jpg" alt="Developer writing code in a dark editor while shipping software" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-03-18">Mar 18, 2026</time>
-                                <h3 class="blog-item-title">ai that solves real work</h3>
-                                <p class="blog-item-excerpt">Where AI adds leverage in product teams—and where it just adds noise. A grounded take from delivery floors.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-05-03">May 3, 2026</time>
+                                <h3 class="blogs__item-title">shipping saas without the drama</h3>
+                                <p class="blogs__item-excerpt">Practical rituals for releases, observability, and feedback loops that keep products calm under growth.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
-                    <article class="blog-item">
-                        <a class="blog-item-link" href="blogs.html#remote-teams-that-ship">
-                            <div class="blog-item-media">
-                                <img src="/agilix-collective/assets/blogs/remote-teams.jpg" alt="Remote team collaborating around sticky notes in a workshop" width="1400" height="900" loading="lazy" decoding="async">
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#ai-that-solves-real-work">
+                            <div class="blogs__item-media">
+                                <img src="assets/blogs/ai-work.jpg" alt="White robot representing practical AI applied to real work" width="1400" height="900" loading="lazy" decoding="async">
                             </div>
-                            <div class="blog-item-body">
-                                <time class="blog-item-date" datetime="2026-02-04">Feb 4, 2026</time>
-                                <h3 class="blog-item-title">building remote teams that actually ship</h3>
-                                <p class="blog-item-excerpt">How we keep distributed squads aligned—clear ownership, async rituals, and the habits that replace hallway talk.</p>
-                                <span class="blog-item-cta">read more</span>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-03-18">Mar 18, 2026</time>
+                                <h3 class="blogs__item-title">ai that solves real work</h3>
+                                <p class="blogs__item-excerpt">Where AI adds leverage in product teams—and where it just adds noise. A grounded take from delivery floors.</p>
+                                <span class="blogs__item-cta">read more</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blogs__item">
+                        <a class="blogs__item-link" href="blogs.html#remote-teams-that-ship">
+                            <div class="blogs__item-media">
+                                <img src="assets/blogs/remote-teams.jpg" alt="Remote team collaborating around sticky notes in a workshop" width="1400" height="900" loading="lazy" decoding="async">
+                            </div>
+                            <div class="blogs__item-body">
+                                <time class="blogs__item-date" datetime="2026-02-04">Feb 4, 2026</time>
+                                <h3 class="blogs__item-title">building remote teams that actually ship</h3>
+                                <p class="blogs__item-excerpt">How we keep distributed squads aligned—clear ownership, async rituals, and the habits that replace hallway talk.</p>
+                                <span class="blogs__item-cta">read more</span>
                             </div>
                         </a>
                     </article>
                 </div>
             </div>
 
-            <div class="blogs-view-more">
-                <a href="/blogs.html" class="banner-cta">view more</a>
+            <div class="blogs__view-more">
+                <a href="blogs.html" class="btn btn--primary">view more</a>
             </div>
       </div>
     </section>
 
-    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
-        <div class="container faq-layout">
-            <div class="faq-intro">
-                <p class="section-label faq-label">FAQS</p>
-                <h2 id="faq-heading" class="faq-title">frequently <br> asked <br> questions</h2>
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+        <div class="container faq__layout">
+            <div class="faq__intro">
+                <p class="section__label faq__label">FAQS</p>
+                <h2 id="faq-heading" class="faq__title">frequently <br> asked <br> questions</h2>
       </div>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-1"
+            <div class="faq__accordion">
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-1"
                         id="faq-trigger-1">
-                        <span class="faq-question">what services does Agilix Collective offer?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">what services does Agilix Collective offer?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" hidden>
+                    <div class="faq__panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" hidden>
                         <p>We provide end-to-end software solutions, including custom development, system design,
                             product
                             strategy, and real-time application development tailored to business needs.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-2"
                         id="faq-trigger-2">
-                        <span class="faq-question">what makes Agilix Collective different from other software
+                        <span class="faq__question">what makes Agilix Collective different from other software
                             firms?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
+                    <div class="faq__panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" hidden>
                         <p>We pair deep technical execution with transparent communication, outcome-focused roadmaps,
                             and
                             agile delivery—so you get scalable products built around your business, not
@@ -1110,36 +1113,36 @@
                             packages.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-3"
                         id="faq-trigger-3">
-                        <span class="faq-question">how do you ensure project quality and timely delivery?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">how do you ensure project quality and timely delivery?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
+                    <div class="faq__panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" hidden>
                         <p>We use structured sprints, clear milestones, code review, and automated checks where they add
                             value—so scope, timelines, and quality stay visible from kickoff through release.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-4"
                         id="faq-trigger-4">
-                        <span class="faq-question">do you provide ongoing support after project delivery?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">do you provide ongoing support after project delivery?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
+                    <div class="faq__panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" hidden>
                         <p>Yes. We offer maintenance, enhancements, and support options after go-live so your product
                             stays
                             reliable and can evolve with your users and business.</p>
         </div>
       </div>
-                <div class="faq-item">
-                    <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5"
+                <div class="faq__item">
+                    <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-panel-5"
                         id="faq-trigger-5">
-                        <span class="faq-question">how can we get started with Agilix Collective?</span>
-                        <span class="faq-icon" aria-hidden="true"></span>
+                        <span class="faq__question">how can we get started with Agilix Collective?</span>
+                        <span class="faq__icon" aria-hidden="true"></span>
                     </button>
-                    <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
+                    <div class="faq__panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" hidden>
                         <p>Reach out through our contact channels; we’ll set up a short discovery call, clarify goals
                             and
                             constraints, and share a proposed approach, timeline, and next steps.</p>
@@ -1152,25 +1155,25 @@
   </main>
 
     <footer class="site-footer">
-    <div class="container footer-inner">
-            <div class="footer-cta" id="contact">
-                <div class="footer-cta-text">
-                    <p class="footer-eyebrow">GET IN TOUCH</p>
-                    <h2 class="footer-heading">let's build <br>
+    <div class="container site-footer__inner">
+            <div class="site-footer__cta" id="contact">
+                <div class="site-footer__cta-text">
+                    <p class="site-footer__eyebrow">GET IN TOUCH</p>
+                    <h2 class="site-footer__heading">let's build <br>
                         something <br>
                         together</h2>
-                    <div class="footer-review" data-footer-reviews aria-roledescription="carousel" aria-label="Team reviews">
-                        <div class="footer-review-viewport">
-                            <div class="footer-review-track" data-footer-review-track></div>
+                    <div class="site-footer__review" data-footer-reviews aria-roledescription="carousel" aria-label="Team reviews">
+                        <div class="site-footer__review-viewport">
+                            <div class="site-footer__review-track" data-footer-review-track></div>
                         </div>
-                        <div class="footer-review-nav" role="group" aria-label="Review carousel controls">
-                            <button type="button" class="footer-review-btn" data-footer-review-prev aria-label="Previous review">
+                        <div class="site-footer__review-nav" role="group" aria-label="Review carousel controls">
+                            <button type="button" class="site-footer__review-btn" data-footer-review-prev aria-label="Previous review">
                                 <svg width="18" height="18" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M28 15H2M2 15L15.1092 2M2 15L15.1092 28" stroke="currentColor" stroke-width="4"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button type="button" class="footer-review-btn footer-review-btn--next" data-footer-review-next aria-label="Next review">
+                            <button type="button" class="site-footer__review-btn site-footer__review-btn--next" data-footer-review-next aria-label="Next review">
                                 <svg width="18" height="18" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M2 15H28M28 15L14.8908 2M28 15L14.8908 28" stroke="currentColor" stroke-width="4"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -1179,39 +1182,39 @@
                         </div>
                     </div>
                 </div>
-                <form class="footer-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
+                <form class="site-footer__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
                     <input type="hidden" name="_subject" value="New enquiry from Agilix Collective website">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
-                    <div class="footer-form-grid">
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-name">full name*</label>
+                    <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
+                    <div class="site-footer__form-grid">
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-name">full name*</label>
                             <input id="footer-name" name="full_name" type="text" autocomplete="name"
                                 placeholder="John Doe" required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-email">email*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-email">email*</label>
                             <input id="footer-email" name="email" type="email" autocomplete="email"
                                 placeholder="john@company.com" required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-phone">phone number*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-phone">phone number*</label>
                             <input id="footer-phone" name="phone" type="tel" autocomplete="tel"
                                 placeholder="+1 555 000 0000" required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-company">company name*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-company">company name*</label>
                             <input id="footer-company" name="company_name" type="text" autocomplete="organization"
                                 placeholder="Company Inc." required>
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-company-url">company url</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-company-url">company url</label>
                             <input id="footer-company-url" name="company_url" type="url" autocomplete="url"
                                 placeholder="https://company.com">
                         </div>
-                        <div class="footer-field">
-                            <label class="footer-label" for="footer-region">region*</label>
+                        <div class="site-footer__field">
+                            <label class="site-footer__label" for="footer-region">region*</label>
                             <select id="footer-region" name="region" required>
                                 <option value="" disabled selected>Select Region</option>
                                 <option value="Middle East &amp; North Africa">Middle East &amp; North Africa</option>
@@ -1224,8 +1227,8 @@
                                 <option value="Rest of World">Rest of World</option>
                             </select>
                         </div>
-                        <div class="footer-field footer-field--full">
-                            <label class="footer-label" for="footer-services">services you are looking for*</label>
+                        <div class="site-footer__field site-footer__field--full">
+                            <label class="site-footer__label" for="footer-services">services you are looking for*</label>
                             <select id="footer-services" name="services" required>
                                 <option value="" disabled selected>Select a service</option>
                                 <option value="Remote IT Resources">Remote IT Resources</option>
@@ -1238,75 +1241,75 @@
                                 <option value="Other IT Services">Other IT Services</option>
                             </select>
                         </div>
-                        <div class="footer-field footer-field--full">
-                            <label class="footer-label" for="footer-details">project details*</label>
+                        <div class="site-footer__field site-footer__field--full">
+                            <label class="site-footer__label" for="footer-details">project details*</label>
                             <textarea id="footer-details" name="project_details" rows="4"
                                 placeholder="Tell us about your project, goals, and timeline" required></textarea>
                         </div>
-                        <div class="footer-field footer-field--full footer-consent">
-                            <label class="footer-consent-label" for="footer-marketing">
+                        <div class="site-footer__field site-footer__field--full site-footer__consent">
+                            <label class="site-footer__consent-label" for="footer-marketing">
                                 <input id="footer-marketing" name="marketing_email_consent" type="checkbox" value="Yes">
                                 <span>I agree to receive marketing information and updates via email.</span>
                             </label>
                         </div>
-                        <div class="footer-field footer-field--full footer-consent">
-                            <label class="footer-consent-label" for="footer-sms">
+                        <div class="site-footer__field site-footer__field--full site-footer__consent">
+                            <label class="site-footer__consent-label" for="footer-sms">
                                 <input id="footer-sms" name="sms_consent" type="checkbox" value="Yes">
                                 <span>I agree to receive SMS messages from agilix collective. Reply ‘STOP’ to opt out anytime.</span>
                             </label>
                         </div>
                     </div>
-                    <button class="footer-form-button" type="submit">submit</button>
+                    <button class="site-footer__form-button" type="submit">submit</button>
                 </form>
             </div>
 
-            <hr class="footer-rule" aria-hidden="true">
+            <hr class="site-footer__rule" aria-hidden="true">
 
-            <div class="footer-nav-row">
-                <div class="footer-columns">
-                    <div class="footer-col">
-                        <p class="footer-col-title">discover</p>
-                        <ul class="footer-links">
-                            <li><a href="/about.html">about</a></li>
-                            <li><a href="/services.html">services</a></li>
+            <div class="site-footer__nav-row">
+                <div class="site-footer__columns">
+                    <div class="site-footer__col">
+                        <p class="site-footer__col-title">discover</p>
+                        <ul class="site-footer__links">
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="services.html">services</a></li>
                             <li><a href="#team">team</a></li>
-                            <li><a href="/careers.html">careers</a></li>
-                            <li><a href="/blogs.html">blogs</a></li>
+                            <li><a href="careers.html">careers</a></li>
+                            <li><a href="blogs.html">blogs</a></li>
                             <li><a href="#faq">FAQs</a></li>
                         </ul>
                     </div>
-                    <div class="footer-col">
-                        <p class="footer-col-title">legal</p>
-                        <ul class="footer-links">
-                            <li><a href="/terms.html">terms and conditions</a></li>
-                            <li><a href="/privacy.html">privacy policy</a></li>
+                    <div class="site-footer__col">
+                        <p class="site-footer__col-title">legal</p>
+                        <ul class="site-footer__links">
+                            <li><a href="terms.html">terms and conditions</a></li>
+                            <li><a href="privacy.html">privacy policy</a></li>
                         </ul>
                     </div>
-                    <div class="footer-col">
-                        <p class="footer-col-title">contact</p>
-                        <ul class="footer-links">
-                            <li><a class="footer-link-underline" href="tel:+971583070847">+971 58 307 0847</a></li>
+                    <div class="site-footer__col">
+                        <p class="site-footer__col-title">contact</p>
+                        <ul class="site-footer__links">
+                            <li><a class="site-footer__link-underline" href="tel:+971583070847">+971 58 307 0847</a></li>
                             <li><a href="mailto:support@agilixcollective.com">support@agilixcollective.com</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer-slogan" aria-hidden="true">
+                <div class="site-footer__slogan" aria-hidden="true">
                     <span>intend</span>
                     <span>execute</span>
                     <span>achieve</span>
                 </div>
             </div>
 
-            <div class="footer-brand">
-                <img class="footer-brand-logo" src="/agilix-collective/assets/agilix-logo.svg" alt="Agilix Collective logo" width="162" height="38" decoding="async">
+            <div class="site-footer__brand">
+                <img class="site-footer__brand-logo" src="assets/icons/agilix-logo.svg" alt="Agilix Collective logo" width="162" height="38" decoding="async">
             </div>
 
-            <hr class="footer-rule" aria-hidden="true">
+            <hr class="site-footer__rule" aria-hidden="true">
 
-            <div class="footer-bottom">
-                <p class="footer-copy">© agilix collective. all rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://wa.me/971583070847" class="footer-social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">© agilix collective. all rights reserved.</p>
+                <div class="site-footer__social">
+                    <a href="https://wa.me/971583070847" class="site-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path
                                 d="M15 0C6.71701 0 0 6.71701 0 15C0 23.283 6.71701 30 15 30C23.283 30 30 23.283 30 15C30 6.71701 23.283 0 15 0ZM15.3179 23.7334C15.3177 23.7334 15.3182 23.7334 15.3179 23.7334H15.3142C13.8117 23.7328 12.3352 23.3561 11.0239 22.641L6.26473 23.8891L7.53844 19.2382C6.7527 17.8772 6.33932 16.3332 6.34002 14.7514C6.34207 9.80303 10.3695 5.77723 15.3179 5.77723C17.7193 5.77811 19.9736 6.71285 21.6685 8.40914C23.3636 10.1056 24.2965 12.3605 24.2956 14.7585C24.2935 19.7072 20.2656 23.7335 15.3179 23.7335L15.3179 23.7334Z"
@@ -1316,7 +1319,7 @@
                                 fill="white" />
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/agilix.collective?igsh=YjJxN2tubGh5YXN5" class="footer-social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/agilix.collective?igsh=YjJxN2tubGh5YXN5" class="site-footer__social-link" aria-label="Instagram">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M17.8672 15C17.8672 16.5857 16.5818 17.8711 14.9961 17.8711C13.4104 17.8711 12.125 16.5857 12.125 15C12.125 13.4143 13.4104 12.1289 14.9961 12.1289C16.5818 12.1289 17.8672 13.4143 17.8672 15Z"
@@ -1330,7 +1333,7 @@
                         </svg>
 
                     </a>
-                    <a href="https://www.facebook.com/share/1Cr7pqDaJC/" class="footer-social-link" aria-label="Facebook">
+                    <a href="https://www.facebook.com/share/1Cr7pqDaJC/" class="site-footer__social-link" aria-label="Facebook">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15 0C6.72903 0 0 6.72903 0 15C0 23.2704 6.72903 30 15 30C23.2704 30 30 23.2704 30 15C30 6.72903 23.2716 0 15 0ZM18.7304 15.5281H16.29V24.2262H12.6738V15.5281H10.9548V12.4539H12.6738V10.4654C12.6738 9.04133 13.3505 6.81604 16.3232 6.81604L19.0029 6.82631V9.81048H17.0579C16.7413 9.81048 16.2912 9.96878 16.2912 10.6479V12.4545H19.0464L18.7304 15.5281Z"
@@ -1338,7 +1341,7 @@
                         </svg>
 
                     </a>
-                    <a href="https://www.linkedin.com/company/agilix-collective/" class="footer-social-link" aria-label="X">
+                    <a href="https://www.linkedin.com/company/agilix-collective/" class="site-footer__social-link" aria-label="X">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15 0C6.716 0 0 6.716 0 15C0 23.284 6.716 30 15 30C23.284 30 30 23.284 30 15C30 6.716 23.284 0 15 0ZM11.25 20.625H8.437V12.188H11.25V20.625ZM9.844 10.922C8.953 10.922 8.25 10.203 8.25 9.328C8.25 8.453 8.969 7.734 9.844 7.734C10.719 7.734 11.438 8.453 11.438 9.328C11.438 10.203 10.734 10.922 9.844 10.922ZM22.125 20.625H19.313V16.219C19.313 14.906 19.078 13.641 17.484 13.641C15.875 13.641 15.703 14.75 15.703 16.172V20.625H12.891V12.188H15.594V13.344H15.625C16.078 12.563 17.016 11.625 18.703 11.625C21.844 11.625 22.125 13.781 22.125 16.313V20.625Z"
@@ -1373,14 +1376,14 @@
 
         <div class="float-dock__products" role="list">
             <a class="float-dock__product" role="listitem" href="https://trace.agilixcollective.com" target="_blank" rel="noopener noreferrer" aria-label="Trace — unified workspace">
-                <img class="float-dock__product-icon float-dock__product-icon--trace" src="/agilix-collective/assets/trace-favicon.png" alt="" width="28" height="28" decoding="async">
+                <img class="float-dock__product-icon float-dock__product-icon--trace" src="assets/icons/trace-favicon.png" alt="" width="28" height="28" decoding="async" aria-hidden="true">
             </a>
-            <a class="float-dock__product" role="listitem" href="/products.html" aria-label="Products">
+            <a class="float-dock__product" role="listitem" href="products.html" aria-label="Products">
                 <svg class="float-dock__product-icon float-dock__product-icon--app" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect x="4.25" y="4.25" width="15.5" height="15.5" rx="4" stroke="currentColor" stroke-width="1.75"/>
                 </svg>
             </a>
-            <a class="float-dock__product" role="listitem" href="/services.html" aria-label="Services">
+            <a class="float-dock__product" role="listitem" href="services.html" aria-label="Services">
                 <svg class="float-dock__product-icon float-dock__product-icon--app" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect x="4.25" y="4.25" width="15.5" height="15.5" rx="4" stroke="currentColor" stroke-width="1.75"/>
                 </svg>
@@ -1404,37 +1407,37 @@
                 </svg>
             </button>
             <div class="form-modal__header">
-                <p class="footer-eyebrow">GET IN TOUCH</p>
+                <p class="site-footer__eyebrow">GET IN TOUCH</p>
                 <h2 id="contact-modal-title" class="form-modal__title form-modal__title--contact">let's build something together</h2>
             </div>
-            <form class="footer-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
+            <form class="site-footer__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" novalidate>
                 <input type="hidden" name="_subject" value="New enquiry from Agilix Collective website">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
-                <div class="footer-form-grid">
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-name">full name*</label>
+                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
+                <div class="site-footer__form-grid">
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-name">full name*</label>
                         <input id="modal-footer-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required data-modal-focus>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-email">email*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-email">email*</label>
                         <input id="modal-footer-email" name="email" type="email" autocomplete="email" placeholder="john@company.com" required>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-phone">phone number*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-phone">phone number*</label>
                         <input id="modal-footer-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 000 0000" required>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-company">company name*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-company">company name*</label>
                         <input id="modal-footer-company" name="company_name" type="text" autocomplete="organization" placeholder="Company Inc." required>
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-company-url">company url</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-company-url">company url</label>
                         <input id="modal-footer-company-url" name="company_url" type="url" autocomplete="url" placeholder="https://company.com">
                     </div>
-                    <div class="footer-field">
-                        <label class="footer-label" for="modal-footer-region">region*</label>
+                    <div class="site-footer__field">
+                        <label class="site-footer__label" for="modal-footer-region">region*</label>
                         <select id="modal-footer-region" name="region" required>
                             <option value="" disabled selected>Select Region</option>
                             <option value="Middle East &amp; North Africa">Middle East &amp; North Africa</option>
@@ -1447,8 +1450,8 @@
                             <option value="Rest of World">Rest of World</option>
                         </select>
                     </div>
-                    <div class="footer-field footer-field--full">
-                        <label class="footer-label" for="modal-footer-services">services you are looking for*</label>
+                    <div class="site-footer__field site-footer__field--full">
+                        <label class="site-footer__label" for="modal-footer-services">services you are looking for*</label>
                         <select id="modal-footer-services" name="services" required>
                             <option value="" disabled selected>Select a service</option>
                             <option value="Remote IT Resources">Remote IT Resources</option>
@@ -1461,24 +1464,24 @@
                             <option value="Other IT Services">Other IT Services</option>
                         </select>
                     </div>
-                    <div class="footer-field footer-field--full">
-                        <label class="footer-label" for="modal-footer-details">project details*</label>
+                    <div class="site-footer__field site-footer__field--full">
+                        <label class="site-footer__label" for="modal-footer-details">project details*</label>
                         <textarea id="modal-footer-details" name="project_details" rows="4" placeholder="Tell us about your project, goals, and timeline" required></textarea>
                     </div>
-                    <div class="footer-field footer-field--full footer-consent">
-                        <label class="footer-consent-label" for="modal-footer-marketing">
+                    <div class="site-footer__field site-footer__field--full site-footer__consent">
+                        <label class="site-footer__consent-label" for="modal-footer-marketing">
                             <input id="modal-footer-marketing" name="marketing_email_consent" type="checkbox" value="Yes">
                             <span>I agree to receive marketing information and updates via email.</span>
                         </label>
                     </div>
-                    <div class="footer-field footer-field--full footer-consent">
-                        <label class="footer-consent-label" for="modal-footer-sms">
+                    <div class="site-footer__field site-footer__field--full site-footer__consent">
+                        <label class="site-footer__consent-label" for="modal-footer-sms">
                             <input id="modal-footer-sms" name="sms_consent" type="checkbox" value="Yes">
                             <span>I agree to receive SMS messages from agilix collective. Reply ‘STOP’ to opt out anytime.</span>
                         </label>
                     </div>
                 </div>
-                <button class="footer-form-button" type="submit">submit</button>
+                <button class="site-footer__form-button" type="submit">submit</button>
             </form>
         </div>
     </div>
@@ -1492,26 +1495,26 @@
                 </svg>
             </button>
             <div class="form-modal__header">
-                <p class="section-label career-label">CAREERS</p>
+                <p class="section__label careers__label">CAREERS</p>
                 <h2 id="careers-modal-title" class="form-modal__title form-modal__title--careers">join our team</h2>
-                <p class="career-lead form-modal__lead">Share your profile and we’ll reach out when there’s a fit.</p>
+                <p class="careers__lead form-modal__lead">Share your profile and we’ll reach out when there’s a fit.</p>
             </div>
-            <form class="career-form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
+            <form class="careers__form" action="https://formsubmit.co/mehar.ali@agilixcollective.com" method="POST" enctype="multipart/form-data" novalidate>
                 <input type="hidden" name="_subject" value="New career application — Agilix Collective">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="footer-honey" aria-hidden="true">
-                <div class="career-form-grid">
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-name">full name*</label>
+                <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" class="site-footer__honey" aria-hidden="true">
+                <div class="careers__form-grid">
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-name">full name*</label>
                         <input id="modal-career-name" name="full_name" type="text" autocomplete="name" placeholder="John Doe" required data-modal-focus>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-email">email*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-email">email*</label>
                         <input id="modal-career-email" name="email" type="email" autocomplete="email" placeholder="john@email.com" required>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-city">city*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-city">city*</label>
                         <select id="modal-career-city" name="city" required>
                             <option value="" disabled selected>Select city</option>
                             <option value="Lahore">Lahore</option>
@@ -1526,8 +1529,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-position">position*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-position">position*</label>
                         <select id="modal-career-position" name="position" required>
                             <option value="" disabled selected>Select position</option>
                             <option value="Software Engineer">Software Engineer</option>
@@ -1543,8 +1546,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-experience">total experience*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-experience">total experience*</label>
                         <select id="modal-career-experience" name="total_experience" required>
                             <option value="" disabled selected>Select experience</option>
                             <option value="Fresher / Less than 1 year">Fresher / Less than 1 year</option>
@@ -1555,8 +1558,8 @@
                             <option value="10+ years">10+ years</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-degree">last degree*</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-degree">last degree*</label>
                         <select id="modal-career-degree" name="last_degree" required>
                             <option value="" disabled selected>Select degree</option>
                             <option value="Intermediate / High School">Intermediate / High School</option>
@@ -1572,57 +1575,56 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-organization">current organization</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-organization">current organization</label>
                         <input id="modal-career-organization" name="current_organization" type="text" autocomplete="organization" placeholder="Company name">
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-current-salary">current salary</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-current-salary">current salary</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="current_salary_currency" value="PKR">
                             <input id="modal-career-current-salary" name="current_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="150000">
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-expected-salary">expected salary*</label>
-                        <div class="career-salary">
-                            <span class="career-salary-currency" aria-hidden="true">PKR</span>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-expected-salary">expected salary*</label>
+                        <div class="careers__salary">
+                            <span class="careers__salary-currency" aria-hidden="true">PKR</span>
                             <input type="hidden" name="expected_salary_currency" value="PKR">
                             <input id="modal-career-expected-salary" name="expected_salary" type="number" inputmode="numeric" min="0" step="1000" placeholder="200000" required>
                         </div>
                     </div>
-                    <div class="career-field">
-                        <label class="career-label-field" for="modal-career-linkedin">linkedin url</label>
+                    <div class="careers__field">
+                        <label class="careers__label-field" for="modal-career-linkedin">linkedin url</label>
                         <input id="modal-career-linkedin" name="linkedin_url" type="url" autocomplete="url" placeholder="https://linkedin.com/in/username">
                     </div>
-                    <div class="career-field career-field--full">
-                        <label class="career-label-field" for="modal-career-resume">resume*</label>
-                        <div class="career-upload">
-                            <input id="modal-career-resume" class="career-upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
-                            <label class="career-upload-btn" for="modal-career-resume">upload resume</label>
-                            <span class="career-upload-name" id="modal-career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
-                            <button class="career-form-button" type="submit">submit</button>
+                    <div class="careers__field careers__field--full">
+                        <label class="careers__label-field" for="modal-career-resume">resume*</label>
+                        <div class="careers__upload">
+                            <input id="modal-career-resume" class="careers__upload-input" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+                            <label class="careers__upload-btn" for="modal-career-resume">upload resume</label>
+                            <span class="careers__upload-name" id="modal-career-resume-name" aria-live="polite">PDF or DOC, max 5MB</span>
+                            <button class="careers__form-button" type="submit">submit</button>
                         </div>
                     </div>
                 </div>
-                <p class="career-form-status" role="status" aria-live="polite"></p>
+                <p class="careers__form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </div>
-
-    <script src="/agilix-collective/jQuery/jquery.min.js"></script>
-    <script src="/agilix-collective/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="/agilix-collective/main.js"> </script>
-    <script src="/agilix-collective/faq.js"></script>
-    <script src="/agilix-collective/form-modals.js"></script>
-    <script src="/agilix-collective/careers-openings.js"></script>
-    <script src="/agilix-collective/team.js"></script>
-    <script src="/agilix-collective/blogs-carousel.js"></script>
-    <script src="/agilix-collective/float-dock.js"></script>
-    <script src="/agilix-collective/footer-reviews.js"></script>
-    <script src="/agilix-collective/services-reveal.js"></script>
-    <script src="/agilix-collective/about-visual.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components/faq.js"></script>
+    <script src="js/components/form-modals.js"></script>
+    <script src="js/pages/careers.js"></script>
+    <script src="js/pages/team.js"></script>
+    <script src="js/pages/blogs-carousel.js"></script>
+    <script src="js/components/float-dock.js"></script>
+    <script src="js/components/footer-reviews.js"></script>
+    <script src="js/pages/services.js"></script>
+    <script src="js/pages/about.js"></script>
 </body>
 
 </html>

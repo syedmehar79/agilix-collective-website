@@ -1,0 +1,405 @@
+(function () {
+    var track = document.getElementById('track');
+    var viewport = document.getElementById('viewport');
+    var prevBtn = document.getElementById('prevBtn');
+    var nextBtn = document.getElementById('nextBtn');
+    if (!track || !viewport || !prevBtn || !nextBtn) {
+        return;
+    }
+
+    /* =====================================================
+       TEAM DATA — edit name / role / photo as needed
+    ===================================================== */
+    var TEAM = [
+        {
+            name: 'Ammar Zafar',
+            role: 'Chief Executive Officer',
+            photo: 'assets/team/ammar-zafar.png',
+            linkedin: 'https://www.linkedin.com/in/ammar-zafar-360/'
+        },
+        {
+            name: 'S. Mehar Ali Shah',
+            role: 'Chief Technical and Operations Officer',
+            photo: 'assets/team/mehar-ali-shah.png',
+            linkedin: 'https://www.linkedin.com/in/s-mehar-ali-shah-507965222/'
+        },
+        {
+            name: 'Waleed Mahmood',
+            role: 'Senior Software Engineer (Full-Stack)',
+            photo: 'assets/team/waleed-mahmood.png',
+            linkedin: 'https://www.linkedin.com/in/waleed-mahmood/'
+        },
+        {
+            name: 'Muhammad Tahir',
+            role: 'Senior Software Engineer (Frontend)',
+            photo: 'assets/team/muhammad-tahir.png',
+            linkedin: 'https://www.linkedin.com/in/muhammad-tahir-414476155/'
+        },
+        {
+            name: 'Usman Ayub',
+            role: 'Software Engineer (Frontend)',
+            photo: 'assets/team/usman-ayub.png',
+            linkedin: 'https://www.linkedin.com/in/engineer-usman-ayub/'
+        },
+        {
+            name: 'Bilal Ahmed',
+            role: 'Senior Product Designer',
+            photo: 'assets/team/bilal-ahmad.png',
+            linkedin: 'https://www.linkedin.com/in/callbilalahmad/'
+        }
+    ];
+
+    var LINKEDIN_ICON =
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
+        '<path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S.02 4.88.02 3.5C.02 2.12 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.5h4.56V23H.22V8.5zM8.34 8.5h4.37v1.98h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7V23h-4.56v-6.7c0-1.6-.03-3.65-2.22-3.65-2.22 0-2.56 1.73-2.56 3.53V23H8.34V8.5z"/>' +
+        '</svg>';
+
+    var GAP = 20;
+    /* 2 advances per 10s → 5s between slides (hold + roll) */
+    var HOLD_MS = 4250;
+    var ROLL_MS = 750;
+    var COPIES = 3;
+    var N = TEAM.length;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* Design reference sizes (desktop) */
+    var DESIGN = {
+        inactiveW: 300,
+        activeW: 500,
+        inactiveH: 600,
+        activeH: 640
+    };
+
+    /* physical index in the middle copy */
+    var physicalIdx = N;
+    var animating = false;
+    var animToken = 0;
+    var paused = false;
+    var autoTimer = null;
+    var cards = [];
+
+    function sizes() {
+        var w = window.innerWidth;
+        /* Scale down proportionally on smaller screens; keep design ratio */
+        if (w <= 480) {
+            return { inactiveW: 150, activeW: 250, inactiveH: 300, activeH: 320 };
+        }
+        if (w <= 768) {
+            return { inactiveW: 180, activeW: 300, inactiveH: 360, activeH: 384 };
+        }
+        if (w <= 1100) {
+            return { inactiveW: 220, activeW: 360, inactiveH: 440, activeH: 470 };
+        }
+        return {
+            inactiveW: DESIGN.inactiveW,
+            activeW: DESIGN.activeW,
+            inactiveH: DESIGN.inactiveH,
+            activeH: DESIGN.activeH
+        };
+    }
+
+    function logicalOf(physical) {
+        return ((physical % N) + N) % N;
+    }
+
+    function buildCard(member, physical) {
+        var card = document.createElement('article');
+        card.className = 'team__card';
+        card.dataset.physical = String(physical);
+        card.setAttribute('role', 'group');
+        card.setAttribute('aria-roledescription', 'slide');
+        card.setAttribute('aria-label', member.name + ', ' + member.role);
+
+        var linkedin = member.linkedin
+            ? '<a class="team__card-linkedin" href="' +
+              member.linkedin +
+              '" target="_blank" rel="noopener noreferrer" aria-label="' +
+              member.name +
+              ' on LinkedIn">' +
+              LINKEDIN_ICON +
+              '</a>'
+            : '';
+
+        card.innerHTML =
+            '<div class="team__card-info">' +
+            '<p class="team__card-role">' + member.role + '</p>' +
+            '<div class="team__card-name-row">' +
+            '<p class="team__card-name">' + member.name + '</p>' +
+            linkedin +
+            '</div>' +
+            '</div>' +
+            '<div class="team__card-media">' +
+            '<img class="team__card-photo" src="' + member.photo + '" alt="' + member.name + '" draggable="false" loading="lazy" decoding="async">' +
+            '</div>';
+
+        return card;
+    }
+
+    /* Invisible swap onto the middle copy (same person). Used only before
+       auto/arrow steps when a prior click left us on an outer copy. */
+    function remountToMiddle() {
+        var mid = normalizePhysical(physicalIdx);
+        if (mid === physicalIdx) return;
+
+        track.classList.add('is-jumping', 'is-remounting');
+        physicalIdx = mid;
+        applyActive(physicalIdx);
+        track.style.transform = 'translate3d(' + centerX(physicalIdx) + 'px, 0, 0)';
+        void track.offsetWidth;
+        track.classList.remove('is-jumping', 'is-remounting');
+    }
+
+    function activateCard(card) {
+        if (!card || !track.contains(card)) return false;
+        /* Use the clicked copy's physical index so the reel moves toward
+           that visible card (left/right), not the sequential middle-copy path.
+           Do NOT remount after click — that remount caused neighbor blinks. */
+        var target = Number(card.dataset.physical);
+        if (isNaN(target) || target === physicalIdx) return false;
+
+        animToken += 1;
+        animating = false;
+        goToPhysical(target, true);
+        return true;
+    }
+
+    /* Triple the deck so the reel can roll forever without reversing */
+    for (var copy = 0; copy < COPIES; copy++) {
+        for (var i = 0; i < N; i++) {
+            var card = buildCard(TEAM[i], copy * N + i);
+            track.appendChild(card);
+            cards.push(card);
+        }
+    }
+
+    function centerX(idx) {
+        var s = sizes();
+        var left = 0;
+        for (var i = 0; i < idx; i++) {
+            left += s.inactiveW + GAP;
+        }
+        return viewport.clientWidth / 2 - (left + s.activeW / 2);
+    }
+
+    function applyActive(idx) {
+        var s = sizes();
+        track.style.gap = GAP + 'px';
+        /* Keep FAQ stable: viewport height never follows mid-transition card heights */
+        viewport.style.height = (s.activeH + 44) + 'px';
+        cards.forEach(function (card, i) {
+            var on = i === idx;
+            card.classList.toggle('is-active', on);
+            card.setAttribute('aria-hidden', on ? 'false' : 'true');
+            card.style.width = (on ? s.activeW : s.inactiveW) + 'px';
+            card.style.height = (on ? s.activeH : s.inactiveH) + 'px';
+        });
+    }
+
+    function setTransform(x, withTransition) {
+        if (!withTransition) {
+            track.classList.add('is-jumping');
+            track.style.transform = 'translate3d(' + x + 'px, 0, 0)';
+            void track.offsetWidth;
+            track.classList.remove('is-jumping');
+        } else {
+            track.style.transform = 'translate3d(' + x + 'px, 0, 0)';
+        }
+    }
+
+    /* Keep the active slide inside the middle copy for seamless looping */
+    function normalizePhysical(idx) {
+        return N + logicalOf(idx);
+    }
+
+    function goToPhysical(idx, animate) {
+        if (animating && animate) return;
+
+        physicalIdx = idx;
+        applyActive(physicalIdx);
+
+        var x = centerX(physicalIdx);
+        if (!animate || reduceMotion) {
+            setTransform(x, false);
+            return;
+        }
+
+        animating = true;
+        var token = ++animToken;
+        setTransform(x, true);
+
+        window.setTimeout(function () {
+            if (token === animToken) {
+                animating = false;
+            }
+        }, ROLL_MS + 40);
+    }
+
+    function step(dir) {
+        if (animating) return;
+
+        /* Clicks may leave the active index on an outer copy; re-seat onto
+           the middle copy first so the existing loop logic below still applies. */
+        if (physicalIdx < N || physicalIdx >= 2 * N) {
+            remountToMiddle();
+        }
+
+        /*
+          Seamless loop:
+          Before leaving the middle copy, silently jump to the same
+          person in another copy, then animate one step.
+          That avoids a visible snap when Ammar comes around again.
+        */
+        if (dir > 0 && physicalIdx === 2 * N - 1) {
+            // Last card of middle copy → jump to last of first copy, then go next
+            goToPhysical(N - 1, false);
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    goToPhysical(N, true);
+                });
+            });
+            return;
+        }
+
+        if (dir < 0 && physicalIdx === N) {
+            // First card of middle copy → jump to first of third copy, then go prev
+            goToPhysical(2 * N, false);
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    goToPhysical(2 * N - 1, true);
+                });
+            });
+            return;
+        }
+
+        goToPhysical(physicalIdx + dir, true);
+    }
+
+    function clearRoll() {
+        clearTimeout(autoTimer);
+        autoTimer = null;
+    }
+
+    function scheduleRoll() {
+        clearRoll();
+        if (paused || reduceMotion) return;
+        autoTimer = setTimeout(function () {
+            step(1);
+            scheduleRoll();
+        }, HOLD_MS + ROLL_MS);
+    }
+
+    viewport.addEventListener('mouseenter', function () {
+        paused = true;
+        clearRoll();
+    });
+    viewport.addEventListener('mouseleave', function () {
+        paused = false;
+        scheduleRoll();
+    });
+
+    prevBtn.addEventListener('click', function () {
+        step(-1);
+        scheduleRoll();
+    });
+    nextBtn.addEventListener('click', function () {
+        step(1);
+        scheduleRoll();
+    });
+
+    /* Drag / swipe — reel feel.
+       Note: pointer capture retargets events to the viewport, so card
+       activation is handled on pointerup (not click). */
+    var pointerX = 0;
+    var dragging = false;
+    var startTransform = 0;
+    var dragMoved = false;
+    var pressCard = null;
+    var activePointerId = null;
+
+    function readX() {
+        var m = /translate3d\((-?\d+(?:\.\d+)?)px/.exec(track.style.transform || '');
+        return m ? parseFloat(m[1]) : centerX(physicalIdx);
+    }
+
+    viewport.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        /* Let LinkedIn links work without starting a card drag */
+        if (e.target.closest && e.target.closest('.team__card-linkedin')) return;
+        dragging = true;
+        dragMoved = false;
+        activePointerId = e.pointerId;
+        pressCard = e.target.closest ? e.target.closest('.team__card') : null;
+        pointerX = e.clientX;
+        startTransform = readX();
+        track.classList.add('is-jumping');
+        clearRoll();
+        try {
+            viewport.setPointerCapture(e.pointerId);
+        } catch (err) { /* ignore */ }
+    });
+
+    viewport.addEventListener('pointermove', function (e) {
+        if (!dragging || e.pointerId !== activePointerId) return;
+        var dx = e.clientX - pointerX;
+        if (Math.abs(dx) > 8) dragMoved = true;
+        if (dragMoved) {
+            track.style.transform = 'translate3d(' + (startTransform + dx) + 'px, 0, 0)';
+        }
+    });
+
+    function endDrag(e) {
+        if (!dragging) return;
+        if (e && activePointerId != null && e.pointerId !== activePointerId) return;
+
+        dragging = false;
+        track.classList.remove('is-jumping');
+
+        var dx = e ? e.clientX - pointerX : 0;
+        var threshold = 48;
+        var card = pressCard;
+        pressCard = null;
+        activePointerId = null;
+
+        if (dragMoved && dx <= -threshold) {
+            step(1);
+            scheduleRoll();
+            return;
+        }
+        if (dragMoved && dx >= threshold) {
+            step(-1);
+            scheduleRoll();
+            return;
+        }
+
+        if (!dragMoved && card && activateCard(card)) {
+            scheduleRoll();
+            return;
+        }
+
+        /* Cancelled drag or click on already-active card — snap back */
+        goToPhysical(physicalIdx, dragMoved);
+        scheduleRoll();
+    }
+
+    viewport.addEventListener('pointerup', endDrag);
+    viewport.addEventListener('pointercancel', endDrag);
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            goToPhysical(physicalIdx, false);
+        }, 80);
+    });
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            clearRoll();
+        } else if (!paused) {
+            scheduleRoll();
+        }
+    });
+
+    goToPhysical(physicalIdx, false);
+    scheduleRoll();
+})();
