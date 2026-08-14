@@ -30,7 +30,7 @@ Then open **http://localhost:3000**
 - `index.html`, `about.html`, `products.html`, `services.html`, `careers.html`, `blogs.html`, `privacy.html`, `terms.html` — pages (URLs stay at the site root)
 - `css/style.css` — site styles (single stylesheet)
 - `js/` — `main.js`, `components/`, `pages/`
-- `assets/` — `icons/`, `images/`, `team/`, `blogs/`, `reviews/`
+- `assets/` — `icons/`, `images/`, `team/`, `blogs/`
 - `vendor/` — jQuery and Owl Carousel (vendored files, not npm)
 - `partials/float-widget.html` — float dock markup for inner pages
 - `vercel.json` — hosting redirects and headers (optional for local viewing)
