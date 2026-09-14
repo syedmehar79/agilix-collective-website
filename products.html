@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore products built by Agilix Collective, including Trace — a unified workspace for teams.">
+    <meta name="description" content="Explore products built by Agilix Collective, including Trace — track everything, ship faster.">
     <link rel="canonical" href="https://agilixcollective.com/products">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Products — Agilix Collective">
-    <meta property="og:description" content="Explore products built by Agilix Collective, including Trace — a unified workspace for development, operations, and support teams.">
+    <meta property="og:description" content="Explore products built by Agilix Collective, including Trace — complete visibility into every task, bug, and release.">
     <meta property="og:url" content="https://agilixcollective.com/products">
     <meta property="og:image" content="https://agilixcollective.com/agilix-collective/assets/images/trace-product-image.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -76,6 +76,7 @@
       <div class="container">
             <p class="section__label">PRODUCTS</p>
             <h1>what we built</h1>
+            <p class="products__lead">We have built SaaS workspaces, custom platforms, AI-powered tools, integrations, and multi-tenant products for project management, operations, and support, along with tailored systems for collaboration and workflow.</p>
             <div class="products__grid">
                 <!-- Box 1: Title Only -->
                 <div class="products__card products__card--title">
@@ -106,35 +107,106 @@
 
                 <!-- Box 2: Description Only -->
                 <div class="products__card products__card--description">
-                    <p class="products__description">trace is a unified workspace for development, operations, and support
-                        teams to manage projects, handle requests, and collaborate seamlessly through integrated
-                        conversations.</p>
+                    <p class="products__description">track everything. ship faster. trace gives your team complete visibility into every task, bug, and release. turn slack messages into trackable work and manage teams without complexity.</p>
                 </div>
 
                 <!-- Box 3: Features List Only -->
                 <div class="products__card products__card--features">
                     <div class="products__features">
                         <ul>
-                            <li>Boards & Backlogs</li>
-                            <li>Queues & Filters</li>
-                            <li>Sprints & Timelines</li>
-                            <li>App & Integrations</li>
-                            <li>Reports & Dashboards</li>
-                            <li>Team & Workflow Management</li>
+                            <li><button type="button" class="products__feature-btn is-active" data-trace-goto="0" aria-current="true">Slack-Powered Actions</button></li>
+                            <li><button type="button" class="products__feature-btn" data-trace-goto="1">Multiple Queue Views</button></li>
+                            <li><button type="button" class="products__feature-btn" data-trace-goto="2">Project &amp; Service Management</button></li>
+                            <li><button type="button" class="products__feature-btn" data-trace-goto="3">Team Management</button></li>
+                            <li><button type="button" class="products__feature-btn" data-trace-goto="4">Integrations Marketplace</button></li>
+                            <li><button type="button" class="products__feature-btn" data-trace-goto="5">Email Integrations</button></li>
+                            <li><button type="button" class="products__feature-btn" data-trace-goto="6">Workspace Management</button></li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Image: Large card spanning 3 rows (RIGHT) -->
+                <!-- Features slider: screens from Trace feature pages -->
                 <div class="products__card products__card--large">
-                    <div class="products__image">
-                        <img src="agilix-collective/assets/images/trace-product-image.png" alt="Trace unified workspace shown across desktop and mobile devices" loading="lazy" decoding="async">
+                    <div class="products__features-slider" data-trace-slider tabindex="0" aria-roledescription="carousel" aria-label="Trace features">
+                        <div class="products__features-slider-viewport">
+                            <figure class="products__features-slide is-active" data-trace-slide>
+                                <img src="agilix-collective/assets/images/trace/slack.png" alt="Real-time ticket updates displayed in Slack via Trace" width="1400" height="1046" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Slack-Powered Actions</p>
+                                    <p class="products__features-slide-tagline">Turn conversations into actionable work instantly.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="products__features-slide" data-trace-slide aria-hidden="true">
+                                <img src="agilix-collective/assets/images/trace/queue.png" alt="All Open queue with ticket lifecycle tracking in Trace" width="1400" height="1049" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Multiple Queue Views</p>
+                                    <p class="products__features-slide-tagline">A clear and structured way to manage work.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="products__features-slide" data-trace-slide aria-hidden="true">
+                                <img src="agilix-collective/assets/images/trace/project.png" alt="Create Project form with custom fields in Trace" width="1400" height="1052" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Project &amp; Service Management</p>
+                                    <p class="products__features-slide-tagline">Manage components and operations in one place.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="products__features-slide" data-trace-slide aria-hidden="true">
+                                <img src="agilix-collective/assets/images/trace/team.png" alt="Team workload and roster management view in Trace" width="1400" height="1049" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Team Management</p>
+                                    <p class="products__features-slide-tagline">Built for growing and distributed teams.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="products__features-slide" data-trace-slide aria-hidden="true">
+                                <img src="agilix-collective/assets/images/trace/integrations.png" alt="Integrations Marketplace with Teams, Automation, Slack, and Timesheets apps in Trace" width="1400" height="1049" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Integrations Marketplace</p>
+                                    <p class="products__features-slide-tagline">Connect Trace with the tools your team already uses.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="products__features-slide" data-trace-slide aria-hidden="true">
+                                <img src="agilix-collective/assets/images/trace/email.png" alt="Incoming email logs with status, sender, and subject in Trace" width="1400" height="1049" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Email Integrations</p>
+                                    <p class="products__features-slide-tagline">Manage customer communication from a single platform.</p>
+                                </figcaption>
+                            </figure>
+                            <figure class="products__features-slide" data-trace-slide aria-hidden="true">
+                                <img src="agilix-collective/assets/images/trace/workspace.png" alt="Workspace switcher and workspace settings in Trace" width="1400" height="1049" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <p class="products__features-slide-title">Workspace Management</p>
+                                    <p class="products__features-slide-tagline">Set up dedicated environments that scale with your organization.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="products__features-slider-nav">
+                            <button type="button" class="products__features-slider-btn" data-trace-prev aria-label="Previous Trace feature">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="products__features-slider-dots" data-trace-dots>
+                                <button type="button" class="products__features-slider-dot is-active" data-trace-dot="0" aria-label="Show Slack-Powered Actions" aria-current="true"></button>
+                                <button type="button" class="products__features-slider-dot" data-trace-dot="1" aria-label="Show Multiple Queue Views" aria-current="false"></button>
+                                <button type="button" class="products__features-slider-dot" data-trace-dot="2" aria-label="Show Project and Service Management" aria-current="false"></button>
+                                <button type="button" class="products__features-slider-dot" data-trace-dot="3" aria-label="Show Team Management" aria-current="false"></button>
+                                <button type="button" class="products__features-slider-dot" data-trace-dot="4" aria-label="Show Integrations Marketplace" aria-current="false"></button>
+                                <button type="button" class="products__features-slider-dot" data-trace-dot="5" aria-label="Show Email Integrations" aria-current="false"></button>
+                                <button type="button" class="products__features-slider-dot" data-trace-dot="6" aria-label="Show Workspace Management" aria-current="false"></button>
+                            </div>
+                            <button type="button" class="products__features-slider-btn" data-trace-next aria-label="Next Trace feature">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="visually-hidden" aria-live="polite" data-trace-status></p>
                     </div>
                 </div>
 
                 <!-- Explore Button: Full width -->
                 <div class="products__card products__card--explore">
-                    <a href="https://trace.agilixcollective.com" class="products__explore-link" target="_blank" rel="noopener noreferrer" aria-label="Explore Trace">
+                    <a href="https://tracewebapp.agilixcollective.com" class="products__explore-link" target="_blank" rel="noopener noreferrer" aria-label="Explore Trace">
                         <span>explore</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -143,6 +215,31 @@
                     </a>
                 </div>
         </div>
+      </div>
+    </section>
+
+    <section class="products__pipeline" id="pipeline" aria-labelledby="pipeline-heading">
+      <div class="container">
+            <p class="section__label">PIPELINE</p>
+            <h2 id="pipeline-heading">what's upcoming</h2>
+            <p class="products__lead">These products are in design and build.</p>
+            <div class="products__pipeline-grid">
+                <article class="products__pipeline-card">
+                    <p class="products__pipeline-status">coming soon</p>
+                    <h3>boards</h3>
+                    <p>A dedicated boards product for planning and tracking work visually &mdash; backlogs, columns, and delivery in one place.</p>
+                </article>
+                <article class="products__pipeline-card">
+                    <p class="products__pipeline-status">coming soon</p>
+                    <h3>integrations</h3>
+                    <p>A product for connecting the tools teams already use, so conversations, tickets, and workflows stay in sync.</p>
+                </article>
+                <article class="products__pipeline-card">
+                    <p class="products__pipeline-status">coming soon</p>
+                    <h3>AI tools</h3>
+                    <p>AI-powered products for summaries, routing, and assistive workflows, built to sit alongside the rest of the stack.</p>
+                </article>
+            </div>
       </div>
     </section>
         </main>
@@ -168,6 +265,7 @@
                         <ul class="site-footer__links">
                             <li><a href="terms.html">terms and conditions</a></li>
                             <li><a href="privacy.html">privacy policy</a></li>
+                            <li><a href="security.html">security policy</a></li>
                         </ul>
                     </div>
                     <div class="site-footer__col">
@@ -209,5 +307,6 @@
     </footer>
     <script src="agilix-collective/js/main.js"></script>
     <script src="agilix-collective/js/components/site-widget.js"></script>
+    <script src="agilix-collective/js/pages/products.js"></script>
 </body>
 </html>

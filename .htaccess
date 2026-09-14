@@ -36,6 +36,8 @@ DirectoryIndex index.html
   RewriteRule ^agilix-collective/OwlCarousel2-2\.3\.4/dist/assets/owl\.carousel\.min\.css$ /agilix-collective/vendor/owl-carousel/owl.carousel.min.css [R=301,L]
   RewriteRule ^agilix-collective/OwlCarousel2-2\.3\.4/dist/assets/owl\.theme\.default\.min\.css$ /agilix-collective/vendor/owl-carousel/owl.theme.default.min.css [R=301,L]
 
+  RewriteRule ^encryption-security(\.html)?$ /security [R=301,L]
+
   # Old images that lived directly under /agilix-collective/assets/
   RewriteCond %{REQUEST_URI} !^/agilix-collective/assets/(icons|images|team|blogs)/
   RewriteRule ^agilix-collective/assets/([^/]+)$ /agilix-collective/assets/images/$1 [R=301,L]

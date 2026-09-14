@@ -1,0 +1,49 @@
+---
+description: Coding standards from the current static site (BEM, paths, JS/CSS)
+alwaysApply: true
+---
+
+# Agilix Collective coding standards
+
+Static HTML/CSS/JS. No `package.json`, bundler, or framework. Follow existing patterns; do not invent new stacks or class systems.
+
+## Layout
+
+- HTML pages live at the repo root (`index.html`, `about.html`, `services.html`, …).
+- Inner pages: `<body class="page page--{name}">` wrapping `<div class="page__shell">`. Home uses `<header class="site-header site-header--home">` and does **not** use `page--*`.
+- Assets: `agilix-collective/css/style.css`, `agilix-collective/js/` (`main.js`, `components/`, `pages/`), `agilix-collective/assets/{icons,images,team,blogs}/`, `agilix-collective/vendor/`, `agilix-collective/partials/float-widget.html`.
+- Use **relative** paths (`agilix-collective/css/style.css`), never root-absolute `/agilix-collective/...`.
+- Page links include `.html` (`about.html`). After adding a file, add matching redirects in `.htaccess` and `vercel.json` if an old path existed.
+- Local preview: `python -m http.server 3000` (needed for the float-widget fetch). Do not add Node tooling unless asked.
+
+## HTML / BEM
+
+```html
+<!-- ✅ -->
+<nav class="site-nav" id="site-nav">
+  <a class="btn btn--primary" href="#contact" data-open-modal="contact">get in touch</a>
+</nav>
+
+<!-- ❌ old names: primary-nav, banner-cta, inner-page, svc-* -->
+```
+
+- Block `__` element `--` modifier. Shared blocks: `site-nav`, `site-footer`, `btn`, `section__label`, `faq`, `float-dock`.
+- Scope page features under the page block (`services__process-step`, not `svc-process-step`).
+- JS state: `is-in`, `is-open`, `is-active`, `is-revealed`, `is-menu-open` — not BEM modifiers.
+- CTAs: `btn btn--primary` / `btn btn--secondary`. Contact: `data-open-modal="contact"`.
+- Headings stay lowercase; labels uppercase (`.section__label`). Brand red `#B20000`, Trace `#4E3162`, font Outfit.
+- Keep skip-link, `#main-content`, canonical/og tags, theme boot script, and `aria-*` consistent with existing pages.
+
+## CSS
+
+- Edit `agilix-collective/css/style.css` only (single stylesheet).
+- Dark theme: `html[data-theme="dark"] …`.
+- Honor `prefers-reduced-motion`.
+- Do not reuse homepage process PNGs on other pages.
+
+## JavaScript
+
+- ES5-style: `var`, `function`, IIFEs. `'use strict'` on new files. No modules/TypeScript.
+- Shared UI → `js/components/`. Page-only → `js/pages/{page}.js` and load it only on that page.
+- `main.js` + `site-widget.js` on inner pages; home inlines the dock and extra page scripts.
+- Query **current** BEM selectors (e.g. `#site-nav`, `.services__item`), not legacy class names.

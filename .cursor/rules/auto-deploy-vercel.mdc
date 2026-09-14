@@ -5,13 +5,12 @@ alwaysApply: true
 
 # Auto-deploy to Vercel
 
-After finishing a successful turn that changed any website files (`index.html`, `agilix-collective/**`, assets, CSS/JS, etc.):
+There is no `package.json`. After a successful turn that changed website files (`index.html`, other root HTML, `agilix-collective/**`, `.htaccess`, `vercel.json`):
 
 1. Run production deploy before ending:
    ```bash
-   npm run deploy
+   npx --yes vercel --prod --yes
    ```
-   (This runs `npx --yes vercel --prod --yes`.)
 2. If deploy fails, report the error and point to `.cursor/deploy-log.txt`.
-3. Do not skip deploy because Cursor hooks might also deploy — hooks are a backup; still run `npm run deploy` after site edits.
-4. Skip deploy only when the turn made **no** website file changes (questions, planning-only, etc.).
+3. Do not skip deploy because Cursor hooks might also deploy — hooks are a backup; still run the command after site edits.
+4. Skip deploy only when the turn made **no** website file changes (questions, planning-only, rules-only, etc.).

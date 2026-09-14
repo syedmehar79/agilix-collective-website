@@ -10,6 +10,8 @@
     }
   ],
   "redirects": [
+    { "source": "/encryption-security", "destination": "/security", "statusCode": 308 },
+    { "source": "/encryption-security.html", "destination": "/security", "statusCode": 308 },
     { "source": "/agilix-collective/assets/favicon.svg", "destination": "/agilix-collective/assets/icons/favicon.svg", "statusCode": 308 },
     { "source": "/agilix-collective/assets/agilix-logo.svg", "destination": "/agilix-collective/assets/icons/agilix-logo.svg", "statusCode": 308 },
     { "source": "/agilix-collective/assets/trace-logo.svg", "destination": "/agilix-collective/assets/icons/trace-favicon.png", "statusCode": 308 },
