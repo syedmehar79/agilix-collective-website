@@ -849,6 +849,62 @@ main > div:is(.page__shell, .hero, .services) .site-nav__cluster--right a[aria-c
     outline: 2px solid #ffffff;
     outline-offset: 3px;
   }
+
+/* Page transition — thin brand bar */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 3px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    pointer-events: none;
+    opacity: 0;
+    background: transparent;
+    overflow: hidden;
+}
+
+.page-loader__bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #b20000;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-loader.is-active {
+    opacity: 1;
+}
+
+.page-loader.is-active .page-loader__bar {
+    transform: scaleX(0.9);
+}
+
+.page-loader.is-done .page-loader__bar {
+    transform: scaleX(1);
+    transition-duration: 0.2s;
+}
+
+.page-loader.is-leaving {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-loader__bar {
+        transition: none;
+    }
+
+    .page-loader.is-leaving {
+        transition: none;
+    }
+}
+
 /* Mobile nav only ? desktop layout unchanged above */
 @media (max-width: 768px) {
     .site-nav {
