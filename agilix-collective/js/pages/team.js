@@ -30,6 +30,12 @@
             linkedin: 'https://www.linkedin.com/in/waleed-mahmood/'
         },
         {
+            name: 'Ashiyan Ayub',
+            role: 'Junior Software Engineer (Backend)',
+            photo: 'agilix-collective/assets/team/ashiyan-ayub.png',
+            linkedin: 'https://www.linkedin.com/in/ashiyan-ayub/'
+        },
+        {
             name: 'Muhammad Tahir',
             role: 'Senior Software Engineer (Frontend)',
             photo: 'agilix-collective/assets/team/muhammad-tahir.png',
